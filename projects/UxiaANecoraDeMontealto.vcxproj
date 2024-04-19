@@ -12,12 +12,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\ComponentRegisterer.cpp" />
+    <ClCompile Include="..\src\KelpComponet.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\bin\Assets\assets.forge.lua" />
     <None Include="..\bin\config.forge.lua" />
     <None Include="..\bin\Assets\scenes.forge.lua" />
     <None Include="..\bin\resources.cfg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\KelpComponent.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
