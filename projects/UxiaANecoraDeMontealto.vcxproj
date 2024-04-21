@@ -13,6 +13,8 @@
   <ItemGroup>
     <ClCompile Include="..\src\ComponentRegisterer.cpp" />
     <ClCompile Include="..\src\KelpComponet.cpp" />
+    <ClCompile Include="..\src\MovementComponent.cpp" />
+    <ClCompile Include="..\src\PlayerInputComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\bin\Assets\assets.forge.lua" />
@@ -22,6 +24,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\KelpComponent.h" />
+    <ClInclude Include="..\src\MovementComponent.h" />
+    <ClInclude Include="..\src\PlayerInputComponent.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
