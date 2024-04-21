@@ -19,8 +19,8 @@ bool KelpComponent::initComponent(ComponentData* data) {
 	if (manager->hasComponent<GameManager>() && entity->hasComponent<Collider>()) {
         gameManager = manager->getComponent<GameManager>();
         collider = entity->getComponent<Collider>();
-        collider->registerCallback([&] (Collider* self, Collider* other){
-            if(self  == collider && )
+        collider->registerCallback([] (Collider* self, Collider* other){
+            //TODO cuando se arreglen los callbacks
         });
         return true;
     }
