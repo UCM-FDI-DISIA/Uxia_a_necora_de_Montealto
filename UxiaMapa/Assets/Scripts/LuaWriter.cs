@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 [Generator]
 public class LuaWriter : MonoBehaviour, ICodeGenerator
 {
-    private string fileName = "luaTest.lua";
+    private string fileName = "UxiaData.lua";
     private string folderPath = "Assets/FORGE Data";
 
     Dictionary<string, int> prefabData = new Dictionary<string, int> ();
