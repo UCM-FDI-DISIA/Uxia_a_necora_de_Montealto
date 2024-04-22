@@ -8,7 +8,7 @@ local scenes = {
 			handler = "MainCamera",
 			components = {
 				Transform= {
-					position = {0,2.57,-22.38},
+					position = {0,1,-10},
 					rotation = {0,0,0,1},
 					scale = {1,1,1}
 				},
@@ -39,7 +39,7 @@ local scenes = {
 					scale = {10.675,1,1}
 				},
 				Collider= {
-					scale = {30,5,30},
+					scale = {30,10,30},
 					shapeType = "Cube"					
 				}
 			}
@@ -59,12 +59,8 @@ local scenes = {
 					friction = 1,
 					restitution = 1,
 					shapeType = "Cube",
-					static = true,
+					static = false,
 					layer = "ALL"					
-				},
-				Collider= {
-					scale = {5,5,5},
-					shapeType = "Cube"					
 				}
 			}
 		}

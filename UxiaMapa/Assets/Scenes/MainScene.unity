@@ -304,7 +304,7 @@ Transform:
   m_GameObject: {fileID: 522146712}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 2.5699997, z: -22.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -455,7 +455,7 @@ MonoBehaviour:
   values:
     _serializedList:
     - Key: scale
-      Value: '{30,10,30}'
+      Value: '{30,5,30}'
     - Key: shapeType
       Value: '"Cube"'
 --- !u!1 &2030037146
@@ -471,6 +471,7 @@ GameObject:
   - component: {fileID: 2030037148}
   - component: {fileID: 2030037147}
   - component: {fileID: 2030037151}
+  - component: {fileID: 2030037152}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -592,9 +593,28 @@ MonoBehaviour:
     - Key: shapeType
       Value: '"Cube"'
     - Key: static
-      Value: false
+      Value: true
     - Key: layer
       Value: '"ALL"'
+--- !u!114 &2030037152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030037146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9daf131188eb7ff46ab57f08fd355f2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  componentName: Collider
+  values:
+    _serializedList:
+    - Key: scale
+      Value: '{5,5,5}'
+    - Key: shapeType
+      Value: '"Cube"'
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
