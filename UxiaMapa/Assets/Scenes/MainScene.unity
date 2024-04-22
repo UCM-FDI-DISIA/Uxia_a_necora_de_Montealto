@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 522146715}
   - component: {fileID: 522146714}
   - component: {fileID: 522146713}
+  - component: {fileID: 522146716}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -309,6 +310,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &522146716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522146712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9daf131188eb7ff46ab57f08fd355f2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  componentName: Camera
+  values:
+    _serializedList:
+    - Key: name
+      Value: maincam
+    - Key: nearClipDistance
+      Value: 1
+    - Key: autoAspectRatio
+      Value: true
+    - Key: backgroundColor
+      Value: '{0.6,0.3,0.3}'
 --- !u!1 &660939326
 GameObject:
   m_ObjectHideFlags: 0

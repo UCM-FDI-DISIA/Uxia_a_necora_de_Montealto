@@ -4,16 +4,32 @@ local prefabs = {
 local scenes = {
 	MainScene = {
 
-		Main Camera= {
+		MainCamera= {
 			handler = "MainCamera",
 			components = {
 				Transform= {
 					position = {0,1,-10},
 					rotation = {0,0,0,1},
 					scale = {1,1,1}
+				},
+				Camera= {
+					name = maincam,
+					nearClipDistance = 1,
+					autoAspectRatio = true,
+					backgroundColor = {0.6,0.3,0.3}					
 				}
 			}
-		}
+		},
+
+		DirectionalLight= {
+			components = {
+				Transform= {
+					position = {0,3,0},
+					rotation = {0.4082179,-0.2345697,0.1093816,0.8754261},
+					scale = {1,1,1}
+				}
+			}
+		},
 
 		Ground= {
 			components = {
@@ -27,7 +43,7 @@ local scenes = {
 					shapeType = "Cube"					
 				}
 			}
-		}
+		},
 
 		Player= {
 			handler = "Player",
