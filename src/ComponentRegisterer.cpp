@@ -2,8 +2,12 @@
 #include "ForgeImport.h"
 #include "MovementComponent.h"
 #include "PlayerInputComponent.h"
+#include "KelpComponent.h"
+#include "EnemyComponent.h"
 
 FORGE_IMPORT void registerComponents(Factory& f) {
+	f.registerComponent<KelpComponent>();
 	f.registerComponent<MovementComponent>();
 	f.registerComponent<PlayerInputComponent>();
+	f.registerComponent<EnemyComponent>();
 }

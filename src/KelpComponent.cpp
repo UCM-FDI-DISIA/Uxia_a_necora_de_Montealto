@@ -1,7 +1,7 @@
 #include "KelpComponent.h"
 #include <ComponentData.h>
 #include <Entity.h>
-//#include <Serializer.h>
+#include <Serializer.h>
 #include <Scene.h>
 #include <Collider.h>
 
@@ -11,7 +11,7 @@ KelpComponent::KelpComponent() :
 	collider(nullptr),
     gameManager(nullptr),
     score(1){
-        //serializer(score,"score");
+       // serializer(score,"score");
 }
 
 bool KelpComponent::initComponent(ComponentData* data) {
