@@ -1,17 +1,19 @@
 #include "EnemyComponent.h"
 #include "MovementComponent.h"
 #include <RigidBody.h>
-#include <ComponentData.h>
 #include <Entity.h>
 
+const std::string EnemyComponent::id = "EnemyComponent";
+
+
 EnemyComponent::EnemyComponent() :
-damage(0),
-radius(0),
-sign(1),
-movementComponent(nullptr),
-rb(nullptr),
-p1(forge::Vector3::ZERO),
-p2(forge::Vector3::ZERO){
+	damage(0),
+	radius(0),
+	sign(1),
+	movementComponent(nullptr),
+	rb(nullptr),
+	p1(forge::Vector3::ZERO),
+	p2(forge::Vector3::ZERO){
 
 }
 
@@ -45,18 +47,18 @@ void EnemyComponent::update() {
 }
 
 bool EnemyComponent::initComponent(ComponentData* data) {
-	if (entity->hasComponent<RigidBody>() && entity->hasComponent<MovementComponent>()) {
-		rb = entity->getComponent<RigidBody>();
-		movementComponent = entity->getComponent<MovementComponent>();
-		if (data->has("radius")) {
-			setRadius(data->get<float>("radius"));
-		}
-		if (data->has("damage")) {
-			setDamage(data->get<float>("damage"));
-		}
+	//if (entity->hasComponent<RigidBody>() && entity->hasComponent<MovementComponent>()) {
+	//	rb = entity->getComponent<RigidBody>();
+	//	movementComponent = entity->getComponent<MovementComponent>();
+	//	if (data->has("radius")) {
+	//		setRadius(data->get<float>("radius"));
+	//	}
+	//	if (data->has("damage")) {
+	//		setDamage(data->get<float>("damage"));
+	//	}
 		return true;
-	}
-	return false;
+	//}
+	//return false;
 }
 
 bool EnemyComponent::checkAttack() {
@@ -64,8 +66,8 @@ bool EnemyComponent::checkAttack() {
 	if (rb->hasCollidedWith(rb) {
 		return true;
 	}
-	return false;
 	*/
+	return false;
 }
 
 void EnemyComponent::attack() {

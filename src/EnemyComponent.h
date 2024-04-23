@@ -2,6 +2,9 @@
 #include <Component.h>
 #include <Vector3.h>
 
+class MovementComponent;
+class RigidBody;
+
 class EnemyComponent : public Component {
 private:
 	forge::Vector3 p1;
@@ -14,6 +17,9 @@ private:
 	//AttackComponent* attackComponent;
 	RigidBody* rb;
 public:
+
+	static const std::string id;
+
 	EnemyComponent();
 	
 	~EnemyComponent();

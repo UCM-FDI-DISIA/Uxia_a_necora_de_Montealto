@@ -4,6 +4,8 @@
 #include <Vector2.h>
 #include "MovementComponent.h"
 
+const std::string PlayerInputComponent::id = "PlayerInputComponent";
+
 PlayerInputComponent::PlayerInputComponent(): input(*Input::GetInstance()) {}
 
 bool PlayerInputComponent::initComponent(ComponentData* data)

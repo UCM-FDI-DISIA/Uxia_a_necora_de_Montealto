@@ -2,6 +2,9 @@
 #include <Transform.h>
 #include <Entity.h>
 
+const std::string MovementComponent::id = "MovementComponent";
+
+
 MovementComponent::MovementComponent() : transform(nullptr) {}
 
 bool MovementComponent::initComponent(ComponentData* data)
@@ -14,7 +17,7 @@ bool MovementComponent::initComponent(ComponentData* data)
 }
 
 void MovementComponent::moveHorizontal(float direction) {
-	currentDirection = (direction, 0, 0);
+	currentDirection = forge::Vector3(direction, 0, 0);
 	transform->movePosition(transform->getPosition()+currentDirection);
 }
 

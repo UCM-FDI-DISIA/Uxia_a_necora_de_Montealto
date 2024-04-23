@@ -6,7 +6,7 @@ class Transform;
 class MovementComponent : public Component {
 private:
 	Transform* transform;
-	forge::Vector3* currentDirection;
+	forge::Vector3 currentDirection;
 public:
 	static const std::string id;
 
