@@ -1,6 +1,6 @@
 #pragma once
-#include "Component.h"
-#include "Vector3.h"
+#include <Component.h>
+#include <Vector3.h>
 
 class Transform;
 class MovementComponent : public Component {

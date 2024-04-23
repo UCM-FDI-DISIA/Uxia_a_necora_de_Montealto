@@ -12,6 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\ComponentRegisterer.cpp" />
+    <ClCompile Include="..\src\EnemyComponent.cpp" />
     <ClCompile Include="..\src\KelpComponet.cpp" />
     <ClCompile Include="..\src\MovementComponent.cpp" />
     <ClCompile Include="..\src\PlayerInputComponent.cpp" />
@@ -23,6 +24,7 @@
     <None Include="..\bin\resources.cfg" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\src\EnemyComponent.h" />
     <ClInclude Include="..\src\KelpComponent.h" />
     <ClInclude Include="..\src\MovementComponent.h" />
     <ClInclude Include="..\src\PlayerInputComponent.h" />
