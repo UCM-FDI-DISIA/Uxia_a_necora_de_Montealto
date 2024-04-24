@@ -11,7 +11,7 @@ KelpComponent::KelpComponent() :
 	collider(nullptr),
     gameManager(nullptr),
     score(1){
-       // serializer(score,"score");
+    serializer(score, "score");
 }
 
 bool KelpComponent::initComponent(ComponentData* data) {

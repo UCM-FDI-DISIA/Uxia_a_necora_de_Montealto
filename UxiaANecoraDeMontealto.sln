@@ -5,15 +5,15 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UxiaANecoraDeMontealto", "projects\UxiaANecoraDeMontealto.vcxproj", "{3DEF3FAF-292B-451F-92A3-2D2712B0672C}"
 EndProject
-Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "UxiaANecoraDeMontealto_d", "bin\UxiaANecoraDeMontealto_d.exe", "{1C712A91-677F-4687-BD89-6DBD35F00F79}"
+Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "FORGE_d", "bin\FORGE_d.exe", "{A8626E10-5B1E-49F3-925E-469DB745E4A1}"
 	ProjectSection(DebuggerProjectSystem) = preProject
-		Executable = .\bin\UxiaANecoraDeMontealto_d.exe
+		Executable = .\bin\FORGE_d.exe
 		StartingDirectory = .\bin
 	EndProjectSection
 EndProject
-Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "UxiaANecoraDeMontealto_r", "bin\UxiaANecoraDeMontealto_r.exe", "{F0ADC029-9134-418C-8D1A-CC136FCBF9D2}"
+Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "FORGE", "bin\FORGE.exe", "{717B87BB-7A6D-49CD-9807-EED0D1FF87C9}"
 	ProjectSection(DebuggerProjectSystem) = preProject
-		Executable = .\bin\UxiaANecoraDeMontealto.exe
+		Executable = .\bin\FORGE.exe
 		StartingDirectory = .\bin
 	EndProjectSection
 EndProject
@@ -27,10 +27,10 @@ Global
 		{3DEF3FAF-292B-451F-92A3-2D2712B0672C}.Debug|x64.Build.0 = Debug|x64
 		{3DEF3FAF-292B-451F-92A3-2D2712B0672C}.Release|x64.ActiveCfg = Release|x64
 		{3DEF3FAF-292B-451F-92A3-2D2712B0672C}.Release|x64.Build.0 = Release|x64
-		{1C712A91-677F-4687-BD89-6DBD35F00F79}.Debug|x64.ActiveCfg = Release|x64
-		{1C712A91-677F-4687-BD89-6DBD35F00F79}.Release|x64.ActiveCfg = Release|x64
-		{F0ADC029-9134-418C-8D1A-CC136FCBF9D2}.Debug|x64.ActiveCfg = Release|x64
-		{F0ADC029-9134-418C-8D1A-CC136FCBF9D2}.Release|x64.ActiveCfg = Release|x64
+		{A8626E10-5B1E-49F3-925E-469DB745E4A1}.Debug|x64.ActiveCfg = Release|x64
+		{A8626E10-5B1E-49F3-925E-469DB745E4A1}.Release|x64.ActiveCfg = Release|x64
+		{717B87BB-7A6D-49CD-9807-EED0D1FF87C9}.Debug|x64.ActiveCfg = Release|x64
+		{717B87BB-7A6D-49CD-9807-EED0D1FF87C9}.Release|x64.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -42,7 +42,9 @@ local scenes = {
 					scale = {30,5,30},
 					shapeType = "Cube"					
 				},
-				KelpComponent = 0
+				KelpComponent = {
+					score = 5
+				}
 			}
 		},
 
