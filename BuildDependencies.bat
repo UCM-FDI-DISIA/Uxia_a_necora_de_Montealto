@@ -17,7 +17,9 @@ xcopy /y "%ENGINEBIN%\plugins.cfg" "%WORKDIR%"
 xcopy /y "%ENGINEBIN%\FORGE.exe" "%WORKDIR%"
 xcopy /y "%ENGINEBIN%\FORGE_d.exe" "%WORKDIR%"
 
-ren %WORKDIR%\FORGE.exe UxiaANecoraDeMontealto.exe
-ren %WORKDIR%\FORGE_d.exe UxiaANecoraDeMontealto_d.exe
+del %WORKDIR%\UxiaANecoraDeMontealto.exe
+del %WORKDIR%\UxiaANecoraDeMontealto_d.exe
+xcopy /y %WORKDIR%\FORGE.exe %WORKDIR%\UxiaANecoraDeMontealto.exe
+xcopy /y %WORKDIR%\FORGE_d.exe %WORKDIR%\UxiaANecoraDeMontealto_d.exe
 
 pause
