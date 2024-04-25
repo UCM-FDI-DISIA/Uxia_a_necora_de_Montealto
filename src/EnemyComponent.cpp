@@ -2,6 +2,8 @@
 #include "MovementComponent.h"
 #include <RigidBody.h>
 #include <Entity.h>
+#include <Serializer.h>
+#include <Transform.h>
 
 const std::string EnemyComponent::id = "EnemyComponent";
 
@@ -13,8 +15,11 @@ EnemyComponent::EnemyComponent() :
 	movementComponent(nullptr),
 	rb(nullptr),
 	p1(forge::Vector3::ZERO),
-	p2(forge::Vector3::ZERO){
-
+	p2(forge::Vector3::ZERO) {
+	serializer(p1, "p1");
+	serializer(p2, "p2");
+	serializer(damage, "damage");
+	serializer(radius, "radius");
 }
 
 EnemyComponent::~EnemyComponent() {
@@ -22,12 +27,13 @@ EnemyComponent::~EnemyComponent() {
 }
 
 void EnemyComponent::update() {
-	/*
-	if (p1.getX() >= movementComponent->getTransform()->getPosition().getX()
-	|| p2.getX() <= movementComponent->getTransform()->getPosition().getX()) {
-		sign = -sign;
-	}
-	float distance = movementComponent->getTransform()->getPosition().getX() - 
+	//if (p1.getX() >= entity->getComponent<Transform>()->getGlobalPosition().getX()
+	//	|| p2.getX() <= entity->getComponent<Transform>()->getGlobalPosition().getX()) {
+	//	sign = -sign;
+	//}
+	//movementComponent->moveHorizontal(1.0f * sign);
+	//std::cout << entity->getComponent<Transform>()->getPosition().getX() << "\n";
+	/*float distance = movementComponent->getTransform()->getPosition().getX() -
 	uxia->movementComponent->transform->getPosition().getX();
 	if((abs)distance <= radius && radius != 0){
 		if(distance >= 0){
@@ -42,23 +48,16 @@ void EnemyComponent::update() {
 	}
 	if(checkAttack()){
 		attack();
-	}
-	*/
+	}*/
 }
 
 bool EnemyComponent::initComponent(ComponentData* data) {
-	//if (entity->hasComponent<RigidBody>() && entity->hasComponent<MovementComponent>()) {
-	//	rb = entity->getComponent<RigidBody>();
-	//	movementComponent = entity->getComponent<MovementComponent>();
-	//	if (data->has("radius")) {
-	//		setRadius(data->get<float>("radius"));
-	//	}
-	//	if (data->has("damage")) {
-	//		setDamage(data->get<float>("damage"));
-	//	}
+	if (entity->hasComponent<RigidBody>() && entity->hasComponent<MovementComponent>()) {
+		rb = entity->getComponent<RigidBody>();
+		movementComponent = entity->getComponent<MovementComponent>();
 		return true;
-	//}
-	//return false;
+	}
+	return false;
 }
 
 bool EnemyComponent::checkAttack() {

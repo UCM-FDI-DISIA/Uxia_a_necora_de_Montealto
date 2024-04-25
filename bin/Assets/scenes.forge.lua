@@ -48,6 +48,41 @@ local scenes = {
 			}
 		},
 
+		Enemy= {
+			components = {
+				Transform= {
+					position = {0,0,-50},
+					rotation = {0,0,0,0},
+					scale = {0.05,0.05,0.05}
+				},
+				RigidBody= {
+					scale = {1,1,1},
+					mass = 1,
+					friction = 1,
+					restitution = 1,
+					shapeType = "Cube",
+					static = false,
+					layer = "ALL"					
+				},
+				Collider= {
+					scale = {1,1,1},
+					shapeType = "Cube"					
+				},
+				MovementComponent = {
+					jumpForce = 1
+				},
+				EnemyComponent = {
+					damage = 1,
+					radius = 2,
+					p1 = {-100, 0, 0},
+					p2 = {100, 0, 0}
+				},
+				Mesh = {
+					mesh = "cigar.mesh";
+				}
+			}
+		},
+
 		Player= {
 			handler = "Player",
 			components = {

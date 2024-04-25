@@ -4,6 +4,7 @@
 #include <Entity.h>
 #include <Serializer.h>
 
+
 const std::string MovementComponent::id = "MovementComponent";
 
 
@@ -13,8 +14,7 @@ MovementComponent::MovementComponent() : transform(nullptr), rigidBody(nullptr),
 	serializer(jumpForce, "jumpForce");
 }
 
-bool MovementComponent::initComponent(ComponentData* data)
-{
+bool MovementComponent::initComponent(ComponentData* data) {
 	jumpDirection.set(0, jumpForce, 0);
 	if (entity->hasComponent<Transform>()&&entity->hasComponent<RigidBody>()) {
 		transform = entity->getComponent<Transform>();
