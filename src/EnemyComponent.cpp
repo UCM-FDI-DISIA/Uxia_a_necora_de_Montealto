@@ -31,7 +31,7 @@ void EnemyComponent::update() {
 	//	|| p2.getX() <= entity->getComponent<Transform>()->getGlobalPosition().getX()) {
 	//	sign = -sign;
 	//}
-	//movementComponent->moveHorizontal(1.0f * sign);
+	movementComponent->moveHorizontal(1.0f * sign);
 	//std::cout << entity->getComponent<Transform>()->getPosition().getX() << "\n";
 	/*float distance = movementComponent->getTransform()->getPosition().getX() -
 	uxia->movementComponent->transform->getPosition().getX();

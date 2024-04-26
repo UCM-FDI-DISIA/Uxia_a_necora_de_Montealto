@@ -10,6 +10,7 @@ private:
 	RigidBody* rigidBody;
 	forge::Vector3 currentDirection;
 	float jumpForce;
+
 	forge::Vector3 jumpDirection;
 public:
 	static const std::string id;
