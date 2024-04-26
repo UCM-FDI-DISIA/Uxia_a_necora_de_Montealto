@@ -61,6 +61,9 @@ bool EnemyComponent::initComponent(ComponentData* data) {
 		//rb->setGravity(forge::Vector3(0, 0, 0));
 		return true;
 	}
+	else {
+		reportError("El componente Enemy requiere un componente Rigidbody y Movement");
+	}
 	return false;
 }
 

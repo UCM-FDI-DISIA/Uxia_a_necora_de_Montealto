@@ -16,6 +16,8 @@
     <ClCompile Include="..\src\KelpComponent.cpp" />
     <ClCompile Include="..\src\MovementComponent.cpp" />
     <ClCompile Include="..\src\PlayerInputComponent.cpp" />
+    <ClCompile Include="HealthComponent.cpp" />
+    <ClCompile Include="PlayerHealthComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\bin\Assets\assets.forge.lua" />
@@ -28,6 +30,8 @@
     <ClInclude Include="..\src\KelpComponent.h" />
     <ClInclude Include="..\src\MovementComponent.h" />
     <ClInclude Include="..\src\PlayerInputComponent.h" />
+    <ClInclude Include="HealthComponent.h" />
+    <ClInclude Include="PlayerHealthComponent.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
