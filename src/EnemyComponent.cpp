@@ -3,13 +3,11 @@
 #include <RigidBody.h>
 #include <Entity.h>
 #include <Serializer.h>
-#include <Transform.h>
 
 const std::string EnemyComponent::id = "EnemyComponent";
 
 
 EnemyComponent::EnemyComponent() :
-	damage(0),
 	radius(0),
 	sign(1),
 	movementComponent(nullptr),
@@ -18,7 +16,6 @@ EnemyComponent::EnemyComponent() :
 	p2(forge::Vector3::ZERO) {
 	serializer(p1, "p1");
 	serializer(p2, "p2");
-	serializer(damage, "damage");
 	serializer(radius, "radius");
 }
 
@@ -27,12 +24,16 @@ EnemyComponent::~EnemyComponent() {
 }
 
 void EnemyComponent::update() {
-	//if (p1.getX() >= entity->getComponent<Transform>()->getGlobalPosition().getX()
-	//	|| p2.getX() <= entity->getComponent<Transform>()->getGlobalPosition().getX()) {
-	//	sign = -sign;
-	//}
-	movementComponent->moveHorizontal(1.0f * sign);
-	//std::cout << entity->getComponent<Transform>()->getPosition().getX() << "\n";
+	/*if (p1.getX() >= transform->getGlobalPosition().getX()) {
+		sign = 1;
+	}
+	if (p2.getX() <= transform->getGlobalPosition().getX()) {
+		sign = -1;
+	}
+	movementComponent->moveHorizontal(0.2f * sign);*/
+	//std::cout << transform->getGlobalPosition().getX() << " " 
+	//	<< transform->getGlobalPosition().getY() << " " 
+	//	<< transform->getGlobalPosition().getZ() << "\n";
 	/*float distance = movementComponent->getTransform()->getPosition().getX() -
 	uxia->movementComponent->transform->getPosition().getX();
 	if((abs)distance <= radius && radius != 0){
@@ -52,9 +53,12 @@ void EnemyComponent::update() {
 }
 
 bool EnemyComponent::initComponent(ComponentData* data) {
-	if (entity->hasComponent<RigidBody>() && entity->hasComponent<MovementComponent>()) {
-		rb = entity->getComponent<RigidBody>();
+	if (entity->hasComponent<Transform>() /*&& entity->hasComponent<RigidBody>()*/
+		&& entity->hasComponent<MovementComponent>()) {
+		transform = entity->getComponent<Transform>();
+		/*rb = entity->getComponent<RigidBody>();*/
 		movementComponent = entity->getComponent<MovementComponent>();
+		//rb->setGravity(forge::Vector3(0, 0, 0));
 		return true;
 	}
 	return false;
@@ -62,7 +66,7 @@ bool EnemyComponent::initComponent(ComponentData* data) {
 
 bool EnemyComponent::checkAttack() {
 	/*
-	if (rb->hasCollidedWith(rb) {
+	if (rb->hasCollidedWith(uxia) {
 		return true;
 	}
 	*/
@@ -70,13 +74,9 @@ bool EnemyComponent::checkAttack() {
 }
 
 void EnemyComponent::attack() {
-	// uxia->healthComponent()->getDamage(damage);
+	// uxia->healthComponent()->damage();
 }
 
 void EnemyComponent::setRadius(float r) {
 	radius = r;
-}
-
-void EnemyComponent::setDamage(float d) {
-	damage = d;
 }

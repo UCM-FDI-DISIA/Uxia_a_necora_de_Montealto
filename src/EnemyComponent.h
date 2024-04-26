@@ -1,6 +1,7 @@
 #pragma once
 #include <Component.h>
 #include <Vector3.h>
+#include <Transform.h>
 
 class MovementComponent;
 class RigidBody;
@@ -11,11 +12,11 @@ private:
 	forge::Vector3 p2;
 	float sign;
 	float radius;
-	float damage;
 	//HealthComponent* healthComponent;
 	MovementComponent* movementComponent;
 	//AttackComponent* attackComponent;
 	RigidBody* rb;
+	Transform* transform;
 public:
 
 	static const std::string id;
@@ -44,6 +45,5 @@ public:
 
 	void setRadius(float r);
 
-	void setDamage(float d);
 };
 
