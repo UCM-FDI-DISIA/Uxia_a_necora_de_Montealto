@@ -5,9 +5,16 @@
 
 const std::string HealthComponent::id = "HealthComponent";
 
-HealthComponent::HealthComponent()
-{
+HealthComponent::HealthComponent() :
+	maxHealth(1),
+	health(1) {
 	serializer(maxHealth, "health");
+	health = maxHealth;
+}
+
+void HealthComponent::onEnabled()
+{
+	health = maxHealth;
 }
 
 bool HealthComponent::initComponent(ComponentData* data)

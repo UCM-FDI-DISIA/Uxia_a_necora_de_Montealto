@@ -12,6 +12,7 @@ public:
 	static const std::string id;
 
 	HealthComponent();
+	void onEnabled() override;
 	bool initComponent(ComponentData* data) override;
 	virtual void damage(int damage);
 };

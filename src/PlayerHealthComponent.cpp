@@ -2,14 +2,20 @@
 #include <ComponentData.h>
 #include <Entity.h>
 #include <Serializer.h>
+#include <SceneManager.h>
+#include <Transform.h>
+#include <Random.h>
 
 const std::string PlayerHealthComponent::id = "PlayerHealthComponent";
 
 PlayerHealthComponent::PlayerHealthComponent(): 
 	maxKelpsSpawned(10), 
 	transform(nullptr) {
+	health = 0;
+	maxHealth = 99;
 	serializer(kelpBlueprint, "kelpBlueprint");
 	serializer(maxKelpsSpawned, "kelpsSpawnLimit");
+	serializer(maxHealth, "maxKelp");
 }
 
 bool PlayerHealthComponent::initComponent(ComponentData* data)
@@ -38,10 +44,20 @@ void PlayerHealthComponent::damage(int damage){
 }
 
 void PlayerHealthComponent::dropKelps() {
-	if (kelpBlueprint != "") {
-
-		for (int i = 0; i < std::min(health, maxKelpsSpawned); i++) {
-			//spawnear las algas
+	forge::Random& random = *forge::Random::GetInstance();
+	for (int i = 0; i < std::min(health, maxKelpsSpawned); i++) {
+		forge::Vector3 newDelta = random.getRandomVector();
+		newDelta.setZ(0);
+		if (sceneManager.instantiateBlueprint("Kelp", transform->getGlobalPosition() + (newDelta *random.generateRange(1.0f, 5.0f))) == nullptr) {
+			reportError("No se ha podido instanciar el Kelp");
+			return;
 		}
+	}
+}
+
+void PlayerHealthComponent::addKelp(int kelp) {
+	health += kelp;
+	if (health > maxHealth) {
+		health = maxHealth;
 	}
 }

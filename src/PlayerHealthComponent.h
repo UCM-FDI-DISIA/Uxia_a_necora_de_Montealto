@@ -19,6 +19,7 @@ public:
 	bool initComponent(ComponentData* data) override;
 	void damage(int damage) override;
 	void dropKelps();
+	void addKelp(int kelp);
 };
 
 #endif //PLAYER_HEALTH_COMPONENT_H_
