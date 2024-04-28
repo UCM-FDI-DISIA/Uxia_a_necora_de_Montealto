@@ -30,10 +30,10 @@
     <ClCompile Include="..\src\EnemyComponent.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="HealthComponent.cpp">
+    <ClCompile Include="..\src\HealthComponent.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="PlayerHealthComponent.cpp">
+    <ClCompile Include="..\src\PlayerHealthComponent.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
@@ -64,10 +64,10 @@
     <ClInclude Include="..\src\EnemyComponent.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="HealthComponent.h">
+    <ClInclude Include="..\src\HealthComponent.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="PlayerHealthComponent.h">
+    <ClInclude Include="..\src\PlayerHealthComponent.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
