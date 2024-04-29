@@ -12,6 +12,8 @@ private:
 	forge::Vector3 p2;
 	float sign;
 	float radius;
+	float speed;
+	bool edge;
 	//HealthComponent* healthComponent;
 	MovementComponent* movementComponent;
 	//AttackComponent* attackComponent;
@@ -30,6 +32,8 @@ public:
 	/// o sigue al jugador si esta en su rango y comprueba si el enemigo debe atacar al jugador
 	/// </summary>
 	void update() override;
+
+	void fixedUpdate() override;
 
 	bool initComponent(ComponentData* data) override;
 

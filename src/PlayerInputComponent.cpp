@@ -3,13 +3,16 @@
 #include <Entity.h>
 #include <Vector2.h>
 #include "MovementComponent.h"
-#include "ForgeError.h"
+#include <ForgeError.h>
+#include <Serializer.h>
 
 const std::string PlayerInputComponent::id = "PlayerInputComponent";
 
 PlayerInputComponent::PlayerInputComponent(): 
 	input(*Input::GetInstance()),
-	movement(nullptr) {
+	movement(nullptr),
+	speed(1){
+	serializer(speed, "speed");
 }
 
 bool PlayerInputComponent::initComponent(ComponentData* data)
@@ -27,10 +30,10 @@ bool PlayerInputComponent::initComponent(ComponentData* data)
 void PlayerInputComponent::update() {
 	//Movimiento A / D
 
-	if (input.keyDown(K_A)) {
+	if (input.keyPressed(K_A)) {
 		movement->moveHorizontal(-speed);
 	}
-	else if (input.keyDown(K_D)) {
+	else if (input.keyPressed(K_D)) {
 		movement->moveHorizontal(speed);
 	}
 

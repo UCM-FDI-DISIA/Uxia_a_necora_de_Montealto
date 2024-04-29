@@ -7,7 +7,7 @@ class PlayerInputComponent : public Component {
 private:
 	Input& input;
 	MovementComponent* movement;
-	float speed = 5;
+	float speed;
 public:
 	static const std::string id;
 

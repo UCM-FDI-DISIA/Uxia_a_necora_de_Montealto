@@ -13,10 +13,13 @@ EnemyComponent::EnemyComponent() :
 	movementComponent(nullptr),
 	rb(nullptr),
 	p1(forge::Vector3::ZERO),
-	p2(forge::Vector3::ZERO) {
+	p2(forge::Vector3::ZERO),
+	speed(0),
+	edge(false){
 	serializer(p1, "p1");
 	serializer(p2, "p2");
 	serializer(radius, "radius");
+	serializer(speed, "speed");
 }
 
 EnemyComponent::~EnemyComponent() {
@@ -24,13 +27,16 @@ EnemyComponent::~EnemyComponent() {
 }
 
 void EnemyComponent::update() {
-	/*if (p1.getX() >= transform->getGlobalPosition().getX()) {
+	if (p1.getX() >= transform->getGlobalPosition().getX()) {
+		edge = true;
+		rb->setPositionX(p1.getX());
 		sign = 1;
 	}
 	if (p2.getX() <= transform->getGlobalPosition().getX()) {
+		edge = true;
+		rb->setPositionX(p2.getX());
 		sign = -1;
 	}
-	movementComponent->moveHorizontal(0.2f * sign);*/
 	//std::cout << transform->getGlobalPosition().getX() << " " 
 	//	<< transform->getGlobalPosition().getY() << " " 
 	//	<< transform->getGlobalPosition().getZ() << "\n";
@@ -52,13 +58,22 @@ void EnemyComponent::update() {
 	}*/
 }
 
+void EnemyComponent::fixedUpdate() {
+	if (edge) {
+		rb->clearForces();
+		edge = false;
+		movementComponent->moveHorizontal(speed * sign);
+	}
+}
+
 bool EnemyComponent::initComponent(ComponentData* data) {
-	if (entity->hasComponent<Transform>() /*&& entity->hasComponent<RigidBody>()*/
+	if (entity->hasComponent<Transform>() && entity->hasComponent<RigidBody>()
 		&& entity->hasComponent<MovementComponent>()) {
 		transform = entity->getComponent<Transform>();
-		/*rb = entity->getComponent<RigidBody>();*/
+		rb = entity->getComponent<RigidBody>();
 		movementComponent = entity->getComponent<MovementComponent>();
-		//rb->setGravity(forge::Vector3(0, 0, 0));
+		rb->setGravity(forge::Vector3(0, 0, 0));
+		movementComponent->moveHorizontal(speed * sign);
 		return true;
 	}
 	else {
