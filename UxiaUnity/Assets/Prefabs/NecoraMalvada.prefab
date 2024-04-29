@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2679488353970328732}
   - component: {fileID: 8711551998671862997}
   - component: {fileID: 4427605772344164507}
+  - component: {fileID: -1236012030978363157}
   m_Layer: 6
   m_Name: NecoraMalvada
   m_TagString: NecoraMalvada
@@ -137,3 +138,20 @@ MonoBehaviour:
       Value: false
     - Key: layer
       Value: '"Player"'
+--- !u!114 &-1236012030978363157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6580519648982715476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9daf131188eb7ff46ab57f08fd355f2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  componentName: Mesh
+  values:
+    _serializedList:
+    - Key: mesh
+      Value: '"Cylinder.mesh"'

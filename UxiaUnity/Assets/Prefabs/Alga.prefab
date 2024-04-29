@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5745490118475935503}
   - component: {fileID: 9167792951262095991}
   - component: {fileID: -9155370994778436337}
+  - component: {fileID: -4134916416779935721}
   m_Layer: 7
   m_Name: Alga
   m_TagString: Alga
@@ -127,3 +128,20 @@ MonoBehaviour:
       Value: '{0.4691,1,1}'
     - Key: shapeType
       Value: '"Cylinder"'
+--- !u!114 &-4134916416779935721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401093723340260609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9daf131188eb7ff46ab57f08fd355f2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  componentName: Mesh
+  values:
+    _serializedList:
+    - Key: mesh
+      Value: '"Cylinder.mesh"'

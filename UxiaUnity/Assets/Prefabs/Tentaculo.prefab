@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 793441880655284859}
   - component: {fileID: 2838953986226852085}
   - component: {fileID: 8601120105044831784}
+  - component: {fileID: -5890349885665105692}
+  - component: {fileID: 6668471608129467167}
   m_Layer: 0
   m_Name: Tentaculo
   m_TagString: Untagged
@@ -107,3 +109,49 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &-5890349885665105692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3236233283741631247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9daf131188eb7ff46ab57f08fd355f2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  componentName: Rigidbody
+  values:
+    _serializedList:
+    - Key: scale
+      Value: '{1,1,1}'
+    - Key: mass
+      Value: 1
+    - Key: friction
+      Value: 1
+    - Key: restitution
+      Value: 1
+    - Key: shapeType
+      Value: '"Cube"'
+    - Key: static
+      Value: false
+    - Key: layer
+      Value: '"Player"'
+--- !u!114 &6668471608129467167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3236233283741631247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9daf131188eb7ff46ab57f08fd355f2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  componentName: Mesh
+  values:
+    _serializedList:
+    - Key: mesh
+      Value: '"Cylinder.mesh"'

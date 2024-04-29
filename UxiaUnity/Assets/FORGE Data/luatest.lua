@@ -12,6 +12,9 @@ local prefabs = {
 			Collider= {
 				scale = {0.5,1.124932,1},
 				shapeType = "Cube"				
+			},
+			Mesh= {
+				mesh = "Cylinder.mesh"				
 			}
 		}
 	}
@@ -28,6 +31,9 @@ local prefabs = {
 			Collider= {
 				scale = {0.4691,1,1},
 				shapeType = "Cylinder"				
+			},
+			Mesh= {
+				mesh = "Cylinder.mesh"				
 			}
 		}
 	}
@@ -49,6 +55,9 @@ local prefabs = {
 				shapeType = "Cube",
 				static = false,
 				layer = "Player"				
+			},
+			Mesh= {
+				mesh = "Cylinder.mesh"				
 			}
 		}
 	}
@@ -59,6 +68,18 @@ local prefabs = {
 				position = {112.31,-8.4,-0.5006065},
 				rotation = {0,0,0,1},
 				scale = {3,9,1}
+			},
+			Rigidbody= {
+				scale = {1,1,1},
+				mass = 1,
+				friction = 1,
+				restitution = 1,
+				shapeType = "Cube",
+				static = false,
+				layer = "Player"				
+			},
+			Mesh= {
+				mesh = "Cylinder.mesh"				
 			}
 		}
 	}
@@ -104,6 +125,9 @@ local scenes = {
 					shapeType = "Cube",
 					static = false,
 					layer = "ALL"					
+				},
+				Mesh= {
+					mesh = "Cylinder.mesh"					
 				}
 			}
 		}
@@ -840,6 +864,9 @@ local scenes = {
 					Collider= {
 						scale = {18.24046,44.89019,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -854,6 +881,9 @@ local scenes = {
 					Collider= {
 						scale = {22.46497,13.35052,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -868,6 +898,9 @@ local scenes = {
 					Collider= {
 						scale = {32.99981,15.58366,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -882,6 +915,9 @@ local scenes = {
 					Collider= {
 						scale = {38.716,26.04071,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -896,6 +932,9 @@ local scenes = {
 					Collider= {
 						scale = {23.28676,30.04056,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -910,6 +949,9 @@ local scenes = {
 					Collider= {
 						scale = {17.28721,11.75787,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -924,6 +966,9 @@ local scenes = {
 					Collider= {
 						scale = {30.14191,25.75562,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -938,6 +983,9 @@ local scenes = {
 					Collider= {
 						scale = {40.42633,40.89478,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -952,6 +1000,9 @@ local scenes = {
 					Collider= {
 						scale = {10.30046,18.32828,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -966,6 +1017,9 @@ local scenes = {
 					Collider= {
 						scale = {20.53343,18.49995,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -980,6 +1034,9 @@ local scenes = {
 					Collider= {
 						scale = {9.725895,23.07129,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -994,6 +1051,9 @@ local scenes = {
 					Collider= {
 						scale = {7.107291,28.21388,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1008,6 +1068,9 @@ local scenes = {
 					Collider= {
 						scale = {24.36362,30.49787,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1022,6 +1085,9 @@ local scenes = {
 					Collider= {
 						scale = {16.53437,1.933702,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1036,6 +1102,9 @@ local scenes = {
 					Collider= {
 						scale = {22.247,2.050476,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1050,6 +1119,9 @@ local scenes = {
 					Collider= {
 						scale = {17.38852,1.933682,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1064,6 +1136,9 @@ local scenes = {
 					Collider= {
 						scale = {22.60653,2.504776,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1078,6 +1153,9 @@ local scenes = {
 					Collider= {
 						scale = {31.46238,4.218759,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1092,6 +1170,9 @@ local scenes = {
 					Collider= {
 						scale = {9.792862,5.361515,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1106,6 +1187,9 @@ local scenes = {
 					Collider= {
 						scale = {3.793755,5.933552,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1120,6 +1204,9 @@ local scenes = {
 					Collider= {
 						scale = {14.53313,1.648048,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1134,6 +1221,9 @@ local scenes = {
 					Collider= {
 						scale = {9.677046,24.50104,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1148,6 +1238,9 @@ local scenes = {
 					Collider= {
 						scale = {7.391328,28.50129,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1162,6 +1255,9 @@ local scenes = {
 					Collider= {
 						scale = {7.391328,23.07464,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1176,6 +1272,9 @@ local scenes = {
 					Collider= {
 						scale = {7.391328,23.07464,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1190,6 +1289,9 @@ local scenes = {
 					Collider= {
 						scale = {7.391328,29.07405,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1204,6 +1306,9 @@ local scenes = {
 					Collider= {
 						scale = {2.535225,29.07405,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1218,6 +1323,9 @@ local scenes = {
 					Collider= {
 						scale = {2.535225,29.07405,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1232,6 +1340,9 @@ local scenes = {
 					Collider= {
 						scale = {2.535225,29.07405,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1246,6 +1357,9 @@ local scenes = {
 					Collider= {
 						scale = {2.535225,25.36129,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1260,6 +1374,9 @@ local scenes = {
 					Collider= {
 						scale = {13.39052,31.36081,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1274,6 +1391,9 @@ local scenes = {
 					Collider= {
 						scale = {11.10504,36.50399,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1288,6 +1408,9 @@ local scenes = {
 					Collider= {
 						scale = {12.8189,42.50159,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1302,6 +1425,9 @@ local scenes = {
 					Collider= {
 						scale = {7.105398,47.07051,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1316,6 +1442,9 @@ local scenes = {
 					Collider= {
 						scale = {7.676759,45.35551,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1330,6 +1459,9 @@ local scenes = {
 					Collider= {
 						scale = {19.96005,29.9301,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1344,6 +1476,9 @@ local scenes = {
 					Collider= {
 						scale = {27.97696,21.07378,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1358,6 +1493,9 @@ local scenes = {
 					Collider= {
 						scale = {1,18.74993,1},
 						shapeType = "Cube"						
+					},
+					Mesh= {
+						mesh = "Cube.mesh"						
 					}
 				}
 			}
@@ -1485,6 +1623,9 @@ local scenes = {
 							position = {50.8516,-40.29,0},
 							rotation = {0,0,0,1},
 							scale = {4.581482,1,1}
+						},
+						Mesh= {
+							mesh = "Cube.mesh"							
 						}
 					}
 				}
@@ -1495,6 +1636,9 @@ local scenes = {
 							position = {91.3516,-40.29,0},
 							rotation = {0,0,0,1},
 							scale = {4.581482,1,1}
+						},
+						Mesh= {
+							mesh = "Cube.mesh"							
 						}
 					}
 				}
@@ -1505,6 +1649,9 @@ local scenes = {
 							position = {112.3516,1.1,0},
 							rotation = {0,0,0,1},
 							scale = {4.581482,1,1}
+						},
+						Mesh= {
+							mesh = "Cube.mesh"							
 						}
 					}
 				}
@@ -1515,6 +1662,9 @@ local scenes = {
 							position = {126.6016,-40.29,0},
 							rotation = {0,0,0,1},
 							scale = {4.581482,1,1}
+						},
+						Mesh= {
+							mesh = "Cube.mesh"							
 						}
 					}
 				}
@@ -1525,6 +1675,9 @@ local scenes = {
 							position = {134.6016,-40.29,0},
 							rotation = {0,0,0,1},
 							scale = {4.581482,1,1}
+						},
+						Mesh= {
+							mesh = "Cube.mesh"							
 						}
 					}
 				}
@@ -1535,6 +1688,9 @@ local scenes = {
 							position = {143.8516,-40.29,0},
 							rotation = {0,0,0,1},
 							scale = {4.581482,1,1}
+						},
+						Mesh= {
+							mesh = "Cube.mesh"							
 						}
 					}
 				}
@@ -1545,6 +1701,9 @@ local scenes = {
 							position = {152.6016,-40.29,0},
 							rotation = {0,0,0,1},
 							scale = {4.581482,1,1}
+						},
+						Mesh= {
+							mesh = "Cube.mesh"							
 						}
 					}
 				}
@@ -1555,6 +1714,9 @@ local scenes = {
 							position = {152.6016,-40.29,0},
 							rotation = {0,0,0,1},
 							scale = {4.581482,1,1}
+						},
+						Mesh= {
+							mesh = "Cube.mesh"							
 						}
 					}
 				}
@@ -1565,6 +1727,9 @@ local scenes = {
 							position = {182.1016,-6.290001,0},
 							rotation = {0,0,0.7071068,0.7071068},
 							scale = {4.581482,1,1}
+						},
+						Mesh= {
+							mesh = "Cube.mesh"							
 						}
 					}
 				}
@@ -1575,6 +1740,9 @@ local scenes = {
 							position = {178.8516,8.709999,0},
 							rotation = {0,0,0,1},
 							scale = {4.581482,1,1}
+						},
+						Mesh= {
+							mesh = "Cube.mesh"							
 						}
 					}
 				}
