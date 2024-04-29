@@ -1,17 +1,14 @@
-using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
 using UnityCodeGen;
 using UnityEditor;
-using UnityEditor.PackageManager.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 [Generator]
 public class LuaWriter : MonoBehaviour, ICodeGenerator
 {
-    private string fileName = "scenes.forge.lua";
+    private string fileName = "luaTest.lua";
     private string folderPath = "Assets/FORGE Data";
 
     Dictionary<string, int> prefabData = new Dictionary<string, int> ();
@@ -63,10 +60,8 @@ public class LuaWriter : MonoBehaviour, ICodeGenerator
                 //Sacar componentes del padre components
                 SaveGameObjectAndChildren(obj);
            }
-           data = data.Remove(data.Length - 2);
-            data += "\n";
            //Decrementamos
-            i--; // = 1
+           i--; // = 1
            Tabulate();
            data += "},\n";
            
@@ -120,7 +115,7 @@ public class LuaWriter : MonoBehaviour, ICodeGenerator
             int repetitions = (prefabData[PrefabUtility.GetCorrespondingObjectFromOriginalSource(obj).name] += 1);
             obj.name = PrefabUtility.GetCorrespondingObjectFromOriginalSource(obj).name + repetitions;
             data += obj.name + "= {\n";
-            i++; // = x +1
+            i++; // = x + 1
             Tabulate();
             data += "blueprint = " + "\"" + PrefabUtility.GetCorrespondingObjectFromOriginalSource(obj).name+ "\",\n";                        
             Tabulate();
@@ -139,31 +134,19 @@ public class LuaWriter : MonoBehaviour, ICodeGenerator
             WriteData(obj);
             //Objetos hijos
             // = x + 1
-            bool children = false;
-            if(obj.transform.childCount > 0)
-            {
-                children = true;
-            }
-            else
-            {
-                data = data.Remove(data.Length - 2);
-                data += "\n";
-            }
             for (int i = 0; i < obj.transform.childCount; i++)
             {
                 Tabulate();
                 SaveGameObjectAndChildren(obj.transform.GetChild(i).gameObject);
-                children = true;
-            }
-            if (children)
-            {
-                data = data.Remove(data.Length - 2);
-                data += "\n";
             }
             i--; // = x + 1
         }
         Tabulate();
-        data += "},\n";
+        data += "}\n";
+        i--;// = x
+
+        i++;
+
     }
 
     private void WriteData(GameObject obj)
@@ -171,8 +154,7 @@ public class LuaWriter : MonoBehaviour, ICodeGenerator
         //Nombre del GameObject
         data += "\n";
         Tabulate();
-        string name = String.Concat(obj.name.Where(c => !Char.IsWhiteSpace(c)));
-        data += name + "= {\n";
+        data += obj.name + "= {\n";
 
         //Componentes
         i++; // = x + 1
@@ -193,10 +175,10 @@ public class LuaWriter : MonoBehaviour, ICodeGenerator
         }
         Tabulate();
         data += "components = {\n";
+        //Transform
         i++;// = x + 2
-        
-        //Transform      
         WriteTransform(obj);
+        //eotransform
 
         foreach (FORGEComponent component in obj.GetComponents(typeof(FORGEComponent)))
         {
@@ -219,7 +201,7 @@ public class LuaWriter : MonoBehaviour, ICodeGenerator
         data = data.Remove(data.Length - 2);
         data += "\n";
         Tabulate();
-        data += "},\n";
+        data += "}\n";
     }
 
     /// <summary>
@@ -245,10 +227,8 @@ public class LuaWriter : MonoBehaviour, ICodeGenerator
         context.AddCode(fileName, data);
     }
 
-    /// <summary>
-    /// Metodo para escribir el componente transform de un objeto en el archivo de Lua
-    /// </summary>
     public void WriteTransform(GameObject obj){
+        
         var tf = obj.GetComponent<Transform>();
         Tabulate();
         data += tf.GetType() + "= {";
@@ -268,6 +248,7 @@ public class LuaWriter : MonoBehaviour, ICodeGenerator
         data += "scale = " + "{" + tf.localScale.x.ToString(rightFormat) +
             "," + tf.localScale.y.ToString(rightFormat) +
             "," + tf.localScale.z.ToString(rightFormat) + "}" + "\n";
+
         i--;// = x + 2
         Tabulate();
         data += "},\n";

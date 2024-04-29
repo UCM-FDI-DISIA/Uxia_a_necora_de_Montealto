@@ -1,8 +1,8 @@
 local prefabs = {
 
-	Cigarro1= {
+	Cigarro_3= {
 		handler = "Cigarro",
-		group = "Objects",
+		group = "",
 		components = {
 			Transform= {
 				position = {26.65192,-25.68632,0},
@@ -14,11 +14,11 @@ local prefabs = {
 				shapeType = "Cube"				
 			}
 		}
-	},
+	}
 
-	Alga1= {
+	Alga_7= {
 		handler = "Alga",
-		group = "Objects",
+		group = "",
 		components = {
 			Transform= {
 				position = {21.01625,-3.271324,0},
@@ -30,11 +30,11 @@ local prefabs = {
 				shapeType = "Cylinder"				
 			}
 		}
-	},
+	}
 
-	NecoraMalvada1= {
+	NecoraMalvada_1= {
 		handler = "NecoraMalvada",
-		group = "Enemies",
+		group = "",
 		components = {
 			Transform= {
 				position = {39.27,-23.63,0},
@@ -51,13 +51,23 @@ local prefabs = {
 				layer = "Player"				
 			}
 		}
-	},
+	}
+
+	Tentaculo= {
+		components = {
+			Transform= {
+				position = {112.31,-8.4,-0.5006065},
+				rotation = {0,0,0,1},
+				scale = {3,9,1}
+			}
+		}
+	}
 }
 
 local scenes = {
 	MapScene = {
 
-		MainCamera= {
+		Main Camera= {
 			handler = "MainCamera",
 			components = {
 				Transform= {
@@ -66,9 +76,9 @@ local scenes = {
 					scale = {1,1,1}
 				}
 			}
-		},
+		}
 
-		DirectionalLight= {
+		Directional Light= {
 			components = {
 				Transform= {
 					position = {0,3,0},
@@ -76,7 +86,7 @@ local scenes = {
 					scale = {1,1,1}
 				}
 			}
-		},
+		}
 
 		Player= {
 			handler = "Player",
@@ -96,7 +106,7 @@ local scenes = {
 					layer = "ALL"					
 				}
 			}
-		},
+		}
 
 		Cigarros= {
 			components = {
@@ -105,7 +115,7 @@ local scenes = {
 					rotation = {0,0,0,1},
 					scale = {0.8751596,0.8751596,0.8751596}
 				}
-			},
+			}
 			
 			Cigarro1= {
 				blueprint = "Cigarro",
@@ -116,7 +126,7 @@ local scenes = {
 						scale = {0.5,1.124932,1}
 					}
 				}
-			},
+			}
 			
 			Cigarro2= {
 				blueprint = "Cigarro",
@@ -127,7 +137,7 @@ local scenes = {
 						scale = {0.5,1.124932,1}
 					}
 				}
-			},
+			}
 			
 			Cigarro3= {
 				blueprint = "Cigarro",
@@ -138,7 +148,7 @@ local scenes = {
 						scale = {0.5,1.124932,1}
 					}
 				}
-			},
+			}
 			
 			Cigarro4= {
 				blueprint = "Cigarro",
@@ -150,7 +160,7 @@ local scenes = {
 					}
 				}
 			}
-		},
+		}
 
 		Algas= {
 			components = {
@@ -159,7 +169,7 @@ local scenes = {
 					rotation = {0,0,0,1},
 					scale = {0.8751596,0.8751596,0.8751596}
 				}
-			},
+			}
 			
 			Alga1= {
 				blueprint = "Alga",
@@ -170,7 +180,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga2= {
 				blueprint = "Alga",
@@ -181,7 +191,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga3= {
 				blueprint = "Alga",
@@ -192,7 +202,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga4= {
 				blueprint = "Alga",
@@ -203,7 +213,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga5= {
 				blueprint = "Alga",
@@ -214,7 +224,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga6= {
 				blueprint = "Alga",
@@ -225,7 +235,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga7= {
 				blueprint = "Alga",
@@ -236,7 +246,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga8= {
 				blueprint = "Alga",
@@ -247,7 +257,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga9= {
 				blueprint = "Alga",
@@ -258,7 +268,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga10= {
 				blueprint = "Alga",
@@ -269,7 +279,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga11= {
 				blueprint = "Alga",
@@ -280,7 +290,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga12= {
 				blueprint = "Alga",
@@ -291,7 +301,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga13= {
 				blueprint = "Alga",
@@ -302,7 +312,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga14= {
 				blueprint = "Alga",
@@ -313,7 +323,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga15= {
 				blueprint = "Alga",
@@ -324,7 +334,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga16= {
 				blueprint = "Alga",
@@ -335,7 +345,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga17= {
 				blueprint = "Alga",
@@ -346,7 +356,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga18= {
 				blueprint = "Alga",
@@ -357,7 +367,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga19= {
 				blueprint = "Alga",
@@ -368,7 +378,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga20= {
 				blueprint = "Alga",
@@ -379,7 +389,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga21= {
 				blueprint = "Alga",
@@ -390,7 +400,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga22= {
 				blueprint = "Alga",
@@ -401,7 +411,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga23= {
 				blueprint = "Alga",
@@ -412,7 +422,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga24= {
 				blueprint = "Alga",
@@ -423,7 +433,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga25= {
 				blueprint = "Alga",
@@ -434,7 +444,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga26= {
 				blueprint = "Alga",
@@ -445,7 +455,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga27= {
 				blueprint = "Alga",
@@ -456,7 +466,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga28= {
 				blueprint = "Alga",
@@ -467,7 +477,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga29= {
 				blueprint = "Alga",
@@ -478,7 +488,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga30= {
 				blueprint = "Alga",
@@ -489,7 +499,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga31= {
 				blueprint = "Alga",
@@ -500,7 +510,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga32= {
 				blueprint = "Alga",
@@ -511,7 +521,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga33= {
 				blueprint = "Alga",
@@ -522,7 +532,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga34= {
 				blueprint = "Alga",
@@ -533,7 +543,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga35= {
 				blueprint = "Alga",
@@ -544,7 +554,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga36= {
 				blueprint = "Alga",
@@ -555,7 +565,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga37= {
 				blueprint = "Alga",
@@ -566,7 +576,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga38= {
 				blueprint = "Alga",
@@ -577,7 +587,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga39= {
 				blueprint = "Alga",
@@ -588,7 +598,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga40= {
 				blueprint = "Alga",
@@ -599,7 +609,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga41= {
 				blueprint = "Alga",
@@ -610,7 +620,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga42= {
 				blueprint = "Alga",
@@ -621,7 +631,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga43= {
 				blueprint = "Alga",
@@ -632,7 +642,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga44= {
 				blueprint = "Alga",
@@ -643,7 +653,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga45= {
 				blueprint = "Alga",
@@ -654,7 +664,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga46= {
 				blueprint = "Alga",
@@ -665,7 +675,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga47= {
 				blueprint = "Alga",
@@ -676,7 +686,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga48= {
 				blueprint = "Alga",
@@ -687,7 +697,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga49= {
 				blueprint = "Alga",
@@ -698,7 +708,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga50= {
 				blueprint = "Alga",
@@ -709,7 +719,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga51= {
 				blueprint = "Alga",
@@ -720,7 +730,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga52= {
 				blueprint = "Alga",
@@ -731,7 +741,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga53= {
 				blueprint = "Alga",
@@ -742,7 +752,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga54= {
 				blueprint = "Alga",
@@ -753,7 +763,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga55= {
 				blueprint = "Alga",
@@ -764,7 +774,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga56= {
 				blueprint = "Alga",
@@ -775,7 +785,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga57= {
 				blueprint = "Alga",
@@ -786,7 +796,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga58= {
 				blueprint = "Alga",
@@ -797,7 +807,7 @@ local scenes = {
 						scale = {0.4691,1,1}
 					}
 				}
-			},
+			}
 			
 			Alga59= {
 				blueprint = "Alga",
@@ -809,7 +819,7 @@ local scenes = {
 					}
 				}
 			}
-		},
+		}
 
 		Terreno= {
 			components = {
@@ -818,7 +828,7 @@ local scenes = {
 					rotation = {0,0,0,1},
 					scale = {0.8751596,0.8751596,0.8751596}
 				}
-			},
+			}
 			
 			Ground= {
 				components = {
@@ -832,7 +842,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_1= {
 				components = {
@@ -846,7 +856,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_2= {
 				components = {
@@ -860,7 +870,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_3= {
 				components = {
@@ -874,7 +884,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_15= {
 				components = {
@@ -888,7 +898,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_18= {
 				components = {
@@ -902,7 +912,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_19= {
 				components = {
@@ -916,7 +926,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_25= {
 				components = {
@@ -930,7 +940,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_4= {
 				components = {
@@ -944,7 +954,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_5= {
 				components = {
@@ -958,7 +968,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_6= {
 				components = {
@@ -972,7 +982,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_7= {
 				components = {
@@ -986,7 +996,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_9= {
 				components = {
@@ -1000,7 +1010,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_8= {
 				components = {
@@ -1014,7 +1024,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_10= {
 				components = {
@@ -1028,7 +1038,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_11= {
 				components = {
@@ -1042,7 +1052,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_16= {
 				components = {
@@ -1056,7 +1066,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_17= {
 				components = {
@@ -1070,7 +1080,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_13= {
 				components = {
@@ -1084,7 +1094,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_14= {
 				components = {
@@ -1098,7 +1108,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_12= {
 				components = {
@@ -1112,7 +1122,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_20= {
 				components = {
@@ -1126,7 +1136,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_21= {
 				components = {
@@ -1140,7 +1150,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_22= {
 				components = {
@@ -1154,7 +1164,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_23= {
 				components = {
@@ -1168,7 +1178,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_24= {
 				components = {
@@ -1182,7 +1192,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_26= {
 				components = {
@@ -1196,7 +1206,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_27= {
 				components = {
@@ -1210,7 +1220,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_28= {
 				components = {
@@ -1224,7 +1234,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_29= {
 				components = {
@@ -1238,7 +1248,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_31= {
 				components = {
@@ -1252,7 +1262,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_32= {
 				components = {
@@ -1266,7 +1276,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_33= {
 				components = {
@@ -1280,7 +1290,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_34= {
 				components = {
@@ -1294,7 +1304,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_30= {
 				components = {
@@ -1308,7 +1318,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_35= {
 				components = {
@@ -1322,7 +1332,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Ground_36= {
 				components = {
@@ -1336,7 +1346,7 @@ local scenes = {
 						shapeType = "Cube"						
 					}
 				}
-			},
+			}
 			
 			Cube= {
 				components = {
@@ -1351,17 +1361,7 @@ local scenes = {
 					}
 				}
 			}
-		},
-
-		Cube= {
-			components = {
-				Transform= {
-					position = {138.867,-6.2949,3.995},
-					rotation = {0,0,1,0},
-					scale = {259.3221,69.08666,0.7470363}
-				}
-			}
-		},
+		}
 
 		NecorasMalvadas= {
 			components = {
@@ -1370,7 +1370,7 @@ local scenes = {
 					rotation = {0,0,0,1},
 					scale = {1,1,1}
 				}
-			},
+			}
 			
 			NecoraMalvada1= {
 				blueprint = "NecoraMalvada",
@@ -1381,7 +1381,7 @@ local scenes = {
 						scale = {1,1,1}
 					}
 				}
-			},
+			}
 			
 			NecoraMalvada2= {
 				blueprint = "NecoraMalvada",
@@ -1392,7 +1392,7 @@ local scenes = {
 						scale = {1,1,1}
 					}
 				}
-			},
+			}
 			
 			NecoraMalvada3= {
 				blueprint = "NecoraMalvada",
@@ -1403,7 +1403,7 @@ local scenes = {
 						scale = {1,1,1}
 					}
 				}
-			},
+			}
 			
 			NecoraMalvada4= {
 				blueprint = "NecoraMalvada",
@@ -1414,7 +1414,7 @@ local scenes = {
 						scale = {1,1,1}
 					}
 				}
-			},
+			}
 			
 			NecoraMalvada5= {
 				blueprint = "NecoraMalvada",
@@ -1425,7 +1425,7 @@ local scenes = {
 						scale = {1,1,1}
 					}
 				}
-			},
+			}
 			
 			NecoraMalvada6= {
 				blueprint = "NecoraMalvada",
@@ -1436,7 +1436,7 @@ local scenes = {
 						scale = {1,1,1}
 					}
 				}
-			},
+			}
 			
 			NecoraMalvada7= {
 				blueprint = "NecoraMalvada",
@@ -1447,7 +1447,7 @@ local scenes = {
 						scale = {1,1,1}
 					}
 				}
-			},
+			}
 			
 			NecoraMalvada8= {
 				blueprint = "NecoraMalvada",
@@ -1459,7 +1459,7 @@ local scenes = {
 					}
 				}
 			}
-		},
+		}
 
 		Tentaculos= {
 			components = {
@@ -1468,7 +1468,7 @@ local scenes = {
 					rotation = {0,0,0,1},
 					scale = {1,1,1}
 				}
-			},
+			}
 			
 			Huecos= {
 				components = {
@@ -1477,7 +1477,7 @@ local scenes = {
 						rotation = {0,0,0,1},
 						scale = {1,1,1}
 					}
-				},
+				}
 				
 				HuecoTentaculo= {
 					components = {
@@ -1487,7 +1487,7 @@ local scenes = {
 							scale = {4.581482,1,1}
 						}
 					}
-				},
+				}
 				
 				HuecoTentaculo_1= {
 					components = {
@@ -1497,7 +1497,7 @@ local scenes = {
 							scale = {4.581482,1,1}
 						}
 					}
-				},
+				}
 				
 				HuecoTentaculo_2= {
 					components = {
@@ -1507,7 +1507,7 @@ local scenes = {
 							scale = {4.581482,1,1}
 						}
 					}
-				},
+				}
 				
 				HuecoTentaculo_3= {
 					components = {
@@ -1517,7 +1517,7 @@ local scenes = {
 							scale = {4.581482,1,1}
 						}
 					}
-				},
+				}
 				
 				HuecoTentaculo_4= {
 					components = {
@@ -1527,7 +1527,7 @@ local scenes = {
 							scale = {4.581482,1,1}
 						}
 					}
-				},
+				}
 				
 				HuecoTentaculo_5= {
 					components = {
@@ -1537,7 +1537,7 @@ local scenes = {
 							scale = {4.581482,1,1}
 						}
 					}
-				},
+				}
 				
 				HuecoTentaculo_6= {
 					components = {
@@ -1547,7 +1547,7 @@ local scenes = {
 							scale = {4.581482,1,1}
 						}
 					}
-				},
+				}
 				
 				HuecoTentaculo_7= {
 					components = {
@@ -1557,7 +1557,7 @@ local scenes = {
 							scale = {4.581482,1,1}
 						}
 					}
-				},
+				}
 				
 				HuecoTentaculo_8= {
 					components = {
@@ -1567,7 +1567,7 @@ local scenes = {
 							scale = {4.581482,1,1}
 						}
 					}
-				},
+				}
 				
 				HuecoTentaculo_9= {
 					components = {
@@ -1575,6 +1575,115 @@ local scenes = {
 							position = {178.8516,8.709999,0},
 							rotation = {0,0,0,1},
 							scale = {4.581482,1,1}
+						}
+					}
+				}
+			}
+			
+			Tentaculos= {
+				components = {
+					Transform= {
+						position = {0,0,0},
+						rotation = {0,0,0,1},
+						scale = {1,1,1}
+					}
+				}
+				
+				Tentaculo1= {
+					blueprint = "Tentaculo",
+					components = {
+						Transform= {
+							position = {112.31,-8.4,-0.5006065},
+							rotation = {0,0,0,1},
+							scale = {3,9,1}
+						}
+					}
+				}
+				
+				Tentaculo2= {
+					blueprint = "Tentaculo",
+					components = {
+						Transform= {
+							position = {50.8,-28.4,-0.5006065},
+							rotation = {0,0,0,1},
+							scale = {3,11.3,1}
+						}
+					}
+				}
+				
+				Tentaculo3= {
+					blueprint = "Tentaculo",
+					components = {
+						Transform= {
+							position = {91.5,-21.6766,-0.5006065},
+							rotation = {0,0,0,1},
+							scale = {3,18.0235,1}
+						}
+					}
+				}
+				
+				Tentaculo4= {
+					blueprint = "Tentaculo",
+					components = {
+						Transform= {
+							position = {126.7,-24.3,-0.5006065},
+							rotation = {0,0,0,1},
+							scale = {3,15.94719,1}
+						}
+					}
+				}
+				
+				Tentaculo5= {
+					blueprint = "Tentaculo",
+					components = {
+						Transform= {
+							position = {134.7,-24.3,-0.5006065},
+							rotation = {0,0,0,1},
+							scale = {3,15.94719,1}
+						}
+					}
+				}
+				
+				Tentaculo6= {
+					blueprint = "Tentaculo",
+					components = {
+						Transform= {
+							position = {143.7,-24.3,-0.5006065},
+							rotation = {0,0,0,1},
+							scale = {3,15.94719,1}
+						}
+					}
+				}
+				
+				Tentaculo7= {
+					blueprint = "Tentaculo",
+					components = {
+						Transform= {
+							position = {152.6,-26.6,-0.5006065},
+							rotation = {0,0,0,1},
+							scale = {3,13.59658,1}
+						}
+					}
+				}
+				
+				Tentaculo8= {
+					blueprint = "Tentaculo",
+					components = {
+						Transform= {
+							position = {170.9505,-6.3,-0.5006065},
+							rotation = {0,0,0.7071068,0.7071068},
+							scale = {3,11.3,1}
+						}
+					}
+				}
+				
+				Tentaculo9= {
+					blueprint = "Tentaculo",
+					components = {
+						Transform= {
+							position = {178.8,0.4064,-0.5006065},
+							rotation = {0,0,0,1},
+							scale = {3,8.3,1}
 						}
 					}
 				}
