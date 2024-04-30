@@ -11,9 +11,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\CheckpointComponent.cpp" />
     <ClCompile Include="..\src\ComponentRegisterer.cpp" />
-    <ClCompile Include="..\src\KelpComponet.cpp" />
+    <ClCompile Include="..\src\EnemyComponent.cpp" />
+    <ClCompile Include="..\src\HealthComponent.cpp" />
+    <ClCompile Include="..\src\KelpComponent.cpp" />
     <ClCompile Include="..\src\MovementComponent.cpp" />
+    <ClCompile Include="..\src\PlayerHealthComponent.cpp" />
     <ClCompile Include="..\src\PlayerInputComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -23,8 +27,12 @@
     <None Include="..\bin\resources.cfg" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\src\CheckpointComponent.h" />
+    <ClInclude Include="..\src\EnemyComponent.h" />
+    <ClInclude Include="..\src\HealthComponent.h" />
     <ClInclude Include="..\src\KelpComponent.h" />
     <ClInclude Include="..\src\MovementComponent.h" />
+    <ClInclude Include="..\src\PlayerHealthComponent.h" />
     <ClInclude Include="..\src\PlayerInputComponent.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -80,8 +88,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\FORGE\FORGE\bin\</AdditionalLibraryDirectories>
-      <AdditionalDependencies>FORGE_d.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\FORGE\FORGE\bin\;$(SolutionDir)Dependencies\FORGE\FORGE\Dependencies\Lua\build\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>FORGE_d.lib;lua.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -99,8 +107,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\FORGE\FORGE\bin\</AdditionalLibraryDirectories>
-      <AdditionalDependencies>FORGE.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\FORGE\FORGE\bin\;$(SolutionDir)Dependencies\FORGE\FORGE\Dependencies\Lua\build\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>FORGE.lib;lua.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

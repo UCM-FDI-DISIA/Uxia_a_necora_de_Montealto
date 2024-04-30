@@ -10,7 +10,6 @@ class GameManager;
 class KelpComponent : public Component {
 private:
 	Collider* collider;
-	GameManager* gameManager;
     int score;
 public:
 	static const std::string id;

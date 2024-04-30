@@ -3,10 +3,9 @@
 set WORKDIR=.\bin
 set ENGINEBIN=.\Dependencies\FORGE\FORGE\bin
 
-git submodule update --init --recursive
+::git submodule update --init --recursive
 
-echo Fin de la actualizacion de submodulos, continua si termino correctamente
-pause
+echo Fin de la actualizacion de submodulos
 
 cd Dependencies\FORGE\FORGE
 call BuildFORGE.bat
@@ -16,8 +15,5 @@ xcopy /y "%ENGINEBIN%\*.dll" "%WORKDIR%"
 xcopy /y "%ENGINEBIN%\plugins.cfg" "%WORKDIR%"
 xcopy /y "%ENGINEBIN%\FORGE.exe" "%WORKDIR%"
 xcopy /y "%ENGINEBIN%\FORGE_d.exe" "%WORKDIR%"
-
-ren %WORKDIR%\FORGE.exe UxiaANecoraDeMontealto.exe
-ren %WORKDIR%\FORGE_d.exe UxiaANecoraDeMontealto_d.exe
 
 pause
