@@ -1,10 +1,10 @@
 #pragma once
 #include <Component.h>
 #include <Vector3.h>
-#include <Transform.h>
 
 class MovementComponent;
 class RigidBody;
+class Transform;
 
 class EnemyComponent : public Component {
 private:
@@ -13,12 +13,13 @@ private:
 	float sign;
 	float radius;
 	float speed;
-	bool edge;
+	bool changeDir;
 	//HealthComponent* healthComponent;
 	MovementComponent* movementComponent;
 	//AttackComponent* attackComponent;
 	RigidBody* rb;
 	Transform* transform;
+	Entity* uxia;
 public:
 
 	static const std::string id;

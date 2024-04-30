@@ -1,6 +1,6 @@
 local prefabs = {
     player = {
-        handler = "player",
+        handler = "uxia",
         components = {
             Transform = {
                 position = {0, 20, 0},
@@ -20,7 +20,7 @@ local prefabs = {
                 jumpForce = 500
             },
             PlayerInputComponent = {
-                speed = 5
+                speed = 10
             }
         }
     }
@@ -89,6 +89,23 @@ local scenes = {
                     p2 = {10, 0, 0},
                     radius = 0,
                     speed = 200,
+                }
+            }
+        },
+
+        checkpoint = {
+            components = {
+                Transform = {
+                    position = {-5, 15, 0},
+                    scale = {0.1, 0.1, 0.1}
+                },
+                 Collider = {
+                    scale = {1, 5, 1},
+                    trigger = true,
+                    shapeType = "Cube"
+                },
+                CheckpointComponent = {
+                    respawnpoint = {-5, 15, 0}
                 },
                 Mesh = {
                     mesh = "cigar.mesh"
