@@ -89,7 +89,7 @@ local scenes = {
                 cam = {
                     components = {
                         Transform = {
-                            position = {0, 0, 50}
+                            position = {0, 0, 100}
                         },
                         Camera = {
                             nearClipDistance = 1,
@@ -823,94 +823,101 @@ local scenes = {
 			components = {
 				Transform= {
 					position = {0,0,0},
-					rotation = {0,0,0,1},
-					scale = {0.8751596,0.8751596,0.8751596}
+					rotation = {0,0,0,1}
 				}
 			},
 			children = {
-				Cube1 = {
+				Cubosss = {
 					components = {
-						Transform= {
-							position = {0,0,0},
-							rotation = {0,0,0,1},
-							scale = {1,1,1}
-						},
-						Mesh = {
-							mesh = "Cube.mesh"				
-						},
-						Collider= {
-							scale = {1,1,1},
-							shapeType = "Cube",
-							layer = "Ground"					
+						Transform = {
+							position = { 5, 0 ,60 },
+							rotation = { 0, 0, 0.258819, 0.9659258}
 						}
-					}
-				},
-				Cube2 = {
-					components = {
-						Transform= {
-							position = {2,0,0},
-							rotation = {0,0,0,1},
-							scale = {1,1,1}
+					},
+					children = {
+						Cube1 = {
+							components = {
+								Transform = { 
+									rotation = { 0, 0, 0.258819, 0.9659258}
+								},
+								Mesh = {
+									mesh = "Cube.mesh"				
+								},
+								Collider= {
+									scale = {1,1,1},
+									shapeType = "Cube",
+									layer = "Ground"					
+								}
+							}
 						},
-						Mesh = {
-							mesh = "Cube.mesh"				
+						Cube2 = {
+							components = {
+								Transform= {
+									position = {2,0,0},
+									rotation = {0,0,0,1},
+									scale = {1,1,1}
+								},
+								Mesh = {
+									mesh = "Cube.mesh"				
+								},
+								Collider= {
+									scale = {1,1,1},
+									shapeType = "Cube",
+									layer = "Ground"					
+								}
+							}
 						},
-						Collider= {
-							scale = {1,1,1},
-							shapeType = "Cube",
-							layer = "Ground"					
-						}
-					}
-				},
-				Cube3 = {
-					components = {
-						Transform= {
-							position = {-2,0,0},
-							rotation = {0,0,0,1},
-							scale = {1,1,1}
+						Cube3 = {
+							components = {
+								Transform= {
+									position = {-2,0,0},
+									rotation = {0,0,0,1},
+									scale = {1,1,1}
+								},
+								Mesh = {
+									mesh = "Cube.mesh"				
+								},
+								Collider= {
+									scale = {1,1,1},
+									shapeType = "Cube",
+									layer = "Ground"					
+								}
+							}
 						},
-						Mesh = {
-							mesh = "Cube.mesh"				
-						},
-						Collider= {
-							scale = {1,1,1},
-							shapeType = "Cube",
-							layer = "Ground"					
-						}
-					}
-				},
-				Cube4 = {
-					components = {
-						Transform= {
-							position = {0,2,0},
-							rotation = {0,0,0,1},
-							scale = {1,1,1}
-						},
-						Mesh = {
+						Cube4 = {
+							components = {
+								Transform= {
+									position = {0,2,0},
+									rotation = {0,0,0,1},
+									scale = {1,1,1}
+								},
+								Mesh = {
 							
-							mesh = "Cube.mesh"				
+									mesh = "Cube.mesh"				
+								},
+								Collider= {
+									scale = {1,1,1},
+									shapeType = "Cube",
+									layer = "Ground"					
+								}
+							}
 						},
-						Collider= {
-							scale = {1,1,1},
-							shapeType = "Cube",
-							layer = "Ground"					
-						}
-					}
-				},
-				Cube5 = {
-					components = {
-						Transform= {
-							position = {0,-2,0},
-							rotation = {0,0,0,1},
-							scale = {1,1,1}
-						},
-						Mesh = {
-							mesh = "Cube.mesh"				
-						},
-						Collider= {
-							scale = {1,1,1},
-							shapeType = "Cube",
-							layer = "Ground"					
+						Cube5 = {
+							components = {
+								Transform= {
+									position = {0,-2,0},
+									rotation = {0,0,0,1},
+									scale = {1,1,1}
+								},
+								Mesh = {
+									mesh = "Cube.mesh"				
+								},
+								Collider= {
+									scale = {1,1,1},
+									shapeType = "Cube",
+									layer = "Ground"					
+								}
+							}
 						}
 					}
 				},
@@ -1620,7 +1627,8 @@ local scenes = {
 						},
 						RigidBody= {
 							scale = {1,1,1},
-							axisBlocked = {false,true,true,true,true,true},
+							axisBlockedPos = {false,true,true},
+							axisBlockedRot = {true, true, true},
 							mass = 1,
 							friction = 1,
 							restitution = 1,
@@ -1652,7 +1660,8 @@ local scenes = {
 						},
 						RigidBody= {
 							scale = {1,1,1},
-							axisBlocked = {false,true,true,true,true,true},
+							axisBlockedPos = {false,true,true},
+							axisBlockedRot = {true, true, true},
 							mass = 1,
 							friction = 1,
 							restitution = 1,
@@ -1684,7 +1693,8 @@ local scenes = {
 						},
 						RigidBody= {
 							scale = {1,1,1},
-							axisBlocked = {false,true,true,true,true,true},
+							axisBlockedPos = {false,true,true},
+							axisBlockedRot = {true, true, true},
 							mass = 1,
 							friction = 1,
 							restitution = 1,
@@ -1716,7 +1726,8 @@ local scenes = {
 						},
 						RigidBody= {
 							scale = {1,1,1},
-							axisBlocked = {false,true,true,true,true,true},
+							axisBlockedPos = {false,true,true},
+							axisBlockedRot = {true, true, true},
 							mass = 1,
 							friction = 1,
 							restitution = 1,
@@ -1748,7 +1759,8 @@ local scenes = {
 						},
 						RigidBody= {
 							scale = {1,1,1},
-							axisBlocked = {false,true,true,true,true,true},
+							axisBlockedPos = {false,true,true},
+							axisBlockedRot = {true, true, true},
 							mass = 1,
 							friction = 1,
 							restitution = 1,
@@ -1780,7 +1792,8 @@ local scenes = {
 						},
 						RigidBody= {
 							scale = {1,1,1},
-							axisBlocked = {false,true,true,true,true,true},
+							axisBlockedPos = {false,true,true},
+							axisBlockedRot = {true, true, true},
 							mass = 1,
 							friction = 1,
 							restitution = 1,
@@ -1812,7 +1825,8 @@ local scenes = {
 						},
 						RigidBody= {
 							scale = {1,1,1},
-							axisBlocked = {false,true,true,true,true,true},
+							axisBlockedPos = {false,true,true},
+							axisBlockedRot = {true, true, true},
 							mass = 1,
 							friction = 1,
 							restitution = 1,
@@ -1844,7 +1858,8 @@ local scenes = {
 						},
 						RigidBody= {
 							scale = {1,1,1},
-							axisBlocked = {false,true,true,true,true,true},
+							axisBlockedPos = {false,true,true},
+							axisBlockedRot = {true, true, true},
 							mass = 1,
 							friction = 1,
 							restitution = 1,

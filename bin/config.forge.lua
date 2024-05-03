@@ -15,7 +15,7 @@ Physics = {
 		ALL			= {	true },
 		Player		= {	true,	true },
 		Enemy		= {	true,	true, 	false },
-		Ground		= {	true,	true, 	true,	true },
+		Ground		= {	true,	true, 	false,	false },
 		Object		= {	true,	true, 	false,	true,	true},
 		DeathZone 	= {	true,	true, 	false,	false,	false,	false}
 	},
