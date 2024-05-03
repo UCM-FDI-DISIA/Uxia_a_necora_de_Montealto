@@ -10,7 +10,6 @@ local prefabs = {
 				scale = {0.5,1.124932,1}
 			},
 			Collider= {
-				scale = {0.5,1.124932,1},
 				shapeType = "Cube",
 				layer = "Object"				
 			},
@@ -30,7 +29,6 @@ local prefabs = {
 				scale = {0.4691,1,1}
 			},
 			Collider= {
-				scale = {0.4691,1,1},
 				shapeType = "Cylinder"				
 			},
 			Mesh= {
@@ -845,7 +843,6 @@ local scenes = {
 									mesh = "Cube.mesh"				
 								},
 								Collider= {
-									scale = {1,1,1},
 									shapeType = "Cube",
 									layer = "Ground"					
 								}
@@ -862,7 +859,6 @@ local scenes = {
 									mesh = "Cube.mesh"				
 								},
 								Collider= {
-									scale = {1,1,1},
 									shapeType = "Cube",
 									layer = "Ground"					
 								}
@@ -879,7 +875,6 @@ local scenes = {
 									mesh = "Cube.mesh"				
 								},
 								Collider= {
-									scale = {1,1,1},
 									shapeType = "Cube",
 									layer = "Ground"					
 								}
@@ -897,7 +892,6 @@ local scenes = {
 									mesh = "Cube.mesh"				
 								},
 								Collider= {
-									scale = {1,1,1},
 									shapeType = "Cube",
 									layer = "Ground"					
 								}
@@ -914,7 +908,6 @@ local scenes = {
 									mesh = "Cube.mesh"				
 								},
 								Collider= {
-									scale = {1,1,1},
 									shapeType = "Cube",
 									layer = "Ground"					
 								}
@@ -930,7 +923,6 @@ local scenes = {
 							scale = {18.24046,44.89019,1}
 						},
 						Collider= {
-							scale = {18.24046,44.89019,1},
 							shapeType = "Cube",
 							layer = "Ground"					
 						},
@@ -948,7 +940,6 @@ local scenes = {
 							scale = {22.46497,13.35052,1}
 						},
 						Collider= {
-							scale = {22.46497,13.35052,1},
 							shapeType = "Cube",
 							layer = "Ground"					
 						},
@@ -966,7 +957,6 @@ local scenes = {
 							scale = {15.39157,24.25952,1}
 						},
 						Collider= {
-							scale = {15.39157,24.25952,1},
 							shapeType = "Cube",					
 							layer = "Ground"					
 						},
@@ -984,7 +974,6 @@ local scenes = {
 							scale = {26.46535,32.16548,1}
 						},
 						Collider= {
-							scale = {26.46535,32.16548,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1002,7 +991,6 @@ local scenes = {
 							scale = {30.05009,23.40536,1}
 						},
 						Collider= {
-							scale = {30.05009,23.40536,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1020,7 +1008,6 @@ local scenes = {
 							scale = {11.67214,17.11616,1}
 						},
 						Collider= {
-							scale = {11.67214,17.11616,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1038,7 +1025,6 @@ local scenes = {
 							scale = {25.54743,30.09663,1}
 						},
 						Collider= {
-							scale = {25.54743,30.09663,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1056,7 +1042,6 @@ local scenes = {
 							scale = {41.06748,40.12918,1}
 						},
 						Collider= {
-							scale = {41.06748,40.12918,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1074,7 +1059,6 @@ local scenes = {
 							scale = {10.30046,18.32828,1}
 						},
 						Collider= {
-							scale = {10.30046,18.32828,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1092,7 +1076,6 @@ local scenes = {
 							scale = {20.53343,18.49995,1}
 						},
 						Collider= {
-							scale = {20.53343,18.49995,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1110,7 +1093,6 @@ local scenes = {
 							scale = {9.725895,23.07129,1}
 						},
 						Collider= {
-							scale = {9.725895,23.07129,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1128,7 +1110,6 @@ local scenes = {
 							scale = {7.107291,28.21388,1}
 						},
 						Collider= {
-							scale = {7.107291,28.21388,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1146,7 +1127,6 @@ local scenes = {
 							scale = {24.36362,30.49787,1}
 						},
 						Collider= {
-							scale = {24.36362,30.49787,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1164,7 +1144,6 @@ local scenes = {
 							scale = {16.53437,1.933702,1}
 						},
 						Collider= {
-							scale = {16.53437,1.933702,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1182,7 +1161,6 @@ local scenes = {
 							scale = {22.247,2.050476,1}
 						},
 						Collider= {
-							scale = {22.247,2.050476,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1200,7 +1178,6 @@ local scenes = {
 							scale = {17.38852,1.933682,1}
 						},
 						Collider= {
-							scale = {17.38852,1.933682,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1218,7 +1195,6 @@ local scenes = {
 							scale = {22.60653,2.504776,1}
 						},
 						Collider= {
-							scale = {22.60653,2.504776,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1236,7 +1212,6 @@ local scenes = {
 							scale = {31.46238,4.218759,1}
 						},
 						Collider= {
-							scale = {31.46238,4.218759,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1254,7 +1229,6 @@ local scenes = {
 							scale = {9.792862,5.361515,1}
 						},
 						Collider= {
-							scale = {9.792862,5.361515,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1272,7 +1246,6 @@ local scenes = {
 							scale = {3.793755,5.933552,1}
 						},
 						Collider= {
-							scale = {3.793755,5.933552,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1290,7 +1263,6 @@ local scenes = {
 							scale = {14.53313,1.648048,1}
 						},
 						Collider= {
-							scale = {14.53313,1.648048,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1308,7 +1280,6 @@ local scenes = {
 							scale = {9.677046,24.50104,1}
 						},
 						Collider= {
-							scale = {9.677046,24.50104,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1326,7 +1297,6 @@ local scenes = {
 							scale = {7.391328,28.50129,1}
 						},
 						Collider= {
-							scale = {7.391328,28.50129,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1344,7 +1314,6 @@ local scenes = {
 							scale = {7.391328,23.07464,1}
 						},
 						Collider= {
-							scale = {7.391328,23.07464,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1362,7 +1331,6 @@ local scenes = {
 							scale = {7.391328,23.07464,1}
 						},
 						Collider= {
-							scale = {7.391328,23.07464,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1380,7 +1348,6 @@ local scenes = {
 							scale = {7.391328,29.07405,1}
 						},
 						Collider= {
-							scale = {7.391328,29.07405,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1398,7 +1365,6 @@ local scenes = {
 							scale = {2.535225,29.07405,1}
 						},
 						Collider= {
-							scale = {2.535225,29.07405,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1416,7 +1382,6 @@ local scenes = {
 							scale = {2.535225,29.07405,1}
 						},
 						Collider= {
-							scale = {2.535225,29.07405,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1434,7 +1399,6 @@ local scenes = {
 							scale = {2.535225,29.07405,1}
 						},
 						Collider= {
-							scale = {2.535225,29.07405,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1452,7 +1416,6 @@ local scenes = {
 							scale = {2.535225,25.36129,1}
 						},
 						Collider= {
-							scale = {2.535225,25.36129,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1470,7 +1433,6 @@ local scenes = {
 							scale = {13.39052,31.36081,1}
 						},
 						Collider= {
-							scale = {13.39052,31.36081,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1488,7 +1450,6 @@ local scenes = {
 							scale = {11.10504,36.50399,1}
 						},
 						Collider= {
-							scale = {11.10504,36.50399,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1506,7 +1467,6 @@ local scenes = {
 							scale = {12.8189,42.50159,1}
 						},
 						Collider= {
-							scale = {12.8189,42.50159,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1524,7 +1484,6 @@ local scenes = {
 							scale = {7.105398,47.07051,1}
 						},
 						Collider= {
-							scale = {7.105398,47.07051,1},
 							shapeType = "Cube",						
 							layer = "Ground"					
 						},
@@ -1542,7 +1501,6 @@ local scenes = {
 							scale = {7.676759,45.35551,1}
 						},
 						Collider= {
-							scale = {7.676759,45.35551,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1560,7 +1518,6 @@ local scenes = {
 							scale = {19.96005,29.9301,1}
 						},
 						Collider= {
-							scale = {19.96005,29.9301,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1578,7 +1535,6 @@ local scenes = {
 							scale = {27.97696,21.07378,1}
 						},
 						Collider= {
-							scale = {27.97696,21.07378,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1596,7 +1552,6 @@ local scenes = {
 							scale = {1,18.74993,1}
 						},
 						Collider= {
-							scale = {1,18.74993,1},
 							shapeType = "Cube",							
 							layer = "Ground"					
 						},
@@ -1627,7 +1582,6 @@ local scenes = {
 							scale = {1,1,1}
 						},
 						RigidBody= {
-							scale = {1,1,1},
 							axisBlockedPos = {false,true,true},
 							axisBlockedRot = {true, true, true},
 							mass = 1,
@@ -1660,7 +1614,6 @@ local scenes = {
 							scale = {1,1,1}
 						},
 						RigidBody= {
-							scale = {1,1,1},
 							axisBlockedPos = {false,true,true},
 							axisBlockedRot = {true, true, true},
 							mass = 1,
@@ -1693,7 +1646,6 @@ local scenes = {
 							scale = {1,1,1}
 						},
 						RigidBody= {
-							scale = {1,1,1},
 							axisBlockedPos = {false,true,true},
 							axisBlockedRot = {true, true, true},
 							mass = 1,
@@ -1726,7 +1678,6 @@ local scenes = {
 							scale = {1,1,1}
 						},
 						RigidBody= {
-							scale = {1,1,1},
 							axisBlockedPos = {false,true,true},
 							axisBlockedRot = {true, true, true},
 							mass = 1,
@@ -1759,7 +1710,6 @@ local scenes = {
 							scale = {1,1,1}
 						},
 						RigidBody= {
-							scale = {1,1,1},
 							axisBlockedPos = {false,true,true},
 							axisBlockedRot = {true, true, true},
 							mass = 1,
@@ -1792,7 +1742,6 @@ local scenes = {
 							scale = {1,1,1}
 						},
 						RigidBody= {
-							scale = {1,1,1},
 							axisBlockedPos = {false,true,true},
 							axisBlockedRot = {true, true, true},
 							mass = 1,
@@ -1825,7 +1774,6 @@ local scenes = {
 							scale = {1,1,1}
 						},
 						RigidBody= {
-							scale = {1,1,1},
 							axisBlockedPos = {false,true,true},
 							axisBlockedRot = {true, true, true},
 							mass = 1,
@@ -1858,7 +1806,6 @@ local scenes = {
 							scale = {1,1,1}
 						},
 						RigidBody= {
-							scale = {1,1,1},
 							axisBlockedPos = {false,true,true},
 							axisBlockedRot = {true, true, true},
 							mass = 1,
@@ -2054,13 +2001,12 @@ local scenes = {
 									scale = {3,9,1}
 								},
 								RigidBody= {
-									scale = {3,9,1},
 									axisBlockedPos = {false,false,true},
 									axisBlockedRot = {true, true, true},
 									mass = 0,
 									friction = 1,
 									restitution = 1,
-									shapeType = "Cube",
+									shapeType = "Cylinder",
 									static = false,
 									layer = "Enemy"									
 								},
@@ -2086,13 +2032,12 @@ local scenes = {
 									scale = {3,11.3,1}
 								},
 								RigidBody= {
-									scale = {3,11.3,1},
 									axisBlockedPos = {false,false,true},
 									axisBlockedRot = {true, true, true},
 									mass = 1,
 									friction = 1,
 									restitution = 1,
-									shapeType = "Cube",
+									shapeType = "Cylinder",
 									static = false,
 									layer = "Enemy"									
 								},
@@ -2118,13 +2063,12 @@ local scenes = {
 									scale = {3,18,1}
 								},
 								RigidBody= {
-									scale = {3,18,1},
 									axisBlockedPos = {false,false,true},
 									axisBlockedRot = {true, true, true},
 									mass = 0,
 									friction = 1,
 									restitution = 1,
-									shapeType = "Cube",
+									shapeType = "Cylinder",
 									static = false,
 									layer = "Enemy"									
 								},
@@ -2150,13 +2094,12 @@ local scenes = {
 									scale = {3,16,1}
 								},
 								RigidBody= {
-									scale = {3,16,1},
 									axisBlockedPos = {false,false,true},
 									axisBlockedRot = {true, true, true},
 									mass = 0,
 									friction = 1,
 									restitution = 1,
-									shapeType = "Cube",
+									shapeType = "Cylinder",
 									static = false,
 									layer = "Enemy"									
 								},
@@ -2182,13 +2125,12 @@ local scenes = {
 									scale = {3,16,1}
 								},
 								RigidBody= {
-									scale = {3,16,1},
 									axisBlockedPos = {false,false,true},
 									axisBlockedRot = {true, true, true},
 									mass = 0,
 									friction = 1,
 									restitution = 1,
-									shapeType = "Cube",
+									shapeType = "Cylinder",
 									static = false,
 									layer = "Enemy"									
 								},
@@ -2214,13 +2156,12 @@ local scenes = {
 									scale = {3,16,1}
 								},
 								RigidBody= {
-									scale = {3,16,1},
 									axisBlockedPos = {false,false,true},
 									axisBlockedRot = {true, true, true},
 									mass = 0,
 									friction = 1,
 									restitution = 1,
-									shapeType = "Cube",
+									shapeType = "Cylinder",
 									static = false,
 									layer = "Enemy"									
 								},
@@ -2246,12 +2187,11 @@ local scenes = {
 									scale = {3,14,1}
 								},
 								RigidBody= {
-									scale = {1,14,1},
 									axisBlocked = {false,false,true,true,true,true},
 									mass = 0,
 									friction = 1,
 									restitution = 1,
-									shapeType = "Cube",
+									shapeType = "Cylinder",
 									static = false,
 									layer = "Enemy"									
 								},
@@ -2277,12 +2217,11 @@ local scenes = {
 									scale = {3,11.3,1}
 								},
 								RigidBody= {
-									scale = {3,11.3,1},
 									axisBlocked = {false,false,true,true,true,true},
 									mass = 0,
 									friction = 1,
 									restitution = 1,
-									shapeType = "Cube",
+									shapeType = "Cylinder",
 									static = false,
 									layer = "Enemy"									
 								},
@@ -2308,12 +2247,11 @@ local scenes = {
 									scale = {3,8.3,1}
 								},
 								RigidBody= {
-									scale = {3,8.3,1},
 									axisBlocked = {false,false,true,true,true,true},
 									mass = 0,
 									friction = 1,
 									restitution = 1,
-									shapeType = "Cube",
+									shapeType = "Cylinder",
 									static = false,
 									layer = "Enemy"									
 								},
@@ -2353,7 +2291,6 @@ local scenes = {
 							scale = {53,7.34,1}
 						},
 						Collider= {
-							scale = {53, 7.34,1},
 							shapeType = "Cube",
 							layer = "DeathZone"							
 						}
@@ -2368,7 +2305,6 @@ local scenes = {
 							scale = {53,7.34,1}
 						},
 						Collider= {
-							scale = {53, 7.34,1},
 							shapeType = "Cube",
 							layer = "DeathZone"							
 						}
@@ -2383,7 +2319,6 @@ local scenes = {
 							scale = {27,7.34,1}
 						},
 						Collider= {
-							scale = {27, 7.34,1},
 							shapeType = "Cube",
 							layer = "DeathZone"							
 						}
@@ -2398,7 +2333,6 @@ local scenes = {
 							scale = {27,7.34,1}
 						},
 						Collider= {
-							scale = {27, 7.34,1},
 							shapeType = "Cube",
 							layer = "DeathZone"							
 						}
