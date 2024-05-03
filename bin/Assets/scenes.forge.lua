@@ -823,8 +823,9 @@ local scenes = {
 			components = {
 				Transform= {
 					position = {0,0,0},
-					rotation = {0,0,0,1}
-				}
+					rotation = {0,0,0,1},
+					scale = {0.8751596,0.8751596,0.8751596}
+				},
 			},
 			children = {
 				Cubosss = {
@@ -1632,7 +1633,7 @@ local scenes = {
 							mass = 1,
 							friction = 1,
 							restitution = 1,
-							shapeType = "Cube",
+							shapeType = "Cylinder",
 							static = false,
 							layer = "Enemy"							
 						},
@@ -1665,7 +1666,7 @@ local scenes = {
 							mass = 1,
 							friction = 1,
 							restitution = 1,
-							shapeType = "Cube",
+							shapeType = "Cylinder",
 							static = false,
 							layer = "Enemy"							
 						},
@@ -1698,7 +1699,7 @@ local scenes = {
 							mass = 1,
 							friction = 1,
 							restitution = 1,
-							shapeType = "Cube",
+							shapeType = "Cylinder",
 							static = false,
 							layer = "Enemy"							
 						},
@@ -1731,7 +1732,7 @@ local scenes = {
 							mass = 1,
 							friction = 1,
 							restitution = 1,
-							shapeType = "Cube",
+							shapeType = "Cylinder",
 							static = false,
 							layer = "Enemy"							
 						},
@@ -1764,7 +1765,7 @@ local scenes = {
 							mass = 1,
 							friction = 1,
 							restitution = 1,
-							shapeType = "Cube",
+							shapeType = "Cylinder",
 							static = false,
 							layer = "Enemy"							
 						},
@@ -1797,7 +1798,7 @@ local scenes = {
 							mass = 1,
 							friction = 1,
 							restitution = 1,
-							shapeType = "Cube",
+							shapeType = "Cylinder",
 							static = false,
 							layer = "Enemy"							
 						},
@@ -1830,7 +1831,7 @@ local scenes = {
 							mass = 1,
 							friction = 1,
 							restitution = 1,
-							shapeType = "Cube",
+							shapeType = "Cylinder",
 							static = false,
 							layer = "Enemy"							
 						},
@@ -1863,7 +1864,7 @@ local scenes = {
 							mass = 1,
 							friction = 1,
 							restitution = 1,
-							shapeType = "Cube",
+							shapeType = "Cylinder",
 							static = false,
 							layer = "Enemy"							
 						},
@@ -1909,6 +1910,9 @@ local scenes = {
 									position = {50.8516,-40.29,0},
 									rotation = {0,0,0,1},
 									scale = {4.581482,1,1}
+								},
+								Mesh= {
+									mesh = "Cube.mesh"							
 								}
 							}
 						},
@@ -1919,6 +1923,9 @@ local scenes = {
 									position = {91.3516,-40.29,0},
 									rotation = {0,0,0,1},
 									scale = {4.581482,1,1}
+								},
+								Mesh= {
+									mesh = "Cube.mesh"							
 								}
 							}
 						},
@@ -1929,6 +1936,9 @@ local scenes = {
 									position = {112.3516,1.1,0},
 									rotation = {0,0,0,1},
 									scale = {4.581482,1,1}
+								},
+								Mesh= {
+									mesh = "Cube.mesh"							
 								}
 							}
 						},
@@ -1939,6 +1949,9 @@ local scenes = {
 									position = {126.6016,-40.29,0},
 									rotation = {0,0,0,1},
 									scale = {4.581482,1,1}
+								},
+								Mesh= {
+									mesh = "Cube.mesh"							
 								}
 							}
 						},
@@ -1949,6 +1962,9 @@ local scenes = {
 									position = {134.6016,-40.29,0},
 									rotation = {0,0,0,1},
 									scale = {4.581482,1,1}
+								},
+								Mesh= {
+									mesh = "Cube.mesh"							
 								}
 							}
 						},
@@ -1959,6 +1975,9 @@ local scenes = {
 									position = {143.8516,-40.29,0},
 									rotation = {0,0,0,1},
 									scale = {4.581482,1,1}
+								},
+								Mesh= {
+									mesh = "Cube.mesh"							
 								}
 							}
 						},
@@ -1969,6 +1988,9 @@ local scenes = {
 									position = {152.6016,-40.29,0},
 									rotation = {0,0,0,1},
 									scale = {4.581482,1,1}
+								},
+								Mesh= {
+									mesh = "Cube.mesh"							
 								}
 							}
 						},
@@ -1979,6 +2001,9 @@ local scenes = {
 									position = {152.6016,-40.29,0},
 									rotation = {0,0,0,1},
 									scale = {4.581482,1,1}
+								},
+								Mesh= {
+									mesh = "Cube.mesh"							
 								}
 							}
 						},
@@ -1989,6 +2014,9 @@ local scenes = {
 									position = {182.1016,-6.290001,0},
 									rotation = {0,0,0.7071068,0.7071068},
 									scale = {4.581482,1,1}
+								},
+								Mesh= {
+									mesh = "Cube.mesh"							
 								}
 							}
 						},
@@ -1999,6 +2027,9 @@ local scenes = {
 									position = {178.8516,8.709999,0},
 									rotation = {0,0,0,1},
 									scale = {4.581482,1,1}
+								},
+								Mesh= {
+									mesh = "Cube.mesh"							
 								}
 							}
 						}
@@ -2024,7 +2055,8 @@ local scenes = {
 								},
 								RigidBody= {
 									scale = {3,9,1},
-									axisBlocked = {false,false,true,true,true,true},
+									axisBlockedPos = {false,false,true},
+									axisBlockedRot = {true, true, true},
 									mass = 0,
 									friction = 1,
 									restitution = 1,
@@ -2055,8 +2087,9 @@ local scenes = {
 								},
 								RigidBody= {
 									scale = {3,11.3,1},
-									axisBlocked = {false,false,true,true,true,true},
-									mass = 0,
+									axisBlockedPos = {false,false,true},
+									axisBlockedRot = {true, true, true},
+									mass = 1,
 									friction = 1,
 									restitution = 1,
 									shapeType = "Cube",
@@ -2069,7 +2102,7 @@ local scenes = {
 								EnemyComponent= {
 									p1 = {50.8,-21.4,0},
 									p2 = {50.8,-37.2,0},
-									speed = 30									
+									speed = 120									
 								},
 								MovementComponent= {
 									jumpForce = 0									
@@ -2086,7 +2119,8 @@ local scenes = {
 								},
 								RigidBody= {
 									scale = {3,18,1},
-									axisBlocked = {false,false,true,true,true,true},
+									axisBlockedPos = {false,false,true},
+									axisBlockedRot = {true, true, true},
 									mass = 0,
 									friction = 1,
 									restitution = 1,
@@ -2117,7 +2151,8 @@ local scenes = {
 								},
 								RigidBody= {
 									scale = {3,16,1},
-									axisBlocked = {false,false,true,true,true,true},
+									axisBlockedPos = {false,false,true},
+									axisBlockedRot = {true, true, true},
 									mass = 0,
 									friction = 1,
 									restitution = 1,
@@ -2148,7 +2183,8 @@ local scenes = {
 								},
 								RigidBody= {
 									scale = {3,16,1},
-									axisBlocked = {false,false,true,true,true,true},
+									axisBlockedPos = {false,false,true},
+									axisBlockedRot = {true, true, true},
 									mass = 0,
 									friction = 1,
 									restitution = 1,
@@ -2179,7 +2215,8 @@ local scenes = {
 								},
 								RigidBody= {
 									scale = {3,16,1},
-									axisBlocked = {false,false,true,true,true,true},
+									axisBlockedPos = {false,false,true},
+									axisBlockedRot = {true, true, true},
 									mass = 0,
 									friction = 1,
 									restitution = 1,
