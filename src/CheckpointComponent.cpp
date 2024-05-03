@@ -39,10 +39,10 @@ bool CheckpointComponent::initComponent(ComponentData* data) {
 
 bool CheckpointComponent::checkCollision() {
 	uxia = scene->getEntityByHandler("uxia");
-	if (collider->hasCollidedWith(uxia)) {
-		//std::cout << "checkpoint\n";
-		return true;
-	}
+	//if (collider->hasCollidedWith(uxia)) {
+	//	//std::cout << "checkpoint\n";
+	//	return true;
+	//}
 	return false;
 }
 

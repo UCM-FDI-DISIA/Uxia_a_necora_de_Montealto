@@ -39,6 +39,7 @@ void PlayerInputComponent::update() {
 
 	//Salto
 	if (input.keyDown(K_W)) {
+		std::cout << "Salto\n";
 		movement->jump();
 	}
 }

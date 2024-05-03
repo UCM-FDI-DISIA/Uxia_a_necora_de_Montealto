@@ -42,36 +42,37 @@ local scenes = {
 			handler = "Player",
 			components = {
 				Transform= {
-					position = {11.92,-0.67,0},
+					position = {0,0,0},
 					rotation = {0,0,0,1},
 					scale = {1,1,1}
 				},
-				-- RigidBody= {
-				-- 	scale = {1,1,1},
-				-- 	axisBlocked = {false,false,true,true,true,true},
-				-- 	mass = 1,
-				-- 	friction = 1,
-				-- 	restitution = 1,
-				-- 	shapeType = "Cube",
-				-- 	static = false,
-				-- 	layer = "ALL"					
-				-- },
+				RigidBody= {
+				 	scale = {1,1,1},
+				 	axisBlockedPos = {false,false,true},
+				 	axisBlockedRot = {true,true,true},
+				 	mass = 1,
+				 	friction = 1,
+				 	restitution = 1,
+				 	shapeType = "Cube",
+				 	static = false,
+				 	layer = "ALL"					
+				},
 				Mesh = {
                     mesh = "Cylinder.mesh"
 
                 },
-                -- PlayerInputComponent = {
-                --     speed = 10
-                -- },
-                -- MovementComponent = {
-                --     jumpForce = 10
-                -- }
+                PlayerInputComponent = {
+                     speed = 1
+                 },
+                 MovementComponent = {
+                     jumpForce = 500
+                 }
 			},
             children = {
                 cam = {
                     components = {
                         Transform = {
-                            position = {0, 0, 100}
+                            position = {0, 0, 20}
                         },
                         Camera = {
                             nearClipDistance = 1,
@@ -92,7 +93,7 @@ local scenes = {
                     position = {-5, 15, 0},
                     scale = {0.1, 0.1, 0.1}
                 },
-                 Collider = {
+                Collider = {
                     scale = {1, 5, 1},
                     trigger = true,
                     shapeType = "Cube"
@@ -113,7 +114,7 @@ local scenes = {
                     position = {0, -10, 0},
                     rotation = {0, 0, 0, 1}
                 },
-                 Collider = {
+                Collider = {
                     scale = {1, 1, 1},
                     shapeType = "Cube"
                 }
