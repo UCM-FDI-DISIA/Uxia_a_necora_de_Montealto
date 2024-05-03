@@ -10,7 +10,9 @@ const std::string PlayerHealthComponent::id = "PlayerHealthComponent";
 
 PlayerHealthComponent::PlayerHealthComponent(): 
 	maxKelpsSpawned(10), 
-	transform(nullptr) {
+	transform(nullptr),
+	sceneManager(*SceneManager::GetInstance()),
+	random(*forge::Random::GetInstance()) {
 	health = 0;
 	maxHealth = 99;
 	serializer(kelpBlueprint, "kelpBlueprint");
@@ -44,7 +46,6 @@ void PlayerHealthComponent::damage(int damage){
 }
 
 void PlayerHealthComponent::dropKelps() {
-	forge::Random& random = *forge::Random::GetInstance();
 	for (int i = 0; i < std::min(health, maxKelpsSpawned); i++) {
 		forge::Vector3 newDelta = random.getRandomVector();
 		newDelta.setZ(0);

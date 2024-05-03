@@ -5,12 +5,18 @@
 #include <string>
 
 class Transform;
+class SceneManager;
+namespace forge {
+	class Random;
+}
 
 class PlayerHealthComponent : public HealthComponent{
 private:
 	std::string kelpBlueprint;
 	Transform* transform;
 	int maxKelpsSpawned;
+	SceneManager& sceneManager;
+	forge::Random& random;
 public:
 
 	static const std::string id;

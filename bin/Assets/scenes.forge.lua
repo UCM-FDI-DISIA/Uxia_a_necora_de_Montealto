@@ -3,11 +3,11 @@ local prefabs = {
         handler = "uxia",
         components = {
             Transform = {
-                position = {0, 20, 0},
+                position = {0, 100, 0},
                 scale = {0.25, 0.25, 0.25}
             },
             RigidBody = {
-                scale = {1, 1, 1},
+                scale = {0.25, 0.25, 0.25},
                 mass = 1,
                 friction = 2,
                 restitution = 1,
@@ -34,7 +34,7 @@ local scenes = {
                 cam = {
                     components = {
                         Transform = {
-                            position = {0, 0, 300}
+                            position = {0, 0, 100}
                         },
                         Camera = {
                             nearClipDistance = 1,
@@ -46,52 +46,8 @@ local scenes = {
                 }
             }
         },
-        cube={
-            components ={
-                Transform = {
-                    position = {0, 0, 0},
-                    scale = {0.25, 0.25, 0.25}
-                },
-                RigidBody = {
-                    scale = {1, 1, 1},
-                    mass = 1,
-                    friction = 4,
-                    restitution = 1,
-                    shapeType = "Cube",
-                    static = false,
-                    layer = "ALL",
-                    axisBlocked = {false,false,false,false,false,false}
-                }
-            }
-        },
 
-        enemy={
-            components ={
-                Transform = {
-                    position = {0, 0, 0},
-                    scale = {0.1, 0.1, 0.1}
-                },
-                RigidBody = {
-                    scale = {1, 1, 1},
-                    mass = 1,
-                    friction = 4,
-                    restitution = 1,
-                    shapeType = "Cube",
-                    static = false,
-                    layer = "ALL",
-                    axisBlocked = {false,true,true,true,true,true}
-                },
-                MovementComponent = {
-                    jumpForce = 0,
-                },
-                EnemyComponent = {
-                    p1 = {-10, 0, 0},
-                    p2 = {10, 0, 0},
-                    radius = 0,
-                    speed = 200,
-                }
-            }
-        },
+        
 
         checkpoint = {
             components = {
@@ -99,7 +55,7 @@ local scenes = {
                     position = {-5, 15, 0},
                     scale = {0.1, 0.1, 0.1}
                 },
-                Collider = {
+                 Collider = {
                     scale = {1, 5, 1},
                     trigger = true,
                     shapeType = "Cube"
@@ -117,11 +73,11 @@ local scenes = {
             handler = "ground",
             components = {
                 Transform = {
-                    position = {0, -50, 0},
+                    position = {0, -10, 0},
                     rotation = {0, 0, 0, 1}
                 },
-                Collider = {
-                    scale = {30, 10, 30},
+                 Collider = {
+                    scale = {1, 1, 1},
                     shapeType = "Cube"
                 }
             }
