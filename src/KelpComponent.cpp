@@ -18,13 +18,13 @@ bool KelpComponent::initComponent(ComponentData* data) {
     Entity* manager = scene->getEntityByHandler("GameManager");
 	if (entity->hasComponent<Collider>()) {
         collider = entity->getComponent<Collider>();
-        collider->registerCallback(Collider::onCollisionEnter, [this] (Collider* self, Collider* other){
-            Entity* player = other->getEntity();
-            if (player->hasComponent<PlayerHealthComponent>()) {
-                player->getComponent<PlayerHealthComponent>()->addKelp(this->score);
-                this->getEntity()->setAlive(false);
-            }
-        });
+        //collider->registerCallback(Collider::onCollisionEnter, [this] (Collider* self, Collider* other){
+        //    Entity* player = other->getEntity();
+        //    if (player->hasComponent<PlayerHealthComponent>()) {
+        //        player->getComponent<PlayerHealthComponent>()->addKelp(this->score);
+        //        this->getEntity()->setAlive(false);
+        //    }
+        //});
         return true;
     }
     return false;

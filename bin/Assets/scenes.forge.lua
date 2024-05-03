@@ -27,9 +27,46 @@ local prefabs = {
 }
 
 local scenes = {
-    MainScene = {
-        jugador = {
-            blueprint = "player",
+	MainScene = {
+		luz = {
+            components = {
+                Transform = {
+                    position = {20, 80, 0}
+                },
+                Light = {
+                    type = 0 
+                }
+            }
+		},
+		Player= {
+			handler = "Player",
+			components = {
+				Transform= {
+					position = {11.92,-0.67,0},
+					rotation = {0,0,0,1},
+					scale = {1,1,1}
+				},
+				-- RigidBody= {
+				-- 	scale = {1,1,1},
+				-- 	axisBlocked = {false,false,true,true,true,true},
+				-- 	mass = 1,
+				-- 	friction = 1,
+				-- 	restitution = 1,
+				-- 	shapeType = "Cube",
+				-- 	static = false,
+				-- 	layer = "ALL"					
+				-- },
+				Mesh = {
+                    mesh = "Cylinder.mesh"
+
+                },
+                -- PlayerInputComponent = {
+                --     speed = 10
+                -- },
+                -- MovementComponent = {
+                --     jumpForce = 10
+                -- }
+			},
             children = {
                 cam = {
                     components = {

@@ -94,9 +94,9 @@ bool EnemyComponent::initComponent(ComponentData* data) {
 }
 
 bool EnemyComponent::checkAttack() {
-	if (rb->hasCollidedWith(uxia)) {
-		return true;
-	}
+	//if (rb->hasCollidedWith(uxia)) {
+	//	return true;
+	//}
 	return false;
 }
 
