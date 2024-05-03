@@ -12,7 +12,7 @@ Physics = {
 		--Layer2	= {	true,	false,	true},
 		--Layer1	= {	true,	false},
 		--				All		Player	Enemy	Ground	Object DeathZone
-		All			= {	true },
+		ALL			= {	true },
 		Player		= {	true,	true },
 		Enemy		= {	true,	true, 	false },
 		Ground		= {	true,	true, 	true,	true },
