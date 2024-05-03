@@ -6,7 +6,7 @@ local prefabs = {
 		components = {
 			Transform= {
 				position = {26.65192,-25.68632,0},
-				rotation = {0,0,0},
+				rotation = {0,0,0,1},
 				scale = {0.5,1.124932,1}
 			},
 			Collider= {
@@ -31,11 +31,11 @@ local prefabs = {
 			},
 			Collider= {
 				scale = {0.4691,1,1},
-				shapeType = "Cylinder",
-                layer = "Object"					
+				shapeType = "Cylinder"				
 			},
 			Mesh= {
-				mesh = "Cylinder.mesh"			
+				mesh = "Cylinder.mesh",
+				layer = "Object"				
 			},
 			KelpComponent= {
 				score = 1				
@@ -56,41 +56,40 @@ local scenes = {
                 }
             }
 		},
-
 		Player= {
 			handler = "Player",
 			components = {
 				Transform= {
 					position = {11.92,-0.67,0},
-					rotation = {0,0,0,0},
+					rotation = {0,0,0,1},
 					scale = {1,1,1}
 				},
-				RigidBody= {
-					scale = {1,1,1},
-					axisBlocked = {false,false,true,true,true,true},
-					mass = 1,
-					friction = 1,
-					restitution = 1,
-					shapeType = "Cube",
-					static = false,
-					layer = "All"					
-				},
-                Mesh = {
+				-- RigidBody= {
+				-- 	scale = {1,1,1},
+				-- 	axisBlocked = {false,false,true,true,true,true},
+				-- 	mass = 1,
+				-- 	friction = 1,
+				-- 	restitution = 1,
+				-- 	shapeType = "Cube",
+				-- 	static = false,
+				-- 	layer = "ALL"					
+				-- },
+				Mesh = {
                     mesh = "Cylinder.mesh"
 
                 },
-                PlayerInputComponent = {
-                    speed = 10
-                },
-                MovementComponent = {
-                    jumpForce = 10
-                }
+                -- PlayerInputComponent = {
+                --     speed = 10
+                -- },
+                -- MovementComponent = {
+                --     jumpForce = 10
+                -- }
 			},
             children = {
                 cam = {
                     components = {
                         Transform = {
-                            position = {0, 0, 100}
+                            position = {0, 0, 50}
                         },
                         Camera = {
                             nearClipDistance = 1,
@@ -100,8 +99,9 @@ local scenes = {
                         AudioListener = 0
                     }
                 }
-            }
+			}
 		},
+
 		Cigarros= {
 			components = {
 				Transform= {
@@ -110,7 +110,8 @@ local scenes = {
 					scale = {0.8751596,0.8751596,0.8751596}
 				}
 			},
-			children = {	
+			children = {
+				
 				Cigarro1= {
 					blueprint = "Cigarro",
 					components = {
@@ -153,19 +154,20 @@ local scenes = {
 							scale = {0.5,1.124932,1}
 						}
 					}
-				},
+				}
 			}
-		},					
+		},
 
 		Algas= {
 			components = {
 				Transform= {
 					position = {0,0,0},
-					rotation = {0,0,0},
+					rotation = {0,0,0,1},
 					scale = {0.8751596,0.8751596,0.8751596}
 				}
 			},
-			children = {							
+			children = {
+				
 				Alga1= {
 					blueprint = "Alga",
 					components = {
@@ -821,11 +823,97 @@ local scenes = {
 			components = {
 				Transform= {
 					position = {0,0,0},
-					rotation = {0,0,0},
+					rotation = {0,0,0,1},
 					scale = {0.8751596,0.8751596,0.8751596}
 				}
 			},
-			children = {				
+			children = {
+				Cube1 = {
+					components = {
+						Transform= {
+							position = {0,0,0},
+							rotation = {0,0,0,1},
+							scale = {1,1,1}
+						},
+						Mesh = {
+							mesh = "Cube.mesh"				
+						},
+						Collider= {
+							scale = {1,1,1},
+							shapeType = "Cube",
+							layer = "Ground"					
+						}
+					}
+				},
+				Cube2 = {
+					components = {
+						Transform= {
+							position = {2,0,0},
+							rotation = {0,0,0,1},
+							scale = {1,1,1}
+						},
+						Mesh = {
+							mesh = "Cube.mesh"				
+						},
+						Collider= {
+							scale = {1,1,1},
+							shapeType = "Cube",
+							layer = "Ground"					
+						}
+					}
+				},
+				Cube3 = {
+					components = {
+						Transform= {
+							position = {-2,0,0},
+							rotation = {0,0,0,1},
+							scale = {1,1,1}
+						},
+						Mesh = {
+							mesh = "Cube.mesh"				
+						},
+						Collider= {
+							scale = {1,1,1},
+							shapeType = "Cube",
+							layer = "Ground"					
+						}
+					}
+				},
+				Cube4 = {
+					components = {
+						Transform= {
+							position = {0,2,0},
+							rotation = {0,0,0,1},
+							scale = {1,1,1}
+						},
+						Mesh = {
+							
+							mesh = "Cube.mesh"				
+						},
+						Collider= {
+							scale = {1,1,1},
+							shapeType = "Cube",
+							layer = "Ground"					
+						}
+					}
+				},
+				Cube5 = {
+					components = {
+						Transform= {
+							position = {0,-2,0},
+							rotation = {0,0,0,1},
+							scale = {1,1,1}
+						},
+						Mesh = {
+							mesh = "Cube.mesh"				
+						},
+						Collider= {
+							scale = {1,1,1},
+							shapeType = "Cube",
+							layer = "Ground"					
+						}
+					}
+				},
 				Ground= {
 					components = {
 						Transform= {
@@ -835,10 +923,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {18.24046,44.89019,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -852,10 +941,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {22.46497,13.35052,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -863,16 +953,17 @@ local scenes = {
 				Ground_2= {
 					components = {
 						Transform= {
-							position = {31.27899,0.1330093,0},
-							rotation = {0,0,0.7071068,0.7071068},
-							scale = {32.99981,15.58366,1}
+							position = {31.1514,4.4714,0},
+							rotation = {0,0,0,1},
+							scale = {15.39157,24.25952,1}
 						},
 						Collider= {
-							scale = {32.99981,15.58366,1},
-							shapeType = "Cube"						
+							scale = {15.39157,24.25952,1},
+							shapeType = "Cube",					
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -880,16 +971,17 @@ local scenes = {
 				Ground_3= {
 					components = {
 						Transform= {
-							position = {52.1031,12.70214,0},
-							rotation = {0,0,0.7071068,0.7071068},
-							scale = {38.716,26.04071,1}
+							position = {51.9755,9.6397,0},
+							rotation = {0,0,0,1},
+							scale = {26.46535,32.16548,1}
 						},
 						Collider= {
-							scale = {38.716,26.04071,1},
-							shapeType = "Cube"						
+							scale = {26.46535,32.16548,1},
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -897,16 +989,17 @@ local scenes = {
 				Ground_15= {
 					components = {
 						Transform= {
-							position = {80.09798,20.41502,0},
-							rotation = {0,0,0.7071068,0.7071068},
-							scale = {23.28676,30.04056,1}
+							position = {80.1618,20.2874,0},
+							rotation = {0,0,0,1},
+							scale = {30.05009,23.40536,1}
 						},
 						Collider= {
-							scale = {23.28676,30.04056,1},
-							shapeType = "Cube"						
+							scale = {30.05009,23.40536,1},
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -914,16 +1007,17 @@ local scenes = {
 				Ground_18= {
 					components = {
 						Transform= {
-							position = {100.9513,23.41448,0},
-							rotation = {0,0,0.7071068,0.7071068},
-							scale = {17.28721,11.75787,1}
+							position = {100.9513,23.4145,0},
+							rotation = {0,0,0,1},
+							scale = {11.67214,17.11616,1}
 						},
 						Collider= {
-							scale = {17.28721,11.75787,1},
-							shapeType = "Cube"						
+							scale = {11.67214,17.11616,1},
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -931,16 +1025,17 @@ local scenes = {
 				Ground_19= {
 					components = {
 						Transform= {
-							position = {119.6622,16.98708,0},
-							rotation = {0,0,0.7071068,0.7071068},
-							scale = {30.14191,25.75562,1}
+							position = {119.5346,16.7319,0},
+							rotation = {0,0,0,1},
+							scale = {25.54743,30.09663,1}
 						},
 						Collider= {
-							scale = {30.14191,25.75562,1},
-							shapeType = "Cube"						
+							scale = {25.54743,30.09663,1},
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -948,16 +1043,17 @@ local scenes = {
 				Ground_25= {
 					components = {
 						Transform= {
-							position = {152.9418,11.84516,0},
-							rotation = {0,0,0.7071068,0.7071068},
-							scale = {40.42633,40.89478,1}
+							position = {152.878,11.9728,0},
+							rotation = {0,0,0,1},
+							scale = {41.06748,40.12918,1}
 						},
 						Collider= {
-							scale = {40.42633,40.89478,1},
-							shapeType = "Cube"						
+							scale = {41.06748,40.12918,1},
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -971,10 +1067,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {10.30046,18.32828,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -988,10 +1085,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {20.53343,18.49995,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1005,10 +1103,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {9.725895,23.07129,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1022,10 +1121,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {7.107291,28.21388,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1039,10 +1139,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {24.36362,30.49787,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1056,10 +1157,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {16.53437,1.933702,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1073,10 +1175,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {22.247,2.050476,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1090,10 +1193,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {17.38852,1.933682,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1107,10 +1211,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {22.60653,2.504776,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1124,10 +1229,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {31.46238,4.218759,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1141,10 +1247,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {9.792862,5.361515,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1158,10 +1265,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {3.793755,5.933552,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1175,10 +1283,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {14.53313,1.648048,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1192,10 +1301,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {9.677046,24.50104,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1209,10 +1319,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {7.391328,28.50129,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1226,10 +1337,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {7.391328,23.07464,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1243,10 +1355,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {7.391328,23.07464,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1260,10 +1373,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {7.391328,29.07405,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1277,10 +1391,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {2.535225,29.07405,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1294,10 +1409,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {2.535225,29.07405,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1311,10 +1427,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {2.535225,29.07405,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1328,10 +1445,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {2.535225,25.36129,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1345,10 +1463,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {13.39052,31.36081,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1362,10 +1481,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {11.10504,36.50399,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1379,10 +1499,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {12.8189,42.50159,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1396,10 +1517,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {7.105398,47.07051,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",						
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1413,10 +1535,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {7.676759,45.35551,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1430,10 +1553,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {19.96005,29.9301,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1447,10 +1571,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {27.97696,21.07378,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				},
@@ -1464,10 +1589,11 @@ local scenes = {
 						},
 						Collider= {
 							scale = {1,18.74993,1},
-							shapeType = "Cube"						
+							shapeType = "Cube",							
+							layer = "Ground"					
 						},
-						Mesh= {
-							mesh = "Cube.mesh"						
+						Mesh = {
+							mesh = "Cube.mesh"				
 						}
 					}
 				}
@@ -1482,7 +1608,8 @@ local scenes = {
 					scale = {1,1,1}
 				}
 			},
-			children = {				
+			children = {
+				
 				NecoraMalvada_1= {
 					group = "",
 					components = {
@@ -1499,18 +1626,18 @@ local scenes = {
 							restitution = 1,
 							shapeType = "Cube",
 							static = false,
-							layer = "Enemy"						
+							layer = "Enemy"							
 						},
 						Mesh= {
-							mesh = "Cylinder.mesh"						
+							mesh = "Cylinder.mesh"							
 						},
 						MovementComponent= {
-							jumpForce = 0						
+							jumpForce = 0							
 						},
 						EnemyComponent= {
 							p1 = {31.5,-23.82,0},
 							p2 = {47,-23.82,0},
-							speed = 30						
+							speed = 30							
 						}
 					}
 				},
@@ -1531,18 +1658,18 @@ local scenes = {
 							restitution = 1,
 							shapeType = "Cube",
 							static = false,
-							layer = "Enemy"						
+							layer = "Enemy"							
 						},
 						Mesh= {
-							mesh = "Cylinder.mesh"						
+							mesh = "Cylinder.mesh"							
 						},
 						MovementComponent= {
-							jumpForce = 0						
+							jumpForce = 0							
 						},
 						EnemyComponent= {
 							p1 = {41,-13.32,0},
 							p2 = {52,-13.32,0},
-							speed = 30						
+							speed = 30							
 						}
 					}
 				},
@@ -1563,18 +1690,18 @@ local scenes = {
 							restitution = 1,
 							shapeType = "Cube",
 							static = false,
-							layer = "Enemy"						
+							layer = "Enemy"							
 						},
 						Mesh= {
-							mesh = "Cylinder.mesh"						
+							mesh = "Cylinder.mesh"							
 						},
 						MovementComponent= {
-							jumpForce = 0						
+							jumpForce = 0							
 						},
 						EnemyComponent= {
 							p1 = {70,-13.38,0},
 							p2 = {87,-13.38,0},
-							speed = 30						
+							speed = 30							
 						}
 					}
 				},
@@ -1595,18 +1722,18 @@ local scenes = {
 							restitution = 1,
 							shapeType = "Cube",
 							static = false,
-							layer = "Enemy"						
+							layer = "Enemy"							
 						},
 						Mesh= {
-							mesh = "Cylinder.mesh"						
+							mesh = "Cylinder.mesh"							
 						},
 						MovementComponent= {
-							jumpForce = 0						
+							jumpForce = 0							
 						},
 						EnemyComponent= {
 							p1 = {82,-6.13,0},
 							p2 = {70,-6.13,0},
-							speed = 30						
+							speed = 30							
 						}
 					}
 				},
@@ -1627,18 +1754,18 @@ local scenes = {
 							restitution = 1,
 							shapeType = "Cube",
 							static = false,
-							layer = "Enemy"						
+							layer = "Enemy"							
 						},
 						Mesh= {
-							mesh = "Cylinder.mesh"						
+							mesh = "Cylinder.mesh"							
 						},
 						MovementComponent= {
-							jumpForce = 0						
+							jumpForce = 0							
 						},
 						EnemyComponent= {
 							p1 = {68,4.31,0},
 							p2 = {91,4.31,0},
-							speed = 30						
+							speed = 30							
 						}
 					}
 				},
@@ -1659,18 +1786,18 @@ local scenes = {
 							restitution = 1,
 							shapeType = "Cube",
 							static = false,
-							layer = "Enemy"						
+							layer = "Enemy"							
 						},
 						Mesh= {
-							mesh = "Cylinder.mesh"						
+							mesh = "Cylinder.mesh"							
 						},
 						MovementComponent= {
-							jumpForce = 0						
+							jumpForce = 0							
 						},
 						EnemyComponent= {
 							p1 = {95,-8.69,0},
 							p2 = {104,-8.69,0},
-							speed = 30						
+							speed = 30							
 						}
 					}
 				},
@@ -1691,18 +1818,18 @@ local scenes = {
 							restitution = 1,
 							shapeType = "Cube",
 							static = false,
-							layer = "Enemy"						
+							layer = "Enemy"							
 						},
 						Mesh= {
-							mesh = "Cylinder.mesh"						
+							mesh = "Cylinder.mesh"							
 						},
 						MovementComponent= {
-							jumpForce = 0						
+							jumpForce = 0							
 						},
 						EnemyComponent= {
 							p1 = {164,-12.67,0},
 							p2 = {171,-12.67,0},
-							speed = 30						
+							speed = 30							
 						}
 					}
 				},
@@ -1723,18 +1850,18 @@ local scenes = {
 							restitution = 1,
 							shapeType = "Cube",
 							static = false,
-							layer = "Enemy"						
+							layer = "Enemy"							
 						},
 						Mesh= {
-							mesh = "Cylinder.mesh"						
+							mesh = "Cylinder.mesh"							
 						},
 						MovementComponent= {
-							jumpForce = 0						
+							jumpForce = 0							
 						},
 						EnemyComponent= {
 							p1 = {184,-2.92,0},
 							p2 = {192,-2.92,0},
-							speed = 30						
+							speed = 30							
 						}
 					}
 				}
@@ -1749,7 +1876,8 @@ local scenes = {
 					scale = {1,1,1}
 				}
 			},
-			children = {	
+			children = {
+				
 				Huecos= {
 					components = {
 						Transform= {
@@ -1758,7 +1886,8 @@ local scenes = {
 							scale = {1,1,1}
 						}
 					},
-					children = {	
+					children = {
+						
 						HuecoTentaculo= {
 							components = {
 								Transform= {
@@ -1860,6 +1989,7 @@ local scenes = {
 						}
 					}
 				},
+				
 				Tentaculos= {
 					components = {
 						Transform= {
@@ -1868,7 +1998,8 @@ local scenes = {
 							scale = {1,1,1}
 						}
 					},
-					children = {	
+					children = {
+						
 						Tentaculo= {
 							components = {
 								Transform= {
@@ -1884,18 +2015,18 @@ local scenes = {
 									restitution = 1,
 									shapeType = "Cube",
 									static = false,
-									layer = "Enemy"							
+									layer = "Enemy"									
 								},
 								Mesh= {
-									mesh = "Cylinder.mesh"							
+									mesh = "Cylinder.mesh"									
 								},
 								EnemyComponent= {
 									p1 = {112.3,-8.4,0},
 									p2 = {112.3, 2.7,0},
-									speed = 30							
+									speed = 30									
 								},
 								MovementComponent= {
-									jumpForce = 0							
+									jumpForce = 0									
 								}
 							}
 						},
@@ -1915,18 +2046,18 @@ local scenes = {
 									restitution = 1,
 									shapeType = "Cube",
 									static = false,
-									layer = "Enemy"							
+									layer = "Enemy"									
 								},
 								Mesh= {
-									mesh = "Cylinder.mesh"							
+									mesh = "Cylinder.mesh"									
 								},
 								EnemyComponent= {
 									p1 = {50.8,-21.4,0},
 									p2 = {50.8,-37.2,0},
-									speed = 30							
+									speed = 30									
 								},
 								MovementComponent= {
-									jumpForce = 0							
+									jumpForce = 0									
 								}
 							}
 						},
@@ -1946,18 +2077,18 @@ local scenes = {
 									restitution = 1,
 									shapeType = "Cube",
 									static = false,
-									layer = "Enemy"							
+									layer = "Enemy"									
 								},
 								Mesh= {
-									mesh = "Cylinder.mesh"							
+									mesh = "Cylinder.mesh"									
 								},
 								EnemyComponent= {
 									p1 = {91.5,-21.7,0},
 									p2 = {91.5,-40.4,0},
-									speed = 30							
+									speed = 30									
 								},
 								MovementComponent= {
-									jumpForce = 0							
+									jumpForce = 0									
 								}
 							}
 						},
@@ -1977,18 +2108,18 @@ local scenes = {
 									restitution = 1,
 									shapeType = "Cube",
 									static = false,
-									layer = "Enemy"							
+									layer = "Enemy"									
 								},
 								Mesh= {
-									mesh = "Cylinder.mesh"							
+									mesh = "Cylinder.mesh"									
 								},
 								EnemyComponent= {
 									p1 = {126.7,-24.3,0},
 									p2 = {126.7,-36,0},
-									speed = 30							
+									speed = 30									
 								},
 								MovementComponent= {
-									jumpForce = 0							
+									jumpForce = 0									
 								}
 							}
 						},
@@ -2008,18 +2139,18 @@ local scenes = {
 									restitution = 1,
 									shapeType = "Cube",
 									static = false,
-									layer = "Enemy"							
+									layer = "Enemy"									
 								},
 								Mesh= {
-									mesh = "Cylinder.mesh"							
+									mesh = "Cylinder.mesh"									
 								},
 								EnemyComponent= {
 									p1 = {134.7,-24.3,0},
 									p2 = {134.7,-36,0},
-									speed = 30							
+									speed = 30									
 								},
 								MovementComponent= {
-									jumpForce = 0							
+									jumpForce = 0									
 								}
 							}
 						},
@@ -2039,18 +2170,18 @@ local scenes = {
 									restitution = 1,
 									shapeType = "Cube",
 									static = false,
-									layer = "Enemy"							
+									layer = "Enemy"									
 								},
 								Mesh= {
-									mesh = "Cylinder.mesh"							
+									mesh = "Cylinder.mesh"									
 								},
 								EnemyComponent= {
 									p1 = {143.7,-24.3,0},
 									p2 = {143.7,-36,0},
-									speed = 30							
+									speed = 30									
 								},
 								MovementComponent= {
-									jumpForce = 0							
+									jumpForce = 0									
 								}
 							}
 						},
@@ -2070,18 +2201,18 @@ local scenes = {
 									restitution = 1,
 									shapeType = "Cube",
 									static = false,
-									layer = "Enemy"							
+									layer = "Enemy"									
 								},
 								Mesh= {
-									mesh = "Cylinder.mesh"							
+									mesh = "Cylinder.mesh"									
 								},
 								EnemyComponent= {
 									p1 = {152.6,-26.6,0},
 									p2 = {152.6,-35.5,0},
-									speed = 30							
+									speed = 30									
 								},
 								MovementComponent= {
-									jumpForce = 0							
+									jumpForce = 0									
 								}
 							}
 						},
@@ -2101,18 +2232,18 @@ local scenes = {
 									restitution = 1,
 									shapeType = "Cube",
 									static = false,
-									layer = "Enemy"							
+									layer = "Enemy"									
 								},
 								Mesh= {
-									mesh = "Cylinder.mesh"							
+									mesh = "Cylinder.mesh"									
 								},
 								EnemyComponent= {
 									p1 = {171,-6.3,0},
 									p2 = {193,-6.3,0},
-									speed = 30							
+									speed = 30									
 								},
 								MovementComponent= {
-									jumpForce = 0							
+									jumpForce = 0									
 								}
 							}
 						},
@@ -2132,32 +2263,22 @@ local scenes = {
 									restitution = 1,
 									shapeType = "Cube",
 									static = false,
-									layer = "Enemy"							
+									layer = "Enemy"									
 								},
 								Mesh= {
-									mesh = "Cylinder.mesh"							
+									mesh = "Cylinder.mesh"									
 								},
 								EnemyComponent= {
 									p1 = {178,0.4,0},
 									p2 = {178,15.6,0},
-									speed = 30							
+									speed = 30									
 								},
 								MovementComponent= {
-									jumpForce = 0							
+									jumpForce = 0									
 								}
 							}
 						}
 					}
-				}
-			}
-		},
-
-		Cube= {
-			components = {
-				Transform= {
-					position = {192.72,-3.02,0},
-					rotation = {0,0,0,1},
-					scale = {1,1,1}
 				}
 			}
 		},
@@ -2170,7 +2291,8 @@ local scenes = {
 					scale = {1,1,1}
 				}
 			},
-			children = {	
+			children = {
+				
 				DeathZone= {
 					components = {
 						Transform= {
@@ -2181,7 +2303,7 @@ local scenes = {
 						Collider= {
 							scale = {53, 7.34,1},
 							shapeType = "Cube",
-							layer = "DeathZone"						
+							layer = "DeathZone"							
 						}
 					}
 				},
@@ -2196,7 +2318,7 @@ local scenes = {
 						Collider= {
 							scale = {53, 7.34,1},
 							shapeType = "Cube",
-							layer = "DeathZone"						
+							layer = "DeathZone"							
 						}
 					}
 				},
@@ -2211,7 +2333,7 @@ local scenes = {
 						Collider= {
 							scale = {27, 7.34,1},
 							shapeType = "Cube",
-							layer = "DeathZone"						
+							layer = "DeathZone"							
 						}
 					}
 				},
@@ -2226,7 +2348,7 @@ local scenes = {
 						Collider= {
 							scale = {27, 7.34,1},
 							shapeType = "Cube",
-							layer = "DeathZone"						
+							layer = "DeathZone"							
 						}
 					}
 				}
@@ -2234,5 +2356,4 @@ local scenes = {
 		}
 	}	
 }
-
 return prefabs, scenes
