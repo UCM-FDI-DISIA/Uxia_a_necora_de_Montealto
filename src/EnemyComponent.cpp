@@ -19,11 +19,14 @@ EnemyComponent::EnemyComponent() :
 	p1(forge::Vector3::ZERO),
 	p2(forge::Vector3::ZERO),
 	speed(0),
-	changeDir(false){
+	changeDir(false),
+	axis(0),
+	uxia(nullptr){
 	serializer(p1, "p1");
 	serializer(p2, "p2");
 	serializer(radius, "radius");
 	serializer(speed, "speed");
+	serializer(axis, "axis");
 }
 
 EnemyComponent::~EnemyComponent() {
@@ -32,34 +35,38 @@ EnemyComponent::~EnemyComponent() {
 
 void EnemyComponent::update() {
 	//Merodeo
-	if (p1.getX() >= transform->getGlobalPosition().getX()) {
-		changeDir = true;
-		rb->setPositionX(p1.getX());
-		sign = 1;
+	switch (axis) {
+		case 1:
+			if (transform->getGlobalPosition().getY() >= p2.getY()) {	
+				changeDir = true;
+				sign = -1;
+			}
+			else if (transform->getGlobalPosition().getY() <= p1.getY()) {
+				changeDir = true;
+				sign = 1;
+			}
+			break;
+		case 2:
+			if (transform->getGlobalPosition().getZ() >= p2.getZ()) {
+				changeDir = true;
+				sign = -1;
+			}
+			else if (transform->getGlobalPosition().getZ() <= p1.getZ()) {
+				changeDir = true;
+				sign = 1;
+			}
+			break;
+		default:
+			if (transform->getGlobalPosition().getX() >= p2.getX()) {
+				changeDir = true;
+				sign = -1;
+			}
+			else if (transform->getGlobalPosition().getX() <= p1.getX()) {
+				changeDir = true;
+				sign = 1;
+			}
+			break;
 	}
-	if (p2.getX() <= transform->getGlobalPosition().getX()) {
-		changeDir = true;
-		rb->setPositionX(p2.getX());
-		sign = -1;
-	}
-
-	/* // Movimiento cuando el player esta cerca
-	float distance = movementComponent->getTransform()->getPosition().getX() -
-	uxia->movementComponent->transform->getPosition().getX();
-	if ((abs)distance <= radius && radius != 0) {
-		changeDir = true;
-		if (distance >= 0) {
-			sign = 1;
-		}
-		else {
-			sign = -1;
-		}
-	}
-	*/
-
-	//std::cout << transform->getGlobalPosition().getX() << " " 
-	//	<< transform->getGlobalPosition().getY() << " " 
-	//	<< transform->getGlobalPosition().getZ() << "\n";
 }
 
 void EnemyComponent::fixedUpdate() {
@@ -67,7 +74,7 @@ void EnemyComponent::fixedUpdate() {
 	if (changeDir) {
 		rb->clearForces();
 		changeDir = false;
-		movementComponent->moveHorizontal(speed * sign);
+		movementComponent->move(speed * sign, axis);
 	}
 	//Comprobacion de ataque
 	uxia = scene->getEntityByHandler("uxia");
@@ -83,7 +90,7 @@ bool EnemyComponent::initComponent(ComponentData* data) {
 		rb = entity->getComponent<RigidBody>();
 		movementComponent = entity->getComponent<MovementComponent>();
 		rb->setGravity(forge::Vector3(0, 0, 0));
-		movementComponent->moveHorizontal(speed * sign);
+		movementComponent->move(speed * sign, axis);
 		uxia = scene->getEntityByHandler("uxia");
 		return true;
 	}
