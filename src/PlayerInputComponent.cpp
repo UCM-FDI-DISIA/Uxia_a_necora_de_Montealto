@@ -31,10 +31,10 @@ void PlayerInputComponent::update() {
 	//Movimiento A / D
 
 	if (input.keyPressed(K_A)) {
-		movement->moveHorizontal(-speed);
+		movement->move(-speed, 0);
 	}
 	else if (input.keyPressed(K_D)) {
-		movement->moveHorizontal(speed);
+		movement->move(speed, 0);
 	}
 
 	//Salto

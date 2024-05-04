@@ -17,6 +17,6 @@ public:
 
 	MovementComponent();
 	bool initComponent(ComponentData* data) override;
-	void moveHorizontal(float direction);
+	void move(float direction, int axis);
 	void jump();
 };

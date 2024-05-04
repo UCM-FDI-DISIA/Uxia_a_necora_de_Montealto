@@ -24,9 +24,20 @@ bool MovementComponent::initComponent(ComponentData* data) {
 	return false;
 }
 
-void MovementComponent::moveHorizontal(float direction) {
-	currentDirection.set(direction, 0, 0);
-	rigidBody->applyForce(currentDirection);
+void MovementComponent::move(float direction, int axis) {
+	switch (axis)
+	{
+		case 1:
+			currentDirection.set(0, direction, 0);
+			break;
+		case 2:
+			currentDirection.set(0, 0, direction);
+			break;
+		default: 
+			currentDirection.set(direction, 0, 0);
+			break;
+	}
+	rigidBody->applyForce(currentDirection);	
 }
 
 void MovementComponent::jump() {

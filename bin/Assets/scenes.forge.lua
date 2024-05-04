@@ -2032,7 +2032,7 @@ local scenes = {
 									scale = {3,11.3,1}
 								},
 								RigidBody= {
-									axisBlockedPos = {false,false,true},
+									axisBlockedPos = {true,false,true},
 									axisBlockedRot = {true, true, true},
 									mass = 1,
 									friction = 1,
@@ -2045,9 +2045,10 @@ local scenes = {
 									mesh = "Cylinder.mesh"									
 								},
 								EnemyComponent= {
-									p1 = {50.8,-21.4,0},
-									p2 = {50.8,-37.2,0},
-									speed = 120									
+									p1 = {50.8,-37.2,0},
+									p2 = {50.8,-21.4,0},
+									speed = 120,
+									axis = 1						
 								},
 								MovementComponent= {
 									jumpForce = 0									
@@ -2076,8 +2077,8 @@ local scenes = {
 									mesh = "Cylinder.mesh"									
 								},
 								EnemyComponent= {
-									p1 = {91.5,-21.7,0},
-									p2 = {91.5,-40.4,0},
+									p1 = {91.5,-40.4,0},
+									p2 = {91.5,-21.7,0},
 									speed = 30									
 								},
 								MovementComponent= {
@@ -2107,8 +2108,8 @@ local scenes = {
 									mesh = "Cylinder.mesh"									
 								},
 								EnemyComponent= {
-									p1 = {126.7,-24.3,0},
-									p2 = {126.7,-36,0},
+									p1 = {126.7,-36,0},
+									p2 = {126.7,-24.3,0},
 									speed = 30									
 								},
 								MovementComponent= {
@@ -2138,8 +2139,8 @@ local scenes = {
 									mesh = "Cylinder.mesh"									
 								},
 								EnemyComponent= {
-									p1 = {134.7,-24.3,0},
-									p2 = {134.7,-36,0},
+									p1 = {134.7,-36,0},
+									p2 = {134.7,-24.3,0},
 									speed = 30									
 								},
 								MovementComponent= {
@@ -2169,8 +2170,8 @@ local scenes = {
 									mesh = "Cylinder.mesh"									
 								},
 								EnemyComponent= {
-									p1 = {143.7,-24.3,0},
-									p2 = {143.7,-36,0},
+									p1 = {143.7,-36,0},
+									p2 = {143.7,-24.3,0},
 									speed = 30									
 								},
 								MovementComponent= {
@@ -2199,8 +2200,8 @@ local scenes = {
 									mesh = "Cylinder.mesh"									
 								},
 								EnemyComponent= {
-									p1 = {152.6,-26.6,0},
-									p2 = {152.6,-35.5,0},
+									p1 = {152.6,-35.5,0},
+									p2 = {152.6,-26.6,0},
 									speed = 30									
 								},
 								MovementComponent= {

@@ -8,12 +8,13 @@ class Transform;
 
 class EnemyComponent : public Component {
 private:
-	forge::Vector3 p1;
-	forge::Vector3 p2;
+	forge::Vector3 p1; // El menor de ambos puntos
+	forge::Vector3 p2; // El mayor de ambos puntos
 	float sign;
 	float radius;
 	float speed;
 	bool changeDir;
+	int axis; // 0 = x, 1 = y, 2 = z
 	//HealthComponent* healthComponent;
 	MovementComponent* movementComponent;
 	//AttackComponent* attackComponent;
