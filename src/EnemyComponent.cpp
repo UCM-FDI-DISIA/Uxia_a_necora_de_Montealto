@@ -34,6 +34,17 @@ EnemyComponent::~EnemyComponent() {
 }
 
 void EnemyComponent::update() {
+	// Cambio de direccion al llegar a un borde
+	if (changeDir) {
+		rb->clearForces();
+		changeDir = false;
+		movementComponent->moveHorizontal(speed);
+	}
+	//Comprobacion de ataque
+	uxia = scene->getEntityByHandler("uxia");
+	if (checkAttack()) {
+		attack();
+	}
 	//Merodeo
 	switch (axis) {
 		case 1:
@@ -69,20 +80,6 @@ void EnemyComponent::update() {
 	}
 }
 
-void EnemyComponent::fixedUpdate() {
-	// Cambio de direccion al llegar a un borde
-	if (changeDir) {
-		rb->clearForces();
-		changeDir = false;
-		movementComponent->move(speed * sign, axis);
-	}
-	//Comprobacion de ataque
-	uxia = scene->getEntityByHandler("uxia");
-	if (checkAttack()) {
-		attack();
-	}
-}
-
 bool EnemyComponent::initComponent(ComponentData* data) {
 	if (entity->hasComponent<Transform>() && entity->hasComponent<RigidBody>()
 		&& entity->hasComponent<MovementComponent>()) {
@@ -90,7 +87,6 @@ bool EnemyComponent::initComponent(ComponentData* data) {
 		rb = entity->getComponent<RigidBody>();
 		movementComponent = entity->getComponent<MovementComponent>();
 		rb->setGravity(forge::Vector3(0, 0, 0));
-		movementComponent->move(speed * sign, axis);
 		uxia = scene->getEntityByHandler("uxia");
 		return true;
 	}

@@ -35,8 +35,6 @@ public:
 	/// </summary>
 	void update() override;
 
-	void fixedUpdate() override;
-
 	bool initComponent(ComponentData* data) override;
 
 	/// <summary>
