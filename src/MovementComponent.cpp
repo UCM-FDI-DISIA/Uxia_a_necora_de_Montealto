@@ -43,3 +43,8 @@ void MovementComponent::move(float direction, int axis) {
 void MovementComponent::jump() {
 	rigidBody->applyForce(jumpDirection);
 }
+
+void MovementComponent::stop() {
+	rigidBody->clearForces();
+	currentDirection.set(forge::Vector3::ZERO);
+}

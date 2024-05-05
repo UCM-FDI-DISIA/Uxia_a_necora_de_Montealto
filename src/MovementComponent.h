@@ -19,4 +19,5 @@ public:
 	bool initComponent(ComponentData* data) override;
 	void move(float direction, int axis);
 	void jump();
+	void stop();
 };

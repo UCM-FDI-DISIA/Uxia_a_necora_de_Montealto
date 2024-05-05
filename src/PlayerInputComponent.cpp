@@ -30,6 +30,10 @@ bool PlayerInputComponent::initComponent(ComponentData* data)
 void PlayerInputComponent::update() {
 	//Movimiento A / D
 
+	if (input.keyUp(K_A) || input.keyUp(K_D)) { 
+		movement->stop();
+	}
+
 	if (input.keyPressed(K_A)) {
 		movement->move(-speed, 0);
 	}

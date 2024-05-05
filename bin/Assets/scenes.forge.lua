@@ -62,26 +62,27 @@ local scenes = {
 					rotation = {0,0,0,1},
 					scale = {1,1,1}
 				},
-				-- RigidBody= {
-				-- 	scale = {1,1,1},
-				-- 	axisBlocked = {false,false,true,true,true,true},
-				-- 	mass = 1,
-				-- 	friction = 1,
-				-- 	restitution = 1,
-				-- 	shapeType = "Cube",
-				-- 	static = false,
-				-- 	layer = "ALL"					
-				-- },
+				 RigidBody= {
+				 	scale = {1,1,1},
+				 	axisBlockedPos = {false,false,true},
+				 	axisBlockedRot = {true,true,true},
+				 	mass = 1,
+				 	friction = 1,
+				 	restitution = 1,
+				 	shapeType = "Cube",
+				 	static = false,
+				 	layer = "ALL"					
+				 },
 				Mesh = {
                     mesh = "Cylinder.mesh"
 
                 },
-                -- PlayerInputComponent = {
-                --     speed = 10
-                -- },
-                -- MovementComponent = {
-                --     jumpForce = 10
-                -- }
+                 PlayerInputComponent = {
+                     speed = 10
+                 },
+                 MovementComponent = {
+                     jumpForce = 400
+                 }
 			},
             children = {
                 cam = {
