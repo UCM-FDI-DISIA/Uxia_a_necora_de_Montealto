@@ -40,16 +40,16 @@ void MovementComponent::move(float direction, int axis) {
 	if (rigidBody->getSpeed() < 5)
 		rigidBody->applyForce(currentDirection);
 	else if (currentDirection.getX() < 0)
-		rigidBody->setLinearVelocity(forge::Vector3(-rigidBody->getSpeed(), 0, 0));
+		rigidBody->setLinearVelocity(forge::Vector3(-5, rigidBody->getLinearVelocity().getY(), 0));
 	else if (currentDirection.getX() > 0)
-		rigidBody->setLinearVelocity(forge::Vector3(rigidBody->getSpeed(), 0, 0));
+		rigidBody->setLinearVelocity(forge::Vector3(5, rigidBody->getLinearVelocity().getY(), 0));
 }
 
 void MovementComponent::jump() {
 	rigidBody->applyForce(jumpDirection);
 }
 
-void MovementComponent::stop() {
+void MovementComponent::stop() {/*
 	rigidBody->rest();
-	currentDirection.set(forge::Vector3::ZERO);
+	currentDirection.set(forge::Vector3::ZERO);*/
 }
