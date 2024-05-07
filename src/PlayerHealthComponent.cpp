@@ -9,7 +9,7 @@
 const std::string PlayerHealthComponent::id = "PlayerHealthComponent";
 
 PlayerHealthComponent::PlayerHealthComponent(): 
-	maxKelpsSpawned(10), 
+	maxKelpsSpawned(10),
 	transform(nullptr) {
 	health = 0;
 	maxHealth = 99;

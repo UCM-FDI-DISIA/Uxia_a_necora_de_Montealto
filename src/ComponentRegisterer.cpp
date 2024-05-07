@@ -5,6 +5,7 @@
 #include "KelpComponent.h"
 #include "EnemyComponent.h"
 #include "CheckpointComponent.h"
+#include "PlayerHealthComponent.h"
 
 FORGE_IMPORT void registerComponents(Factory& f) {
 	f.registerComponent<KelpComponent>();
@@ -12,4 +13,5 @@ FORGE_IMPORT void registerComponents(Factory& f) {
 	f.registerComponent<PlayerInputComponent>();
 	f.registerComponent<EnemyComponent>();
 	f.registerComponent<CheckpointComponent>();
+	f.registerComponent<PlayerHealthComponent>();
 }

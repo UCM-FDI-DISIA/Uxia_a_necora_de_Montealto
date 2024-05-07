@@ -77,12 +77,15 @@ local scenes = {
                     mesh = "Cylinder.mesh"
 
                 },
-                 PlayerInputComponent = {
-                     speed = 10
-                 },
-                 MovementComponent = {
-                     jumpForce = 400
-                 }
+				PlayerInputComponent = {
+					speed = 10
+				},
+				MovementComponent = {
+					jumpForce = 400
+				},
+				PlayerHealthComponent = {
+					kelpBlueprint = "Alga",
+				}
 			},
             children = {
                 cam = {
@@ -2004,7 +2007,7 @@ local scenes = {
 								RigidBody= {
 									axisBlockedPos = {false,false,true},
 									axisBlockedRot = {true, true, true},
-									mass = 0,
+									mass = 1,
 									friction = 1,
 									restitution = 1,
 									shapeType = "Cylinder",
@@ -2067,7 +2070,7 @@ local scenes = {
 								RigidBody= {
 									axisBlockedPos = {false,false,true},
 									axisBlockedRot = {true, true, true},
-									mass = 0,
+									mass = 1,
 									friction = 1,
 									restitution = 1,
 									shapeType = "Cylinder",
@@ -2098,7 +2101,7 @@ local scenes = {
 								RigidBody= {
 									axisBlockedPos = {false,false,true},
 									axisBlockedRot = {true, true, true},
-									mass = 0,
+									mass = 1,
 									friction = 1,
 									restitution = 1,
 									shapeType = "Cylinder",
@@ -2129,7 +2132,7 @@ local scenes = {
 								RigidBody= {
 									axisBlockedPos = {false,false,true},
 									axisBlockedRot = {true, true, true},
-									mass = 0,
+									mass = 1,
 									friction = 1,
 									restitution = 1,
 									shapeType = "Cylinder",
@@ -2160,7 +2163,7 @@ local scenes = {
 								RigidBody= {
 									axisBlockedPos = {false,false,true},
 									axisBlockedRot = {true, true, true},
-									mass = 0,
+									mass = 1,
 									friction = 1,
 									restitution = 1,
 									shapeType = "Cylinder",
@@ -2189,8 +2192,9 @@ local scenes = {
 									scale = {3,14,1}
 								},
 								RigidBody= {
-									axisBlocked = {false,false,true,true,true,true},
-									mass = 0,
+									axisBlockedPos = {false,false,true},
+									axisBlockedRot = {true, true, true},
+									mass = 1,
 									friction = 1,
 									restitution = 1,
 									shapeType = "Cylinder",
@@ -2219,8 +2223,9 @@ local scenes = {
 									scale = {3,11.3,1}
 								},
 								RigidBody= {
-									axisBlocked = {false,false,true,true,true,true},
-									mass = 0,
+									axisBlockedPos = {false,false,true},
+									axisBlockedRot = {true, true, true},
+									mass = 1,
 									friction = 1,
 									restitution = 1,
 									shapeType = "Cylinder",
@@ -2249,8 +2254,9 @@ local scenes = {
 									scale = {3,8.3,1}
 								},
 								RigidBody= {
-									axisBlocked = {false,false,true,true,true,true},
-									mass = 0,
+									axisBlockedPos = {false,false,true},
+									axisBlockedRot = {true, true, true},
+									mass = 1,
 									friction = 1,
 									restitution = 1,
 									shapeType = "Cylinder",
