@@ -29,7 +29,8 @@ local prefabs = {
 				scale = {0.4691,1,1}
 			},
 			Collider= {
-				shapeType = "Cylinder"				
+				shapeType = "Cylinder",	
+				trigger = true
 			},
 			Mesh= {
 				mesh = "Cylinder.mesh",
@@ -67,7 +68,7 @@ local scenes = {
 				 	axisBlockedPos = {false,false,true},
 				 	axisBlockedRot = {true,true,true},
 				 	mass = 1,
-				 	friction = 10,
+				 	friction = 1,
 				 	restitution = 1,
 				 	shapeType = "Cube",
 				 	static = false,
