@@ -91,7 +91,7 @@ local scenes = {
                 cam = {
                     components = {
                         Transform = {
-                            position = {0, 0, 10}
+                            position = {0, 0, 60}
                         },
                         Camera = {
                             nearClipDistance = 1,

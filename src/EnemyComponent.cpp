@@ -111,5 +111,5 @@ bool EnemyComponent::checkAttack() {
 }
 
 void EnemyComponent::attack() {
-	//uxiaHealthComponent->damage(1);
+	uxiaHealthComponent->damage(0);
 }

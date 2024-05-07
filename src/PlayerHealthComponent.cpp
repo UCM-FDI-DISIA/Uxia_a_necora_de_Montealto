@@ -48,7 +48,7 @@ void PlayerHealthComponent::dropKelps() {
 	for (int i = 0; i < std::min(health, maxKelpsSpawned); i++) {
 		forge::Vector3 newDelta = random.getRandomVector();
 		newDelta.setZ(0);
-		if (sceneManager.instantiateBlueprint("Kelp", transform->getGlobalPosition() + (newDelta *random.generateRange(1.0f, 5.0f))) == nullptr) {
+		if (sceneManager.instantiateBlueprint(kelpBlueprint, transform->getGlobalPosition() + (newDelta *random.generateRange(1.0f, 5.0f))) == nullptr) {
 			reportError("No se ha podido instanciar el Kelp");
 			return;
 		}
