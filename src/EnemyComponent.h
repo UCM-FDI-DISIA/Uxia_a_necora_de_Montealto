@@ -2,6 +2,7 @@
 #include <Component.h>
 #include <Vector3.h>
 
+class PlayerHealthComponent;
 class MovementComponent;
 class RigidBody;
 class Transform;
@@ -13,11 +14,11 @@ private:
 	float sign;
 	float radius;
 	float speed;
+	float damage;
 	bool changeDir;
 	int axis; // 0 = x, 1 = y, 2 = z
-	//HealthComponent* healthComponent;
+	PlayerHealthComponent* uxiaHealthComponent;
 	MovementComponent* movementComponent;
-	//AttackComponent* attackComponent;
 	RigidBody* rb;
 	Transform* transform;
 	Entity* uxia;
@@ -35,6 +36,9 @@ public:
 	/// </summary>
 	void update() override;
 
+	/// <summary>
+	/// Movimiento y comprobacion de ataque
+	/// </summary>
 	void fixedUpdate() override;
 
 	bool initComponent(ComponentData* data) override;
@@ -48,8 +52,6 @@ public:
 	/// Restar vida a Uxia
 	/// </summary>
 	void attack();
-
-	void setRadius(float r);
 
 };
 

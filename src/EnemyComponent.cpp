@@ -1,5 +1,6 @@
 #include "EnemyComponent.h"
 #include "MovementComponent.h"
+#include "PlayerHealthComponent.h"
 #include <RigidBody.h>
 #include <Entity.h>
 #include <Serializer.h>
@@ -13,6 +14,7 @@ const std::string EnemyComponent::id = "EnemyComponent";
 EnemyComponent::EnemyComponent() :
 	radius(0),
 	sign(1),
+	damage(1),
 	movementComponent(nullptr),
 	rb(nullptr),
 	transform (nullptr),
@@ -26,6 +28,7 @@ EnemyComponent::EnemyComponent() :
 	serializer(p2, "p2");
 	serializer(radius, "radius");
 	serializer(speed, "speed");
+	serializer(damage, "damage");
 	serializer(axis, "axis");
 }
 
@@ -72,12 +75,11 @@ void EnemyComponent::update() {
 void EnemyComponent::fixedUpdate() {
 	// Cambio de direccion al llegar a un borde
 	if (changeDir) {
-		rb->clearForces();
+		movementComponent->stop();
 		changeDir = false;
 		movementComponent->move(speed * sign, axis);
 	}
 	//Comprobacion de ataque
-	uxia = scene->getEntityByHandler("uxia");
 	if (checkAttack()) {
 		attack();
 	}
@@ -91,7 +93,8 @@ bool EnemyComponent::initComponent(ComponentData* data) {
 		movementComponent = entity->getComponent<MovementComponent>();
 		rb->setGravity(forge::Vector3(0, 0, 0));
 		movementComponent->move(speed * sign, axis);
-		uxia = scene->getEntityByHandler("uxia");
+		uxia = scene->getEntityByHandler("Player");
+		uxiaHealthComponent = uxia->getComponent<PlayerHealthComponent>();
 		return true;
 	}
 	else {
@@ -101,17 +104,12 @@ bool EnemyComponent::initComponent(ComponentData* data) {
 }
 
 bool EnemyComponent::checkAttack() {
-	//if (rb->hasCollidedWith(uxia)) {
-	//	return true;
-	//}
+	if (rb->hasCollidedWith(uxia)) {
+		return true;
+	}
 	return false;
 }
 
 void EnemyComponent::attack() {
-	//uxia->healthComponent()->damage();
-	//std::cout << "damages\n";
-}
-
-void EnemyComponent::setRadius(float r) {
-	radius = r;
+	//uxiaHealthComponent->damage(1);
 }
