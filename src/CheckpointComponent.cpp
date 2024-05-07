@@ -10,6 +10,7 @@ const std::string CheckpointComponent::id = "CheckpointComponent";
 CheckpointComponent:: CheckpointComponent() :
 collider(nullptr),
 active (true),
+uxia(nullptr),
 respawnpoint(forge::Vector3::ZERO){
 	serializer(respawnpoint, "respawnpoint");
 }
@@ -28,7 +29,7 @@ bool CheckpointComponent::initComponent(ComponentData* data) {
 	if (entity->hasComponent<Transform>() && entity->hasComponent<Collider>()) {
 		collider = entity->getComponent<Collider>();
 		collider->setTrigger(true);
-		uxia = scene->getEntityByHandler("uxia");
+		uxia = scene->getEntityByHandler("Player");
 		return true;
 	}
 	else {
@@ -38,11 +39,10 @@ bool CheckpointComponent::initComponent(ComponentData* data) {
 }
 
 bool CheckpointComponent::checkCollision() {
-	uxia = scene->getEntityByHandler("uxia");
-	//if (collider->hasCollidedWith(uxia)) {
-	//	//std::cout << "checkpoint\n";
-	//	return true;
-	//}
+	if (collider->hasCollidedWith(uxia)) {
+		//std::cout << "checkpoint\n";
+		return true;
+	}
 	return false;
 }
 
@@ -50,5 +50,3 @@ void CheckpointComponent::activateCheckpoint() {
 	/*uxia->getComponent<SpawnComponent>().changeSpawn(respawnpoint);
 	active = false;*/
 }
-
-//quitar linea 41 y 30 cuando funcione
