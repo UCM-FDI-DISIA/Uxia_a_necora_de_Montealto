@@ -3,15 +3,22 @@
 #include <RigidBody.h>
 #include <Entity.h>
 #include <Serializer.h>
+#include <TimeForge.h>
 
 
 const std::string MovementComponent::id = "MovementComponent";
 
 
-MovementComponent::MovementComponent() : transform(nullptr), rigidBody(nullptr), jumpForce(1) {
-	currentDirection = forge::Vector3();
-	jumpDirection = forge::Vector3();
+MovementComponent::MovementComponent() : 
+	transform(nullptr),
+	rigidBody(nullptr),
+	jumpForce(1),
+	nextJumpTime(0),
+	jumpCooldown(0.5f),
+	currentDirection(),
+	jumpDirection(){
 	serializer(jumpForce, "jumpForce");
+	serializer(jumpCooldown, "jumpCooldown");
 }
 
 bool MovementComponent::initComponent(ComponentData* data) {
@@ -46,7 +53,10 @@ void MovementComponent::move(float direction, int axis) {
 }
 
 void MovementComponent::jump() {
-	rigidBody->applyForce(jumpDirection);
+	if (forge::Time::time >= nextJumpTime) {
+		rigidBody->applyForce(jumpDirection);
+		nextJumpTime = forge::Time::time + jumpCooldown;
+	}
 }
 
 void MovementComponent::stop() {/*

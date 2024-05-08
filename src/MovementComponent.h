@@ -9,6 +9,8 @@ private:
 	Transform* transform;
 	RigidBody* rigidBody;
 	forge::Vector3 currentDirection;
+	float nextJumpTime;
+	float jumpCooldown;
 	float jumpForce;
 
 	forge::Vector3 jumpDirection;

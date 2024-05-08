@@ -17,6 +17,7 @@ EnemyComponent::EnemyComponent() :
 	sign(1),
 	damage(1),
 	movementComponent(nullptr),
+	uxiaHealthComponent(nullptr),
 	rb(nullptr),
 	transform(nullptr),
 	p1(forge::Vector3::ZERO),
@@ -41,7 +42,7 @@ EnemyComponent::~EnemyComponent() {
 }
 
 void EnemyComponent::update() {
-	cooldown += forge::Time::deltaTime;
+	cooldown += (float) forge::Time::deltaTime;
 	//Merodeo
 	switch (axis) {
 		case 1:

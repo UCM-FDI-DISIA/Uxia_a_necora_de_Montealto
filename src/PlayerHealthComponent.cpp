@@ -39,8 +39,7 @@ void PlayerHealthComponent::damage(int damage){
 		health = 0;
 	}
 	else {
-		//muere
-		onDeath();
+		death();
 	}
 }
 
@@ -63,6 +62,6 @@ void PlayerHealthComponent::addKelp(int kelp) {
 	}
 }
 
-void PlayerHealthComponent::onDeath() {
+void PlayerHealthComponent::death() {
 	//transform->setPosition()
 }

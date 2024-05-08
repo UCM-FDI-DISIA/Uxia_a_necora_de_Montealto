@@ -1,7 +1,6 @@
 local prefabs = {
 
 	Cigarro= {
-		handler = "Cigarro",
 		group = "",
 		components = {
 			Transform= {
@@ -20,7 +19,6 @@ local prefabs = {
 	},
 
 	Alga= {
-		handler = "Alga",
 		group = "",
 		components = {
 			Transform= {
@@ -92,12 +90,13 @@ local scenes = {
                 cam = {
                     components = {
                         Transform = {
-                            position = {0, 0, 20}
+                            position = {0, 4, 20},
+							rotation = {20, 0, 0}
                         },
                         Camera = {
                             nearClipDistance = 1,
                             autoAspectRatio = true,
-                            backgroundColor = {0.6, 0.3, 0.3}
+                            backgroundColor = {0,0.25,0.5}
                         },
                         AudioListener = 0
                     }
@@ -1626,7 +1625,8 @@ local scenes = {
 							restitution = 1,
 							shapeType = "Cylinder",
 							static = false,
-							layer = "Enemy"							
+							layer = "Enemy",	
+							trigger = true
 						},
 						Mesh= {
 							mesh = "Cylinder.mesh"							
@@ -1658,7 +1658,8 @@ local scenes = {
 							restitution = 1,
 							shapeType = "Cylinder",
 							static = false,
-							layer = "Enemy"							
+							layer = "Enemy",	
+							trigger = true							
 						},
 						Mesh= {
 							mesh = "Cylinder.mesh"							
@@ -1690,7 +1691,8 @@ local scenes = {
 							restitution = 1,
 							shapeType = "Cylinder",
 							static = false,
-							layer = "Enemy"							
+							layer = "Enemy",	
+							trigger = true							
 						},
 						Mesh= {
 							mesh = "Cylinder.mesh"							
@@ -1722,7 +1724,8 @@ local scenes = {
 							restitution = 1,
 							shapeType = "Cylinder",
 							static = false,
-							layer = "Enemy"							
+							layer = "Enemy",	
+							trigger = true							
 						},
 						Mesh= {
 							mesh = "Cylinder.mesh"							
@@ -1754,7 +1757,8 @@ local scenes = {
 							restitution = 1,
 							shapeType = "Cylinder",
 							static = false,
-							layer = "Enemy"							
+							layer = "Enemy",	
+							trigger = true							
 						},
 						Mesh= {
 							mesh = "Cylinder.mesh"							
@@ -1786,7 +1790,8 @@ local scenes = {
 							restitution = 1,
 							shapeType = "Cylinder",
 							static = false,
-							layer = "Enemy"							
+							layer = "Enemy",	
+							trigger = true							
 						},
 						Mesh= {
 							mesh = "Cylinder.mesh"							
@@ -1818,7 +1823,8 @@ local scenes = {
 							restitution = 1,
 							shapeType = "Cylinder",
 							static = false,
-							layer = "Enemy"							
+							layer = "Enemy",	
+							trigger = true							
 						},
 						Mesh= {
 							mesh = "Cylinder.mesh"							
@@ -1850,7 +1856,8 @@ local scenes = {
 							restitution = 1,
 							shapeType = "Cylinder",
 							static = false,
-							layer = "Enemy"							
+							layer = "Enemy",	
+							trigger = true							
 						},
 						Mesh= {
 							mesh = "Cylinder.mesh"							
@@ -2045,7 +2052,8 @@ local scenes = {
 									restitution = 1,
 									shapeType = "Cylinder",
 									static = false,
-									layer = "Enemy"									
+									layer = "Enemy",	
+									trigger = true									
 								},
 								Mesh= {
 									mesh = "Cylinder.mesh"									
@@ -2076,7 +2084,8 @@ local scenes = {
 									restitution = 1,
 									shapeType = "Cylinder",
 									static = false,
-									layer = "Enemy"									
+									layer = "Enemy",	
+									trigger = true									
 								},
 								Mesh= {
 									mesh = "Cylinder.mesh"									
@@ -2108,7 +2117,8 @@ local scenes = {
 									restitution = 1,
 									shapeType = "Cylinder",
 									static = false,
-									layer = "Enemy"									
+									layer = "Enemy",	
+									trigger = true									
 								},
 								Mesh= {
 									mesh = "Cylinder.mesh"									
@@ -2139,7 +2149,8 @@ local scenes = {
 									restitution = 1,
 									shapeType = "Cylinder",
 									static = false,
-									layer = "Enemy"									
+									layer = "Enemy",	
+									trigger = true									
 								},
 								Mesh= {
 									mesh = "Cylinder.mesh"									
@@ -2170,10 +2181,11 @@ local scenes = {
 									restitution = 1,
 									shapeType = "Cylinder",
 									static = false,
-									layer = "Enemy"									
+									layer = "Enemy",	
+									trigger = true									
 								},
 								Mesh= {
-									mesh = "Cylinder.mesh"									
+									mesh = "Cylinder.mesh"							
 								},
 								EnemyComponent= {
 									p1 = {134.7,-36,0},
@@ -2232,7 +2244,8 @@ local scenes = {
 									restitution = 1,
 									shapeType = "Cylinder",
 									static = false,
-									layer = "Enemy"									
+									layer = "Enemy",	
+									trigger = true									
 								},
 								Mesh= {
 									mesh = "Cylinder.mesh"									
@@ -2263,7 +2276,8 @@ local scenes = {
 									restitution = 1,
 									shapeType = "Cylinder",
 									static = false,
-									layer = "Enemy"									
+									layer = "Enemy",	
+									trigger = true									
 								},
 								Mesh= {
 									mesh = "Cylinder.mesh"									
@@ -2294,7 +2308,8 @@ local scenes = {
 									restitution = 1,
 									shapeType = "Cylinder",
 									static = false,
-									layer = "Enemy"									
+									layer = "Enemy",	
+									trigger = true									
 								},
 								Mesh= {
 									mesh = "Cylinder.mesh"									
