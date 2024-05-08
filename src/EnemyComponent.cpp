@@ -26,7 +26,8 @@ EnemyComponent::EnemyComponent() :
 	axis(0),
 	cooldown(0),
 	timeBetweenHits(0.25),
-	uxia(nullptr){
+	uxia(nullptr),
+	uxiaHealthComponent(nullptr){
 	serializer(p1, "p1");
 	serializer(p2, "p2");
 	serializer(radius, "radius");

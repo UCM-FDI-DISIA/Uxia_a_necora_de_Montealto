@@ -1,4 +1,6 @@
 #pragma once
+#ifndef ENEMY_COMPONENT_H_
+#define ENEMY_COMPONENT_H_
 #include <Component.h>
 #include <Vector3.h>
 
@@ -54,6 +56,7 @@ public:
 	/// Restar vida a Uxia
 	/// </summary>
 	void attack();
-
 };
+
+#endif // !ENEMY_COMPONENT_H_
 

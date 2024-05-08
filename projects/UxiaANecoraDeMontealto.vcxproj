@@ -19,6 +19,7 @@
     <ClCompile Include="..\src\MovementComponent.cpp" />
     <ClCompile Include="..\src\PlayerHealthComponent.cpp" />
     <ClCompile Include="..\src\PlayerInputComponent.cpp" />
+    <ClCompile Include="AttackComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\bin\Assets\assets.forge.lua" />
@@ -34,6 +35,7 @@
     <ClInclude Include="..\src\MovementComponent.h" />
     <ClInclude Include="..\src\PlayerHealthComponent.h" />
     <ClInclude Include="..\src\PlayerInputComponent.h" />
+    <ClInclude Include="AttackComponent.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

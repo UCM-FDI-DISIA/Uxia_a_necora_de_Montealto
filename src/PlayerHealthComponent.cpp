@@ -64,5 +64,6 @@ void PlayerHealthComponent::addKelp(int kelp) {
 }
 
 void PlayerHealthComponent::onDeath() {
-	//transform->setPosition()
+	//Mueve a la entidad a un punto de respawn
+
 }

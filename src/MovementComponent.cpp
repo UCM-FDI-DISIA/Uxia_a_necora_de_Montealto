@@ -8,7 +8,10 @@
 const std::string MovementComponent::id = "MovementComponent";
 
 
-MovementComponent::MovementComponent() : transform(nullptr), rigidBody(nullptr), jumpForce(1) {
+MovementComponent::MovementComponent() : 
+	transform(nullptr), 
+	rigidBody(nullptr), 
+	jumpForce(1) {
 	currentDirection = forge::Vector3();
 	jumpDirection = forge::Vector3();
 	serializer(jumpForce, "jumpForce");

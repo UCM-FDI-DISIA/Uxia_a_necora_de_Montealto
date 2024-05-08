@@ -13,5 +13,6 @@ FORGE_IMPORT void registerComponents(Factory& f) {
 	f.registerComponent<PlayerInputComponent>();
 	f.registerComponent<EnemyComponent>();
 	f.registerComponent<CheckpointComponent>();
+	f.registerComponent<HealthComponent>();
 	f.registerComponent<PlayerHealthComponent>();
 }
