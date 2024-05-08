@@ -23,7 +23,7 @@ public:
 
 	bool initComponent(ComponentData* data) override;
 
-	void fixedUpdate() override;
+	void update() override;
 };
 
 #endif // !ATTACK_COMPONENT_H_

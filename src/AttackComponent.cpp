@@ -24,10 +24,10 @@ bool AttackComponent::initComponent(ComponentData* data) {
 	if (entity->hasComponent<Collider>()) {
 		hitbox = entity->getComponent<Collider>();
 		hitbox->registerCallback(forge::onCollisionEnter, [this](Collider* self, Collider* other) {
-			if (other->getEntity()->hasComponent<PlayerHealthComponent>()) {
-				other->getEntity()->getComponent<PlayerHealthComponent>()->damage(damage);
-			}
-			else if (other->getEntity()->hasComponent<HealthComponent>()) {
+			//if (other->getEntity()->hasComponent<PlayerHealthComponent>()) {
+			//	other->getEntity()->getComponent<PlayerHealthComponent>()->damage(damage);
+			//}
+			if (other->getEntity()->hasComponent<HealthComponent>()) {
 				other->getEntity()->getComponent<HealthComponent>()->damage(damage);
 			}
 		});
@@ -37,12 +37,9 @@ bool AttackComponent::initComponent(ComponentData* data) {
 	return false;
 }
 
-void AttackComponent::fixedUpdate() {
+void AttackComponent::update() {
 	lifetime -= forge::Time::deltaTime;	
-	if (lifetime <= 0.0) {
-		//if (entity->getParent()->getComponent<PlayerInputComponent>()) {
-		//	entity->getParent()->getComponent<PlayerInputComponent>()->setAttacking(false);
-		//}
+	if (lifetime <= 0.0f) {
 		entity->setAlive(false);
 	}
 }
