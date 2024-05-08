@@ -5,12 +5,18 @@
 #include <string>
 
 class Transform;
+class UIManager;
+class LevelManager;
 
 class PlayerHealthComponent : public HealthComponent{
 private:
 	std::string kelpBlueprint;
 	Transform* transform;
+	UIManager* ui;
+	LevelManager* level;
 	int maxKelpsSpawned;
+	float invulnerabilityTime;
+	float invulnerability;
 public:
 
 	static const std::string id;

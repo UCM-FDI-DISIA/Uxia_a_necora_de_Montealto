@@ -6,6 +6,8 @@
 #include "EnemyComponent.h"
 #include "CheckpointComponent.h"
 #include "PlayerHealthComponent.h"
+#include "UIManager.h"
+#include "LevelManager.h"
 
 FORGE_IMPORT void registerComponents(Factory& f) {
 	f.registerComponent<KelpComponent>();
@@ -13,5 +15,7 @@ FORGE_IMPORT void registerComponents(Factory& f) {
 	f.registerComponent<PlayerInputComponent>();
 	f.registerComponent<EnemyComponent>();
 	f.registerComponent<CheckpointComponent>();
+	f.registerComponent<UIManager>();
+	f.registerComponent<LevelManager>();
 	f.registerComponent<PlayerHealthComponent>();
 }

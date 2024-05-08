@@ -18,18 +18,6 @@ public:
 
 	~CheckpointComponent();
 
-	void fixedUpdate() override;
-
 	bool initComponent(ComponentData* data) override;
-
-	/// <summary>
-	/// Comprueba si el enemigo choca con Uxia
-	/// </summary>
-	bool checkCollision();
-
-	/// <summary>
-	/// Restar vida a Uxia
-	/// </summary>
-	void activateCheckpoint();
 };
 

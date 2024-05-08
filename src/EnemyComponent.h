@@ -38,22 +38,6 @@ public:
 	/// </summary>
 	void update() override;
 
-	/// <summary>
-	/// Movimiento y comprobacion de ataque
-	/// </summary>
-	void fixedUpdate() override;
-
 	bool initComponent(ComponentData* data) override;
-
-	/// <summary>
-	/// Comprueba si el enemigo choca con Uxia
-	/// </summary>
-	bool checkAttack();
-
-	/// <summary>
-	/// Restar vida a Uxia
-	/// </summary>
-	void attack();
-
 };
 

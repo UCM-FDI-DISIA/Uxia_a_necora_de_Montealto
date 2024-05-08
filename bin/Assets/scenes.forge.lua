@@ -27,18 +27,18 @@ local prefabs = {
 				scale = {0.4691,1,1}
 			},
 			Collider= {
-				shapeType = "Cylinder",	
+				shapeType = "Cylinder",
+				layer = "Object",				
 				trigger = true
 			},
 			Mesh= {
-				mesh = "seaweed.mesh",
-				layer = "Object"				
+				mesh = "seaweed.mesh"
 			},
 			KelpComponent= {
 				score = 1				
 			}
 		}
-	},
+	}
 }
 
 local scenes = {
@@ -62,25 +62,24 @@ local scenes = {
 					scale = {1,1,1}
 				},
 				 RigidBody= {
-				 	scale = {1,1,1},
-				 	axisBlockedPos = {false,false,true},
-				 	axisBlockedRot = {true,true,true},
-				 	mass = 1,
-				 	friction = 1,
-				 	restitution = 1,
-				 	shapeType = "Cube",
-				 	static = false,
-				 	layer = "ALL"					
+					scale = {1,1,1},
+					axisBlockedPos = {false,false,true},
+					axisBlockedRot = {true,true,true},
+					mass = 1,
+					friction = 1,
+					restitution = 1,
+					shapeType = "Cube",
+					static = false,
+					layer = "ALL"					
 				 },
 				Mesh = {
                     mesh = "Cylinder.mesh"
-
                 },
 				PlayerInputComponent = {
 					speed = 10
 				},
 				MovementComponent = {
-					jumpForce = 400
+					jumpForce = 500
 				},
 				PlayerHealthComponent = {
 					kelpBlueprint = "Alga",
@@ -103,7 +102,48 @@ local scenes = {
                 }
 			}
 		},
-
+		manager = {
+			handler = "manager",
+			keepBetweenScenes = true,
+            components = {
+				UIManager = 0,
+				LevelManager = {
+					levels = {"MainScene"}
+				}
+            }
+		},
+        kelpText = {
+			handler = "kelpText",
+			keepBetweenScenes = true,
+            components = {
+                RectTransform = {
+                    position = {40, 20},
+                    scale = {1.3, 1.3}
+                },
+                Text = {
+                    text = "Algas: 0",
+                    fontName = "Crab.ttf",
+                    fontHeight = 40,
+					color = {0.16, 0.43, 0.12, 1}
+                }
+            }
+        },
+		deathText = {
+			handler = "deathText",
+			keepBetweenScenes = true,
+            components = {
+                RectTransform = {
+                    position = {40, 20},
+                    scale = {1.3, 1.3}
+                },
+                Text = {
+                    text = "MORISTE",
+                    fontName = "Crab.ttf",
+                    fontHeight = 80,
+					color = {0.56, 0.23, 0.12, 0}
+                }
+            }
+        },
 		cenicero = {
 			components = {
 				Transform = {
@@ -135,7 +175,6 @@ local scenes = {
                 }
             }
 		},
-
 		Cigarros= {
 			components = {
 				Transform= {
@@ -191,7 +230,6 @@ local scenes = {
 				}
 			}
 		},
-
 		Algas= {
 			components = {
 				Transform= {
@@ -852,7 +890,6 @@ local scenes = {
 				}
 			}
 		},
-
 		Terreno= {
 			components = {
 				Transform= {
@@ -1598,7 +1635,6 @@ local scenes = {
 				}
 			}
 		},
-
 		NecorasMalvadas= {
 			components = {
 				Transform= {
@@ -1874,7 +1910,6 @@ local scenes = {
 				}
 			}
 		},
-
 		Tentaculos= {
 			components = {
 				Transform= {
@@ -2328,7 +2363,6 @@ local scenes = {
 				}
 			}
 		},
-
 		DeathZones= {
 			components = {
 				Transform= {
