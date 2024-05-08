@@ -41,6 +41,26 @@ local prefabs = {
 			}
 		}
 	},
+
+	Attack= {
+		handler = "Attack",
+		group = "",
+		components = {
+			Transform= {
+				position = {0,0,0},
+				rotation = {0,0,0,1},
+				scale = {1,1,1}
+			},
+			Collider= {
+				shapeType = "Cube",
+				layer = "Attack"				
+			},
+			AttackComponent= {
+				damage = 1,
+				lifeTime = 5000		
+			}
+		}
+	},
 }
 
 local scenes = {

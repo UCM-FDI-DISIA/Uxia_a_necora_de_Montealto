@@ -12,6 +12,7 @@ class AttackComponent : public Component
 private:
 	Collider* hitbox;
 	int damage;
+	double lifetime;
 
 public:
 	static const std::string id;
@@ -22,11 +23,7 @@ public:
 
 	bool initComponent(ComponentData* data) override;
 
-	/// 
-	/// <summary>
- 	/// Restar vida a Uxia
- 	/// </summary>
- 	void attack();
+	void fixedUpdate() override;
 };
 
 #endif // !ATTACK_COMPONENT_H_

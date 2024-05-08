@@ -39,7 +39,7 @@
     <ClCompile Include="..\src\CheckpointComponent.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="AttackComponent.cpp">
+    <ClCompile Include="..\src\AttackComponent.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
@@ -79,7 +79,7 @@
     <ClInclude Include="..\src\CheckpointComponent.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="AttackComponent.h">
+    <ClInclude Include="..\src\AttackComponent.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
