@@ -5,12 +5,15 @@
 #include <Vector2.h>
 #include <ForgeError.h>
 #include <Serializer.h>
+#include <SceneManager.h>
+#include <Transform.h>
 
 const std::string PlayerInputComponent::id = "PlayerInputComponent";
 
 PlayerInputComponent::PlayerInputComponent(): 
 	input(*Input::GetInstance()),
 	movement(nullptr),
+	attacking(false),
 	speed(1){
 	serializer(speed, "speed");
 }
@@ -40,9 +43,17 @@ void PlayerInputComponent::update() {
 	else if (input.keyPressed(K_D)) {
 		movement->move(speed, 0);
 	}
+	else if (input.keyPressed(K_SPACE) && !attacking) {
+		sceneManager.instantiateBlueprint("Attack", entity->getComponent<Transform>()->getGlobalPosition() + forge::Vector3(0.5, 0, 0), entity);
+		attacking = true;
+	}
 
 	//Salto
 	if (input.keyDown(K_W)) {
 		movement->jump();
 	}
+}
+
+void PlayerInputComponent::setAttacking(bool attack) {
+	attacking = attack;
 }

@@ -59,7 +59,7 @@ void MovementComponent::jump() {
 	}
 }
 
-void MovementComponent::stop() {/*
-	rigidBody->rest();
-	currentDirection.set(forge::Vector3::ZERO);*/
+void MovementComponent::stop() {
+	rigidBody->setLinearVelocity(forge::Vector3(0, rigidBody->getLinearVelocity().getY(), 0));
+	currentDirection.set(forge::Vector3::ZERO);
 }

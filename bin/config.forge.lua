@@ -11,13 +11,15 @@ Physics = {
 		--Layer3	= {	false,	false,	false,	true},
 		--Layer2	= {	true,	false,	true},
 		--Layer1	= {	true,	false},
-		--				All		Player	Enemy	Ground	Object DeathZone
+		--				All		Player	Enemy	Ground	Object DeathZone Attack PlayerAttack
 		ALL			= {	true },
 		Player		= {	true,	true },
 		Enemy		= {	true,	true, 	false },
 		Ground		= {	true,	true, 	false,	false },
-		Object		= {	true,	true, 	false,	true,	true},
-		DeathZone 	= {	true,	true, 	false,	false,	false,	false}
+		Object		= {	true,	true, 	false,	false,	false},
+		DeathZone 	= {	true,	true, 	false,	false,	false,	false},
+		Attack		= {	true,	true,	true,	false,	false,	false,	false},
+		PlayerAttack= {	true,	false,	true,	false,	false,	false,	false,	false},
 	},
 	debug = true
 }

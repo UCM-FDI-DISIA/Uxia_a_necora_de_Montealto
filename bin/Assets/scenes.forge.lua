@@ -38,6 +38,26 @@ local prefabs = {
 				score = 1				
 			}
 		}
+	},
+
+	Attack= {
+		handler = "Attack",
+		group = "",
+		components = {
+			Transform= {
+				position = {0,0,0},
+				rotation = {0,0,0,1},
+				scale = {1,1,1}
+			},
+			Collider= {
+				shapeType = "Cube",
+				layer = "Attack"				
+			},
+			AttackComponent= {
+				damage = 1,
+				lifeTime = 5000		
+			}
+		}
 	}
 }
 
@@ -62,15 +82,15 @@ local scenes = {
 					scale = {1,1,1}
 				},
 				 RigidBody= {
-					scale = {1,1,1},
-					axisBlockedPos = {false,false,true},
-					axisBlockedRot = {true,true,true},
-					mass = 1,
-					friction = 1,
-					restitution = 1,
-					shapeType = "Cube",
-					static = false,
-					layer = "ALL"					
+				 	scale = {1,1,1},
+				 	axisBlockedPos = {false,false,true},
+				 	axisBlockedRot = {true,true,true},
+				 	mass = 1,
+				 	friction = 0,
+				 	restitution = 1,
+				 	shapeType = "Cube",
+				 	static = false,
+				 	layer = "ALL"					
 				 },
 				Mesh = {
                     mesh = "Cylinder.mesh"

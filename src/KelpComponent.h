@@ -1,7 +1,7 @@
 #pragma once
 #ifndef KELP_COMPONENT_H_
 #define KELP_COMPONENT_H_
-#include "Component.h"
+#include <Component.h>
 #include <string>
 
 class Collider;

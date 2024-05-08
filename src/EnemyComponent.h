@@ -1,4 +1,6 @@
 #pragma once
+#ifndef ENEMY_COMPONENT_H_
+#define ENEMY_COMPONENT_H_
 #include <Component.h>
 #include <Vector3.h>
 
@@ -39,5 +41,17 @@ public:
 	void update() override;
 
 	bool initComponent(ComponentData* data) override;
+
+	/// <summary>
+	/// Comprueba si el enemigo choca con Uxia
+	/// </summary>
+	bool checkAttack();
+
+	/// <summary>
+	/// Restar vida a Uxia
+	/// </summary>
+	void attack();
 };
+
+#endif // !ENEMY_COMPONENT_H_
 
