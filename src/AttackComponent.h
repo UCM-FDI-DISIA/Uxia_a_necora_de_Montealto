@@ -6,11 +6,12 @@
 #include <string>
 
 class Collider;
+class PlayerInputComponent;
 
-class AttackComponent : public Component
-{
+class AttackComponent : public Component {
 private:
 	Collider* hitbox;
+	PlayerInputComponent* input;
 	int damage;
 	double lifetime;
 

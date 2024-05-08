@@ -2,6 +2,7 @@
 #include "PlayerHealthComponent.h"
 #include "PlayerInputComponent.h"
 #include <Entity.h>
+#include <Scene.h>
 #include <Serializer.h>
 #include <SceneManager.h>
 #include <Collider.h>
@@ -11,6 +12,7 @@ const std::string AttackComponent::id = "AttackComponent";
 
 AttackComponent::AttackComponent() :
 	hitbox(nullptr),
+	input(nullptr),
 	lifetime(500),
 	damage(1){
 	serializer(damage, "damage");
@@ -31,7 +33,11 @@ bool AttackComponent::initComponent(ComponentData* data) {
 				other->getEntity()->getComponent<HealthComponent>()->damage(damage);
 			}
 		});
-			return true;
+		Entity* player = scene->getEntityByHandler("Player");
+		if (player != nullptr) {
+			input = player->getComponent<PlayerInputComponent>();
+		}
+		return true;
 	}
 	else reportError("El component Attack requiere un componente Collider");
 	return false;
@@ -40,6 +46,7 @@ bool AttackComponent::initComponent(ComponentData* data) {
 void AttackComponent::update() {
 	lifetime -= forge::Time::deltaTime;	
 	if (lifetime <= 0.0f) {
+		input->setAttacking(false);
 		entity->setAlive(false);
 	}
 }
