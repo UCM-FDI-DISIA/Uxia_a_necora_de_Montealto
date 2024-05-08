@@ -40,6 +40,7 @@ void PlayerHealthComponent::damage(int damage){
 	}
 	else {
 		//muere
+		onDeath();
 	}
 }
 
@@ -60,4 +61,8 @@ void PlayerHealthComponent::addKelp(int kelp) {
 	if (health > maxHealth) {
 		health = maxHealth;
 	}
+}
+
+void PlayerHealthComponent::onDeath() {
+	//transform->setPosition()
 }

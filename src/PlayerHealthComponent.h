@@ -20,6 +20,7 @@ public:
 	void damage(int damage) override;
 	void dropKelps();
 	void addKelp(int kelp);
+	void onDeath();
 };
 
 #endif //PLAYER_HEALTH_COMPONENT_H_

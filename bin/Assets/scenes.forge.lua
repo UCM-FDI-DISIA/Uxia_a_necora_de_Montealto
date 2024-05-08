@@ -33,7 +33,7 @@ local prefabs = {
 				trigger = true
 			},
 			Mesh= {
-				mesh = "Cylinder.mesh",
+				mesh = "seaweed.mesh",
 				layer = "Object"				
 			},
 			KelpComponent= {
@@ -92,7 +92,7 @@ local scenes = {
                 cam = {
                     components = {
                         Transform = {
-                            position = {0, 0, 60}
+                            position = {0, 0, 20}
                         },
                         Camera = {
                             nearClipDistance = 1,
@@ -119,8 +119,8 @@ local scenes = {
                 cigar = {
 					components = {
 						Transform = {
-							position = {0, 0, 0},
-							scale = {0.05, 0.05, 0.05}
+							position = {0, 1.5, 0},
+							scale = {0.4, 4, 0.4}
 						},
 						Collider = {
 							shapeType = "Cube",	
