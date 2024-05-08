@@ -16,7 +16,7 @@ Physics = {
 		Player		= {	true,	true },
 		Enemy		= {	true,	true, 	false },
 		Ground		= {	true,	true, 	false,	false },
-		Object		= {	true,	true, 	false,	true,	true},
+		Object		= {	true,	true, 	false,	false,	false},
 		DeathZone 	= {	true,	true, 	false,	false,	false,	false}
 	},
 	debug = true

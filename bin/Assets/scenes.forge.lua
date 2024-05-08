@@ -1626,7 +1626,8 @@ local scenes = {
 							restitution = 1,
 							shapeType = "Cylinder",
 							static = false,
-							layer = "Enemy"							
+							layer = "Enemy"	,
+							trigger = true						
 						},
 						Mesh= {
 							mesh = "Cylinder.mesh"							
