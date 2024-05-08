@@ -17,9 +17,11 @@
     <ClCompile Include="..\src\EnemyComponent.cpp" />
     <ClCompile Include="..\src\HealthComponent.cpp" />
     <ClCompile Include="..\src\KelpComponent.cpp" />
+    <ClCompile Include="..\src\LevelManager.cpp" />
     <ClCompile Include="..\src\MovementComponent.cpp" />
     <ClCompile Include="..\src\PlayerHealthComponent.cpp" />
     <ClCompile Include="..\src\PlayerInputComponent.cpp" />
+    <ClCompile Include="..\src\UIManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\bin\Assets\assets.forge.lua" />
@@ -33,9 +35,11 @@
     <ClInclude Include="..\src\EnemyComponent.h" />
     <ClInclude Include="..\src\HealthComponent.h" />
     <ClInclude Include="..\src\KelpComponent.h" />
+    <ClInclude Include="..\src\LevelManager.h" />
     <ClInclude Include="..\src\MovementComponent.h" />
     <ClInclude Include="..\src\PlayerHealthComponent.h" />
     <ClInclude Include="..\src\PlayerInputComponent.h" />
+    <ClInclude Include="..\src\UIManager.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

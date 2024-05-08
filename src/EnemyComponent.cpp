@@ -17,6 +17,7 @@ EnemyComponent::EnemyComponent() :
 	sign(1),
 	damage(1),
 	movementComponent(nullptr),
+	uxiaHealthComponent(nullptr),
 	rb(nullptr),
 	transform(nullptr),
 	p1(forge::Vector3::ZERO),
@@ -42,7 +43,7 @@ EnemyComponent::~EnemyComponent() {
 }
 
 void EnemyComponent::update() {
-	cooldown += forge::Time::deltaTime;
+	cooldown += (float) forge::Time::deltaTime;
 	//Merodeo
 	switch (axis) {
 		case 1:
@@ -78,19 +79,6 @@ void EnemyComponent::update() {
 	}
 }
 
-void EnemyComponent::fixedUpdate() {
-	// Cambio de direccion al llegar a un borde
-	if (changeDir) {
-		movementComponent->stop();
-		changeDir = false;
-		movementComponent->move(speed * sign, axis);
-	}
-	//Comprobacion de ataque
-	if (checkAttack()) {
-		attack();
-	}
-}
-
 bool EnemyComponent::initComponent(ComponentData* data) {
 	if (entity->hasComponent<Transform>() && entity->hasComponent<RigidBody>()
 		&& entity->hasComponent<MovementComponent>()) {
@@ -101,23 +89,16 @@ bool EnemyComponent::initComponent(ComponentData* data) {
 		movementComponent->move(speed * sign, axis);
 		uxia = scene->getEntityByHandler("Player");
 		uxiaHealthComponent = uxia->getComponent<PlayerHealthComponent>();
+		rb->registerCallback(forge::onCollisionEnter, [this](Collider* self, Collider* other) {
+			Entity* player = other->getEntity();
+			if (player->hasComponent<PlayerHealthComponent>()) {
+				player->getComponent<PlayerHealthComponent>()->damage(0);
+			}
+		});
 		return true;
 	}
 	else {
 		reportError("El componente Enemy requiere un componente Transform, Rigidbody y Movement");
 	}
 	return false;
-}
-
-bool EnemyComponent::checkAttack() {
-	if (cooldown > timeBetweenHits && rb->hasCollidedWith(uxia)) {
-		return true;
-	}
-	return false;
-}
-
-void EnemyComponent::attack() {
-	cooldown = 0;
-	uxiaHealthComponent->damage(0);
-	//std::cout << "enemigo\n";
 }

@@ -39,6 +39,12 @@
     <ClCompile Include="..\src\CheckpointComponent.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\LevelManager.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\UIManager.cpp">
+          <Filter>Archivos de origen</Filter>
+    </ClCompile>
     <ClCompile Include="..\src\AttackComponent.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
@@ -78,6 +84,12 @@
     </ClInclude>
     <ClInclude Include="..\src\CheckpointComponent.h">
       <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\LevelManager.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\UIManager.h">
+          <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="..\src\AttackComponent.h">
       <Filter>Archivos de encabezado</Filter>

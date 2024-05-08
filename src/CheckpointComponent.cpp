@@ -19,35 +19,21 @@ CheckpointComponent::~CheckpointComponent() {
 
 }
 
-void CheckpointComponent::fixedUpdate() {
-	if (active && checkCollision()) {
-		activateCheckpoint();
-	}
-}
-
 bool CheckpointComponent::initComponent(ComponentData* data) {
 	if (entity->hasComponent<Transform>() && entity->hasComponent<Collider>()) {
 		collider = entity->getComponent<Collider>();
 		collider->setTrigger(true);
-		uxia = scene->getEntityByHandler("Player");
+		collider->registerCallback(forge::onCollisionEnter, [this](Collider* self, Collider* other) {
+			Entity* player = other->getEntity();
+			if (player == scene->getEntityByHandler("Player")) {
+				std::cout << "checkpoint\n";
+				this->getEntity()->setAlive(false);
+			}
+			});
 		return true;
 	}
 	else {
 		reportError("El componente Enemy requiere un componente Transform y Collider");
 	}
 	return false;
-}
-
-bool CheckpointComponent::checkCollision() {
-	if (collider->hasCollidedWith(uxia)) {
-		std::cout << "checkpoint\n";
-		return true;
-	}
-	return false;
-}
-
-void CheckpointComponent::activateCheckpoint() {
-	//uxia->getComponent<SpawnComponent>().changeSpawn(respawnpoint);
-	active = false;
-	entity->setAlive(false);
 }

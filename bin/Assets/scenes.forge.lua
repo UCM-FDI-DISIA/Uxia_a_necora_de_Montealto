@@ -1,7 +1,6 @@
 local prefabs = {
 
 	Cigarro= {
-		handler = "Cigarro",
 		group = "",
 		components = {
 			Transform= {
@@ -20,7 +19,6 @@ local prefabs = {
 	},
 
 	Alga= {
-		handler = "Alga",
 		group = "",
 		components = {
 			Transform= {
@@ -29,12 +27,12 @@ local prefabs = {
 				scale = {0.4691,1,1}
 			},
 			Collider= {
-				shapeType = "Cylinder",	
+				shapeType = "Cylinder",
+				layer = "Object",				
 				trigger = true
 			},
 			Mesh= {
-				mesh = "seaweed.mesh",
-				layer = "Object"				
+				mesh = "seaweed.mesh"
 			},
 			KelpComponent= {
 				score = 1				
@@ -60,7 +58,7 @@ local prefabs = {
 				lifeTime = 5000		
 			}
 		}
-	},
+	}
 }
 
 local scenes = {
@@ -96,13 +94,12 @@ local scenes = {
 				 },
 				Mesh = {
                     mesh = "Cylinder.mesh"
-
                 },
 				PlayerInputComponent = {
 					speed = 10
 				},
 				MovementComponent = {
-					jumpForce = 400
+					jumpForce = 500
 				},
 				PlayerHealthComponent = {
 					kelpBlueprint = "Alga",
@@ -112,19 +109,61 @@ local scenes = {
                 cam = {
                     components = {
                         Transform = {
-                            position = {0, 0, 20}
+                            position = {0, 4, 20},
+							rotation = {20, 0, 0}
                         },
                         Camera = {
                             nearClipDistance = 1,
                             autoAspectRatio = true,
-                            backgroundColor = {0.6, 0.3, 0.3}
+                            backgroundColor = {0,0.25,0.5}
                         },
                         AudioListener = 0
                     }
                 }
 			}
 		},
-
+		manager = {
+			handler = "manager",
+			keepBetweenScenes = true,
+            components = {
+				UIManager = 0,
+				LevelManager = {
+					levels = {"MainScene"}
+				}
+            }
+		},
+        kelpText = {
+			handler = "kelpText",
+			keepBetweenScenes = true,
+            components = {
+                RectTransform = {
+                    position = {40, 20},
+                    scale = {1.3, 1.3}
+                },
+                Text = {
+                    text = "Algas: 0",
+                    fontName = "Crab.ttf",
+                    fontHeight = 40,
+					color = {0.16, 0.43, 0.12, 1}
+                }
+            }
+        },
+		deathText = {
+			handler = "deathText",
+			keepBetweenScenes = true,
+            components = {
+                RectTransform = {
+                    position = {40, 20},
+                    scale = {1.3, 1.3}
+                },
+                Text = {
+                    text = "MORISTE",
+                    fontName = "Crab.ttf",
+                    fontHeight = 80,
+					color = {0.56, 0.23, 0.12, 0}
+                }
+            }
+        },
 		cenicero = {
 			components = {
 				Transform = {
@@ -156,7 +195,6 @@ local scenes = {
                 }
             }
 		},
-
 		Cigarros= {
 			components = {
 				Transform= {
@@ -212,7 +250,6 @@ local scenes = {
 				}
 			}
 		},
-
 		Algas= {
 			components = {
 				Transform= {
@@ -873,7 +910,6 @@ local scenes = {
 				}
 			}
 		},
-
 		Terreno= {
 			components = {
 				Transform= {
@@ -1619,7 +1655,6 @@ local scenes = {
 				}
 			}
 		},
-
 		NecorasMalvadas= {
 			components = {
 				Transform= {
@@ -1646,8 +1681,8 @@ local scenes = {
 							restitution = 1,
 							shapeType = "Cylinder",
 							static = false,
-							layer = "Enemy"	,
-							trigger = true						
+							layer = "Enemy",	
+							trigger = true
 						},
 						Mesh= {
 							mesh = "Cylinder.mesh"							
@@ -1679,7 +1714,8 @@ local scenes = {
 							restitution = 1,
 							shapeType = "Cylinder",
 							static = false,
-							layer = "Enemy"							
+							layer = "Enemy",	
+							trigger = true							
 						},
 						Mesh= {
 							mesh = "Cylinder.mesh"							
@@ -1711,7 +1747,8 @@ local scenes = {
 							restitution = 1,
 							shapeType = "Cylinder",
 							static = false,
-							layer = "Enemy"							
+							layer = "Enemy",	
+							trigger = true							
 						},
 						Mesh= {
 							mesh = "Cylinder.mesh"							
@@ -1743,7 +1780,8 @@ local scenes = {
 							restitution = 1,
 							shapeType = "Cylinder",
 							static = false,
-							layer = "Enemy"							
+							layer = "Enemy",	
+							trigger = true							
 						},
 						Mesh= {
 							mesh = "Cylinder.mesh"							
@@ -1775,7 +1813,8 @@ local scenes = {
 							restitution = 1,
 							shapeType = "Cylinder",
 							static = false,
-							layer = "Enemy"							
+							layer = "Enemy",	
+							trigger = true							
 						},
 						Mesh= {
 							mesh = "Cylinder.mesh"							
@@ -1807,7 +1846,8 @@ local scenes = {
 							restitution = 1,
 							shapeType = "Cylinder",
 							static = false,
-							layer = "Enemy"							
+							layer = "Enemy",	
+							trigger = true							
 						},
 						Mesh= {
 							mesh = "Cylinder.mesh"							
@@ -1839,7 +1879,8 @@ local scenes = {
 							restitution = 1,
 							shapeType = "Cylinder",
 							static = false,
-							layer = "Enemy"							
+							layer = "Enemy",	
+							trigger = true							
 						},
 						Mesh= {
 							mesh = "Cylinder.mesh"							
@@ -1871,7 +1912,8 @@ local scenes = {
 							restitution = 1,
 							shapeType = "Cylinder",
 							static = false,
-							layer = "Enemy"							
+							layer = "Enemy",	
+							trigger = true							
 						},
 						Mesh= {
 							mesh = "Cylinder.mesh"							
@@ -1888,7 +1930,6 @@ local scenes = {
 				}
 			}
 		},
-
 		Tentaculos= {
 			components = {
 				Transform= {
@@ -2066,7 +2107,8 @@ local scenes = {
 									restitution = 1,
 									shapeType = "Cylinder",
 									static = false,
-									layer = "Enemy"									
+									layer = "Enemy",	
+									trigger = true									
 								},
 								Mesh= {
 									mesh = "Cylinder.mesh"									
@@ -2097,7 +2139,8 @@ local scenes = {
 									restitution = 1,
 									shapeType = "Cylinder",
 									static = false,
-									layer = "Enemy"									
+									layer = "Enemy",	
+									trigger = true									
 								},
 								Mesh= {
 									mesh = "Cylinder.mesh"									
@@ -2129,7 +2172,8 @@ local scenes = {
 									restitution = 1,
 									shapeType = "Cylinder",
 									static = false,
-									layer = "Enemy"									
+									layer = "Enemy",	
+									trigger = true									
 								},
 								Mesh= {
 									mesh = "Cylinder.mesh"									
@@ -2160,7 +2204,8 @@ local scenes = {
 									restitution = 1,
 									shapeType = "Cylinder",
 									static = false,
-									layer = "Enemy"									
+									layer = "Enemy",	
+									trigger = true									
 								},
 								Mesh= {
 									mesh = "Cylinder.mesh"									
@@ -2191,10 +2236,11 @@ local scenes = {
 									restitution = 1,
 									shapeType = "Cylinder",
 									static = false,
-									layer = "Enemy"									
+									layer = "Enemy",	
+									trigger = true									
 								},
 								Mesh= {
-									mesh = "Cylinder.mesh"									
+									mesh = "Cylinder.mesh"							
 								},
 								EnemyComponent= {
 									p1 = {134.7,-36,0},
@@ -2253,7 +2299,8 @@ local scenes = {
 									restitution = 1,
 									shapeType = "Cylinder",
 									static = false,
-									layer = "Enemy"									
+									layer = "Enemy",	
+									trigger = true									
 								},
 								Mesh= {
 									mesh = "Cylinder.mesh"									
@@ -2284,7 +2331,8 @@ local scenes = {
 									restitution = 1,
 									shapeType = "Cylinder",
 									static = false,
-									layer = "Enemy"									
+									layer = "Enemy",	
+									trigger = true									
 								},
 								Mesh= {
 									mesh = "Cylinder.mesh"									
@@ -2315,7 +2363,8 @@ local scenes = {
 									restitution = 1,
 									shapeType = "Cylinder",
 									static = false,
-									layer = "Enemy"									
+									layer = "Enemy",	
+									trigger = true									
 								},
 								Mesh= {
 									mesh = "Cylinder.mesh"									
@@ -2334,7 +2383,6 @@ local scenes = {
 				}
 			}
 		},
-
 		DeathZones= {
 			components = {
 				Transform= {

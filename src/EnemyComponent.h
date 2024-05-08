@@ -40,11 +40,6 @@ public:
 	/// </summary>
 	void update() override;
 
-	/// <summary>
-	/// Movimiento y comprobacion de ataque
-	/// </summary>
-	void fixedUpdate() override;
-
 	bool initComponent(ComponentData* data) override;
 
 	/// <summary>
