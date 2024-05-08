@@ -40,13 +40,14 @@ bool CheckpointComponent::initComponent(ComponentData* data) {
 
 bool CheckpointComponent::checkCollision() {
 	if (collider->hasCollidedWith(uxia)) {
-		//std::cout << "checkpoint\n";
+		std::cout << "checkpoint\n";
 		return true;
 	}
 	return false;
 }
 
 void CheckpointComponent::activateCheckpoint() {
-	/*uxia->getComponent<SpawnComponent>().changeSpawn(respawnpoint);
-	active = false;*/
+	//uxia->getComponent<SpawnComponent>().changeSpawn(respawnpoint);
+	active = false;
+	entity->setAlive(false);
 }

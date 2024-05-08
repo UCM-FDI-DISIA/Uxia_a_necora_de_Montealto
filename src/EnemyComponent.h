@@ -15,6 +15,8 @@ private:
 	float radius;
 	float speed;
 	float damage;
+	float timeBetweenHits;
+	float cooldown;
 	bool changeDir;
 	int axis; // 0 = x, 1 = y, 2 = z
 	PlayerHealthComponent* uxiaHealthComponent;

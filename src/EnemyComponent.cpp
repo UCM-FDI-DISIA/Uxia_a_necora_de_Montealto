@@ -1,6 +1,7 @@
 #include "EnemyComponent.h"
 #include "MovementComponent.h"
 #include "PlayerHealthComponent.h"
+#include <TimeForge.h>
 #include <RigidBody.h>
 #include <Entity.h>
 #include <Serializer.h>
@@ -17,12 +18,14 @@ EnemyComponent::EnemyComponent() :
 	damage(1),
 	movementComponent(nullptr),
 	rb(nullptr),
-	transform (nullptr),
+	transform(nullptr),
 	p1(forge::Vector3::ZERO),
 	p2(forge::Vector3::ZERO),
 	speed(0),
 	changeDir(false),
 	axis(0),
+	cooldown(0),
+	timeBetweenHits(0.25),
 	uxia(nullptr){
 	serializer(p1, "p1");
 	serializer(p2, "p2");
@@ -30,6 +33,7 @@ EnemyComponent::EnemyComponent() :
 	serializer(speed, "speed");
 	serializer(damage, "damage");
 	serializer(axis, "axis");
+	serializer(timeBetweenHits, "cooldown");
 }
 
 EnemyComponent::~EnemyComponent() {
@@ -37,6 +41,7 @@ EnemyComponent::~EnemyComponent() {
 }
 
 void EnemyComponent::update() {
+	cooldown += forge::Time::deltaTime;
 	//Merodeo
 	switch (axis) {
 		case 1:
@@ -104,13 +109,14 @@ bool EnemyComponent::initComponent(ComponentData* data) {
 }
 
 bool EnemyComponent::checkAttack() {
-	if (rb->hasCollidedWith(uxia)) {
+	if (cooldown > timeBetweenHits && rb->hasCollidedWith(uxia)) {
 		return true;
 	}
 	return false;
 }
 
 void EnemyComponent::attack() {
+	cooldown = 0;
 	uxiaHealthComponent->damage(0);
 	//std::cout << "enemigo\n";
 }

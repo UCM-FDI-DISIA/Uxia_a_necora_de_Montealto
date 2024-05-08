@@ -105,6 +105,38 @@ local scenes = {
 			}
 		},
 
+		cenicero = {
+			components = {
+				Transform = {
+					position = {15,-0.67,0},
+					scale = {1, 1, 1}
+				},
+				Mesh = {
+					mesh = "ashtray.mesh"
+				}
+			},
+			children = {
+                cigar = {
+					components = {
+						Transform = {
+							position = {0, 0, 0},
+							scale = {0.05, 0.05, 0.05}
+						},
+						Collider = {
+							shapeType = "Cube",	
+							trigger = true
+						},
+						Mesh = {
+							mesh = "cigar.mesh"
+						},
+						CheckpointComponent = {
+							respawnpoint = {15,-0.67,0}
+						}
+					}
+                }
+            }
+		},
+
 		Cigarros= {
 			components = {
 				Transform= {
