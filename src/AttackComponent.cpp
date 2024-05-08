@@ -40,9 +40,9 @@ bool AttackComponent::initComponent(ComponentData* data) {
 void AttackComponent::fixedUpdate() {
 	lifetime -= forge::Time::deltaTime;	
 	if (lifetime <= 0.0) {
-		if (entity->getParent()->getComponent<PlayerInputComponent>()) {
-			entity->getParent()->getComponent<PlayerInputComponent>()->setAttacking(false);
-		}
+		//if (entity->getParent()->getComponent<PlayerInputComponent>()) {
+		//	entity->getParent()->getComponent<PlayerInputComponent>()->setAttacking(false);
+		//}
 		entity->setAlive(false);
 	}
 }

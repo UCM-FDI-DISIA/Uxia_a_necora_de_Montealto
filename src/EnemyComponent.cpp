@@ -13,29 +13,21 @@ const std::string EnemyComponent::id = "EnemyComponent";
 
 
 EnemyComponent::EnemyComponent() :
-	radius(0),
 	sign(1),
 	damage(1),
 	movementComponent(nullptr),
-	uxiaHealthComponent(nullptr),
 	rb(nullptr),
 	transform(nullptr),
 	p1(forge::Vector3::ZERO),
 	p2(forge::Vector3::ZERO),
-	speed(0),
 	changeDir(false),
-	axis(0),
-	cooldown(0),
-	timeBetweenHits(0.25),
-	uxia(nullptr),
-	uxiaHealthComponent(nullptr){
+	speed(0),
+	axis(0) {
 	serializer(p1, "p1");
 	serializer(p2, "p2");
-	serializer(radius, "radius");
 	serializer(speed, "speed");
 	serializer(damage, "damage");
 	serializer(axis, "axis");
-	serializer(timeBetweenHits, "cooldown");
 }
 
 EnemyComponent::~EnemyComponent() {
@@ -43,7 +35,6 @@ EnemyComponent::~EnemyComponent() {
 }
 
 void EnemyComponent::update() {
-	cooldown += (float) forge::Time::deltaTime;
 	//Merodeo
 	switch (axis) {
 		case 1:
@@ -87,8 +78,6 @@ bool EnemyComponent::initComponent(ComponentData* data) {
 		movementComponent = entity->getComponent<MovementComponent>();
 		rb->setGravity(forge::Vector3(0, 0, 0));
 		movementComponent->move(speed * sign, axis);
-		uxia = scene->getEntityByHandler("Player");
-		uxiaHealthComponent = uxia->getComponent<PlayerHealthComponent>();
 		rb->registerCallback(forge::onCollisionEnter, [this](Collider* self, Collider* other) {
 			Entity* player = other->getEntity();
 			if (player->hasComponent<PlayerHealthComponent>()) {

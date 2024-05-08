@@ -9,26 +9,21 @@
 const std::string KelpComponent::id = "KelpComponent";
 
 KelpComponent::KelpComponent() :
-    collider(nullptr),
-    uxia(nullptr),
     score(1) {
     serializer(score, "score");
 }
 
 bool KelpComponent::initComponent(ComponentData* data) {
-    //Entity* manager = scene->getEntityByHandler("GameManager");
     if (entity->hasComponent<Collider>()) {
-        collider = entity->getComponent<Collider>();
-        uxia = scene->getEntityByHandler("Player");
+        Collider* collider = entity->getComponent<Collider>();
+        collider->registerCallback(forge::onCollisionEnter, [this](Collider* self, Collider* other) {
+            Entity* player = other->getEntity();
+            if (player->hasComponent<PlayerHealthComponent>()) {
+                player->getComponent<PlayerHealthComponent>()->addKelp(this->score);
+                this->getEntity()->setAlive(false);
+            }
+            });
         return true;
     }
     return false;
-}
-
-void KelpComponent::fixedUpdate()
-{
-    if (collider->hasCollidedWith(uxia)) {  
-        uxia->getComponent<PlayerHealthComponent>()->addKelp(score);
-        entity->setAlive(false);
-    }
 }
