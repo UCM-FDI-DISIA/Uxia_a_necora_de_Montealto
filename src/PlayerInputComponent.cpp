@@ -44,7 +44,7 @@ void PlayerInputComponent::update() {
 		movement->move(speed, 0);
 	}
 	else if (input.keyPressed(K_SPACE) && !attacking) {
-		sceneManager.instantiateBlueprint("Attack", entity->getComponent<Transform>()->getGlobalPosition() + forge::Vector3(0.5, 0, 0), entity);
+		sceneManager.instantiateBlueprint("Attack", entity);
 		attacking = true;
 	}
 

@@ -4,7 +4,6 @@
 #include <Component.h>
 #include <Vector3.h>
 
-class PlayerHealthComponent;
 class MovementComponent;
 class RigidBody;
 class Transform;
@@ -14,18 +13,13 @@ private:
 	forge::Vector3 p1; // El menor de ambos puntos
 	forge::Vector3 p2; // El mayor de ambos puntos
 	float sign;
-	float radius;
 	float speed;
 	float damage;
-	float timeBetweenHits;
-	float cooldown;
 	bool changeDir;
 	int axis; // 0 = x, 1 = y, 2 = z
-	PlayerHealthComponent* uxiaHealthComponent;
 	MovementComponent* movementComponent;
 	RigidBody* rb;
 	Transform* transform;
-	Entity* uxia;
 public:
 
 	static const std::string id;
@@ -41,16 +35,6 @@ public:
 	void update() override;
 
 	bool initComponent(ComponentData* data) override;
-
-	/// <summary>
-	/// Comprueba si el enemigo choca con Uxia
-	/// </summary>
-	bool checkAttack();
-
-	/// <summary>
-	/// Restar vida a Uxia
-	/// </summary>
-	void attack();
 };
 
 #endif // !ENEMY_COMPONENT_H_

@@ -153,13 +153,13 @@ local scenes = {
 			keepBetweenScenes = true,
             components = {
                 RectTransform = {
-                    position = {40, 20},
+                    position = {250, 200},
                     scale = {1.3, 1.3}
                 },
                 Text = {
                     text = "MORISTE",
                     fontName = "Crab.ttf",
-                    fontHeight = 80,
+                    fontHeight = 100,
 					color = {0.56, 0.23, 0.12, 0}
                 }
             }
