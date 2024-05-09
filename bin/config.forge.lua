@@ -3,7 +3,7 @@ Config = {
 	debugGame = "UxiaANecoraDeMontealto_d",
 	assetsFile = "Assets/assets.forge.lua",
 	scenesFile = "Assets/scenes.forge.lua",
-	initialScene = "Level1"
+	initialScene = "MainMenuScene"
 }
 
 Window = {
