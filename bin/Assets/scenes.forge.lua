@@ -50,6 +50,10 @@ local prefabs = {
 			Transform = {
 				position = {0,0,0}
 			},
+            Billboard = {
+                material = "navaja",
+                billboardDimensions = {1,1}
+            },
 			Collider = {
 				shapeType = "Cube",
 				layer = "Attack"

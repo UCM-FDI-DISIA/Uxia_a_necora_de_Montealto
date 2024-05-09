@@ -3,7 +3,7 @@ Config = {
 	debugGame = "UxiaANecoraDeMontealto_d",
 	assetsFile = "Assets/assets.forge.lua",
 	scenesFile = "Assets/scenes.forge.lua",
-	initialScene = "PauseMenuScene"
+	initialScene = "MainMenuScene"
 }
 
 Window = {
@@ -22,5 +22,5 @@ Physics = {
 		DeathZone 	= {	true,	true, 	false,	false,	false,	false},
 		Attack		= {	true,	false,	true,	false,	false,	false,	false}
 	},
-	debug = true
+	debug = false
 }
