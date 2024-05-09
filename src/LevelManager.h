@@ -13,6 +13,7 @@ private:
 	std::vector<std::string> levels;
 	forge::Vector3 spawnpoint;
 	int currentLevel;
+	int maxLevel;
 public:
 	static const std::string id;
 
@@ -20,6 +21,7 @@ public:
 	bool initComponent(ComponentData* data) override;
 	
 	void changeLevel(int level);
+	void nextLevel();
 	int getLevel();
 
 	void returnToLevel();

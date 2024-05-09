@@ -14,7 +14,8 @@ LevelManager::LevelManager() :
     pauseMenu(),
     levels(),
     spawnpoint(),
-    currentLevel(0) {
+    currentLevel(0),
+    maxLevel(0) {
     serializer(mainMenu, "mainMenu");
     serializer(pauseMenu, "pauseMenu");
     serializer(levels, "levels");
@@ -22,12 +23,29 @@ LevelManager::LevelManager() :
 }
 
 bool LevelManager::initComponent(ComponentData* data) {
+    if (levels.size() < 1 || pauseMenu == "" || mainMenu == "") {
+        throwError(false, "Falta definir escenas en el level manager");
+    }
+    maxLevel = levels.size() - 1;
     return true;
 }
 
 void LevelManager::changeLevel(int level) {
+    if (level >= maxLevel) {
+        reportError("El nivel introducido no es válido");
+        return;
+    }
     currentLevel = level;
-    sceneManager.changeScene(levels[level]);
+    sceneManager.changeScene(levels[currentLevel]);
+}
+
+void LevelManager::nextLevel() {
+    if (currentLevel >= maxLevel) {
+        reportError("Ya se ha alcanzado el máximo nivel");
+        return;
+    }
+    currentLevel++;
+    sceneManager.changeScene(levels[currentLevel]);
 }
 
 int LevelManager::getLevel() {

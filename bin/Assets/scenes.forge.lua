@@ -65,7 +65,50 @@ local prefabs = {
 	}
 }
 
-local keepBetweenScenes = {}
+local keepBetweenScenes = {
+		manager = {
+			handler = "manager",
+			components = {
+				UIManager = 0,
+				LevelManager = {
+					levels = {"MainScene", "Scene2"},
+					spawns = {11.92,-0.67,0},
+					mainMenu = "MainMenuScene"
+					pauseMenu = "MainMenuScene"
+				}
+			}
+		},
+		kelpText = {
+			handler = "kelpText",
+			components = {
+				RectTransform = {
+					position = {40, 20},
+					scale = {1.3, 1.3}
+				},
+				Text = {
+					text = "Algas: 0",
+					fontName = "Crab.ttf",
+					fontHeight = 40,
+					color = {0.16, 0.43, 0.12, 1}
+				}
+			}
+		},
+		deathText = {
+			handler = "deathText",
+			components = {
+				RectTransform = {
+					position = {250, 200},
+					scale = {1.3, 1.3}
+				},
+				Text = {
+					text = "MORISTE",
+					fontName = "Crab.ttf",
+					fontHeight = 100,
+					color = {0.56, 0.23, 0.12, 0}
+				}
+			}
+		}
+}
 
 local scenes = {
 	MainMenuScene = {
@@ -132,7 +175,7 @@ local scenes = {
 			}
 		}
 	},
-	MainScene = {
+	Level1 = {
 		Player= {
 			handler = "Player",
 			components = {
@@ -141,16 +184,16 @@ local scenes = {
 					rotation = {0,0,0,1},
 					scale = {1, 1, 1}
 				},
-				 RigidBody= {
-					 scale = {2.95, 1,1.13},
-					 axisBlockedPos = {false,false,true},
-					 axisBlockedRot = {true,true,true},
-					 mass = 1,
-					 friction = 0,
-					 restitution = 1,
-					 shapeType = "Cube",
-					 static = false,
-					 layer = "Player"					
+				RigidBody= {
+					scale = {2.95, 1,1.13},
+					axisBlockedPos = {false,false,true},
+					axisBlockedRot = {true,true,true},
+					mass = 1,
+					friction = 0,
+					restitution = 1,
+					shapeType = "Cube",
+					static = false,
+					layer = "Player"					
 				 },
 				Animator = {
 					mesh = "Crab.mesh",
@@ -184,8 +227,7 @@ local scenes = {
 					}
 				}
 			}
-		},
-		
+		},	
 		luz = {
 			components = {
 				Transform = {
@@ -193,50 +235,6 @@ local scenes = {
 				},
 				Light = {
 					type = 0 
-				}
-			}
-		},
-		manager = {
-			handler = "manager",
-			keepBetweenScenes = true,
-			components = {
-				UIManager = 0,
-				LevelManager = {
-					levels = {"MainScene", "Scene2"},
-					spawns = {11.92,-0.67,0},
-					mainMenu = "MainMenuScene"
-				}
-			}
-		},
-		kelpText = {
-			handler = "kelpText",
-			keepBetweenScenes = true,
-			components = {
-				RectTransform = {
-					position = {40, 20},
-					scale = {1.3, 1.3}
-				},
-				Text = {
-					text = "Algas: 0",
-					fontName = "Crab.ttf",
-					fontHeight = 40,
-					color = {0.16, 0.43, 0.12, 1}
-				}
-			}
-		},
-		deathText = {
-			handler = "deathText",
-			keepBetweenScenes = true,
-			components = {
-				RectTransform = {
-					position = {250, 200},
-					scale = {1.3, 1.3}
-				},
-				Text = {
-					text = "MORISTE",
-					fontName = "Crab.ttf",
-					fontHeight = 100,
-					color = {0.56, 0.23, 0.12, 0}
 				}
 			}
 		},
@@ -2482,9 +2480,8 @@ local scenes = {
 				}
 			}
 		}
-
 	},
-	Scene2={
+	Level2={
 		Player= {
 			handler = "Player",
 			components = {
@@ -2493,7 +2490,7 @@ local scenes = {
 					rotation = {0,0,0,1},
 					scale = {1, 1, 1}
 				},
-				 RigidBody= {
+				RigidBody= {
 					 scale = {2.95, 1,1.13},
 					 axisBlockedPos = {false,false,true},
 					 axisBlockedRot = {true,true,true},
@@ -2503,7 +2500,7 @@ local scenes = {
 					 shapeType = "Cube",
 					 static = false,
 					 layer = "Player"					
-				 },
+				},
 				Animator = {
 					mesh = "Crab.mesh",
 					activeAnimations = {
@@ -2553,48 +2550,6 @@ local scenes = {
 						},
 						Light = {
 							type = 0 
-						}
-					}
-				},
-				manager = {
-					handler = "manager",
-					keepBetweenScenes = true,
-					components = {
-						UIManager = 0,
-						LevelManager = {
-							levels = {"MainScene"}
-						}
-					}
-				},
-				kelpText = {
-					handler = "kelpText",
-					keepBetweenScenes = true,
-					components = {
-						RectTransform = {
-							position = {40, 20},
-							scale = {1.3, 1.3}
-						},
-						Text = {
-							text = "Algas: 0",
-							fontName = "Crab.ttf",
-							fontHeight = 40,
-							color = {0.16, 0.43, 0.12, 1}
-						}
-					}
-				},
-				deathText = {
-					handler = "deathText",
-					keepBetweenScenes = true,
-					components = {
-						RectTransform = {
-							position = {250, 200},
-							scale = {1.3, 1.3}
-						},
-						Text = {
-							text = "MORISTE",
-							fontName = "Crab.ttf",
-							fontHeight = 100,
-							color = {0.56, 0.23, 0.12, 0}
 						}
 					}
 				},
@@ -4689,7 +4644,7 @@ local scenes = {
 										}
 									}
 								},
-								
+
 								Tentaculo_7= {
 									components = {
 										Transform= {

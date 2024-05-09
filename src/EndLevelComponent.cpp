@@ -11,9 +11,7 @@ const std::string EndLevelComponent::id = "EndLevelComponent";
 
 EndLevelComponent::EndLevelComponent() :
 	collider(nullptr),
-	level(nullptr),
-	nextLevel(1){
-	serializer(nextLevel, "nextLevel");
+	level(nullptr){
 }
 
 EndLevelComponent::~EndLevelComponent() {
@@ -38,14 +36,13 @@ bool EndLevelComponent::initComponent(ComponentData* data) {
 			Entity* player = other->getEntity();
 			if (player->hasComponent<PlayerHealthComponent>()) {
 				std::cout << "endLevel\n";
-				this->getEntity()->setAlive(false);
-				level->changeLevel(nextLevel);
+				level->nextLevel();
 			}
 			});
 		return true;
 	}
 	else {
-		reportError("El componente Enemy requiere un componente Transform y Collider");
+		reportError("El componente EndLevel requiere un componente Transform y Collider");
 	}
 	return false;
 }
