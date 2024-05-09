@@ -14,6 +14,9 @@ private:
 	forge::Vector3 spawnpoint;
 	int currentLevel;
 	int maxLevel;
+
+	void registerFunctions();
+
 public:
 	static const std::string id;
 

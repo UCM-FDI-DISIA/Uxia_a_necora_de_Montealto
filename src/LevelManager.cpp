@@ -6,8 +6,21 @@
 #include <Serializer.h>
 #include <Scene.h>
 #include <Collider.h>
+#include <MainForge.h>
 
 const std::string LevelManager::id = "LevelManager";
+
+void LevelManager::registerFunctions() {
+    entity->getInvoker().registerFunction("startGame", [&]() {
+        returnToLevel();
+        });
+    entity->getInvoker().registerFunction("exitGame", [&]() {
+        MainForge::Exit();
+        });
+    entity->getInvoker().registerFunction("goToMenu", [&]() {
+        setMainMenu();
+        });
+}
 
 LevelManager::LevelManager() :
     mainMenu(),
@@ -27,12 +40,13 @@ bool LevelManager::initComponent(ComponentData* data) {
         throwError(false, "Falta definir escenas en el level manager");
     }
     maxLevel = levels.size() - 1;
+    registerFunctions();
     return true;
 }
 
 void LevelManager::changeLevel(int level) {
     if (level >= maxLevel) {
-        reportError("El nivel introducido no es válido");
+        reportError("El nivel introducido no es valido");
         return;
     }
     currentLevel = level;

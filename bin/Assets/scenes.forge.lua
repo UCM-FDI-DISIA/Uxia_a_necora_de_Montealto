@@ -164,24 +164,36 @@ local scenes = {
 		PlayButton = {
 			components = {
 				RectTransform = {
-					position = Vector2(Window["width"] * 0.1, Window["height"] * 0.6),
-					scale = Vector2(201, 53)
-				}
-			}
-		},
-		LoadButton = {
-			components = {
-				RectTransform = {
-					position = Vector2(Window["width"] * 0.4, Window["height"] * 0.6),
-					scale = Vector2(201, 53)
+					position = Vector2(Window["width"] * 0.375, Window["height"] * 0.6),
+					scale = Vector2(351, 80)
+				},
+				Button = {
+					depth = 8,
+                    out = "playButtonOnOut.png",
+                    hover = "playButtonOnOver.png",
+                    clicked = "playButtonOnClicked.png",
+                    onReleaseInvoker = "manager",
+                    onRelease = function (inv)
+                        inv:invoke("startGame");
+                    end
 				}
 			}
 		},
 		ExitButton = {
 			components = {
 				RectTransform = {
-					position = Vector2(Window["width"] * 0.7, Window["height"] * 0.6),
-					scale = Vector2(201, 53)
+					position = Vector2(Window["width"] * 0.375, Window["height"] * 0.75),
+					scale = Vector2(351, 80)
+				},
+				Button = {
+					depth = 8,
+                    out = "exitButtonOnOut.png",
+                    hover = "exitButtonOnOver.png",
+                    clicked = "exitButtonOnClicked.png",
+					onReleaseInvoker = "manager",
+                    onRelease = function (inv)
+						inv:invoke("exitGame");
+                    end
 				}
 			}
 		},
@@ -293,9 +305,15 @@ local scenes = {
 					position = Vector2(Window["width"] * 0.575, Window["height"] * 0.8),
 					scale = Vector2(201, 53)
 				},
-				Image = {
-					depth = 0,
-					texture = "continueButtonOnOut.png"
+				Button = {
+					depth = 8,
+                    out = "continueButtonOnOut.png",
+                    hover = "continueButtonOnOver.png",
+                    clicked = "continueButtonOnClicked.png",
+                    onReleaseInvoker = "manager",
+                    onRelease = function (inv)
+                        inv:invoke("startGame");
+                    end
 				}
 			}
 		},
@@ -305,9 +323,15 @@ local scenes = {
 					position = Vector2(Window["width"] * 0.275, Window["height"] * 0.8),
 					scale = Vector2(201, 53)
 				},
-				Image = {
-					depth = 0,
-					texture = "menuButtonOnOut.png"
+				Button = {
+					depth = 8,
+                    out = "menuButtonOnOut.png",
+                    hover = "menuButtonOnOver.png",
+                    clicked = "menuButtonOnClicked.png",
+                    onReleaseInvoker = "manager",
+                    onRelease = function (inv)
+                        inv:invoke("goToMenu");
+                    end
 				}
 			}
 		}
@@ -346,9 +370,15 @@ local scenes = {
 					position = Vector2(Window["width"] * 0.275, Window["height"] * 0.8),
 					scale = Vector2(201, 53)
 				},
-				Image = {
-					depth = 0,
-					texture = "menuButtonOnOut.png"
+				Button = {
+					depth = 8,
+                    out = "menuButtonOnOut.png",
+                    hover = "menuButtonOnOver.png",
+                    clicked = "menuButtonOnClicked.png",
+                    onReleaseInvoker = "manager",
+                    onRelease = function (inv)
+                        inv:invoke("goToMenu");
+                    end
 				}
 			}
 		},
@@ -358,9 +388,15 @@ local scenes = {
 					position = Vector2(Window["width"] * 0.575, Window["height"] * 0.8),
 					scale = Vector2(201, 53)
 				},
-				Image = {
-					depth = 0,
-					texture = "exitButtonOnOut.png"
+				Button = {
+					depth = 8,
+                    out = "exitButtonOnOut.png",
+                    hover = "exitButtonOnOver.png",
+                    clicked = "exitButtonOnClicked.png",
+                    onReleaseInvoker = "manager",
+                    onRelease = function (inv)
+                        inv:invoke("exitGame");
+                    end
 				}
 			}
 		}

@@ -3,7 +3,7 @@ Config = {
 	debugGame = "UxiaANecoraDeMontealto_d",
 	assetsFile = "Assets/assets.forge.lua",
 	scenesFile = "Assets/scenes.forge.lua",
-	initialScene = "Level1"
+	initialScene = "PauseMenuScene"
 }
 
 Window = {
@@ -12,10 +12,7 @@ Window = {
 }
 
 Physics = {
-	layers = {	--		Default	Layer1	Layer2	Layer3
-		--Layer3	= {	false,	false,	false,	true},
-		--Layer2	= {	true,	false,	true},
-		--Layer1	= {	true,	false},
+	layers = {	
 		--				All		Player	Enemy	Ground	Object DeathZone Attack PlayerAttack
 		ALL			= {	true },
 		Player		= {	true,	true },
