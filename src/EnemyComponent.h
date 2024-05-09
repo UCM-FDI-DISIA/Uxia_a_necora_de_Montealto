@@ -35,6 +35,8 @@ public:
 	void update() override;
 
 	bool initComponent(ComponentData* data) override;
+
+	void fixedUpdate() override;
 };
 
 #endif // !ENEMY_COMPONENT_H_

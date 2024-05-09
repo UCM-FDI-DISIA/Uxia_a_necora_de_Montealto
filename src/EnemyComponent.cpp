@@ -91,3 +91,12 @@ bool EnemyComponent::initComponent(ComponentData* data) {
 	}
 	return false;
 }
+
+void EnemyComponent::fixedUpdate() {
+	// Cambio de direccion al llegar a un borde
+	if (changeDir) {
+		movementComponent->fullStop();
+		changeDir = false;
+		movementComponent->move(speed * sign, axis);
+	}
+}

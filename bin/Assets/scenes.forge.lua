@@ -109,7 +109,7 @@ local scenes = {
                 cam = {
                     components = {
                         Transform = {
-                            position = {0, 4, 20},
+                            position = {0, 4, 50},
 							rotation = {20, 0, 0}
                         },
                         Camera = {
@@ -2111,7 +2111,7 @@ local scenes = {
 									trigger = true									
 								},
 								Mesh= {
-									mesh = "Cylinder.mesh"									
+									mesh = "tentacle.mesh"									
 								},
 								EnemyComponent= {
 									p1 = {112.3,-8.4,0},
@@ -2143,7 +2143,7 @@ local scenes = {
 									trigger = true									
 								},
 								Mesh= {
-									mesh = "Cylinder.mesh"									
+									mesh = "tentacle.mesh"									
 								},
 								EnemyComponent= {
 									p1 = {50.8,-37.2,0},
@@ -2176,7 +2176,7 @@ local scenes = {
 									trigger = true									
 								},
 								Mesh= {
-									mesh = "Cylinder.mesh"									
+									mesh = "tentacle.mesh"									
 								},
 								EnemyComponent= {
 									p1 = {91.5,-40.4,0},
@@ -2208,7 +2208,7 @@ local scenes = {
 									trigger = true									
 								},
 								Mesh= {
-									mesh = "Cylinder.mesh"									
+									mesh = "tentacle.mesh"									
 								},
 								EnemyComponent= {
 									p1 = {126.7,-36,0},
@@ -2240,7 +2240,7 @@ local scenes = {
 									trigger = true									
 								},
 								Mesh= {
-									mesh = "Cylinder.mesh"							
+									mesh = "tentacle.mesh"							
 								},
 								EnemyComponent= {
 									p1 = {134.7,-36,0},
@@ -2271,7 +2271,7 @@ local scenes = {
 									layer = "Enemy"									
 								},
 								Mesh= {
-									mesh = "Cylinder.mesh"									
+									mesh = "tentacle.mesh"									
 								},
 								EnemyComponent= {
 									p1 = {143.7,-36,0},
@@ -2303,7 +2303,7 @@ local scenes = {
 									trigger = true									
 								},
 								Mesh= {
-									mesh = "Cylinder.mesh"									
+									mesh = "tentacle.mesh"									
 								},
 								EnemyComponent= {
 									p1 = {152.6,-35.5,0},
@@ -2335,7 +2335,7 @@ local scenes = {
 									trigger = true									
 								},
 								Mesh= {
-									mesh = "Cylinder.mesh"									
+									mesh = "tentacle.mesh"									
 								},
 								EnemyComponent= {
 									p1 = {171,-6.3,0},
@@ -2367,7 +2367,7 @@ local scenes = {
 									trigger = true									
 								},
 								Mesh= {
-									mesh = "Cylinder.mesh"									
+									mesh = "tentacle.mesh"									
 								},
 								EnemyComponent= {
 									p1 = {178,0.4,0},

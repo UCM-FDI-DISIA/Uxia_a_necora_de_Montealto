@@ -22,4 +22,5 @@ public:
 	void move(float direction, int axis);
 	void jump();
 	void stop();
+	void fullStop();
 };

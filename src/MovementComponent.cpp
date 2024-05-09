@@ -63,3 +63,8 @@ void MovementComponent::stop() {
 	rigidBody->setLinearVelocity(forge::Vector3(0, rigidBody->getLinearVelocity().getY(), 0));
 	currentDirection.set(forge::Vector3::ZERO);
 }
+
+void MovementComponent::fullStop() {
+	rigidBody->setLinearVelocity(forge::Vector3(0, 0, 0));
+	currentDirection.set(forge::Vector3::ZERO);
+}
