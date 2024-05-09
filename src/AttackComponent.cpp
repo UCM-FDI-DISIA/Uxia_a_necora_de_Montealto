@@ -26,12 +26,8 @@ bool AttackComponent::initComponent(ComponentData* data) {
 	if (entity->hasComponent<Collider>()) {
 		hitbox = entity->getComponent<Collider>();
 		hitbox->registerCallback(forge::onCollisionEnter, [this](Collider* self, Collider* other) {
-			//if (other->getEntity()->hasComponent<PlayerHealthComponent>()) {
-			//	other->getEntity()->getComponent<PlayerHealthComponent>()->damage(damage);
-			//}
-			if (other->getEntity()->hasComponent<HealthComponent>()) {
-				other->getEntity()->getComponent<HealthComponent>()->damage(damage);
-			}
+			other->getEntity()->getComponent<HealthComponent>()->damage(damage);
+			entity->setAlive(false);	
 		});
 		Entity* player = scene->getEntityByHandler("Player");
 		if (player != nullptr) {

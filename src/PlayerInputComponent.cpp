@@ -43,15 +43,15 @@ void PlayerInputComponent::update() {
 	else if (input.keyPressed(K_D)) {
 		movement->move(speed, 0);
 	}
-	else if (input.keyPressed(K_SPACE) && !attacking) {
-		sceneManager.instantiateBlueprint("Attack", entity);
-		attacking = true;
-	}
 
 	//Salto
 	if (input.keyDown(K_W)) {
 		movement->jump();
 	}
+	if (input.keyPressed(K_SPACE) && !attacking) {	
+		sceneManager.instantiateBlueprint("Attack", entity->getComponent<Transform>()->getGlobalPosition() + forge::Vector3(entity->getComponent<Transform>()->getGlobalScale().getX() * 2, 0, 0), entity);	
+		attacking = true;
+	}	
 }
 
 void PlayerInputComponent::setAttacking(bool attack) {

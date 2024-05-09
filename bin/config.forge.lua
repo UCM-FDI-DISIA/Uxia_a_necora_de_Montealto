@@ -23,8 +23,7 @@ Physics = {
 		Ground		= {	true,	true, 	false,	false },
 		Object		= {	true,	true, 	false,	false,	false},
 		DeathZone 	= {	true,	true, 	false,	false,	false,	false},
-		Attack		= {	true,	true,	true,	false,	false,	false,	false},
-		PlayerAttack= {	true,	false,	true,	false,	false,	false,	false,	false},
+		Attack		= {	true,	false,	true,	false,	false,	false,	false}
 	},
 	debug = true
 }

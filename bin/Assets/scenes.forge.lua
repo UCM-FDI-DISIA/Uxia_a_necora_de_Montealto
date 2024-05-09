@@ -6,14 +6,18 @@ local prefabs = {
 			Transform= {
 				position = {26.65192,-25.68632,0},
 				rotation = {0,0,0,1},
-				scale = {0.5,1.124932,1}
+				scale = {0.4,4,0.4}
 			},
 			Collider= {
 				shapeType = "Cube",
-				layer = "Object"				
+				layer = "Object",
+				trigger = true				
 			},
 			Mesh= {
-				mesh = "Cylinder.mesh"				
+				mesh = "cigar.mesh"				
+			},
+			CheckpointComponent = {
+				respawnpoint = {26.65192,-25.68632,0}
 			}
 		}
 	},
@@ -90,7 +94,7 @@ local scenes = {
 				 	restitution = 1,
 				 	shapeType = "Cube",
 				 	static = false,
-				 	layer = "ALL"					
+				 	layer = "Player"					
 				 },
 				Mesh = {
                     mesh = "uxia.mesh"
@@ -109,7 +113,7 @@ local scenes = {
                 cam = {
                     components = {
                         Transform = {
-                            position = {0, 4, 20},
+                            position = {4, 4, 30},
 							rotation = {20, 0, 0}
                         },
                         Camera = {
@@ -164,90 +168,90 @@ local scenes = {
                 }
             }
         },
-		cenicero = {
-			components = {
-				Transform = {
-					position = {15,-0.67,0},
-					scale = {1, 1, 1}
-				},
-				Mesh = {
-					mesh = "ashtray.mesh"
-				}
-			},
-			children = {
-                cigar = {
-					components = {
-						Transform = {
-							position = {0, 1.5, 0},
-							scale = {0.4, 4, 0.4}
-						},
-						Collider = {
-							shapeType = "Cube",	
-							trigger = true
-						},
-						Mesh = {
-							mesh = "cigar.mesh"
-						},
-						CheckpointComponent = {
-							respawnpoint = {15,-0.67,0}
-						}
-					}
-                }
-            }
-		},
 		Cigarros= {
 			components = {
 				Transform= {
 					position = {0,0,0},
 					rotation = {0,0,0,1},
-					scale = {0.8751596,0.8751596,0.8751596}
+					scale = {1,1,1}
 				}
 			},
-			children = {
-				
-				Cigarro1= {
-					blueprint = "Cigarro",
+			children = {		
+				Cenicero1 = {
 					components = {
-						Transform= {
-							position = {26.65192,-25.68632,0},
-							rotation = {0,0,0,1},
-							scale = {0.5,1.124932,1}
+						Transform = {
+							position = {15,-0.67,0},
+							scale = {0.6, 0.6, 0.6}
+						},
+						Mesh = {
+							mesh = "ashtray.mesh"
+						}
+					},
+					children = {
+						Cigarro1 = {
+							blueprint = "Cigarro",
+							components = {
+								Transform = {
+									position = {0, 1.5, 0},
+									scale = {0.4,4,0.4}
+								},
+								CheckpointComponent = {
+									respawnpoint = {15,-0.67,0}
+								}
+							}
 						}
 					}
 				},
-				
-				Cigarro2= {
-					blueprint = "Cigarro",
+				cenicero2 = {
 					components = {
-						Transform= {
-							position = {72.92918,-16.25947,0},
-							rotation = {0,0,0,1},
-							scale = {0.5,1.124932,1}
+						Transform = {
+							position = {65,-16,0},
+							scale = {0.6, 0.6, 0.6}
+						},
+						Mesh = {
+							mesh = "ashtray.mesh"
+						}
+					},
+					children = {
+						Cigarro2 = {
+							blueprint = "Cigarro",
+							components = {
+								Transform = {
+									position = {0, 1.5, 0},
+									scale = {0.4,4,0.4}
+								},
+								CheckpointComponent = {
+									respawnpoint = {65,-16,0},
+								}
+							}
+						}
+					}
+				},				
+				cenicero3 = {
+					components = {
+						Transform = {
+							position = {123,-15,0},
+							scale = {0.6, 0.6, 0.6}
+						},
+						Mesh = {
+							mesh = "ashtray.mesh"
+						}
+					},
+					children = {
+						Cigarro3 = {
+							blueprint = "Cigarro",
+							components = {
+								Transform = {
+									position = {0, 1.5, 0},
+									scale = {0.4,4,0.4}
+								},
+								CheckpointComponent = {
+									respawnpoint = {123,-15,0}
+								}
+							}
 						}
 					}
 				},
-				
-				Cigarro3= {
-					blueprint = "Cigarro",
-					components = {
-						Transform= {
-							position = {71.21521,-2.833354,0},
-							rotation = {0,0,0,1},
-							scale = {0.5,1.124932,1}
-						}
-					}
-				},
-				
-				Cigarro4= {
-					blueprint = "Cigarro",
-					components = {
-						Transform= {
-							position = {136.6318,-15.68815,0},
-							rotation = {0,0,0,1},
-							scale = {0.5,1.124932,1}
-						}
-					}
-				}
 			}
 		},
 		Algas= {
@@ -919,95 +923,6 @@ local scenes = {
 				},
 			},
 			children = {
-				Cubosss = {
-					components = {
-						Transform = {
-							position = { 5, 0 ,60 },
-							rotation = { 0, 0, 0.258819, 0.9659258}
-						}
-					},
-					children = {
-						Cube1 = {
-							components = {
-								Transform = { 
-									rotation = { 0, 0, 0.258819, 0.9659258}
-								},
-								Mesh = {
-									mesh = "Cube.mesh"				
-								},
-								Collider= {
-									shapeType = "Cube",
-									layer = "Ground"					
-								}
-							}
-						},
-						Cube2 = {
-							components = {
-								Transform= {
-									position = {2,0,0},
-									rotation = {0,0,0,1},
-									scale = {1,1,1}
-								},
-								Mesh = {
-									mesh = "Cube.mesh"				
-								},
-								Collider= {
-									shapeType = "Cube",
-									layer = "Ground"					
-								}
-							}
-						},
-						Cube3 = {
-							components = {
-								Transform= {
-									position = {-2,0,0},
-									rotation = {0,0,0,1},
-									scale = {1,1,1}
-								},
-								Mesh = {
-									mesh = "Cube.mesh"				
-								},
-								Collider= {
-									shapeType = "Cube",
-									layer = "Ground"					
-								}
-							}
-						},
-						Cube4 = {
-							components = {
-								Transform= {
-									position = {0,2,0},
-									rotation = {0,0,0,1},
-									scale = {1,1,1}
-								},
-								Mesh = {
-							
-									mesh = "Cube.mesh"				
-								},
-								Collider= {
-									shapeType = "Cube",
-									layer = "Ground"					
-								}
-							}
-						},
-						Cube5 = {
-							components = {
-								Transform= {
-									position = {0,-2,0},
-									rotation = {0,0,0,1},
-									scale = {1,1,1}
-								},
-								Mesh = {
-									mesh = "Cube.mesh"				
-								},
-								Collider= {
-									shapeType = "Cube",
-									layer = "Ground"					
-								}
-							}
-						}
-					}
-				},
 				Ground= {
 					components = {
 						Transform= {
@@ -1694,7 +1609,10 @@ local scenes = {
 						EnemyComponent= {
 							p1 = {31.5,-23.82,0},
 							p2 = {47,-23.82,0},
-							speed = 30							
+							speed = 80							
+						},
+						HealthComponent={
+							health = 2
 						}
 					}
 				},
@@ -1727,7 +1645,10 @@ local scenes = {
 						EnemyComponent= {
 							p1 = {41,-13.32,0},
 							p2 = {52,-13.32,0},
-							speed = 30							
+							speed = 80							
+						},
+						HealthComponent={
+							health = 2
 						}
 					}
 				},
@@ -1760,7 +1681,10 @@ local scenes = {
 						EnemyComponent= {
 							p1 = {70,-13.38,0},
 							p2 = {87,-13.38,0},
-							speed = 30							
+							speed = 80							
+						},
+						HealthComponent={
+							health = 2
 						}
 					}
 				},
@@ -1791,9 +1715,12 @@ local scenes = {
 							jumpForce = 0							
 						},
 						EnemyComponent= {
-							p1 = {82,-6.13,0},
-							p2 = {70,-6.13,0},
-							speed = 30							
+							p1 = {70,-6.13,0},
+							p2 = {82,-6.13,0},
+							speed = 80							
+						},
+						HealthComponent={
+							health = 2
 						}
 					}
 				},
@@ -1826,7 +1753,10 @@ local scenes = {
 						EnemyComponent= {
 							p1 = {68,4.31,0},
 							p2 = {91,4.31,0},
-							speed = 30							
+							speed = 80							
+						},
+						HealthComponent={
+							health = 2
 						}
 					}
 				},
@@ -1859,7 +1789,10 @@ local scenes = {
 						EnemyComponent= {
 							p1 = {95,-8.69,0},
 							p2 = {104,-8.69,0},
-							speed = 30							
+							speed = 80							
+						},
+						HealthComponent={
+							health = 2
 						}
 					}
 				},
@@ -1892,7 +1825,10 @@ local scenes = {
 						EnemyComponent= {
 							p1 = {164,-12.67,0},
 							p2 = {171,-12.67,0},
-							speed = 30							
+							speed = 80							
+						},
+						HealthComponent={
+							health = 2
 						}
 					}
 				},
@@ -1925,7 +1861,10 @@ local scenes = {
 						EnemyComponent= {
 							p1 = {184,-2.92,0},
 							p2 = {192,-2.92,0},
-							speed = 30							
+							speed = 80							
+						},
+						HealthComponent={
+							health = 2
 						}
 					}
 				}
@@ -2092,45 +2031,13 @@ local scenes = {
 						}
 					},
 					children = {
-						
+												
 						Tentaculo= {
-							components = {
-								Transform= {
-									position = {112.31,4.1,-0.5006065},
-									rotation = {0,0,0,1},
-									scale = {3,9,1}
-								},
-								RigidBody= {
-									axisBlockedPos = {false,false,true},
-									axisBlockedRot = {true, true, true},
-									mass = 1,
-									friction = 1,
-									restitution = 1,
-									shapeType = "Cylinder",
-									static = false,
-									layer = "Enemy",	
-									trigger = true									
-								},
-								Mesh= {
-									mesh = "tentacle.mesh"									
-								},
-								EnemyComponent= {
-									p1 = {112.3,-8.4,0},
-									p2 = {112.3, 2.7,0},
-									speed = 30									
-								},
-								MovementComponent= {
-									jumpForce = 0									
-								}
-							}
-						},
-						
-						Tentaculo_1= {
 							components = {
 								Transform= {
 									position = {50.8,-34.2,-0.5006065},
 									rotation = {0,0,0,1},
-									scale = {3,11.3,1}
+									scale = {3,20,1}
 								},
 								RigidBody= {
 									axisBlockedPos = {true,false,true},
@@ -2147,8 +2054,8 @@ local scenes = {
 									mesh = "tentacle.mesh"									
 								},
 								EnemyComponent= {
-									p1 = {50.8,-37.2,0},
-									p2 = {50.8,-21.4,0},
+									p1 = {50.8,-36,0},
+									p2 = {50.8,-26,0},
 									speed = 120,
 									axis = 1						
 								},
@@ -2157,16 +2064,15 @@ local scenes = {
 								}
 							}
 						},
-						
-						Tentaculo_2= {
+						Tentaculo_1= {
 							components = {
 								Transform= {
 									position = {91.5,-30.3,-0.5006065},
 									rotation = {0,0,0,1},
-									scale = {3,18,1}
+									scale = {3,26,1}
 								},
 								RigidBody= {
-									axisBlockedPos = {false,false,true},
+									axisBlockedPos = {true,false,true},
 									axisBlockedRot = {true, true, true},
 									mass = 1,
 									friction = 1,
@@ -2180,25 +2086,57 @@ local scenes = {
 									mesh = "tentacle.mesh"									
 								},
 								EnemyComponent= {
-									p1 = {91.5,-40.4,0},
-									p2 = {91.5,-21.7,0},
-									speed = 30									
+									p1 = {91.5,-35,0},
+									p2 = {91.5,-15.5,0},
+									speed = 120,
+									axis = 1										
 								},
 								MovementComponent= {
 									jumpForce = 0									
 								}
 							}
 						},
-						
+						Tentaculo_2= {
+							components = {
+								Transform= {
+									position = {112.31,4.1,-0.5006065},
+									rotation = {0,0,180,1},
+									scale = {3,23,1}
+								},
+								RigidBody= {
+									axisBlockedPos = {true,false,true},
+									axisBlockedRot = {true, true, true},
+									mass = 1,
+									friction = 1,
+									restitution = 1,
+									shapeType = "Cylinder",
+									static = false,
+									layer = "Enemy",	
+									trigger = true									
+								},
+								Mesh= {
+									mesh = "tentacle.mesh"									
+								},
+								EnemyComponent= {
+									p1 = {112.3,-9.5,0},
+									p2 = {112.3, 7,0},
+									speed = 120,
+									axis = 1									
+								},
+								MovementComponent= {
+									jumpForce = 0									
+								}
+							}
+						},					
 						Tentaculo_3= {
 							components = {
 								Transform= {
 									position = {126.7,-33.5,-0.5006065},
 									rotation = {0,0,0,1},
-									scale = {3,16,1}
+									scale = {3,23,1}
 								},
 								RigidBody= {
-									axisBlockedPos = {false,false,true},
+									axisBlockedPos = {true,false,true},
 									axisBlockedRot = {true, true, true},
 									mass = 1,
 									friction = 1,
@@ -2213,8 +2151,9 @@ local scenes = {
 								},
 								EnemyComponent= {
 									p1 = {126.7,-36,0},
-									p2 = {126.7,-24.3,0},
-									speed = 30									
+									p2 = {126.7,-19,0},
+									speed = 120,
+									axis = 1									
 								},
 								MovementComponent= {
 									jumpForce = 0									
@@ -2227,10 +2166,10 @@ local scenes = {
 								Transform= {
 									position = {134.7,-29.5,-0.5006065},
 									rotation = {0,0,0,1},
-									scale = {3,16,1}
+									scale = {3,23,1}
 								},
 								RigidBody= {
-									axisBlockedPos = {false,false,true},
+									axisBlockedPos = {true,false,true},
 									axisBlockedRot = {true, true, true},
 									mass = 1,
 									friction = 1,
@@ -2245,8 +2184,9 @@ local scenes = {
 								},
 								EnemyComponent= {
 									p1 = {134.7,-36,0},
-									p2 = {134.7,-24.3,0},
-									speed = 30									
+									p2 = {134.7,-19,0},
+									speed = 120,
+									axis = 1									
 								},
 								MovementComponent= {
 									jumpForce = 0									
@@ -2259,25 +2199,27 @@ local scenes = {
 								Transform= {
 									position = {143.7,-25.1,-0.5006065},
 									rotation = {0,0,0,1},
-									scale = {3,16,1}
+									scale = {3,23,1}
 								},
 								RigidBody= {
-									axisBlockedPos = {false,false,true},
+									axisBlockedPos = {true,false,true},
 									axisBlockedRot = {true, true, true},
 									mass = 1,
 									friction = 1,
 									restitution = 1,
 									shapeType = "Cylinder",
 									static = false,
-									layer = "Enemy"									
+									layer = "Enemy",
+									trigger = true								
 								},
 								Mesh= {
 									mesh = "tentacle.mesh"									
 								},
 								EnemyComponent= {
 									p1 = {143.7,-36,0},
-									p2 = {143.7,-24.3,0},
-									speed = 30									
+									p2 = {143.7,-19,0},
+									speed = 120,
+									axis = 1									
 								},
 								MovementComponent= {
 									jumpForce = 0									
@@ -2290,10 +2232,10 @@ local scenes = {
 								Transform= {
 									position = {152.6,-32.8,-0.5006065},
 									rotation = {0,0,0,1},
-									scale = {3,14,1}
+									scale = {3,23,1}
 								},
 								RigidBody= {
-									axisBlockedPos = {false,false,true},
+									axisBlockedPos = {true,false,true},
 									axisBlockedRot = {true, true, true},
 									mass = 1,
 									friction = 1,
@@ -2308,8 +2250,9 @@ local scenes = {
 								},
 								EnemyComponent= {
 									p1 = {152.6,-35.5,0},
-									p2 = {152.6,-26.6,0},
-									speed = 30									
+									p2 = {152.6,-22.5,0},
+									speed = 120,
+									axis = 1									
 								},
 								MovementComponent= {
 									jumpForce = 0									
@@ -2322,10 +2265,10 @@ local scenes = {
 								Transform= {
 									position = {186.9,-6.3,-0.5006065},
 									rotation = {0,0,0.7071068,0.7071068},
-									scale = {3,11.3,1}
+									scale = {3,28,1}
 								},
 								RigidBody= {
-									axisBlockedPos = {false,false,true},
+									axisBlockedPos = {false,true,true},
 									axisBlockedRot = {true, true, true},
 									mass = 1,
 									friction = 1,
@@ -2339,9 +2282,10 @@ local scenes = {
 									mesh = "tentacle.mesh"									
 								},
 								EnemyComponent= {
-									p1 = {171,-6.3,0},
-									p2 = {193,-6.3,0},
-									speed = 30									
+									p1 = {172.5,-6.3,0},
+									p2 = {195,-6.3,0},
+									speed = 120,
+									axis = 0									
 								},
 								MovementComponent= {
 									jumpForce = 0									
@@ -2353,11 +2297,11 @@ local scenes = {
 							components = {
 								Transform= {
 									position = {178.8,0.4064,-0.5006065},
-									rotation = {0,0,0,1},
-									scale = {3,8.3,1}
+									rotation = {0,0,180,1},
+									scale = {3,20,1}
 								},
 								RigidBody= {
-									axisBlockedPos = {false,false,true},
+									axisBlockedPos = {true,false,true},
 									axisBlockedRot = {true, true, true},
 									mass = 1,
 									friction = 1,
@@ -2371,9 +2315,10 @@ local scenes = {
 									mesh = "tentacle.mesh"									
 								},
 								EnemyComponent= {
-									p1 = {178,0.4,0},
-									p2 = {178,15.6,0},
-									speed = 30									
+									p1 = {178,1.5,0},
+									p2 = {178,16.5,0},
+									speed = 120,
+									axis = 1									
 								},
 								MovementComponent= {
 									jumpForce = 0									
@@ -2392,8 +2337,7 @@ local scenes = {
 					scale = {1,1,1}
 				}
 			},
-			children = {
-				
+			children = {	
 				DeathZone= {
 					components = {
 						Transform= {
