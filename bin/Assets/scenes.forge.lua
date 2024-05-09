@@ -50,9 +50,6 @@ local prefabs = {
 			Transform = {
 				position = {0,0,0}
 			},
-			Mesh = {
-				mesh = "Cube.mesh"
-			},
 			Collider = {
 				shapeType = "Cube",
 				layer = "Attack"
