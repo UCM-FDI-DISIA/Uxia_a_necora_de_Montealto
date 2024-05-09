@@ -33,6 +33,7 @@ public:
 
 	void setSpawnpoint(forge::Vector3);
 	forge::Vector3 getSpawnpoint();
+	void spawn();
 };
 
 #endif // !LEVEL_MANAGER_H_

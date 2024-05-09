@@ -91,4 +91,5 @@ void PlayerHealthComponent::addKelp(int kelp) {
 
 void PlayerHealthComponent::death() {
 	ui->enableDeathText(true);
+	level->spawn();
 }

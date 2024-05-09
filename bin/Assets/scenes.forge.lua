@@ -407,7 +407,8 @@ local scenes = {
 			handler = "Player",
 			components = {
 				Transform= {
-					position = {11.92,-0.67,0},
+					--position = {11.92,-0.67,0},
+					position = {193,5,0},
 					rotation = {0,0,0,1},
 					scale = {1, 1, 1}
 				},
@@ -1919,7 +1920,7 @@ local scenes = {
 						}
 					}
 				}
-},
+		},
 		NecorasMalvadas= {
 			components = {
 				Transform= {
@@ -2766,7 +2767,7 @@ local scenes = {
 			handler = "Player",
 			components = {
 				Transform= {
-					position = {-11.92,-0.67,0},
+					position = {-225, 0.5,0},
 					rotation = {0,0,0,1},
 					scale = {1, 1, 1}
 				},
@@ -2817,8 +2818,8 @@ local scenes = {
 		EndLevel = {
 			components = {
 				Transform = {
-					position = {-15,5,0},
-					scale = {1, 10, 1},
+					position = {-15,-18,0},
+					scale = {1, 15, 1},
 					rotation = {0, 0, 0, 1}
 				},
 				Collider = {
@@ -2859,7 +2860,7 @@ local scenes = {
 						Cenicero1 = {
 							components = {
 								Transform = {
-									position = {15,-0.67,0},
+									position = {200,0.7,0},
 									scale = {0.6, 0.6, 0.6}
 								},
 								Mesh = {
@@ -2875,7 +2876,7 @@ local scenes = {
 											scale = {0.4,4,0.4}
 										},
 										CheckpointComponent = {
-											respawnpoint = {-15,-0.67,0}
+											respawnpoint = {-200,0.7,0}
 										}
 									}
 								}
@@ -2947,7 +2948,7 @@ local scenes = {
 							blueprint = "Alga",
 							components = {
 								Transform= {
-									position = {21.01625,-3.271324,0},
+									position = {245,6,0},
 									rotation = {0,0,-0.2588186,0.965926},
 									scale = {0.4691,1,1}
 								}
@@ -2958,7 +2959,7 @@ local scenes = {
 							blueprint = "Alga",
 							components = {
 								Transform= {
-									position = {21.01625,-5.771324,0},
+									position = {247,6,0},
 									rotation = {0,0,-0.2588186,0.965926},
 									scale = {0.4691,1,1}
 								}
@@ -2969,7 +2970,7 @@ local scenes = {
 							blueprint = "Alga",
 							components = {
 								Transform= {
-									position = {21.01625,-8.45,0},
+									position = {249,6,0},
 									rotation = {0,0,-0.2588186,0.965926},
 									scale = {0.4691,1,1}
 								}
@@ -2980,7 +2981,7 @@ local scenes = {
 							blueprint = "Alga",
 							components = {
 								Transform= {
-									position = {21.01625,-11.02132,0},
+									position = {245,4,0},
 									rotation = {0,0,-0.2588186,0.965926},
 									scale = {0.4691,1,1}
 								}
@@ -2991,7 +2992,7 @@ local scenes = {
 							blueprint = "Alga",
 							components = {
 								Transform= {
-									position = {21.01625,-13.73566,0},
+									position = {247,4,0},
 									rotation = {0,0,-0.2588186,0.965926},
 									scale = {0.4691,1,1}
 								}
@@ -3002,18 +3003,7 @@ local scenes = {
 							blueprint = "Alga",
 							components = {
 								Transform= {
-									position = {21.01625,-16.77132,0},
-									rotation = {0,0,-0.2588186,0.965926},
-									scale = {0.4691,1,1}
-								}
-							}
-						},
-						
-						Alga7= {
-							blueprint = "Alga",
-							components = {
-								Transform= {
-									position = {21.01625,-19.52132,0},
+									position = {249,4,0},
 									rotation = {0,0,-0.2588186,0.965926},
 									scale = {0.4691,1,1}
 								}
@@ -3594,699 +3584,716 @@ local scenes = {
 					}
 				},
 				Terreno= {
-				components = {
-					Transform= {
-						position = {0,0,0},
-						rotation = {0,0,0,1},
-						scale = {0.8751596,0.8751596,0.8751596}
+					components = {
+						Transform= {
+							position = {0,0,0},
+							rotation = {0,0,0,1},
+							scale = {0.8751596,0.8751596,0.8751596}
+						},
 					},
-				},
-				children = {
-					Ground= {
-						components = {
-							Transform= {
-								position = {9.157056,-24.1024,0},
-								rotation = {0,0,0,1},
-								scale = {18.24046,44.89019,1}
-							},
-							Collider= {
-								shapeType = "Cube",
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"
+					children = {
+						Ground= {
+							components = {
+								Transform= {
+									position = {11,-38,0},
+									rotation = {0,0,0,1},
+									scale = {15,18.32828,1}
+								},
+								Collider= {
+									shapeType = "Cube",
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"
+								}
 							}
-						}
-					},
-					
-					Ground_1= {
-						components = {
-							Transform= {
-								position = {12.25366,9.957811,0},
-								rotation = {0,0,0,1},
-								scale = {22.46497,13.35052,1}
-							},
-							Collider= {
-								shapeType = "Cube",
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"				
+						},
+						
+						Ground_1= {
+							components = {
+								Transform= {
+									position = {12.25366,-5,0},
+									rotation = {0,0,0,1},
+									scale = {22.46497,13.35052,1}
+								},
+								Collider= {
+									shapeType = "Cube",
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"				
+								}
 							}
-						}
-					},
-					
-					Ground_2= {
-						components = {
-							Transform= {
-								position = {31.1514,4.4714,0},
-								rotation = {0,0,0,1},
-								scale = {15.39157,24.25952,1}
-							},
-							Collider= {
-								shapeType = "Cube",					
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"				
+						},
+						
+						Ground_2= {
+							components = {
+								Transform= {
+									position = {31.1514,4.4714,0},
+									rotation = {0,0,0,1},
+									scale = {15.39157,24.25952,1}
+								},
+								Collider= {
+									shapeType = "Cube",					
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"				
+								}
 							}
-						}
-					},
-					
-					Ground_3= {
-						components = {
-							Transform= {
-								position = {51.9755,9.6397,0},
-								rotation = {0,0,0,1},
-								scale = {26.46535,32.16548,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"		
+						},
+						
+						Ground_3= {
+							components = {
+								Transform= {
+									position = {51.9755,9.6397,0},
+									rotation = {0,0,0,1},
+									scale = {26.46535,32.16548,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"		
+								}
 							}
-						}
-					},
-					
-					Ground_15= {
-						components = {
-							Transform= {
-								position = {80.1618,20.2874,0},
-								rotation = {0,0,0,1},
-								scale = {30.05009,23.40536,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"				
+						},
+						
+						Ground_15= {
+							components = {
+								Transform= {
+									position = {80.1618,20.2874,0},
+									rotation = {0,0,0,1},
+									scale = {30.05009,23.40536,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"				
+								}
 							}
-						}
-					},
-					
-					Ground_18= {
-						components = {
-							Transform= {
-								position = {100.9513,23.4145,0},
-								rotation = {0,0,0,1},
-								scale = {11.67214,17.11616,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"			
+						},
+						
+						Ground_18= {
+							components = {
+								Transform= {
+									position = {100.9513,23.4145,0},
+									rotation = {0,0,0,1},
+									scale = {11.67214,17.11616,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"			
+								}
 							}
-						}
-					},
-					
-					Ground_19= {
-						components = {
-							Transform= {
-								position = {119.5346,16.7319,0},
-								rotation = {0,0,0,1},
-								scale = {25.54743,30.09663,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"				
+						},
+						
+						Ground_19= {
+							components = {
+								Transform= {
+									position = {119.5346,16.7319,0},
+									rotation = {0,0,0,1},
+									scale = {25.54743,30.09663,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"				
+								}
 							}
-						}
-					},
-					
-					Ground_25= {
-						components = {
-							Transform= {
-								position = {152.878,11.9728,0},
-								rotation = {0,0,0,1},
-								scale = {41.06748,40.12918,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"			
+						},
+						
+						Ground_25= {
+							components = {
+								Transform= {
+									position = {152.878,11.9728,0},
+									rotation = {0,0,0,1},
+									scale = {41.06748,40.12918,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"			
+								}
 							}
-						}
-					},
-					
-					Ground_4= {
-						components = {
-							Transform= {
-								position = {23.38559,-37.37799,0},
-								rotation = {0,0,0,1},
-								scale = {10.30046,18.32828,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"			
+						},
+						
+						Ground_4= {
+							components = {
+								Transform= {
+									position = {23.38559,-38,0},
+									rotation = {0,0,0,1},
+									scale = {10.30046,18.32828,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"			
+								}
 							}
-						}
-					},
-					
-					Ground_5= {
-						components = {
-							Transform= {
-								position = {44.97408,-37.41199,0},
-								rotation = {0,0,0,1},
-								scale = {20.53343,18.49995,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"			
+						},
+						
+						Ground_5= {
+							components = {
+								Transform= {
+									position = {44.97408,-37.41199,0},
+									rotation = {0,0,0,1},
+									scale = {20.53343,18.49995,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"			
+								}
 							}
-						}
-					},
-					
-					Ground_6= {
-						components = {
-							Transform= {
-								position = {65.8516,-35.12669,0},
-								rotation = {0,0,0,1},
-								scale = {9.725895,23.07129,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"			
+						},
+						
+						Ground_6= {
+							components = {
+								Transform= {
+									position = {65.8516,-35.12669,0},
+									rotation = {0,0,0,1},
+									scale = {9.725895,23.07129,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"			
+								}
 							}
-						}
-					},
-					
-					Ground_7= {
-						components = {
-							Transform= {
-								position = {74.25446,-32.55573,0},
-								rotation = {0,0,0,1},
-								scale = {7.107291,28.21388,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"			
+						},
+						
+						Ground_7= {
+							components = {
+								Transform= {
+									position = {74.25446,-32.55573,0},
+									rotation = {0,0,0,1},
+									scale = {7.107291,28.21388,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"			
+								}
 							}
-						}
-					},
-					
-					Ground_9= {
-						components = {
-							Transform= {
-								position = {89.9075,-31.41308,0},
-								rotation = {0,0,0,1},
-								scale = {24.36362,30.49787,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"			
+						},
+						
+						Ground_9= {
+							components = {
+								Transform= {
+									position = {89.9075,-31.41308,0},
+									rotation = {0,0,0,1},
+									scale = {24.36362,30.49787,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"			
+								}
 							}
-						}
-					},
-					
-					Ground_8= {
-						components = {
-							Transform= {
-								position = {53.03754,-17.13,0},
-								rotation = {0,0,0,1},
-								scale = {16.53437,1.933702,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"				
+						},
+						
+						Ground_8= {
+							components = {
+								Transform= {
+									position = {53.03754,-17.13,0},
+									rotation = {0,0,0,1},
+									scale = {16.53437,1.933702,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"				
+								}
 							}
-						}
-					},
-					
-					Ground_10= {
-						components = {
-							Transform= {
-								position = {81.8894,-10.787,0},
-								rotation = {0,0,0,1},
-								scale = {22.247,2.050476,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"			
+						},
+						
+						Ground_10= {
+							components = {
+								Transform= {
+									position = {81.8894,-10.787,0},
+									rotation = {0,0,0,1},
+									scale = {22.247,2.050476,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"			
+								}
 							}
-						}
-					},
-					
-					Ground_11= {
-						components = {
-							Transform= {
-								position = {87.17416,-8.845797,0},
-								rotation = {0,0,0,1},
-								scale = {17.38852,1.933682,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"			
+						},
+						
+						Ground_11= {
+							components = {
+								Transform= {
+									position = {87.17416,-8.845797,0},
+									rotation = {0,0,0,1},
+									scale = {17.38852,1.933682,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"			
+								}
 							}
-						}
-					},
-					
-					Ground_16= {
-						components = {
-							Transform= {
-								position = {95.4965,-1.418581,0},
-								rotation = {0,0,0,1},
-								scale = {22.60653,2.504776,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"			
+						},
+						
+						Ground_16= {
+							components = {
+								Transform= {
+									position = {95.4965,-1.418581,0},
+									rotation = {0,0,0,1},
+									scale = {22.60653,2.504776,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"			
+								}
 							}
-						}
-					},
-					
-					Ground_17= {
-						components = {
-							Transform= {
-								position = {91.0688,1.939817,0},
-								rotation = {0,0,0,1},
-								scale = {31.46238,4.218759,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"			
+						},
+						
+						Ground_17= {
+							components = {
+								Transform= {
+									position = {91.0688,1.939817,0},
+									rotation = {0,0,0,1},
+									scale = {31.46238,4.218759,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"			
+								}
 							}
-						}
-					},
-					
-					Ground_13= {
-						components = {
-							Transform= {
-								position = {73.6636,-7.131825,0},
-								rotation = {0,0,0,1},
-								scale = {9.792862,5.361515,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"			
+						},
+						
+						Ground_13= {
+							components = {
+								Transform= {
+									position = {73.6636,-7.131825,0},
+									rotation = {0,0,0,1},
+									scale = {9.792862,5.361515,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"			
+								}
 							}
-						}
-					},
-					
-					Ground_14= {
-						components = {
-							Transform= {
-								position = {66.95054,-3.65,0},
-								rotation = {0,0,0,1},
-								scale = {3.793755,5.933552,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"			
+						},
+						
+						Ground_14= {
+							components = {
+								Transform= {
+									position = {66.95054,-3.65,0},
+									rotation = {0,0,0,1},
+									scale = {3.793755,5.933552,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"			
+								}
 							}
-						}
-					},
-					
-					Ground_12= {
-						components = {
-							Transform= {
-								position = {113.7407,-11.55959,0},
-								rotation = {0,0,0,1},
-								scale = {14.53313,1.648048,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"			
+						},
+						
+						Ground_12= {
+							components = {
+								Transform= {
+									position = {113.7407,-11.55959,0},
+									rotation = {0,0,0,1},
+									scale = {14.53313,1.648048,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"			
+								}
 							}
-						}
-					},
-					
-					Ground_20= {
-						components = {
-							Transform= {
-								position = {111.8839,-34.41254,0},
-								rotation = {0,0,0,1},
-								scale = {9.677046,24.50104,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"			
+						},
+						
+						Ground_20= {
+							components = {
+								Transform= {
+									position = {111.8839,-34.41254,0},
+									rotation = {0,0,0,1},
+									scale = {9.677046,24.50104,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"			
+								}
 							}
-						}
-					},
-					
-					Ground_21= {
-						components = {
-							Transform= {
-								position = {120.4,-32.41291,0},
-								rotation = {0,0,0,1},
-								scale = {7.391328,28.50129,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"			
+						},
+						
+						Ground_21= {
+							components = {
+								Transform= {
+									position = {120.4,-32.41291,0},
+									rotation = {0,0,0,1},
+									scale = {7.391328,28.50129,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"			
+								}
 							}
-						}
-					},
-					
-					Ground_22= {
-						components = {
-							Transform= {
-								position = {127.77,-35.1267,0},
-								rotation = {0,0,0,1},
-								scale = {7.391328,23.07464,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"			
+						},
+						
+						Ground_22= {
+							components = {
+								Transform= {
+									position = {127.77,-35.1267,0},
+									rotation = {0,0,0,1},
+									scale = {7.391328,23.07464,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"			
+								}
 							}
-						}
-					},
-					
-					Ground_23= {
-						components = {
-							Transform= {
-								position = {127.77,-35.1267,0},
-								rotation = {0,0,0,1},
-								scale = {7.391328,23.07464,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"			
+						},
+						
+						Ground_23= {
+							components = {
+								Transform= {
+									position = {127.77,-35.1267,0},
+									rotation = {0,0,0,1},
+									scale = {7.391328,23.07464,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"			
+								}
 							}
-						}
-					},
-					
-					Ground_24= {
-						components = {
-							Transform= {
-								position = {138.6252,-32.12724,0},
-								rotation = {0,0,0,1},
-								scale = {7.391328,29.07405,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"			
+						},
+						
+						Ground_24= {
+							components = {
+								Transform= {
+									position = {138.6252,-32.12724,0},
+									rotation = {0,0,0,1},
+									scale = {7.391328,29.07405,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"			
+								}
 							}
-						}
-					},
-					
-					Ground_26= {
-						components = {
-							Transform= {
-								position = {148.4805,-32.12724,0},
-								rotation = {0,0,0,1},
-								scale = {2.535225,29.07405,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"			
+						},
+						
+						Ground_26= {
+							components = {
+								Transform= {
+									position = {148.4805,-32.12724,0},
+									rotation = {0,0,0,1},
+									scale = {2.535225,29.07405,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"			
+								}
 							}
-						}
-					},
-					
-					Ground_27= {
-						components = {
-							Transform= {
-								position = {159.05,-32.12724,0},
-								rotation = {0,0,0,1},
-								scale = {2.535225,29.07405,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"			
+						},
+						
+						Ground_27= {
+							components = {
+								Transform= {
+									position = {159.05,-32.12724,0},
+									rotation = {0,0,0,1},
+									scale = {2.535225,29.07405,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"			
+								}
 							}
-						}
-					},
-					
-					Ground_28= {
-						components = {
-							Transform= {
-								position = {169.3338,-32.12724,0},
-								rotation = {0,0,0,1},
-								scale = {2.535225,29.07405,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"			
+						},
+						
+						Ground_28= {
+							components = {
+								Transform= {
+									position = {169.3338,-32.12724,0},
+									rotation = {0,0,0,1},
+									scale = {2.535225,29.07405,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"			
+								}
 							}
-						}
-					},
-					
-					Ground_29= {
-						components = {
-							Transform= {
-								position = {179.0463,-33.98405,0},
-								rotation = {0,0,0,1},
-								scale = {2.535225,25.36129,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"			
+						},
+						
+						Ground_29= {
+							components = {
+								Transform= {
+									position = {179.0463,-33.98405,0},
+									rotation = {0,0,0,1},
+									scale = {2.535225,25.36129,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"			
+								}
 							}
-						}
-					},
-					
-					Ground_31= {
-						components = {
-							Transform= {
-								position = {191.6155,-30.98459,0},
-								rotation = {0,0,0,1},
-								scale = {13.39052,31.36081,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"			
+						},
+						
+						Ground_31= {
+							components = {
+								Transform= {
+									position = {191.6155,-30.98459,0},
+									rotation = {0,0,0,1},
+									scale = {13.39052,31.36081,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"			
+								}
 							}
-						}
-					},
-					
-					Ground_32= {
-						components = {
-							Transform= {
-								position = {203.6133,-28.41364,0},
-								rotation = {0,0,0,1},
-								scale = {11.10504,36.50399,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"		
+						},
+						
+						Ground_32= {
+							components = {
+								Transform= {
+									position = {203.6133,-28.41364,0},
+									rotation = {0,0,0,1},
+									scale = {11.10504,36.50399,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"		
+								}
 							}
-						}
-					},
-					
-					Ground_33= {
-						components = {
-							Transform= {
-								position = {215.3254,-25.41418,0},
-								rotation = {0,0,0,1},
-								scale = {12.8189,42.50159,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"			
+						},
+						
+						Ground_33= {
+							components = {
+								Transform= {
+									position = {215.3254,-25.41418,0},
+									rotation = {0,0,0,1},
+									scale = {12.8189,42.50159,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"			
+								}
 							}
-						}
-					},
-					
-					Ground_34= {
-						components = {
-							Transform= {
-								position = {225.0379,-23.12889,0},
-								rotation = {0,0,0,1},
-								scale = {7.105398,47.07051,1}
-							},
-							Collider= {
-								shapeType = "Cube",						
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"		
+						},
+						
+						Ground_34= {
+							components = {
+								Transform= {
+									position = {240,-23.12889,0},
+									rotation = {0,0,0,1},
+									scale = {40,47.07051,1}
+								},
+								Collider= {
+									shapeType = "Cube",						
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"		
+								}
 							}
-						}
-					},
-					
-					Ground_30= {
-						components = {
-							Transform= {
-								position = {177.0467,9.341371,0},
-								rotation = {0,0,0,1},
-								scale = {7.676759,45.35551,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"
+						},
+						
+						Ground_30= {
+							components = {
+								Transform= {
+									position = {177.0467,9.341371,0},
+									rotation = {0,0,0,1},
+									scale = {7.676759,45.35551,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"
+								}
 							}
-						}
-					},
-					
-					Ground_35= {
-						components = {
-							Transform= {
-								position = {190.6156,17.05425,0},
-								rotation = {0,0,0,1},
-								scale = {19.96005,29.9301,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"
+						},
+						
+						Ground_35= {
+							components = {
+								Transform= {
+									position = {190.6156,17.05425,0},
+									rotation = {0,0,0,1},
+									scale = {19.96005,29.9301,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"
+								}
 							}
-						}
-					},
-					
-					Ground_36= {
-						components = {
-							Transform= {
-								position = {214.3167,21.48201,0},
-								rotation = {0,0,0,1},
-								scale = {27.97696,21.07378,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"
+						},
+						
+						Ground_36= {
+							components = {
+								Transform= {
+									position = {230,21.48201,0},
+									rotation = {0,0,0,1},
+									scale = {60,21.07378,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"
+								}
 							}
-						}
-					},
-					
-					Cube= {
-						components = {
-							Transform= {
-								position = {0.5262561,7.258011,0},
-								rotation = {0,0,0,1},
-								scale = {1,18.74993,1}
-							},
-							Collider= {
-								shapeType = "Cube",							
-								layer = "Ground"					
-							},
-							Mesh = {
-								mesh = "Cube.mesh",
-								material = "suelo"
+						},
+						
+						Cube= {
+							components = {
+								Transform= {
+									position = {260,7.258011,0},
+									rotation = {0,0,0,1},
+									scale = {1,18.74993,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"
+								}
+							}
+						},
+						Cube2= {
+							components = {
+								Transform= {
+									position = {230,13,0},
+									rotation = {0,0,0,1},
+									scale = {20,18.74993,1}
+								},
+								Collider= {
+									shapeType = "Cube",							
+									layer = "Ground"					
+								},
+								Mesh = {
+									mesh = "Cube.mesh",
+									material = "suelo"
+								}
 							}
 						}
 					}
-				}
-},
+				},
 				NecorasMalvadas= {
 					components = {
 						Transform= {
@@ -4323,8 +4330,8 @@ local scenes = {
 									jumpForce = 0							
 								},
 								EnemyComponent= {
-									p1 = {31.5,-23.82,0},
-									p2 = {47,-23.82,0},
+									p1 = {-47,-23.82,0},
+									p2 = {-31.5,-23.82,0},
 									speed = 80							
 								},
 								HealthComponent={
@@ -4359,8 +4366,8 @@ local scenes = {
 									jumpForce = 0							
 								},
 								EnemyComponent= {
-									p1 = {41,-13.32,0},
-									p2 = {52,-13.32,0},
+									p1 = {-52,-13.32,0},
+									p2 = {-41,-13.32,0},
 									speed = 80							
 								},
 								HealthComponent={
@@ -4395,8 +4402,8 @@ local scenes = {
 									jumpForce = 0							
 								},
 								EnemyComponent= {
-									p1 = {70,-13.38,0},
-									p2 = {87,-13.38,0},
+									p1 = {-87,-13.38,0},
+									p2 = {-70,-13.38,0},
 									speed = 80							
 								},
 								HealthComponent={
@@ -4431,8 +4438,8 @@ local scenes = {
 									jumpForce = 0							
 								},
 								EnemyComponent= {
-									p1 = {70,-6.13,0},
-									p2 = {82,-6.13,0},
+									p1 = {-82,-6.13,0},
+									p2 = {-70,-6.13,0},
 									speed = 80							
 								},
 								HealthComponent={
@@ -4467,8 +4474,8 @@ local scenes = {
 									jumpForce = 0							
 								},
 								EnemyComponent= {
-									p1 = {68,4.31,0},
-									p2 = {91,4.31,0},
+									p1 = {-91,4.31,0},
+									p2 = {-68,4.31,0},
 									speed = 80							
 								},
 								HealthComponent={
@@ -4503,8 +4510,8 @@ local scenes = {
 									jumpForce = 0							
 								},
 								EnemyComponent= {
-									p1 = {95,-8.69,0},
-									p2 = {104,-8.69,0},
+									p1 = {-104,-8.69,0},
+									p2 = {-95,-8.69,0},
 									speed = 80							
 								},
 								HealthComponent={
@@ -4539,8 +4546,8 @@ local scenes = {
 									jumpForce = 0							
 								},
 								EnemyComponent= {
-									p1 = {164,-12.67,0},
-									p2 = {171,-12.67,0},
+									p1 = {-171,-12.67,0},
+									p2 = {-164,-12.67,0},
 									speed = 80							
 								},
 								HealthComponent={
@@ -4575,8 +4582,8 @@ local scenes = {
 									jumpForce = 0							
 								},
 								EnemyComponent= {
-									p1 = {184,-2.92,0},
-									p2 = {192,-2.92,0},
+									p1 = {-192,-2.92,0},
+									p2 = {-184,-2.92,0},
 									speed = 80							
 								},
 								HealthComponent={
@@ -4736,8 +4743,7 @@ local scenes = {
 									}
 								}
 							}
-						},
-						
+						},					
 						Tentaculos= {
 							components = {
 								Transform= {
@@ -4998,8 +5004,8 @@ local scenes = {
 											mesh = "tentacle.mesh"									
 										},
 										EnemyComponent= {
-											p1 = {172.5,-6.3,0},
-											p2 = {195,-6.3,0},
+											p1 = {-195,-6.3,0},
+											p2 = {-172.5,-6.3,0},
 											speed = 120,
 											axis = 0									
 										},

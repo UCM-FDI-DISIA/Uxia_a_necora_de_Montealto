@@ -6,6 +6,7 @@
 #include <Serializer.h>
 #include <Scene.h>
 #include <Collider.h>
+#include <RigidBody.h>
 #include <MainForge.h>
 
 const std::string LevelManager::id = "LevelManager";
@@ -84,5 +85,10 @@ void LevelManager::setSpawnpoint(forge::Vector3 newSpawn) {
 
 forge::Vector3 LevelManager::getSpawnpoint() {
     return spawnpoint;
+}
+
+void LevelManager::spawn() {
+    Entity* player = scene->getEntityByHandler("Player");   
+    player->getComponent<RigidBody>()->setPosition(spawnpoint);
 }
 
