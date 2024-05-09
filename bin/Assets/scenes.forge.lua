@@ -79,10 +79,10 @@ local scenes = {
 				Transform= {
 					position = {11.92,-0.67,0},
 					rotation = {0,0,0,1},
-					scale = {1,1,1}
+					scale = {1, 1, 1}
 				},
 				 RigidBody= {
-				 	scale = {1,1,1},
+				 	scale = {2.95, 1,1.13},
 				 	axisBlockedPos = {false,false,true},
 				 	axisBlockedRot = {true,true,true},
 				 	mass = 1,
@@ -93,7 +93,7 @@ local scenes = {
 				 	layer = "ALL"					
 				 },
 				Mesh = {
-                    mesh = "Cylinder.mesh"
+                    mesh = "uxia.mesh"
                 },
 				PlayerInputComponent = {
 					speed = 10
@@ -109,7 +109,7 @@ local scenes = {
                 cam = {
                     components = {
                         Transform = {
-                            position = {0, 4, 50},
+                            position = {0, 4, 20},
 							rotation = {20, 0, 0}
                         },
                         Camera = {
@@ -1020,7 +1020,8 @@ local scenes = {
 							layer = "Ground"					
 						},
 						Mesh = {
-							mesh = "Cube.mesh"				
+							mesh = "Cube.mesh",
+							material = "suelo"
 						}
 					}
 				},
