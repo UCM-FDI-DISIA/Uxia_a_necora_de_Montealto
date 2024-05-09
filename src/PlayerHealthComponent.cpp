@@ -91,5 +91,4 @@ void PlayerHealthComponent::addKelp(int kelp) {
 
 void PlayerHealthComponent::death() {
 	ui->enableDeathText(true);
-	entity->getComponent<RigidBody>()->setPosition(level->getSpawnpoint());
 }

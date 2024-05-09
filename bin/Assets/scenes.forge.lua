@@ -45,21 +45,21 @@ local prefabs = {
 	},
 
 	Attack= {
-		handler = "Attack",
 		group = "",
 		components = {
 			Transform= {
-				position = {0,0,0},
-				rotation = {0,0,0,1},
-				scale = {1,1,1}
+				position = {0,0,0}
+			},
+			Mesh= {
+				mesh = "Cube.mesh"
 			},
 			Collider= {
 				shapeType = "Cube",
-				layer = "Attack"				
+				layer = "Attack"
 			},
 			AttackComponent= {
 				damage = 1,
-				lifeTime = 5000		
+				lifeTime = 0.5		
 			}
 		}
 	}

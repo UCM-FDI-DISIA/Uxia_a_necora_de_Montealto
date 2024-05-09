@@ -13,7 +13,7 @@ const std::string AttackComponent::id = "AttackComponent";
 AttackComponent::AttackComponent() :
 	hitbox(nullptr),
 	input(nullptr),
-	lifetime(500),
+	lifetime(0.5f),
 	damage(1){
 	serializer(damage, "damage");
 	serializer(lifetime, "lifetime");
@@ -22,6 +22,7 @@ AttackComponent::AttackComponent() :
 AttackComponent::~AttackComponent() {
 
 }
+
 bool AttackComponent::initComponent(ComponentData* data) {
 	if (entity->hasComponent<Collider>()) {
 		hitbox = entity->getComponent<Collider>();
@@ -35,8 +36,12 @@ bool AttackComponent::initComponent(ComponentData* data) {
 		}
 		return true;
 	}
-	else reportError("El component Attack requiere un componente Collider");
-	return false;
+	Entity* player = scene->getEntityByHandler("Player");
+	if (player != nullptr) {
+		input = player->getComponent<PlayerInputComponent>();
+	}
+	return true;
+	throwError(false, "El component Attack requiere un componente Collider");
 }
 
 void AttackComponent::update() {

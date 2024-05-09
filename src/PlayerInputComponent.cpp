@@ -14,8 +14,11 @@ PlayerInputComponent::PlayerInputComponent():
 	input(*Input::GetInstance()),
 	movement(nullptr),
 	attacking(false),
-	speed(1){
+	attackOffset(2),
+	speed(1),
+	lastDirection(1) {
 	serializer(speed, "speed");
+	serializer(attackOffset, "attackOffset");
 }
 
 bool PlayerInputComponent::initComponent(ComponentData* data)
@@ -39,9 +42,11 @@ void PlayerInputComponent::update() {
 
 	if (input.keyPressed(K_A)) {
 		movement->move(-speed, 0);
+		lastDirection = -1;
 	}
 	else if (input.keyPressed(K_D)) {
 		movement->move(speed, 0);
+		lastDirection = 1;
 	}
 
 	//Salto
@@ -49,7 +54,8 @@ void PlayerInputComponent::update() {
 		movement->jump();
 	}
 	if (input.keyPressed(K_SPACE) && !attacking) {	
-		sceneManager.instantiateBlueprint("Attack", entity->getComponent<Transform>()->getGlobalPosition() + forge::Vector3(entity->getComponent<Transform>()->getGlobalScale().getX() * 2, 0, 0), entity);	
+		forge::Vector3 offset = forge::Vector3(attackOffset,0,0) * lastDirection;
+		sceneManager.instantiateBlueprint("Attack", offset, entity);
 		attacking = true;
 	}	
 }

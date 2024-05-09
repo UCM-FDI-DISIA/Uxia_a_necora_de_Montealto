@@ -13,6 +13,8 @@ private:
 	MovementComponent* movement;
 	float speed;
 	bool attacking;
+	float attackOffset;
+	short lastDirection;
 
 public:
 	static const std::string id;
