@@ -25,22 +25,19 @@ AttackComponent::~AttackComponent() {
 
 bool AttackComponent::initComponent(ComponentData* data) {
 	if (entity->hasComponent<Collider>()) {
+		Entity* player = entity->getParent();
+		if (player == nullptr || !player->hasComponent<PlayerInputComponent>()) {
+			throwError(false, "El component Attack requiere un padre Player");
+		}
+		input = player->getComponent<PlayerInputComponent>();
 		hitbox = entity->getComponent<Collider>();
 		hitbox->registerCallback(forge::onCollisionEnter, [this](Collider* self, Collider* other) {
 			other->getEntity()->getComponent<HealthComponent>()->damage(damage);
-			entity->setAlive(false);	
+			entity->setAlive(false);
+			input->setAttacking(false);
 		});
-		Entity* player = scene->getEntityByHandler("Player");
-		if (player != nullptr) {
-			input = player->getComponent<PlayerInputComponent>();
-		}
 		return true;
 	}
-	Entity* player = scene->getEntityByHandler("Player");
-	if (player != nullptr) {
-		input = player->getComponent<PlayerInputComponent>();
-	}
-	return true;
 	throwError(false, "El component Attack requiere un componente Collider");
 }
 

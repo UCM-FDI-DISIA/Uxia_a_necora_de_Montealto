@@ -47,13 +47,13 @@ local prefabs = {
 	Attack= {
 		group = "",
 		components = {
-			Transform= {
+			Transform = {
 				position = {0,0,0}
 			},
-			Mesh= {
+			Mesh = {
 				mesh = "Cube.mesh"
 			},
-			Collider= {
+			Collider = {
 				shapeType = "Cube",
 				layer = "Attack"
 			},
