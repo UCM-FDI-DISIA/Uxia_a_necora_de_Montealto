@@ -1,4 +1,6 @@
 #include "CheckpointComponent.h"
+#include "PlayerHealthComponent.h"
+#include "LevelManager.h"
 #include <Collider.h>
 #include <Serializer.h>
 #include <Entity.h>
@@ -11,6 +13,7 @@ CheckpointComponent:: CheckpointComponent() :
 collider(nullptr),
 active (true),
 uxia(nullptr),
+level(nullptr),
 respawnpoint(forge::Vector3::ZERO){
 	serializer(respawnpoint, "respawnpoint");
 }
@@ -21,15 +24,26 @@ CheckpointComponent::~CheckpointComponent() {
 
 bool CheckpointComponent::initComponent(ComponentData* data) {
 	if (entity->hasComponent<Transform>() && entity->hasComponent<Collider>()) {
+		Entity* manager = scene->getEntityByHandler("manager");
+		if (manager != nullptr) {
+			level = manager->getComponent<LevelManager>();
+			if (level == nullptr) {
+				return false;
+			}
+		}
+		else {
+			reportError("No se han encontrado los Managers");
+		}
 		collider = entity->getComponent<Collider>();
 		collider->setTrigger(true);
 		collider->registerCallback(forge::onCollisionEnter, [this](Collider* self, Collider* other) {
 			Entity* player = other->getEntity();
-			if (player == scene->getEntityByHandler("Player")) {
+			if (player->hasComponent<PlayerHealthComponent>()) {
 				std::cout << "checkpoint\n";
 				this->getEntity()->setAlive(false);
+				level->setSpawnpoint(respawnpoint);
 			}
-			});
+		});
 		return true;
 	}
 	else {

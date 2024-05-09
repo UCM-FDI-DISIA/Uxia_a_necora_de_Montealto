@@ -3,6 +3,7 @@
 #include <Vector3.h>
 
 class Collider;
+class LevelManager;
 
 class CheckpointComponent : public Component
 {
@@ -11,6 +12,7 @@ private:
 	bool active;
 	Collider* collider;
 	Entity* uxia;
+	LevelManager* level;
 public:
 	static const std::string id;
 
