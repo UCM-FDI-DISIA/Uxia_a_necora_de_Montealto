@@ -121,7 +121,7 @@ local scenes = {
 				Camera = {
 					nearClipDistance = 1,
 					autoAspectRatio = true,
-					backgroundColor = Vector3(0.05,0.615,0.5)
+					backgroundColor = Vector3(0.145,0.368,0.41)
 				}
 			}
 		},
@@ -132,8 +132,56 @@ local scenes = {
 					scale = Vector2(702,367)
 				},
 				Image = {
-					depth = 0,
+					depth = 5,
 					texture = "gameTitle.png" 
+				}
+			}
+		},
+		AlgaIzq = {
+			components = {
+				RectTransform = {
+					position = Vector2(10, Window["height"] * 0.2),
+					scale = Vector2(360, 669)
+				},
+				Image = {
+					depth = 0,
+					texture = "seaweedIzq.png"
+				}
+			}
+		},
+		AlgaDer = {
+			components = {
+				RectTransform = {
+					position = Vector2(Window["width"] * 0.725, Window["height"] * 0.2),
+					scale = Vector2(360, 669)
+				},
+				Image = {
+					depth = 0,
+					texture = "seaweedDer.png"
+				}
+			}
+		},
+		PlayButton = {
+			components = {
+				RectTransform = {
+					position = Vector2(Window["width"] * 0.1, Window["height"] * 0.6),
+					scale = Vector2(201, 53)
+				}
+			}
+		},
+		LoadButton = {
+			components = {
+				RectTransform = {
+					position = Vector2(Window["width"] * 0.4, Window["height"] * 0.6),
+					scale = Vector2(201, 53)
+				}
+			}
+		},
+		ExitButton = {
+			components = {
+				RectTransform = {
+					position = Vector2(Window["width"] * 0.7, Window["height"] * 0.6),
+					scale = Vector2(201, 53)
 				}
 			}
 		},
@@ -144,7 +192,7 @@ local scenes = {
 					scale = Vector2(50,50)
 				},
 				Image = {
-					depth = 0,
+					depth = 4,
 					texture = "logoNullptr.png" 
 				}
 			}
@@ -152,13 +200,14 @@ local scenes = {
 		LicenseText = {
 			components = {
 				RectTransform = {
-					position = Vector2(Window["width"] * 0.78, Window["height"] * 0.955),
+					position = Vector2(Window["width"] * 0.725, Window["height"] * 0.95),
 					scale = Vector2(1,1)
 				},
 				Text = {
+					depth = 4,
 					text = "Hecho en ",
-                    fontName = "Crab.ttf",
-                    fontHeight = 30
+					fontName = "KingCrabs.ttf",
+					fontHeight = 30
 				}
 			}
 		},
@@ -169,8 +218,149 @@ local scenes = {
 					scale = Vector2(193, 57)
 				},
 				Image = {
-					depth = 0,
+					depth = 4,
 					texture = "logoFORGE.png"
+				}
+			}
+		}
+	},
+	PauseMenuScene = {
+		Camera = {
+			components = {
+				Transform = {
+					position = Vector3(0, 0, 0),
+					scale = Vector3(0.05, 0.05, 0.05)
+				},
+				Camera = {
+					nearClipDistance = 1,
+					autoAspectRatio = true,
+					backgroundColor = Vector3(0.43,0.6,0.2)
+				}
+			}
+		},
+		PauseTitle =  {
+			components = {
+				RectTransform = {
+					position = Vector2(Window["width"] * 0.40, 20),
+					scale = Vector2(1,1)
+				},
+				Text = {
+					text = "PAUSA",
+					fontName = "KingCrabs.ttf",
+					fontHeight = 125
+				}
+			}
+		},
+		ControlsImage = {
+			components = {
+				RectTransform = {
+					position = Vector2(Window["width"] * 0.365, Window["height"] * 0.25),
+					scale = Vector2(375,375)
+				},
+				Image = {
+					depth = 0,
+					texture = "default.png"
+				}
+			}
+		},
+		AlgaIzq = {
+			components = {
+				RectTransform = {
+					position = Vector2(10, Window["height"] * 0.2),
+					scale = Vector2(360, 669)
+				},
+				Image = {
+					depth = 5,
+					texture = "seaweedIzq.png"
+				}
+			}
+		},
+		AlgaDer = {
+			components = {
+				RectTransform = {
+					position = Vector2(Window["width"] * 0.725, Window["height"] * 0.2),
+					scale = Vector2(360, 669)
+				},
+				Image = {
+					depth = 5,
+					texture = "seaweedDer.png"
+				}
+			}
+		},
+		ResumeButton = {
+			components = {
+				RectTransform = {
+					position = Vector2(Window["width"] * 0.575, Window["height"] * 0.8),
+					scale = Vector2(201, 53)
+				},
+				Image = {
+					depth = 0,
+					texture = "continueButtonOnOut.png"
+				}
+			}
+		},
+		MenuButton = {
+			components = {
+				RectTransform = {
+					position = Vector2(Window["width"] * 0.275, Window["height"] * 0.8),
+					scale = Vector2(201, 53)
+				},
+				Image = {
+					depth = 0,
+					texture = "menuButtonOnOut.png"
+				}
+			}
+		}
+	},
+	VictoryMenuScene = {
+		Camera = {
+			components = {
+				Transform = {
+					position = Vector3(0, 0, 0),
+					scale = Vector3(0.05, 0.05, 0.05)
+				},
+				Camera = {
+					nearClipDistance = 1,
+					autoAspectRatio = true,
+					backgroundColor = Vector3(0.16,0.5,0.26)
+				}
+			}
+		},
+		Title = {
+			components = {
+				RectTransform = {
+					position = Vector2(Window["width"] * 0.35, 20),
+					scale = Vector2(1,1)
+				},
+				Text = {
+					color = Vector4(0.5, 1, 0, 1),
+					text = "VICTORIA",
+					fontName = "KingCrabs.ttf",
+					fontHeight = 125
+				}
+			}
+		},
+		MenuButton = {
+			components = {
+				RectTransform = {
+					position = Vector2(Window["width"] * 0.275, Window["height"] * 0.8),
+					scale = Vector2(201, 53)
+				},
+				Image = {
+					depth = 0,
+					texture = "menuButtonOnOut.png"
+				}
+			}
+		},
+		ExitButton = {
+			components = {
+				RectTransform = {
+					position = Vector2(Window["width"] * 0.575, Window["height"] * 0.8),
+					scale = Vector2(201, 53)
+				},
+				Image = {
+					depth = 0,
+					texture = "exitButtonOnOut.png"
 				}
 			}
 		}
