@@ -7,6 +7,7 @@
 #include <Scene.h>
 #include <Serializer.h>
 #include <SceneManager.h>
+#include <RigidBody.h>
 #include <Transform.h>
 #include <Random.h>
 
@@ -87,4 +88,5 @@ void PlayerHealthComponent::addKelp(int kelp) {
 
 void PlayerHealthComponent::death() {
 	ui->enableDeathText(true);
+	entity->getComponent<RigidBody>()->setPosition(level->getSpawnpoint());
 }
