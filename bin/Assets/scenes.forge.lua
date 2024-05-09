@@ -92,8 +92,11 @@ local scenes = {
 				 	static = false,
 				 	layer = "ALL"					
 				 },
-				Mesh = {
-                    mesh = "uxia.mesh"
+				Animator = {
+                    mesh = "Crab.mesh",
+					activeAnimations = {
+						"my_animation"
+					}
                 },
 				PlayerInputComponent = {
 					speed = 10
