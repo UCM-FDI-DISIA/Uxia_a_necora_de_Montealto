@@ -66,6 +66,70 @@ local prefabs = {
 }
 
 local scenes = {
+	MainMenuScene = {
+		Camera = {
+			components = {
+				Transform = {
+					position = Vector3(0, 0, 0),
+					scale = Vector3(0.05, 0.05, 0.05)
+				},
+				Camera = {
+					nearClipDistance = 1,
+					autoAspectRatio = true,
+					backgroundColor = Vector3(0.05,0.615,0.5)
+				}
+			}
+		},
+		Title = {
+			components = {
+				RectTransform = {
+					position = Vector2(Window["width"] * 0.25, 20),
+					scale = Vector2(702,367)
+				},
+				Image = {
+					depth = 0,
+					texture = "gameTitle.png" 
+				}
+			}
+		},
+		GroupLogoImage = {
+			components = {
+				RectTransform = {
+					position = Vector2(20, Window["height"] * 0.92),
+					scale = Vector2(50,50)
+				},
+				Image = {
+					depth = 0,
+					texture = "logoNullptr.png" 
+				}
+			}
+		},
+		LicenseText = {
+			components = {
+				RectTransform = {
+					position = Vector2(Window["width"] * 0.78, Window["height"] * 0.955),
+					scale = Vector2(1,1)
+				},
+				Text = {
+					text = "Hecho en ",
+                    fontName = "Crab.ttf",
+                    fontHeight = 30
+				}
+			}
+		},
+		EngineLogoImage = {
+			components =  {
+				RectTransform = {
+					position = Vector2(Window["width"] * 0.83, Window["height"] * 0.92),
+					scale = Vector2(193, 57)
+				},
+				Image = {
+					depth = 0,
+					texture = "logoFORGE.png"
+				}
+			}
+		}
+	},
 	MainScene = {
 		luz = {
             components = {
