@@ -1,4 +1,4 @@
-#include "CheckpointComponent.h"
+#include "EndLevelComponent.h"
 #include "PlayerHealthComponent.h"
 #include "LevelManager.h"
 #include <Collider.h>
@@ -7,20 +7,20 @@
 #include <Transform.h>
 #include <Scene.h> 
 
-const std::string CheckpointComponent::id = "CheckpointComponent";
+const std::string EndLevelComponent::id = "EndLevelComponent";
 
-CheckpointComponent:: CheckpointComponent() :
-collider(nullptr),
-level(nullptr),
-respawnpoint(forge::Vector3::ZERO){
-	serializer(respawnpoint, "respawnpoint");
+EndLevelComponent::EndLevelComponent() :
+	collider(nullptr),
+	level(nullptr),
+	nextLevel(1){
+	serializer(nextLevel, "nextLevel");
 }
 
-CheckpointComponent::~CheckpointComponent() {
+EndLevelComponent::~EndLevelComponent() {
 
 }
 
-bool CheckpointComponent::initComponent(ComponentData* data) {
+bool EndLevelComponent::initComponent(ComponentData* data) {
 	if (entity->hasComponent<Transform>() && entity->hasComponent<Collider>()) {
 		Entity* manager = scene->getEntityByHandler("manager");
 		if (manager != nullptr) {
@@ -37,11 +37,11 @@ bool CheckpointComponent::initComponent(ComponentData* data) {
 		collider->registerCallback(forge::onCollisionEnter, [this](Collider* self, Collider* other) {
 			Entity* player = other->getEntity();
 			if (player->hasComponent<PlayerHealthComponent>()) {
-				std::cout << "checkpoint\n";
+				std::cout << "endLevel\n";
 				this->getEntity()->setAlive(false);
-				level->setSpawnpoint(respawnpoint);
+				level->changeLevel(nextLevel);
 			}
-		});
+			});
 		return true;
 	}
 	else {

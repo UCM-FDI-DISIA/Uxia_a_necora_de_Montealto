@@ -65,6 +65,8 @@ local prefabs = {
 	}
 }
 
+local keepBetweenScenes = {}
+
 local scenes = {
 	MainMenuScene = {
 		Camera = {
@@ -170,7 +172,7 @@ local scenes = {
 				cam = {
 					components = {
 						Transform = {
-							position = {4, 4, 150},
+							position = {4, 4, 20},
 							rotation = {20, 0, 0}
 						},
 						Camera = {
@@ -322,6 +324,21 @@ local scenes = {
 						}
 					}
 				},
+			}
+		},
+		EndLevel = {
+			components = {
+				Transform = {
+					position = {2.92,-0.67,0},
+					scale = {1, 1, 1},
+					rotation = {0, 0, 0, 1}
+				},
+				Collider = {
+					shapeType = "Cube"
+				},
+				EndLevelComponent = {
+					nextLevel = 1
+				}
 			}
 		},
 		Algas= {
@@ -4812,4 +4829,4 @@ local scenes = {
 		}
 	}
 }
-return prefabs, scenes
+return prefabs, keepBetweenScenes, scenes

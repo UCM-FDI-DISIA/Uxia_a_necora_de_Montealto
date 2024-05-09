@@ -5,18 +5,18 @@
 class Collider;
 class LevelManager;
 
-class CheckpointComponent : public Component
+class EndLevelComponent : public Component
 {
 private:
-	forge::Vector3 respawnpoint;
+	int nextLevel;
 	Collider* collider;
 	LevelManager* level;
 public:
 	static const std::string id;
 
-	CheckpointComponent();
+	EndLevelComponent();
 
-	~CheckpointComponent();
+	~EndLevelComponent();
 
 	bool initComponent(ComponentData* data) override;
 };

@@ -9,6 +9,7 @@
 #include "UIManager.h"
 #include "LevelManager.h"
 #include "AttackComponent.h"
+#include "EndLevelComponent.h"
 
 FORGE_IMPORT void registerComponents(Factory& f) {
 	f.registerComponent<KelpComponent>();
@@ -21,4 +22,5 @@ FORGE_IMPORT void registerComponents(Factory& f) {
 	f.registerComponent<HealthComponent>();
 	f.registerComponent<PlayerHealthComponent>();
 	f.registerComponent<AttackComponent>();
+	f.registerComponent<EndLevelComponent>();
 }

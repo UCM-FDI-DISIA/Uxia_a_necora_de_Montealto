@@ -14,6 +14,7 @@
     <ClCompile Include="..\src\AttackComponent.cpp" />
     <ClCompile Include="..\src\CheckpointComponent.cpp" />
     <ClCompile Include="..\src\ComponentRegisterer.cpp" />
+    <ClCompile Include="..\src\EndLevelComponent.cpp" />
     <ClCompile Include="..\src\EnemyComponent.cpp" />
     <ClCompile Include="..\src\HealthComponent.cpp" />
     <ClCompile Include="..\src\KelpComponent.cpp" />
@@ -32,6 +33,7 @@
   <ItemGroup>
     <ClInclude Include="..\src\AttackComponent.h" />
     <ClInclude Include="..\src\CheckpointComponent.h" />
+    <ClInclude Include="..\src\EndLevelComponent.h" />
     <ClInclude Include="..\src\EnemyComponent.h" />
     <ClInclude Include="..\src\HealthComponent.h" />
     <ClInclude Include="..\src\KelpComponent.h" />
