@@ -8,7 +8,6 @@ class LevelManager;
 class EndLevelComponent : public Component
 {
 private:
-	int nextLevel;
 	Collider* collider;
 	LevelManager* level;
 public:
