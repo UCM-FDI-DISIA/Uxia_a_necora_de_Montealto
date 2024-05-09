@@ -6,6 +6,7 @@
 #include <Entity.h>
 #include <Serializer.h>
 #include <Transform.h>
+#include <Collider.h>
 #include <Scene.h>
 
 
@@ -17,6 +18,7 @@ EnemyComponent::EnemyComponent() :
 	damage(1),
 	movementComponent(nullptr),
 	rb(nullptr),
+	collider(nullptr),
 	transform(nullptr),
 	p1(forge::Vector3::ZERO),
 	p2(forge::Vector3::ZERO),
@@ -36,9 +38,10 @@ EnemyComponent::~EnemyComponent() {
 
 void EnemyComponent::update() {
 	//Merodeo
-	switch (axis) {
+	if(movementComponent != nullptr){
+		switch (axis) {
 		case 1:
-			if (transform->getGlobalPosition().getY() >= p2.getY()) {	
+			if (transform->getGlobalPosition().getY() >= p2.getY()) {
 				changeDir = true;
 				sign = -1;
 			}
@@ -67,24 +70,36 @@ void EnemyComponent::update() {
 				sign = 1;
 			}
 			break;
+		}
 	}
 }
 
 bool EnemyComponent::initComponent(ComponentData* data) {
-	if (entity->hasComponent<Transform>() && entity->hasComponent<RigidBody>()
-		&& entity->hasComponent<MovementComponent>()) {
+	if (entity->hasComponent<Transform>()) {
 		transform = entity->getComponent<Transform>();
-		rb = entity->getComponent<RigidBody>();
-		movementComponent = entity->getComponent<MovementComponent>();
-		rb->setGravity(forge::Vector3(0, 0, 0));
-		movementComponent->move(speed * sign, axis);
-		rb->registerCallback(forge::onCollisionEnter, [this](Collider* self, Collider* other) {
-			Entity* player = other->getEntity();
-			if (player->hasComponent<PlayerHealthComponent>()) {
-				player->getComponent<PlayerHealthComponent>()->damage(0);
-			}
-		});
-		return true;
+		if(entity->hasComponent<RigidBody>() && entity->hasComponent<MovementComponent>()){			
+			rb = entity->getComponent<RigidBody>();
+			movementComponent = entity->getComponent<MovementComponent>();
+			rb->setGravity(forge::Vector3(0, 0, 0));
+			movementComponent->move(speed * sign, axis);
+			rb->registerCallback(forge::onCollisionEnter, [this](Collider* self, Collider* other) {
+				Entity* player = other->getEntity();
+				if (player->hasComponent<PlayerHealthComponent>()) {
+					player->getComponent<PlayerHealthComponent>()->damage(damage);
+				}
+			});
+			return true;
+		}
+		else if (entity->hasComponent<Collider>()) {
+			collider = entity->getComponent<Collider>();	
+			collider->registerCallback(forge::onCollisionEnter, [this](Collider* self, Collider* other) {	
+				Entity* player = other->getEntity();	
+				if (player->hasComponent<PlayerHealthComponent>()) {	
+					player->getComponent<PlayerHealthComponent>()->damage(damage);	
+				}
+			});
+			return true;
+		}
 	}
 	else {
 		reportError("El componente Enemy requiere un componente Transform, Rigidbody y Movement");
@@ -94,7 +109,7 @@ bool EnemyComponent::initComponent(ComponentData* data) {
 
 void EnemyComponent::fixedUpdate() {
 	// Cambio de direccion al llegar a un borde
-	if (changeDir) {
+	if (movementComponent != nullptr && changeDir) {
 		movementComponent->fullStop();
 		changeDir = false;
 		movementComponent->move(speed * sign, axis);

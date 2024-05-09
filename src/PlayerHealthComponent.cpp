@@ -52,7 +52,7 @@ bool PlayerHealthComponent::initComponent(ComponentData* data)
 }
 
 void PlayerHealthComponent::damage(int damage) {
-	if (forge::Time::time >= invulnerabilityTime) {
+	if (forge::Time::time >= invulnerabilityTime && damage < 100) {
 		if (health > 0) {
 			dropKelps();
 			health = 0;
@@ -62,6 +62,9 @@ void PlayerHealthComponent::damage(int damage) {
 			death();
 		}
 		invulnerabilityTime = (float)forge::Time::time + invulnerability;
+	}
+	else {
+		death();
 	}
 }
 

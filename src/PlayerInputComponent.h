@@ -1,4 +1,7 @@
 #pragma once
+#ifndef PLAYER_INPUT_CONTROLLER_H
+#define PLAYER_INPUT_CONTROLLER_H
+
 #include <Component.h>
 
 class Input;
@@ -20,3 +23,4 @@ public:
 
 	void setAttacking(bool attack);
 };
+#endif // !PLAYER_INPUT_CONTROLLER_H

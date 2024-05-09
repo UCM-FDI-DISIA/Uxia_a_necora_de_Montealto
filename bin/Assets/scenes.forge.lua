@@ -327,8 +327,8 @@ local scenes = {
 		EndLevel = {
 			components = {
 				Transform = {
-					position = {2.92,-0.67,0},
-					scale = {1, 1, 1},
+					position = {197,5,0},
+					scale = {1, 10, 1},
 					rotation = {0, 0, 0, 1}
 				},
 				Collider = {
@@ -2417,7 +2417,7 @@ local scenes = {
 		DeathZones= {
 			components = {
 				Transform= {
-					position = {161.3,-26.1,-1.018157},
+					position = {161.3,-26.1,0},
 					rotation = {0,0,0,1},
 					scale = {1,1,1}
 				}
@@ -2432,7 +2432,11 @@ local scenes = {
 						},
 						Collider= {
 							shapeType = "Cube",
-							layer = "DeathZone"							
+							layer = "DeathZone",
+							trigger = true					
+						},
+						EnemyComponent= {
+							damage = 100						
 						}
 					}
 				},
@@ -2446,7 +2450,11 @@ local scenes = {
 						},
 						Collider= {
 							shapeType = "Cube",
-							layer = "DeathZone"							
+							layer = "DeathZone",
+							trigger = true							
+						},
+						EnemyComponent= {
+							damage = 100						
 						}
 					}
 				},
@@ -2460,7 +2468,11 @@ local scenes = {
 						},
 						Collider= {
 							shapeType = "Cube",
-							layer = "DeathZone"							
+							layer = "DeathZone",
+							trigger = true							
+						},
+						EnemyComponent= {
+							damage = 100						
 						}
 					}
 				},
@@ -2474,7 +2486,11 @@ local scenes = {
 						},
 						Collider= {
 							shapeType = "Cube",
-							layer = "DeathZone"							
+							layer = "DeathZone",
+							trigger = true							
+						},
+						EnemyComponent= {
+							damage = 100						
 						}
 					}
 				}
@@ -2531,6 +2547,20 @@ local scenes = {
 						},
 						AudioListener = 0
 					}
+				}
+			}
+		},
+		EndLevel = {
+			components = {
+				Transform = {
+					position = {-15,5,0},
+					scale = {1, 10, 1},
+					rotation = {0, 0, 0, 1}
+				},
+				Collider = {
+					shapeType = "Cube"
+				},
+				EndLevelComponent = {
 				}
 			}
 		},

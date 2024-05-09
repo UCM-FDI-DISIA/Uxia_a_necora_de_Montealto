@@ -7,6 +7,7 @@
 class MovementComponent;
 class RigidBody;
 class Transform;
+class Collider;
 
 class EnemyComponent : public Component {
 private:
@@ -20,6 +21,8 @@ private:
 	MovementComponent* movementComponent;
 	RigidBody* rb;
 	Transform* transform;
+	Collider* collider;
+
 public:
 
 	static const std::string id;
