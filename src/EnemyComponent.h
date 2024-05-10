@@ -21,7 +21,7 @@ private:
 	forge::Vector3 p2; 
 	float sign;
 	float speed;
-	float damage;
+	int damage;
 	bool changeDir;
 	/// <summary>
 	/// 0 = x, 1 = y, 2 = z
@@ -30,7 +30,6 @@ private:
 	MovementComponent* movementComponent;
 	RigidBody* rb;
 	Transform* transform;
-	Collider* collider;
 
 public:
 
@@ -56,6 +55,10 @@ public:
 	/// Actualiza el componente Enemy. Si tiene que cambiar de direccion detiene el movimiento y ejerce una fuerza en la direccion contraria
 	/// </summary>
 	void fixedUpdate() override;
+	/// <summary>
+	/// Activa el flag para mover el Rigidbody
+	/// </summary>
+	void onEnabled() override;
 };
 
 #endif // !ENEMY_COMPONENT_H_

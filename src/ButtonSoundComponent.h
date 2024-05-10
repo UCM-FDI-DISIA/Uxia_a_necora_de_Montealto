@@ -10,7 +10,6 @@ public:
 
 #pragma region Constructoras
 	ButtonSoundComponent();
-	~ButtonSoundComponent();
 #pragma endregion
 
 	/// <summary>

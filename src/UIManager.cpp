@@ -36,9 +36,9 @@ void UIManager::updateKelpText(int kelp) {
 }
 
 void UIManager::enableKelpText(bool enabled) {
-    kelpText->setTextOpacity(enabled ? 1 : 0);
+    kelpText->setTextOpacity(enabled ? 1.0f : 0.0f);
 }
 
 void UIManager::enableDeathText(bool enabled) {
-    deathText->setTextOpacity(enabled ? 1 : 0);
+    deathText->setTextOpacity(enabled ? 1.0f : 0.0f);
 }

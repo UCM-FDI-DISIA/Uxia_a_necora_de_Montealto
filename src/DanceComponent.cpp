@@ -17,10 +17,6 @@ DanceComponent::DanceComponent() :
 	serializer(limInf, "lowerBound");
 }
 
-DanceComponent::~DanceComponent()
-{
-}
-
 bool DanceComponent::initComponent(ComponentData* data) {
 	if (!entity->hasComponent(Transform::id)) {
 		throwError(false, "Se necesita un componente AudioSource para reproducir un sonido de boton");
@@ -33,13 +29,13 @@ bool DanceComponent::initComponent(ComponentData* data) {
 void DanceComponent::update() {
 	float height = myTransform->getPosition().getY();
 	if (goingUp) {
-		myTransform->setPositionY(height + 50 * forge::Time::deltaTime);
+		myTransform->setPositionY(height + 50.0f * forge::Time::deltaTime);
 		goingUp = (height <= originalHeight + limSup);
 	}
 	else {
-		myTransform->setPositionY(height - 50 * forge::Time::deltaTime);
+		myTransform->setPositionY(height - 50.0f * forge::Time::deltaTime);
 		goingUp = !(height >= originalHeight - limInf);
 	}
 
-	myTransform->rotateY(10 * forge::Time::deltaTime);
+	myTransform->rotateY(10.f * forge::Time::deltaTime);
 }

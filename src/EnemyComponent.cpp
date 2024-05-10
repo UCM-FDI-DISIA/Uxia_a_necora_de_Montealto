@@ -18,7 +18,6 @@ EnemyComponent::EnemyComponent() :
 	damage(1),
 	movementComponent(nullptr),
 	rb(nullptr),
-	collider(nullptr),
 	transform(nullptr),
 	p1(forge::Vector3::ZERO),
 	p2(forge::Vector3::ZERO),
@@ -90,24 +89,12 @@ bool EnemyComponent::initComponent(ComponentData* data) {
 			});
 			return true;
 		}
-		else if (entity->hasComponent<Collider>()) {
-			collider = entity->getComponent<Collider>();	
-			collider->registerCallback(forge::onCollisionEnter, [this](Collider* self, Collider* other) {	
-				Entity* player = other->getEntity();	
-				if (player->hasComponent<PlayerHealthComponent>()) {	
-					player->getComponent<PlayerHealthComponent>()->damage(damage);	
-				}
-			});
-			return true;
-		}
 	}
 	else {
 		reportError("El componente Enemy requiere un componente Transform, Rigidbody y Movement");
 	}
 	return false;
 }
-
-
 
 void EnemyComponent::fixedUpdate() {
 	// Cambio de direccion al llegar a un borde
@@ -116,4 +103,8 @@ void EnemyComponent::fixedUpdate() {
 		changeDir = false;
 		movementComponent->move(speed * sign, axis);
 	}
+}
+
+void EnemyComponent::onEnabled() {
+	changeDir = true;
 }

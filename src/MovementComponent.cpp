@@ -59,7 +59,7 @@ void MovementComponent::move(float direction, int axis) {
 void MovementComponent::jump() {
 	if (forge::Time::time >= nextJumpTime) {
 		rigidBody->applyForce(jumpDirection);
-		nextJumpTime = forge::Time::time + jumpCooldown;
+		nextJumpTime = (float)forge::Time::time + jumpCooldown;
 	}
 }
 

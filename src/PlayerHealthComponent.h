@@ -23,7 +23,6 @@ public:
 
 #pragma region Constructoras
 	PlayerHealthComponent();
-	~PlayerHealthComponent();
 #pragma endregion
 
 	/// <summary>

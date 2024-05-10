@@ -50,7 +50,7 @@ bool LevelManager::initComponent(ComponentData* data) {
     if (levels.size() < 1 || pauseMenu == "" || mainMenu == "") {
         throwError(false, "Falta definir escenas en el level manager");
     }
-    maxLevel = levels.size() - 1;
+    maxLevel = (int)levels.size() - 1;
     registerFunctions();
     return true;
 }
