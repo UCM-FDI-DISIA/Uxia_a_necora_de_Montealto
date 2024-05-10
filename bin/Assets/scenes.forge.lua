@@ -407,8 +407,8 @@ local scenes = {
 			handler = "Player",
 			components = {
 				Transform= {
-					position = {11.92,-0.67,0},
-					--position = {193,5,0},
+					--position = {11.92,-0.67,0},
+					position = {193,5,0},
 					rotation = {0,0,0,1},
 					scale = {1, 1, 1}
 				},
@@ -4359,28 +4359,28 @@ local scenes = {
 							components = {
 								Transform= {
 									position = {39.27,-23.82,0},
-									rotation = {0,0,0,1},
-							scale = {1,1,1}
-						},
-						RigidBody= {
-							scale = {2.95, 1,1.13},
-							axisBlockedPos = {false,true,true},
-							axisBlockedRot = {true, true, true},
-							mass = 1,
-							friction = 1,
-							restitution = 1,
-							shapeType = "Cylinder",
-							static = false,
-							layer = "Enemy",	
-							trigger = true
-						},
-						Animator = {
-							mesh = "Crab.mesh",
-							material = "evilUxia",
-							activeAnimations = {
-								"my_animation"
-							}
-						},
+									rotation = {0,-1,0,0},
+									scale = {1,1,1}
+								},
+								RigidBody= {
+									scale = {2.95, 1,1.13},
+									axisBlockedPos = {false,true,true},
+									axisBlockedRot = {true, true, true},
+									mass = 1,
+									friction = 1,
+									restitution = 1,
+									shapeType = "Cylinder",
+									static = false,
+									layer = "Enemy",	
+									trigger = true
+								},
+								Animator = {
+									mesh = "Crab.mesh",
+									material = "evilUxia",
+									activeAnimations = {
+										"my_animation"
+									}
+								},
 								MovementComponent= {
 									jumpForce = 0							
 								},
@@ -4400,28 +4400,28 @@ local scenes = {
 							components = {
 								Transform= {
 									position = {46.77,-13.32,0},
-									rotation = {0,0,0,1},
-							scale = {1,1,1}
-						},
-						RigidBody= {
-							scale = {2.95, 1,1.13},
-							axisBlockedPos = {false,true,true},
-							axisBlockedRot = {true, true, true},
-							mass = 1,
-							friction = 1,
-							restitution = 1,
-							shapeType = "Cylinder",
-							static = false,
-							layer = "Enemy",	
-							trigger = true
-						},
-						Animator = {
-							mesh = "Crab.mesh",
-							material = "evilUxia",
-							activeAnimations = {
-								"my_animation"
-							}
-						},
+									rotation = {0,-1,0,0},
+									scale = {1,1,1}
+								},
+								RigidBody= {
+									scale = {2.95, 1,1.13},
+									axisBlockedPos = {false,true,true},
+									axisBlockedRot = {true, true, true},
+									mass = 1,
+									friction = 1,
+									restitution = 1,
+									shapeType = "Cylinder",
+									static = false,
+									layer = "Enemy",	
+									trigger = true
+								},
+								Animator = {
+									mesh = "Crab.mesh",
+									material = "evilUxia",
+									activeAnimations = {
+										"my_animation"
+									}
+								},
 								MovementComponent= {
 									jumpForce = 0							
 								},
@@ -4441,28 +4441,28 @@ local scenes = {
 							components = {
 								Transform= {
 									position = {76.77,-13.38,0},
-									rotation = {0,0,0,1},
-							scale = {1,1,1}
-						},
-						RigidBody= {
-							scale = {2.95, 1,1.13},
-							axisBlockedPos = {false,true,true},
-							axisBlockedRot = {true, true, true},
-							mass = 1,
-							friction = 1,
-							restitution = 1,
-							shapeType = "Cylinder",
-							static = false,
-							layer = "Enemy",	
-							trigger = true
-						},
-						Animator = {
-							mesh = "Crab.mesh",
-							material = "evilUxia",
-							activeAnimations = {
-								"my_animation"
-							}
-						},
+									rotation = {0,-1,0,0},
+									scale = {1,1,1}
+								},
+								RigidBody= {
+									scale = {2.95, 1,1.13},
+									axisBlockedPos = {false,true,true},
+									axisBlockedRot = {true, true, true},
+									mass = 1,
+									friction = 1,
+									restitution = 1,
+									shapeType = "Cylinder",
+									static = false,
+									layer = "Enemy",	
+									trigger = true
+								},
+								Animator = {
+									mesh = "Crab.mesh",
+									material = "evilUxia",
+									activeAnimations = {
+										"my_animation"
+									}
+								},
 								MovementComponent= {
 									jumpForce = 0							
 								},
@@ -4482,28 +4482,28 @@ local scenes = {
 							components = {
 								Transform= {
 									position = {76.02,-6.13,0},
-									rotation = {0,0,0,1},
-							scale = {1,1,1}
-						},
-						RigidBody= {
-							scale = {2.95, 1,1.13},
-							axisBlockedPos = {false,true,true},
-							axisBlockedRot = {true, true, true},
-							mass = 1,
-							friction = 1,
-							restitution = 1,
-							shapeType = "Cylinder",
-							static = false,
-							layer = "Enemy",	
-							trigger = true
-						},
-						Animator = {
-							mesh = "Crab.mesh",
-							material = "evilUxia",
-							activeAnimations = {
-								"my_animation"
-							}
-						},
+									rotation = {0,-1,0,0},
+									scale = {1,1,1}
+								},
+								RigidBody= {
+									scale = {2.95, 1,1.13},
+									axisBlockedPos = {false,true,true},
+									axisBlockedRot = {true, true, true},
+									mass = 1,
+									friction = 1,
+									restitution = 1,
+									shapeType = "Cylinder",
+									static = false,
+									layer = "Enemy",	
+									trigger = true
+								},
+								Animator = {
+									mesh = "Crab.mesh",
+									material = "evilUxia",
+									activeAnimations = {
+										"my_animation"
+									}
+								},
 								MovementComponent= {
 									jumpForce = 0							
 								},
@@ -4523,151 +4523,151 @@ local scenes = {
 							components = {
 								Transform= {
 									position = {76.52,4.31,0},
-									rotation = {0,0,0,1},
-							scale = {1,1,1}
-						},
-						RigidBody= {
-							scale = {2.95, 1,1.13},
-							axisBlockedPos = {false,true,true},
-							axisBlockedRot = {true, true, true},
-							mass = 1,
-							friction = 1,
-							restitution = 1,
-							shapeType = "Cylinder",
-							static = false,
-							layer = "Enemy",	
-							trigger = true
-						},
-						Animator = {
-							mesh = "Crab.mesh",
-							material = "evilUxia",
-							activeAnimations = {
-								"my_animation"
-							}
-						},
-								MovementComponent= {
-									jumpForce = 0							
+									rotation = {0,-1,0,0},
+									scale = {1,1,1}
 								},
-								EnemyComponent= {
-									p1 = {-91,4.31,0},
-									p2 = {-68,4.31,0},
-									speed = 80							
+								RigidBody= {
+									scale = {2.95, 1,1.13},
+									axisBlockedPos = {false,true,true},
+									axisBlockedRot = {true, true, true},
+									mass = 1,
+									friction = 1,
+									restitution = 1,
+									shapeType = "Cylinder",
+									static = false,
+									layer = "Enemy",	
+									trigger = true
 								},
-								HealthComponent={
-									health = 2
-								}
-							}
-						},
+								Animator = {
+									mesh = "Crab.mesh",
+									material = "evilUxia",
+									activeAnimations = {
+										"my_animation"
+									}
+								},
+										MovementComponent= {
+											jumpForce = 0							
+										},
+										EnemyComponent= {
+											p1 = {-91,4.31,0},
+											p2 = {-68,4.31,0},
+											speed = 80							
+										},
+										HealthComponent={
+											health = 2
+										}
+									}
+								},
 						
 						NecoraMalvada= {
 							group = "",
 							components = {
 								Transform= {
 									position = {99.77,-8.69,0},
-									rotation = {0,0,0,1},
-							scale = {1,1,1}
-						},
-						RigidBody= {
-							scale = {2.95, 1,1.13},
-							axisBlockedPos = {false,true,true},
-							axisBlockedRot = {true, true, true},
-							mass = 1,
-							friction = 1,
-							restitution = 1,
-							shapeType = "Cylinder",
-							static = false,
-							layer = "Enemy",	
-							trigger = true
-						},
-						Animator = {
-							mesh = "Crab.mesh",
-							material = "evilUxia",
-							activeAnimations = {
-								"my_animation"
-							}
-						},
-								MovementComponent= {
-									jumpForce = 0							
+									rotation = {0,-1,0,0},
+									scale = {1,1,1}
 								},
-								EnemyComponent= {
-									p1 = {-104,-8.69,0},
-									p2 = {-95,-8.69,0},
-									speed = 80							
+								RigidBody= {
+									scale = {2.95, 1,1.13},
+									axisBlockedPos = {false,true,true},
+									axisBlockedRot = {true, true, true},
+									mass = 1,
+									friction = 1,
+									restitution = 1,
+									shapeType = "Cylinder",
+									static = false,
+									layer = "Enemy",	
+									trigger = true
 								},
-								HealthComponent={
-									health = 2
-								}
-							}
-						},
+								Animator = {
+									mesh = "Crab.mesh",
+									material = "evilUxia",
+									activeAnimations = {
+										"my_animation"
+									}
+								},
+										MovementComponent= {
+											jumpForce = 0							
+										},
+										EnemyComponent= {
+											p1 = {-104,-8.69,0},
+											p2 = {-95,-8.69,0},
+											speed = 80							
+										},
+										HealthComponent={
+											health = 2
+										}
+									}
+								},
 						
 						NecoraMalvada_2= {
 							group = "",
 							components = {
 								Transform= {
 									position = {167.84,-12.67,0},
-									rotation = {0,0,0,1},
-							scale = {1,1,1}
-						},
-						RigidBody= {
-							scale = {2.95, 1,1.13},
-							axisBlockedPos = {false,true,true},
-							axisBlockedRot = {true, true, true},
-							mass = 1,
-							friction = 1,
-							restitution = 1,
-							shapeType = "Cylinder",
-							static = false,
-							layer = "Enemy",	
-							trigger = true
-						},
-						Animator = {
-							mesh = "Crab.mesh",
-							material = "evilUxia",
-							activeAnimations = {
-								"my_animation"
-							}
-						},
-								MovementComponent= {
-									jumpForce = 0							
+									rotation = {0,-1,0,0},
+									scale = {1,1,1}
 								},
-								EnemyComponent= {
-									p1 = {-171,-12.67,0},
-									p2 = {-164,-12.67,0},
-									speed = 80							
+								RigidBody= {
+									scale = {2.95, 1,1.13},
+									axisBlockedPos = {false,true,true},
+									axisBlockedRot = {true, true, true},
+									mass = 1,
+									friction = 1,
+									restitution = 1,
+									shapeType = "Cylinder",
+									static = false,
+									layer = "Enemy",	
+									trigger = true
 								},
-								HealthComponent={
-									health = 2
-								}
-							}
-						},
+								Animator = {
+									mesh = "Crab.mesh",
+									material = "evilUxia",
+									activeAnimations = {
+										"my_animation"
+									}
+								},
+										MovementComponent= {
+											jumpForce = 0							
+										},
+										EnemyComponent= {
+											p1 = {-171,-12.67,0},
+											p2 = {-164,-12.67,0},
+											speed = 80							
+										},
+										HealthComponent={
+											health = 2
+										}
+									}
+								},
 						
 						NecoraMalvada_5= {
 							group = "",
 							components = {
 								Transform= {
 									position = {188.59,-2.92,0},
-								rotation = {0,0,0,1},
-							scale = {1,1,1}
-						},
-						RigidBody= {
-							scale = {2.95, 1,1.13},
-							axisBlockedPos = {false,true,true},
-							axisBlockedRot = {true, true, true},
-							mass = 1,
-							friction = 1,
-							restitution = 1,
-							shapeType = "Cylinder",
-							static = false,
-							layer = "Enemy",	
-							trigger = true
-						},
-						Animator = {
-							mesh = "Crab.mesh",
-							material = "evilUxia",
-							activeAnimations = {
-								"my_animation"
-							}
-						},
+									rotation = {0,-1,0,0},
+									scale = {1,1,1}
+								},
+								RigidBody= {
+									scale = {2.95, 1,1.13},
+									axisBlockedPos = {false,true,true},
+									axisBlockedRot = {true, true, true},
+									mass = 1,
+									friction = 1,
+									restitution = 1,
+									shapeType = "Cylinder",
+									static = false,
+									layer = "Enemy",	
+									trigger = true
+								},
+								Animator = {
+									mesh = "Crab.mesh",
+									material = "evilUxia",
+									activeAnimations = {
+										"my_animation"
+									}
+								},
 								MovementComponent= {
 									jumpForce = 0							
 								},
@@ -4856,8 +4856,8 @@ local scenes = {
 								Tentaculo= {
 									components = {
 										Transform= {
-											position = {50.8,-34.2,-0.5006065},
-											rotation = {0,0,0,1},
+											position = {50.8,-34.2,0},
+											rotation = {-1,0,0,0},
 											scale = {3,20,1}
 										},
 										RigidBody= {
@@ -4888,8 +4888,8 @@ local scenes = {
 								Tentaculo_1= {
 									components = {
 										Transform= {
-											position = {91.5,-30.3,-0.5006065},
-											rotation = {0,0,0,1},
+											position = {91.5,-30.3,0},
+											rotation = {-1,0,0,0},
 											scale = {3,26,1}
 										},
 										RigidBody= {
@@ -4920,8 +4920,8 @@ local scenes = {
 								Tentaculo_2= {
 									components = {
 										Transform= {
-											position = {112.31,4.1,-0.5006065},
-											rotation = {0,0,180,1},
+											position = {112.31,4.1,0},
+											rotation = {-1,0,0,0},
 											scale = {3,23,1}
 										},
 										RigidBody= {
@@ -4952,8 +4952,8 @@ local scenes = {
 								Tentaculo_3= {
 									components = {
 										Transform= {
-											position = {126.7,-33.5,-0.5006065},
-											rotation = {0,0,0,1},
+											position = {126.7,-33.5,0},
+											rotation = {-1,0,0,0},
 											scale = {3,23,1}
 										},
 										RigidBody= {
@@ -4985,8 +4985,8 @@ local scenes = {
 								Tentaculo_4= {
 									components = {
 										Transform= {
-											position = {134.7,-29.5,-0.5006065},
-											rotation = {0,0,0,1},
+											position = {134.7,-29.5,0},
+											rotation = {-1,0,0,0},
 											scale = {3,23,1}
 										},
 										RigidBody= {
@@ -5018,8 +5018,8 @@ local scenes = {
 								Tentaculo_5= {
 									components = {
 										Transform= {
-											position = {143.7,-25.1,-0.5006065},
-											rotation = {0,0,0,1},
+											position = {143.7,-25.1,05},
+											rotation = {-1,0,0,0},
 											scale = {3,23,1}
 										},
 										RigidBody= {
@@ -5051,8 +5051,8 @@ local scenes = {
 								Tentaculo_6= {
 									components = {
 										Transform= {
-											position = {152.6,-32.8,-0.5006065},
-											rotation = {0,0,0,1},
+											position = {152.6,-32.8,0},
+											rotation = {-1,0,0,0},
 											scale = {3,23,1}
 										},
 										RigidBody= {
@@ -5084,8 +5084,8 @@ local scenes = {
 								Tentaculo_7= {
 									components = {
 										Transform= {
-											position = {186.9,-6.3,-0.5006065},
-											rotation = {0,0,0.7071068,0.7071068},
+											position = {186.9,-6.3,0},
+											rotation = {-1,-1,0,0},
 											scale = {3,28,1}
 										},
 										RigidBody= {
@@ -5117,8 +5117,8 @@ local scenes = {
 								Tentaculo_8= {
 									components = {
 										Transform= {
-											position = {178.8,0.4064,-0.5006065},
-											rotation = {0,0,180,1},
+											position = {178.8,0.4064,0},
+											rotation = {-1,0,0,0},
 											scale = {3,20,1}
 										},
 										RigidBody= {
