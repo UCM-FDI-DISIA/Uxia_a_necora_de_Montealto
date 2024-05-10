@@ -31,9 +31,13 @@ bool EndLevelComponent::initComponent(ComponentData* data) {
 		collider->registerCallback(forge::onCollisionEnter, [this](Collider* self, Collider* other) {
 			Entity* player = other->getEntity();
 			if (player->hasComponent<PlayerHealthComponent>()) {
-				if (level->getLevel() == 0) level->nextLevel();	
-				else 
-					level->setMainMenu();	
+				if (level->getLevel() == 0) {
+					level->nextLevel();
+				}
+				else {
+					level->setVictoryMenu();
+				}
+						
 			}
 			});
 		return true;

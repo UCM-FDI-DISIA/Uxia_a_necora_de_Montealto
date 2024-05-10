@@ -71,6 +71,9 @@ void PlayerHealthComponent::damage(int damage) {
 	}
 	else {
 		death();
+		health = 0;
+		ui->updateKelpText(health);
+		level->setKelp(health);
 	}
 }
 
@@ -106,4 +109,8 @@ void PlayerHealthComponent::death() {
 	entity->getComponent<MovementComponent>()->fullStop();
 	
 	ui->enableDeathText(true);
+}
+
+void PlayerHealthComponent::resetKelp() {
+	level->setKelp(0);
 }

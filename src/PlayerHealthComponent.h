@@ -53,6 +53,8 @@ public:
 	/// Realiza los procesos necesarios para la muerte del jugador
 	/// </summary>
 	void death();
+
+	void resetKelp();
 };
 
 #endif //PLAYER_HEALTH_COMPONENT_H_

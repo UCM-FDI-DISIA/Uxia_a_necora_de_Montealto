@@ -90,6 +90,16 @@ bool EnemyComponent::initComponent(ComponentData* data) {
 			}
 			return true;
 		}
+		else if (entity->hasComponent<Collider>()) {
+			Collider* collider = entity->getComponent<Collider>();
+			collider->registerCallback(forge::onCollisionEnter, [this](Collider* self, Collider* other) {
+				Entity* player = other->getEntity();
+				if (player->hasComponent<PlayerHealthComponent>()) {
+					player->getComponent<PlayerHealthComponent>()->damage(damage);
+				}
+				});
+			return true;
+		}
 	}
 	else {
 		reportError("El componente Enemy requiere un componente Transform, Rigidbody y Movement");

@@ -11,8 +11,10 @@ class LevelManager : public Component {
 private:
 	std::string mainMenu;
 	std::string pauseMenu;
+	std::string victoryMenu;
 	std::vector<std::string> levels;
 	forge::Vector3 spawnpoint;
+	forge::Vector3 initialSpawnpoint;
 	UIManager* ui;
 	int currentLevel;
 	int maxLevel;
@@ -49,7 +51,7 @@ public:
 	/// Devuelve el punto de spawn actual
 	/// </summary>
 	/// <returns> Vector3 con el punto de spawn</returns>
-	forge::Vector3 getSpawnpoint();	
+	forge::Vector3 getSpawnpoint();
 
 	/// <summary>
 	/// Cambia la cantidad de algas (vida) que tiene el jugador
@@ -69,7 +71,7 @@ public:
 	/// Inicializa el componente LevelManager
 	/// </summary>
 	bool initComponent(ComponentData* data) override;
-	
+
 	/// <summary>
 	/// Cambia el nivel actual al nivel indicado
 	/// </summary>
@@ -84,7 +86,7 @@ public:
 	/// <summary>
 	/// Vuelve al nivel actual
 	/// </summary>
-	void returnToLevel();
+	void returnToLevel(bool start);
 
 	/// <summary>
 	/// Cambia a la escena de menu principal
@@ -96,10 +98,11 @@ public:
 	/// </summary>
 	void setPauseMenu();
 
-	/// <summary>
-	/// Respawnea al jugador en el punto de spawn
-	/// </summary>
+	void setVictoryMenu();
+
 	void spawn();
+
+	void restart();
 };
 
 #endif // !LEVEL_MANAGER_H_

@@ -1,4 +1,4 @@
-local prefabs = {
+prefabs = {
 
 	Cigarro= {
 		group = "",
@@ -68,16 +68,17 @@ local prefabs = {
 	}
 }
 
-local keepBetweenScenes = {
+keepBetweenScenes = {
 		manager = {
 			handler = "manager",
 			components = {
 				UIManager = 0,
 				LevelManager = {
 					levels = {"Level1", "Level2"},
-					spawns = {Vector3(11.92,-0.67,0),Vector3(-225, 0.5,0)},
+					spawn = {11.92,-0.67,0},
 					mainMenu = "MainMenuScene",
-					pauseMenu = "PauseMenuScene"
+					pauseMenu = "PauseMenuScene",
+					victoryMenu = "VictoryMenuScene"
 				}
 			}
 		},
@@ -115,7 +116,7 @@ local keepBetweenScenes = {
 			components = {
 				AudioSource = {
 					sound = "MainTheme",
-					volume = 0.3,
+					volume = 0.7,
 					sound2D = true,
 					playOnAwake = true,
 					looped = true
@@ -124,7 +125,7 @@ local keepBetweenScenes = {
 		}
 }
 
-local scenes = {
+scenes = {
 	MainMenuScene = {
 		Camera = {
 			components = {
@@ -527,11 +528,6 @@ local scenes = {
 					activeAnimations = {
 						"my_animation"
 					}
-				},
-				AudioSource = {
-					sound = "AttackSound",
-					volume = 1.5,
-					sound2D = true,
 				},
 				PlayerInputComponent = {
 					speed = 10
@@ -2072,13 +2068,6 @@ local scenes = {
 						},
 						HealthComponent={
 							health = 2
-						},
-						AudioSource = {
-							sound = "EnemyDeath",
-							volume = 1,
-							sound2D = true,
-							playOnAwake = false,
-							looped = false
 						}
 					}
 				},
@@ -2120,13 +2109,6 @@ local scenes = {
 						},
 						HealthComponent={
 							health = 2
-						},
-						AudioSource = {
-							sound = "EnemyDeath",
-							volume = 1,
-							sound2D = true,
-							playOnAwake = false,
-							looped = false
 						}
 					}
 				},
@@ -2168,13 +2150,6 @@ local scenes = {
 						},
 						HealthComponent={
 							health = 2
-						},
-						AudioSource = {
-							sound = "EnemyDeath",
-							volume = 1,
-							sound2D = true,
-							playOnAwake = false,
-							looped = false
 						}
 					}
 				},
@@ -2216,13 +2191,6 @@ local scenes = {
 						},
 						HealthComponent={
 							health = 2
-						},
-						AudioSource = {
-							sound = "EnemyDeath",
-							volume = 1,
-							sound2D = true,
-							playOnAwake = false,
-							looped = false
 						}
 					}
 				},
@@ -2264,13 +2232,6 @@ local scenes = {
 						},
 						HealthComponent={
 							health = 2
-						},
-						AudioSource = {
-							sound = "EnemyDeath",
-							volume = 1,
-							sound2D = true,
-							playOnAwake = false,
-							looped = false
 						}
 					}
 				},
@@ -2312,13 +2273,6 @@ local scenes = {
 						},
 						HealthComponent={
 							health = 2
-						},
-						AudioSource = {
-							sound = "EnemyDeath",
-							volume = 1,
-							sound2D = true,
-							playOnAwake = false,
-							looped = false
 						}
 					}
 				},
@@ -2360,13 +2314,6 @@ local scenes = {
 						},
 						HealthComponent={
 							health = 2
-						},
-						AudioSource = {
-							sound = "EnemyDeath",
-							volume = 1,
-							sound2D = true,
-							playOnAwake = false,
-							looped = false
 						}
 					}
 				},
@@ -2408,13 +2355,6 @@ local scenes = {
 						},
 						HealthComponent={
 							health = 2
-						},
-						AudioSource = {
-							sound = "EnemyDeath",
-							volume = 1,
-							sound2D = true,
-							playOnAwake = false,
-							looped = false
 						}
 					}
 				}
@@ -3006,13 +2946,6 @@ local scenes = {
 				},
 				PlayerHealthComponent = {
 					kelpBlueprint = "Alga",
-				},
-				AudioSource = {
-					sound = "AtaqueChorbo",
-					volume = 2,
-					sound2D = true,
-					playOnAwake = false,
-					looped = false
 				}
 			},
 			children = {
@@ -4558,13 +4491,6 @@ local scenes = {
 								},
 								HealthComponent={
 									health = 2
-								},
-								AudioSource = {
-									sound = "EnemyDeath",
-									volume = 1,
-									sound2D = true,
-									playOnAwake = false,
-									looped = false
 								}
 							}
 						},
@@ -4606,13 +4532,6 @@ local scenes = {
 								},
 								HealthComponent={
 									health = 2
-								},
-								AudioSource = {
-									sound = "EnemyDeath",
-									volume = 1,
-									sound2D = true,
-									playOnAwake = false,
-									looped = false
 								}
 							}
 						},
@@ -4654,13 +4573,6 @@ local scenes = {
 								},
 								HealthComponent={
 									health = 2
-								},
-								AudioSource = {
-									sound = "EnemyDeath",
-									volume = 1,
-									sound2D = true,
-									playOnAwake = false,
-									looped = false
 								}
 							}
 						},
@@ -4702,13 +4614,6 @@ local scenes = {
 								},
 								HealthComponent={
 									health = 2
-								},
-								AudioSource = {
-									sound = "EnemyDeath",
-									volume = 1,
-									sound2D = true,
-									playOnAwake = false,
-									looped = false
 								}
 							}
 						},
@@ -4740,26 +4645,19 @@ local scenes = {
 										"my_animation"
 									}
 								},
-								MovementComponent= {
-									jumpForce = 0							
+										MovementComponent= {
+											jumpForce = 0							
+										},
+										EnemyComponent= {
+											p1 = {-91,4.31,0},
+											p2 = {-68,4.31,0},
+											speed = 80							
+										},
+										HealthComponent={
+											health = 2
+										}
+									}
 								},
-								EnemyComponent= {
-									p1 = {-91,4.31,0},
-									p2 = {-68,4.31,0},
-									speed = 80							
-								},
-								HealthComponent={
-									health = 2
-								},
-								AudioSource = {
-									sound = "EnemyDeath",
-									volume = 1,
-									sound2D = true,
-									playOnAwake = false,
-									looped = false
-								}
-							}
-						},
 						
 						NecoraMalvada= {
 							group = "",
@@ -4788,26 +4686,19 @@ local scenes = {
 										"my_animation"
 									}
 								},
-								MovementComponent= {
-									jumpForce = 0							
+										MovementComponent= {
+											jumpForce = 0							
+										},
+										EnemyComponent= {
+											p1 = {-104,-8.69,0},
+											p2 = {-95,-8.69,0},
+											speed = 80							
+										},
+										HealthComponent={
+											health = 2
+										}
+									}
 								},
-								EnemyComponent= {
-									p1 = {-104,-8.69,0},
-									p2 = {-95,-8.69,0},
-									speed = 80							
-								},
-								HealthComponent={
-									health = 2
-								},
-								AudioSource = {
-									sound = "EnemyDeath",
-									volume = 1,
-									sound2D = true,
-									playOnAwake = false,
-									looped = false
-								}
-							}
-						},
 						
 						NecoraMalvada_2= {
 							group = "",
@@ -4836,26 +4727,19 @@ local scenes = {
 										"my_animation"
 									}
 								},
-								MovementComponent= {
-									jumpForce = 0							
+										MovementComponent= {
+											jumpForce = 0							
+										},
+										EnemyComponent= {
+											p1 = {-171,-12.67,0},
+											p2 = {-164,-12.67,0},
+											speed = 80							
+										},
+										HealthComponent={
+											health = 2
+										}
+									}
 								},
-								EnemyComponent= {
-									p1 = {-171,-12.67,0},
-									p2 = {-164,-12.67,0},
-									speed = 80							
-								},
-								HealthComponent={
-									health = 2
-								}
-							},
-							AudioSource = {
-								sound = "EnemyDeath",
-								volume = 1,
-								sound2D = true,
-								playOnAwake = false,
-								looped = false
-							}
-						},
 						
 						NecoraMalvada_5= {
 							group = "",
@@ -4894,13 +4778,6 @@ local scenes = {
 								},
 								HealthComponent={
 									health = 2
-								},
-								AudioSource = {
-									sound = "EnemyDeath",
-									volume = 1,
-									sound2D = true,
-									playOnAwake = false,
-									looped = false
 								}
 							}
 						}
@@ -5472,4 +5349,3 @@ local scenes = {
 		}
 	}
 }
-return prefabs, keepBetweenScenes, scenes
