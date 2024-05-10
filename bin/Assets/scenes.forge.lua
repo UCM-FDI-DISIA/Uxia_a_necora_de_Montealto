@@ -108,6 +108,16 @@ local keepBetweenScenes = {
 					color = {0.56, 0.23, 0.12, 0}
 				}
 			}
+		},
+		themeReproducer = {
+			components = {
+				AudioSource = {
+					sound = "MainTheme",
+					volume = 0.7,
+					sound2D = true,
+					playOnAwake = true
+				}
+			}
 		}
 }
 
@@ -173,11 +183,20 @@ local scenes = {
                     out = "playButtonOnOut.png",
                     hover = "playButtonOnOver.png",
                     clicked = "playButtonOnClicked.png",
+					onClick = function (inv)
+						inv:invoke("playClicked");
+					end,
                     onReleaseInvoker = "manager",
                     onRelease = function (inv)
                         inv:invoke("startGame");
                     end
-				}
+				},
+				AudioSource = {
+					sound = "ClickedButton",
+					sound2D = true,
+					volume = 1
+				},
+				ButtonSoundComponent = 0
 			}
 		},
 		ExitButton = {
@@ -191,11 +210,20 @@ local scenes = {
                     out = "exitButtonOnOut.png",
                     hover = "exitButtonOnOver.png",
                     clicked = "exitButtonOnClicked.png",
+					onClick = function (inv)
+						inv:invoke("playClicked");
+					end,
 					onReleaseInvoker = "manager",
                     onRelease = function (inv)
 						inv:invoke("exitGame");
                     end
-				}
+				},
+				AudioSource = {
+					sound = "ClickedButton",
+					sound2D = false,
+					volume = 1
+				},
+				ButtonSoundComponent = 0
 			}
 		},
 		GroupLogoImage = {
@@ -311,11 +339,20 @@ local scenes = {
                     out = "continueButtonOnOut.png",
                     hover = "continueButtonOnOver.png",
                     clicked = "continueButtonOnClicked.png",
+					onClick = function (inv)
+						inv:invoke("playClicked");
+					end,
                     onReleaseInvoker = "manager",
                     onRelease = function (inv)
                         inv:invoke("startGame");
                     end
-				}
+				},
+				AudioSource = {
+					sound = "ClickedButton",
+					sound2D = false,
+					volume = 1
+				},
+				ButtonSoundComponent = 0
 			}
 		},
 		MenuButton = {
@@ -329,11 +366,20 @@ local scenes = {
                     out = "menuButtonOnOut.png",
                     hover = "menuButtonOnOver.png",
                     clicked = "menuButtonOnClicked.png",
+					onClick = function (inv)
+						inv:invoke("playClicked");
+					end,
                     onReleaseInvoker = "manager",
                     onRelease = function (inv)
                         inv:invoke("goToMenu");
                     end
-				}
+				},
+				AudioSource = {
+					sound = "ClickedButton",
+					sound2D = false,
+					volume = 1
+				},
+				ButtonSoundComponent = 0
 			}
 		}
 	},
@@ -376,11 +422,20 @@ local scenes = {
                     out = "menuButtonOnOut.png",
                     hover = "menuButtonOnOver.png",
                     clicked = "menuButtonOnClicked.png",
+					onClick = function (inv)
+						inv:invoke("playClicked");
+					end,
                     onReleaseInvoker = "manager",
                     onRelease = function (inv)
                         inv:invoke("goToMenu");
                     end
-				}
+				},
+				AudioSource = {
+					sound = "ClickedButton",
+					sound2D = false,
+					volume = 1
+				},
+				ButtonSoundComponent = 0
 			}
 		},
 		ExitButton = {
@@ -394,11 +449,20 @@ local scenes = {
                     out = "exitButtonOnOut.png",
                     hover = "exitButtonOnOver.png",
                     clicked = "exitButtonOnClicked.png",
+					onClick = function (inv)
+						inv:invoke("playClicked");
+					end,
                     onReleaseInvoker = "manager",
                     onRelease = function (inv)
                         inv:invoke("exitGame");
                     end
-				}
+				},
+				AudioSource = {
+					sound = "ClickedButton",
+					sound2D = false,
+					volume = 1
+				},
+				ButtonSoundComponent = 0
 			}
 		}
 	},

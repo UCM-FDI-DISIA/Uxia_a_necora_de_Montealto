@@ -12,6 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\AttackComponent.cpp" />
+    <ClCompile Include="..\src\ButtonSoundComponent.cpp" />
     <ClCompile Include="..\src\CheckpointComponent.cpp" />
     <ClCompile Include="..\src\ComponentRegisterer.cpp" />
     <ClCompile Include="..\src\EndLevelComponent.cpp" />
@@ -32,6 +33,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\AttackComponent.h" />
+    <ClInclude Include="..\src\ButtonSoundComponent.h" />
     <ClInclude Include="..\src\CheckpointComponent.h" />
     <ClInclude Include="..\src\EndLevelComponent.h" />
     <ClInclude Include="..\src\EnemyComponent.h" />

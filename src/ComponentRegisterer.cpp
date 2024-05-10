@@ -10,6 +10,7 @@
 #include "LevelManager.h"
 #include "AttackComponent.h"
 #include "EndLevelComponent.h"
+#include "ButtonSoundComponent.h"
 
 FORGE_IMPORT void registerComponents(Factory& f) {
 	f.registerComponent<KelpComponent>();
@@ -23,4 +24,5 @@ FORGE_IMPORT void registerComponents(Factory& f) {
 	f.registerComponent<PlayerHealthComponent>();
 	f.registerComponent<AttackComponent>();
 	f.registerComponent<EndLevelComponent>();
+	f.registerComponent<ButtonSoundComponent>();
 }
