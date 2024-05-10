@@ -7,12 +7,14 @@
 class Input;
 class MovementComponent;
 class LevelManager;
+class AudioSource;
 
 class PlayerInputComponent : public Component {
 private:
 	Input& input;
 	MovementComponent* movement;
 	LevelManager* level;
+	AudioSource* audio;
 	float speed;
 	bool attacking;
 	float attackOffset;

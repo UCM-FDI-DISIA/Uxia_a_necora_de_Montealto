@@ -8,7 +8,7 @@ class MovementComponent;
 class RigidBody;
 class Transform;
 class Collider;
-
+class AudioSource;
 class EnemyComponent : public Component {
 private:
 	/// <summary>
@@ -30,6 +30,7 @@ private:
 	MovementComponent* movementComponent;
 	RigidBody* rb;
 	Transform* transform;
+	AudioSource* audio;
 
 public:
 
@@ -58,6 +59,11 @@ public:
 	/// Activa el flag para mover el Rigidbody
 	/// </summary>
 	void onEnabled() override;
+
+	/// <summary>
+	/// Realiza los procesos necesarios al morir el enemigo
+	/// </summary>
+	void onDeath();
 };
 
 #endif // !ENEMY_COMPONENT_H_

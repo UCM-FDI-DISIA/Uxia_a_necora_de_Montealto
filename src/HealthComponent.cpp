@@ -2,6 +2,7 @@
 #include <ComponentData.h>
 #include <Entity.h>
 #include <Serializer.h>
+#include "EnemyComponent.h"
 
 const std::string HealthComponent::id = "HealthComponent";
 
@@ -27,6 +28,12 @@ void HealthComponent::damage(int damage)
 	health -= damage;
 	if (health <= 0)
 	{
-		entity->setAlive(false);
+		if (entity->hasComponent<EnemyComponent>())
+		{
+			entity->getComponent<EnemyComponent>()->onDeath();
+		}
+		else {
+			entity->setAlive(false);
+		}
 	}
 }

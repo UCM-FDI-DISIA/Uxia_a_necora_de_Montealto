@@ -9,6 +9,7 @@
 #include <Serializer.h>
 #include <SceneManager.h>
 #include <Transform.h>
+#include <AudioSource.h>
 
 const std::string PlayerInputComponent::id = "PlayerInputComponent";
 
@@ -18,6 +19,7 @@ PlayerInputComponent::PlayerInputComponent():
 	level(nullptr),
 	attacking(false),
 	dead(false),
+	audio(nullptr),
 	attackOffset(2),
 	speed(1),
 	lastDirection(1) {
@@ -29,6 +31,9 @@ bool PlayerInputComponent::initComponent(ComponentData* data)
 {
 	if (!entity->hasComponent<MovementComponent>()) {
 		throwError(false, "El componente PlayerInput necesita un componente Movement");
+	}
+	if (entity->hasComponent<AudioSource>()) {	
+		audio = entity->getComponent<AudioSource>();	
 	}
 	movement = entity->getComponent<MovementComponent>();
 	Entity* manager = scene->getEntityByHandler("manager");
@@ -62,6 +67,9 @@ void PlayerInputComponent::update() {
 		if (input.keyPressed(K_SPACE) && !attacking) {
 			forge::Vector3 offset = forge::Vector3(attackOffset, 0, 0) * lastDirection;
 			sceneManager.instantiateBlueprint("Attack", offset, entity);
+			if (audio != nullptr) {
+				audio->play();
+			}
 			attacking = true;
 		}		
 		if (input.keyUp(K_ESC)) {

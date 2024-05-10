@@ -8,6 +8,7 @@
 #include <Transform.h>
 #include <Collider.h>
 #include <Scene.h>
+#include <AudioSource.h>
 
 
 const std::string EnemyComponent::id = "EnemyComponent";
@@ -19,6 +20,7 @@ EnemyComponent::EnemyComponent() :
 	movementComponent(nullptr),
 	rb(nullptr),
 	transform(nullptr),
+	audio(nullptr),
 	p1(forge::Vector3::ZERO),
 	p2(forge::Vector3::ZERO),
 	changeDir(false),
@@ -83,6 +85,9 @@ bool EnemyComponent::initComponent(ComponentData* data) {
 					player->getComponent<PlayerHealthComponent>()->damage(damage);
 				}
 			});
+			if (entity->hasComponent<AudioSource>()) {
+				audio = entity->getComponent<AudioSource>();
+			}
 			return true;
 		}
 	}
@@ -103,4 +108,12 @@ void EnemyComponent::fixedUpdate() {
 
 void EnemyComponent::onEnabled() {
 	changeDir = true;
+}
+
+void EnemyComponent::onDeath()
+{
+	if (audio != nullptr) {
+		audio->play();
+	}
+	entity->setAlive(false);
 }
