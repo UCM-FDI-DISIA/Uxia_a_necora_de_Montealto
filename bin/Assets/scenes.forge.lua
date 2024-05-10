@@ -116,7 +116,7 @@ keepBetweenScenes = {
 			components = {
 				AudioSource = {
 					sound = "MainTheme",
-					volume = 0.7,
+					volume = 0.1,
 					sound2D = true,
 					playOnAwake = true,
 					looped = true
@@ -198,7 +198,7 @@ scenes = {
 				AudioSource = {
 					sound = "ClickedButton",
 					sound2D = true,
-					volume = 1
+					volume = 0.2
 				},
 				ButtonSoundComponent = 0
 			}
@@ -225,7 +225,7 @@ scenes = {
 				AudioSource = {
 					sound = "ClickedButton",
 					sound2D = false,
-					volume = 1
+					volume = 0.2
 				},
 				ButtonSoundComponent = 0
 			}
@@ -354,7 +354,7 @@ scenes = {
 				AudioSource = {
 					sound = "ClickedButton",
 					sound2D = false,
-					volume = 1
+					volume = 0.2
 				},
 				ButtonSoundComponent = 0
 			}
@@ -381,7 +381,7 @@ scenes = {
 				AudioSource = {
 					sound = "ClickedButton",
 					sound2D = false,
-					volume = 1
+					volume = 0.2
 				},
 				ButtonSoundComponent = 0
 			}
@@ -470,7 +470,7 @@ scenes = {
 				AudioSource = {
 					sound = "ClickedButton",
 					sound2D = false,
-					volume = 1
+					volume = 0.2
 				},
 				ButtonSoundComponent = 0
 			}
@@ -497,7 +497,7 @@ scenes = {
 				AudioSource = {
 					sound = "ClickedButton",
 					sound2D = false,
-					volume = 1
+					volume = 0.2
 				},
 				ButtonSoundComponent = 0
 			}
@@ -537,6 +537,11 @@ scenes = {
 				},
 				PlayerHealthComponent = {
 					kelpBlueprint = "Alga",
+				},
+				AudioSource = {
+					sound = "AttackSound",
+					volume = 100,
+					sound2D = false
 				}
 			},
 			children = {
@@ -2946,6 +2951,11 @@ scenes = {
 				},
 				PlayerHealthComponent = {
 					kelpBlueprint = "Alga",
+				},
+				AudioSource = {
+					sound = "AttackSound",
+					volume = 1.5,
+					sound2D = false
 				}
 			},
 			children = {
