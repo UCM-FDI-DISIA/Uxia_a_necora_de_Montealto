@@ -17,6 +17,7 @@ public:
 	bool initComponent(ComponentData* data) override;
 
 	void updateKelpText(int kelp);
+	void enableKelpText(bool enabled);
 	void enableDeathText(bool enabled);
 
 };

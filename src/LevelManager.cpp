@@ -1,11 +1,14 @@
 #include "LevelManager.h"
 #include "PlayerHealthComponent.h"
+#include "PlayerInputComponent.h"
+#include "UIManager.h"
 #include <SceneManager.h>
 #include <ComponentData.h>
 #include <Entity.h>
 #include <Serializer.h>
 #include <Scene.h>
 #include <Collider.h>
+#include <Animator.h>
 #include <RigidBody.h>
 #include <MainForge.h>
 
@@ -24,11 +27,13 @@ void LevelManager::registerFunctions() {
 }
 
 LevelManager::LevelManager() :
+    ui(nullptr),
     mainMenu(),
     pauseMenu(),
     levels(),
     spawnpoint(),
     currentLevel(0),
+    currentKelp(0),
     maxLevel(0) {
     serializer(mainMenu, "mainMenu");
     serializer(pauseMenu, "pauseMenu");
@@ -37,6 +42,7 @@ LevelManager::LevelManager() :
 }
 
 bool LevelManager::initComponent(ComponentData* data) {
+    ui = entity->getComponent<UIManager>();
     if (levels.size() < 1 || pauseMenu == "" || mainMenu == "") {
         throwError(false, "Falta definir escenas en el level manager");
     }
@@ -67,15 +73,26 @@ int LevelManager::getLevel() {
     return currentLevel;
 }
 
+int LevelManager::getKelp() {
+    return currentKelp;
+}
+
+void LevelManager::setKelp(int kelp) {
+    currentKelp = kelp;
+}
+
 void LevelManager::returnToLevel() {
+    ui->enableKelpText(true);
     sceneManager.changeScene(levels[currentLevel]);
 }
 
 void LevelManager::setMainMenu() {
+    ui->enableKelpText(false);
     sceneManager.changeScene(mainMenu);
 }
 
 void LevelManager::setPauseMenu() {
+    ui->enableKelpText(false);
     sceneManager.changeScene(pauseMenu);
 }
 
@@ -88,7 +105,12 @@ forge::Vector3 LevelManager::getSpawnpoint() {
 }
 
 void LevelManager::spawn() {
-    Entity* player = scene->getEntityByHandler("Player");   
-    player->getComponent<RigidBody>()->setPosition(spawnpoint);
+    Entity* player = scene->getEntityByHandler("Player");
+    if (player != nullptr) {
+        ui->enableDeathText(false);
+        player->getComponent<PlayerInputComponent>()->setDead(false);
+        player->getComponent<Animator>()->setActive("my_animation", true);
+        player->getComponent<RigidBody>()->setPosition(spawnpoint);
+    }
 }
 

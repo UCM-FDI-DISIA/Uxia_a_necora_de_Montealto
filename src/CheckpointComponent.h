@@ -20,4 +20,3 @@ public:
 
 	bool initComponent(ComponentData* data) override;
 };
-

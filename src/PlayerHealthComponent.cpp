@@ -1,9 +1,13 @@
 #include "PlayerHealthComponent.h"
+#include "PlayerInputComponent.h"
+#include "MovementComponent.h"
+#include "LifeTimeComponent.h"
 #include "UIManager.h"
 #include "LevelManager.h"
 #include <TimeForge.h>
 #include <ComponentData.h>
 #include <Entity.h>
+#include <Animator.h>
 #include <Scene.h>
 #include <Serializer.h>
 #include <SceneManager.h>
@@ -38,6 +42,7 @@ bool PlayerHealthComponent::initComponent(ComponentData* data)
 			ui = manager->getComponent<UIManager>();
 			level = manager->getComponent<LevelManager>();
 			if (ui != nullptr && level != nullptr) {
+				health = level->getKelp();
 				return true;
 			}
 		}
@@ -57,6 +62,7 @@ void PlayerHealthComponent::damage(int damage) {
 			dropKelps();
 			health = 0;
 			ui->updateKelpText(health);
+			level->setKelp(health);
 		}
 		else {
 			death();
@@ -74,10 +80,14 @@ void PlayerHealthComponent::dropKelps() {
 		forge::Vector3 newPos = random.getRandomVector();
 		newPos.setZ(0);
 		newPos = transform->getGlobalPosition() + (newPos * random.generateRange(7.0f, 10.0f));
-		if (sceneManager.instantiateBlueprint(kelpBlueprint, newPos) == nullptr) {
+		Entity* kelp = sceneManager.instantiateBlueprint(kelpBlueprint, newPos);
+		if (kelp == nullptr) {
 			reportError("No se ha podido instanciar el Kelp");
 			return;
 		}
+		ComponentData data = ComponentData(LifeTimeComponent::id);
+		data.add("lifetime", 2.5f);
+		kelp->addComponent(&data);
 	}
 }
 
@@ -87,9 +97,13 @@ void PlayerHealthComponent::addKelp(int kelp) {
 		health = maxHealth;
 	}
 	ui->updateKelpText(health);
+	level->setKelp(health);
 }
 
 void PlayerHealthComponent::death() {
+	entity->getComponent<PlayerInputComponent>()->setDead(true);
+	entity->getComponent<Animator>()->setActive("my_animation", false);
+	entity->getComponent<MovementComponent>()->fullStop();
+	
 	ui->enableDeathText(true);
-	level->spawn();
 }

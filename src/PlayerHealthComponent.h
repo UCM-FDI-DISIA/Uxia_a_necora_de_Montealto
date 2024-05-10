@@ -8,7 +8,7 @@ class Transform;
 class UIManager;
 class LevelManager;
 
-class PlayerHealthComponent : public HealthComponent{
+class PlayerHealthComponent : public HealthComponent {
 private:
 	std::string kelpBlueprint;
 	Transform* transform;

@@ -8,7 +8,6 @@ const std::string ButtonSoundComponent::id = "ButtonSoundComponent";
 
 ButtonSoundComponent::ButtonSoundComponent() : 
 	audioComponent(nullptr) {
-
 }
 
 bool ButtonSoundComponent::initComponent(ComponentData* data) {

@@ -60,6 +60,8 @@ local prefabs = {
 			},
 			AttackComponent= {
 				damage = 1,
+			},
+			LifeTimeComponent = {
 				lifeTime = 0.5		
 			}
 		}
@@ -73,9 +75,9 @@ local keepBetweenScenes = {
 				UIManager = 0,
 				LevelManager = {
 					levels = {"Level1", "Level2"},
-					spawns = {11.92,-0.67,0},
+					spawns = {Vector3(11.92,-0.67,0),Vector3(-225, 0.5,0)},
 					mainMenu = "MainMenuScene",
-					pauseMenu = "MainMenuScene"
+					pauseMenu = "PauseMenuScene"
 				}
 			}
 		},
@@ -98,7 +100,7 @@ local keepBetweenScenes = {
 			handler = "deathText",
 			components = {
 				RectTransform = {
-					position = {250, 200},
+					position = {540, 334},
 					scale = {1.3, 1.3}
 				},
 				Text = {

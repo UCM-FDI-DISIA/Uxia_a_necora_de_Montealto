@@ -6,21 +6,18 @@
 #include <Serializer.h>
 #include <SceneManager.h>
 #include <Collider.h>
-#include <TimeForge.h>
 
 const std::string AttackComponent::id = "AttackComponent";
 
 AttackComponent::AttackComponent() :
 	hitbox(nullptr),
 	input(nullptr),
-	lifetime(0.5f),
 	damage(1){
 	serializer(damage, "damage");
-	serializer(lifetime, "lifetime");
 }
 
 AttackComponent::~AttackComponent() {
-
+	input->setAttacking(false);
 }
 
 bool AttackComponent::initComponent(ComponentData* data) {
@@ -41,13 +38,5 @@ bool AttackComponent::initComponent(ComponentData* data) {
 		return true;
 	}
 	throwError(false, "El component Attack requiere un componente Collider");
-}
-
-void AttackComponent::update() {
-	lifetime -= forge::Time::deltaTime;	
-	if (lifetime <= 0.0f) {
-		input->setAttacking(false);
-		entity->setAlive(false);
-	}
 }
 

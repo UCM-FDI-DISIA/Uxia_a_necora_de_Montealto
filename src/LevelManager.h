@@ -5,6 +5,7 @@
 #include <string>
 #include <Vector3.h>
 
+class UIManager;
 
 class LevelManager : public Component {
 private:
@@ -12,9 +13,10 @@ private:
 	std::string pauseMenu;
 	std::vector<std::string> levels;
 	forge::Vector3 spawnpoint;
+	UIManager* ui;
 	int currentLevel;
 	int maxLevel;
-
+	int currentKelp;
 	void registerFunctions();
 
 public:
@@ -26,6 +28,9 @@ public:
 	void changeLevel(int level);
 	void nextLevel();
 	int getLevel();
+
+	int getKelp();
+	void setKelp(int kelp);
 
 	void returnToLevel();
 	void setMainMenu();

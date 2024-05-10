@@ -31,6 +31,10 @@ void UIManager::updateKelpText(int kelp) {
     kelpText->setText("Algas: " + std::to_string(kelp));
 }
 
+void UIManager::enableKelpText(bool enabled) {
+    kelpText->setTextOpacity(enabled ? 1 : 0);
+}
+
 void UIManager::enableDeathText(bool enabled) {
     deathText->setTextOpacity(enabled ? 1 : 0);
 }

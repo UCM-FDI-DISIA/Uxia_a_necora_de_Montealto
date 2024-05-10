@@ -13,7 +13,6 @@ private:
 	Collider* hitbox;
 	PlayerInputComponent* input;
 	int damage;
-	double lifetime;
 
 public:
 	static const std::string id;
@@ -24,7 +23,6 @@ public:
 
 	bool initComponent(ComponentData* data) override;
 
-	void update() override;
 };
 
 #endif // !ATTACK_COMPONENT_H_
