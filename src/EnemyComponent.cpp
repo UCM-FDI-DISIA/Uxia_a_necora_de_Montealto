@@ -107,6 +107,8 @@ bool EnemyComponent::initComponent(ComponentData* data) {
 	return false;
 }
 
+
+
 void EnemyComponent::fixedUpdate() {
 	// Cambio de direccion al llegar a un borde
 	if (movementComponent != nullptr && changeDir) {
