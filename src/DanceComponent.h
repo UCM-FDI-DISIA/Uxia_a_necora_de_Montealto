@@ -14,7 +14,6 @@ public:
 
 #pragma region Constructoras
 	DanceComponent();
-	~DanceComponent();
 #pragma endregion
 
 	/// <summary>

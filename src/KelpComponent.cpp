@@ -13,10 +13,6 @@ KelpComponent::KelpComponent() :
     serializer(score, "score");
 }
 
-KelpComponent::~KelpComponent()
-{
-}
-
 bool KelpComponent::initComponent(ComponentData* data) {
     if (entity->hasComponent<Collider>()) {
         Collider* collider = entity->getComponent<Collider>();

@@ -16,7 +16,6 @@ public:
 
 #pragma region Constructoras
 	CheckpointComponent();
-	~CheckpointComponent();
 #pragma endregion
 
 	/// <summary>

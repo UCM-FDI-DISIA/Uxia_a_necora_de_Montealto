@@ -13,7 +13,6 @@ public:
 
 #pragma region Constructoras
 	LifeTimeComponent();
-	~LifeTimeComponent();
 #pragma endregion
 
 	/// <summary>

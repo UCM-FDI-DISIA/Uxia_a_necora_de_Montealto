@@ -15,7 +15,6 @@ public:
 
 #pragma region Constructoras
 	UIManager();
-	~UIManager();
 #pragma endregion
 
 	/// <summary>

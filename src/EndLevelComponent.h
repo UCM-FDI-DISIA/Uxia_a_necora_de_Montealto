@@ -15,7 +15,6 @@ public:
 
 #pragma region Constructoras
 	EndLevelComponent();
-	~EndLevelComponent();
 #pragma endregion
 
 	/// <summary>

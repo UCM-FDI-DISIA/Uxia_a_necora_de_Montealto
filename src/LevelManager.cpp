@@ -41,10 +41,6 @@ LevelManager::LevelManager() :
     serializer(spawnpoint, "spawn");
 }
 
-LevelManager::~LevelManager()
-{
-}
-
 bool LevelManager::initComponent(ComponentData* data) {
     ui = entity->getComponent<UIManager>();
     if (levels.size() < 1 || pauseMenu == "" || mainMenu == "") {

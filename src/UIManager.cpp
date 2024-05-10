@@ -12,10 +12,6 @@ UIManager::UIManager() :
     deathText(nullptr) {
 }
 
-UIManager::~UIManager()
-{
-}
-
 bool UIManager::initComponent(ComponentData* data) {
     Entity* kelpEntity = scene->getEntityByHandler("kelpText");
     if (kelpEntity != nullptr) {

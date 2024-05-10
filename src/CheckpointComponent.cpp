@@ -16,10 +16,6 @@ respawnpoint(forge::Vector3::ZERO){
 	serializer(respawnpoint, "respawnpoint");
 }
 
-CheckpointComponent::~CheckpointComponent() {
-
-}
-
 bool CheckpointComponent::initComponent(ComponentData* data) {
 	if (entity->hasComponent<Transform>() && entity->hasComponent<Collider>()) {
 		Entity* manager = scene->getEntityByHandler("manager");
