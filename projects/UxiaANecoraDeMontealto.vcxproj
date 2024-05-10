@@ -26,6 +26,7 @@
     <ClCompile Include="..\src\PlayerHealthComponent.cpp" />
     <ClCompile Include="..\src\PlayerInputComponent.cpp" />
     <ClCompile Include="..\src\UIManager.cpp" />
+    <ClCompile Include="..\src\UpdateSeaweedComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\bin\Assets\assets.forge.lua" />
@@ -48,6 +49,7 @@
     <ClInclude Include="..\src\PlayerHealthComponent.h" />
     <ClInclude Include="..\src\PlayerInputComponent.h" />
     <ClInclude Include="..\src\UIManager.h" />
+    <ClInclude Include="..\src\UpdateSeaweedComponent.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

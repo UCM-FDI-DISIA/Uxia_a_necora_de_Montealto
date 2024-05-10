@@ -443,7 +443,8 @@ local scenes = {
 					fontHeight = 40,
 					fontName = "KingCrabs.ttf",
 					text = "Numero de algas finales: "
-				}
+				},
+				UpdateSeaweedComponent = 0
 			}
 		},
 		MenuButton = {

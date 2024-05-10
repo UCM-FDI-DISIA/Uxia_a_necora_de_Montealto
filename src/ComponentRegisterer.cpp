@@ -13,6 +13,7 @@
 #include "ButtonSoundComponent.h"
 #include "DanceComponent.h"
 #include "LifeTimeComponent.h"
+#include "UpdateSeaweedComponent.h"
 
 FORGE_IMPORT void registerComponents(Factory& f) {
 	f.registerComponent<KelpComponent>();
@@ -29,4 +30,5 @@ FORGE_IMPORT void registerComponents(Factory& f) {
 	f.registerComponent<ButtonSoundComponent>();
 	f.registerComponent<DanceComponent>();
 	f.registerComponent<LifeTimeComponent>();
+	f.registerComponent<UpdateSeaweedComponent>();
 }
