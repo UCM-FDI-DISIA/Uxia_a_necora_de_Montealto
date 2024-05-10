@@ -2951,7 +2951,7 @@ local scenes = {
 				cam = {
 					components = {
 						Transform = {
-							position = {4, 4, 200},
+							position = {4, 4, 30},
 							rotation = {20, 0, 0}
 						},
 						Camera = {

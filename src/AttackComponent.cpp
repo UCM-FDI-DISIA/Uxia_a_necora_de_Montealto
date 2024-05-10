@@ -29,10 +29,9 @@ bool AttackComponent::initComponent(ComponentData* data) {
 		input = player->getComponent<PlayerInputComponent>();
 		hitbox = entity->getComponent<Collider>();
 		hitbox->registerCallback(forge::onCollisionEnter, [this](Collider* self, Collider* other) {
-			if (other->getEntity()->hasComponent<PlayerHealthComponent>()) {	
+			if (other->getEntity()->hasComponent<HealthComponent>()) {
 				other->getEntity()->getComponent<HealthComponent>()->damage(damage);
 				entity->setAlive(false);
-				input->setAttacking(false);
 			}
 		});
 		return true;
