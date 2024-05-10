@@ -19,7 +19,6 @@ public:
 
 #pragma region Constructoras
 	MovementComponent();
-	~MovementComponent();
 #pragma endregion
 
 	/// <summary>

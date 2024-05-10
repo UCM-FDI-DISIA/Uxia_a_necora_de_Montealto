@@ -15,7 +15,6 @@ public:
 
 #pragma region Constructoras
 	KelpComponent();
-	~KelpComponent();
 #pragma endregion
 
 	/// <summary>

@@ -12,7 +12,6 @@ public:
 	static const std::string id;
 #pragma region Constructoras
 	HealthComponent();
-	~HealthComponent();
 #pragma endregion
 
 	/// <summary>

@@ -36,7 +36,6 @@ public:
 	static const std::string id;
 #pragma region Constructoras
 	EnemyComponent();
-	~EnemyComponent();
 #pragma endregion
 
 	/// <summary>

@@ -10,10 +10,6 @@ LifeTimeComponent::LifeTimeComponent() :
 	serializer(lifetime, "lifetime");
 }
 
-LifeTimeComponent::~LifeTimeComponent()
-{
-}
-
 void LifeTimeComponent::update() {
 	lifetime -= forge::Time::deltaTime;
 	if (lifetime <= 0.0f) {

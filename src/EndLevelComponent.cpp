@@ -14,10 +14,6 @@ EndLevelComponent::EndLevelComponent() :
 	level(nullptr){
 }
 
-EndLevelComponent::~EndLevelComponent() {
-
-}
-
 bool EndLevelComponent::initComponent(ComponentData* data) {
 	if (entity->hasComponent<Transform>() && entity->hasComponent<Collider>()) {
 		Entity* manager = scene->getEntityByHandler("manager");

@@ -28,7 +28,6 @@ public:
 
 #pragma region Constructoras
 	LevelManager();
-	~LevelManager();
 #pragma endregion
 
 

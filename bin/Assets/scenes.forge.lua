@@ -507,8 +507,7 @@ local scenes = {
 			handler = "Player",
 			components = {
 				Transform= {
-					--position = {11.92,-0.67,0},
-					position = {193,5,0},
+					position = {11.92,-0.67,0},
 					rotation = {0,0,0,1},
 					scale = {1, 1, 1}
 				},

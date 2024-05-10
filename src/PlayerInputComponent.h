@@ -24,7 +24,6 @@ public:
 
 #pragma region Constructoras
 	PlayerInputComponent();
-	~PlayerInputComponent();
 #pragma endregion
 
 

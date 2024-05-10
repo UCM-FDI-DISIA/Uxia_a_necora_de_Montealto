@@ -31,10 +31,6 @@ EnemyComponent::EnemyComponent() :
 	serializer(axis, "axis");
 }
 
-EnemyComponent::~EnemyComponent() {
-
-}
-
 void EnemyComponent::update() {
 	//Merodeo
 	if(movementComponent != nullptr){
