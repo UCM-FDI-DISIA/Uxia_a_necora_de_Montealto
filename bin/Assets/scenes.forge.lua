@@ -119,7 +119,7 @@ keepBetweenScenes = {
 					volume = 0.1,
 					sound2D = true,
 					playOnAwake = true,
-					looped = true
+					loop = true
 				}
 			}
 		}
