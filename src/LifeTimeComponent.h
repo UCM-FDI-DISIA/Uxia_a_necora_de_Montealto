@@ -11,8 +11,14 @@ public:
 
 	static const std::string id;
 
+#pragma region Constructoras
 	LifeTimeComponent();
+	~LifeTimeComponent();
+#pragma endregion
 
+	/// <summary>
+	/// Si el tiempo de vida del objeto ha terminado, lo destruye
+	/// </summary>
 	void update() override;
 };
 #endif //LIFETIME_COMPONENT_H_

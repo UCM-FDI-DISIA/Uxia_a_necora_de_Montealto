@@ -21,6 +21,10 @@ MovementComponent::MovementComponent() :
 	serializer(jumpCooldown, "jumpCooldown");
 }
 
+MovementComponent::~MovementComponent()
+{
+}
+
 bool MovementComponent::initComponent(ComponentData* data) {
 	jumpDirection.set(0, jumpForce, 0);
 	if (entity->hasComponent<Transform>()&&entity->hasComponent<RigidBody>()) {

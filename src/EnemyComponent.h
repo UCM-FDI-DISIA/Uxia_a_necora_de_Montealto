@@ -11,13 +11,22 @@ class Collider;
 
 class EnemyComponent : public Component {
 private:
-	forge::Vector3 p1; // El menor de ambos puntos
-	forge::Vector3 p2; // El mayor de ambos puntos
+	/// <summary>
+	/// El menor de los dos puntos
+	/// </summary>
+	forge::Vector3 p1; 
+	/// <summary>
+	/// El mayor de los dos puntos
+	/// </summary>
+	forge::Vector3 p2; 
 	float sign;
 	float speed;
 	float damage;
 	bool changeDir;
-	int axis; // 0 = x, 1 = y, 2 = z
+	/// <summary>
+	/// 0 = x, 1 = y, 2 = z
+	/// </summary>
+	int axis;
 	MovementComponent* movementComponent;
 	RigidBody* rb;
 	Transform* transform;
@@ -26,19 +35,26 @@ private:
 public:
 
 	static const std::string id;
-
+#pragma region Constructoras
 	EnemyComponent();
-	
 	~EnemyComponent();
+#pragma endregion
 
 	/// <summary>
 	/// Logica del enemigo, cambia de direccion si llega a los puntos establecidos
-	/// o sigue al jugador si esta en su rango y comprueba si el enemigo debe atacar al jugador
 	/// </summary>
 	void update() override;
 
+	/// <summary>
+	/// Inicializa el componente Enemy
+	/// </summary>
+	/// <param name="data"> Datos del componente</param>
+	/// <returns> True si se ha inicializado correctamente</returns>
 	bool initComponent(ComponentData* data) override;
 
+	/// <summary>
+	/// Actualiza el componente Enemy. Si tiene que cambiar de direccion detiene el movimiento y ejerce una fuerza en la direccion contraria
+	/// </summary>
 	void fixedUpdate() override;
 };
 

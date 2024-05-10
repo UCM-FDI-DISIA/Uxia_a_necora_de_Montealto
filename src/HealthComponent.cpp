@@ -12,6 +12,10 @@ HealthComponent::HealthComponent() :
 	health = maxHealth;
 }
 
+HealthComponent::~HealthComponent()
+{
+}
+
 void HealthComponent::onEnabled()
 {
 	health = maxHealth;

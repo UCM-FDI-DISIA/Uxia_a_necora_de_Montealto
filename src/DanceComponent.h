@@ -12,7 +12,19 @@ protected:
 public:
 	static const std::string id;
 
+#pragma region Constructoras
 	DanceComponent();
+	~DanceComponent();
+#pragma endregion
+
+	/// <summary>
+	/// Inicializa el componente Dance
+	/// </summary>
+	/// <param name="data"> Datos del componente</param>
 	bool initComponent(ComponentData* data) override;
+
+	/// <summary>
+	/// Actualiza la posicion del objeto dependiendo de si esta subiendo o bajando
+	/// </summary>
 	void update() override;
 };

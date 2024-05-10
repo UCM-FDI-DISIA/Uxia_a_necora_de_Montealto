@@ -10,10 +10,24 @@ protected:
 public:
 
 	static const std::string id;
-
+#pragma region Constructoras
 	HealthComponent();
+	~HealthComponent();
+#pragma endregion
+
+	/// <summary>
+	/// Inicializa el componente Health cuando se activa
+	/// </summary>
 	void onEnabled() override;
+	/// <summary>
+	/// Inicializa el componente Health
+	/// </summary>
 	bool initComponent(ComponentData* data) override;
+
+	/// <summary>
+	/// Reduce la vida actual en funcion del daño recibido
+	/// </summary>
+	/// <param name="damage"> Daño recibido</param>
 	virtual void damage(int damage);
 };
 

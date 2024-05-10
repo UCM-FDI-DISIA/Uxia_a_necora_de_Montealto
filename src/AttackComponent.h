@@ -16,13 +16,17 @@ private:
 
 public:
 	static const std::string id;
-
+#pragma region Constructoras
 	AttackComponent();
-
 	~AttackComponent();
+#pragma endregion
 
+	/// <summary>
+	/// Inicializa el componente Attack
+	/// </summary>
+	/// <param name="data"> Datos del componente</param>
+	/// <returns> True si se ha inicializado correctamente</returns>
 	bool initComponent(ComponentData* data) override;
-
 };
 
 #endif // !ATTACK_COMPONENT_H_

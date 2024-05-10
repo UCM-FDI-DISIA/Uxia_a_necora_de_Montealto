@@ -13,7 +13,14 @@ private:
 public:
 	static const std::string id;
 
+#pragma region Constructoras
 	KelpComponent();
+	~KelpComponent();
+#pragma endregion
+
+	/// <summary>
+	/// Inicializa el componente Kelp
+	/// </summary>
 	bool initComponent(ComponentData* data) override;
 };
 

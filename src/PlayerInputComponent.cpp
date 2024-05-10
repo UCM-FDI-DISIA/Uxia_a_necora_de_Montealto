@@ -25,6 +25,10 @@ PlayerInputComponent::PlayerInputComponent():
 	serializer(attackOffset, "attackOffset");
 }
 
+PlayerInputComponent::~PlayerInputComponent()
+{
+}
+
 bool PlayerInputComponent::initComponent(ComponentData* data)
 {
 	if (!entity->hasComponent<MovementComponent>()) {

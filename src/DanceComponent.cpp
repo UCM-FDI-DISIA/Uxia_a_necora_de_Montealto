@@ -17,6 +17,10 @@ DanceComponent::DanceComponent() :
 	serializer(limInf, "lowerBound");
 }
 
+DanceComponent::~DanceComponent()
+{
+}
+
 bool DanceComponent::initComponent(ComponentData* data) {
 	if (!entity->hasComponent(Transform::id)) {
 		throwError(false, "Se necesita un componente AudioSource para reproducir un sonido de boton");

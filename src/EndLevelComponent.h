@@ -13,10 +13,16 @@ private:
 public:
 	static const std::string id;
 
+#pragma region Constructoras
 	EndLevelComponent();
-
 	~EndLevelComponent();
+#pragma endregion
 
+	/// <summary>
+	/// Inicializa el componente EndLevel
+	/// </summary>
+	/// <param name="data"> Datos del componente</param>
+	/// <returns> True si se ha inicializado correctamente</returns>
 	bool initComponent(ComponentData* data) override;
 };
 
