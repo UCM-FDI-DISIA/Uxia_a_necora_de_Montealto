@@ -15,6 +15,7 @@
     <ClCompile Include="..\src\ButtonSoundComponent.cpp" />
     <ClCompile Include="..\src\CheckpointComponent.cpp" />
     <ClCompile Include="..\src\ComponentRegisterer.cpp" />
+    <ClCompile Include="..\src\DanceComponent.cpp" />
     <ClCompile Include="..\src\EndLevelComponent.cpp" />
     <ClCompile Include="..\src\EnemyComponent.cpp" />
     <ClCompile Include="..\src\HealthComponent.cpp" />
@@ -35,6 +36,7 @@
     <ClInclude Include="..\src\AttackComponent.h" />
     <ClInclude Include="..\src\ButtonSoundComponent.h" />
     <ClInclude Include="..\src\CheckpointComponent.h" />
+    <ClInclude Include="..\src\DanceComponent.h" />
     <ClInclude Include="..\src\EndLevelComponent.h" />
     <ClInclude Include="..\src\EnemyComponent.h" />
     <ClInclude Include="..\src\HealthComponent.h" />

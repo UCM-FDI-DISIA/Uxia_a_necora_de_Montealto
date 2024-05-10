@@ -11,6 +11,7 @@
 #include "AttackComponent.h"
 #include "EndLevelComponent.h"
 #include "ButtonSoundComponent.h"
+#include "DanceComponent.h"
 
 FORGE_IMPORT void registerComponents(Factory& f) {
 	f.registerComponent<KelpComponent>();
@@ -25,4 +26,5 @@ FORGE_IMPORT void registerComponents(Factory& f) {
 	f.registerComponent<AttackComponent>();
 	f.registerComponent<EndLevelComponent>();
 	f.registerComponent<ButtonSoundComponent>();
+	f.registerComponent<DanceComponent>();
 }

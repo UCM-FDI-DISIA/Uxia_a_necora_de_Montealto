@@ -57,7 +57,12 @@ void PlayerInputComponent::update() {
 		forge::Vector3 offset = forge::Vector3(attackOffset,0,0) * lastDirection;
 		sceneManager.instantiateBlueprint("Attack", offset, entity);
 		attacking = true;
-	}	
+	}
+
+	// Pausa
+	if (input.keyUp(K_ESC)) {
+		level->setPauseMenu();
+	}
 }
 
 void PlayerInputComponent::setAttacking(bool attack) {

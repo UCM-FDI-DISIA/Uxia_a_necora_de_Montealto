@@ -115,7 +115,8 @@ local keepBetweenScenes = {
 					sound = "MainTheme",
 					volume = 0.7,
 					sound2D = true,
-					playOnAwake = true
+					playOnAwake = true,
+					looped = true
 				}
 			}
 		}
@@ -295,12 +296,12 @@ local scenes = {
 		ControlsImage = {
 			components = {
 				RectTransform = {
-					position = Vector2(Window["width"] * 0.365, Window["height"] * 0.25),
-					scale = Vector2(375,375)
+					position = Vector2(Window["width"] * 0.35, Window["height"] * 0.25),
+					scale = Vector2(428,360)
 				},
 				Image = {
 					depth = 0,
-					texture = "default.png"
+					texture = "controles.png"
 				}
 			}
 		},
@@ -358,7 +359,7 @@ local scenes = {
 		MenuButton = {
 			components = {
 				RectTransform = {
-					position = Vector2(Window["width"] * 0.275, Window["height"] * 0.8),
+					position = Vector2(Window["width"] * 0.3, Window["height"] * 0.8),
 					scale = Vector2(201, 53)
 				},
 				Button = {
@@ -400,7 +401,7 @@ local scenes = {
 		Title = {
 			components = {
 				RectTransform = {
-					position = Vector2(Window["width"] * 0.35, 20),
+					position = Vector2(Window["width"] * 0.325, 20),
 					scale = Vector2(1,1)
 				},
 				Text = {
@@ -411,11 +412,43 @@ local scenes = {
 				}
 			}
 		},
+		Necora = {
+			components = {
+				Transform = {
+					position = {0, 0, -100},
+					rotation = {0,0,0,1},
+					scale = {8, 8, 8}
+				},
+				Animator = {
+					mesh = "Crab.mesh",
+					activeAnimations = {
+						"my_animation"
+					}
+				},
+				DanceComponent = {
+					upperBound = 12.5,
+					lowerBound = 12.5
+				}
+			}
+		},
+		SeaweedNumber = {
+			components = {
+				RectTransform = {
+					position = Vector2(Window["width"] * 0.315, Window["height"] * 0.7),
+					scale = Vector2(1,1)
+				},
+				Text = {
+					fontHeight = 40,
+					fontName = "KingCrabs.ttf",
+					text = "Numero de algas finales: "
+				}
+			}
+		},
 		MenuButton = {
 			components = {
 				RectTransform = {
-					position = Vector2(Window["width"] * 0.275, Window["height"] * 0.8),
-					scale = Vector2(201, 53)
+					position = Vector2(Window["width"] * 0.225, Window["height"] * 0.8),
+					scale = Vector2(352, 80)
 				},
 				Button = {
 					depth = 8,
@@ -441,8 +474,8 @@ local scenes = {
 		ExitButton = {
 			components = {
 				RectTransform = {
-					position = Vector2(Window["width"] * 0.575, Window["height"] * 0.8),
-					scale = Vector2(201, 53)
+					position = Vector2(Window["width"] * 0.55, Window["height"] * 0.8),
+					scale = Vector2(352, 80)
 				},
 				Button = {
 					depth = 8,
