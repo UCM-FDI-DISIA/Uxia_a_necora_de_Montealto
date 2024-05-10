@@ -22,5 +22,5 @@ Physics = {
 		DeathZone 	= {	true,	true, 	false,	false,	false,	false},
 		Attack		= {	true,	false,	true,	false,	false,	false,	false}
 	},
-	debug = true
+	debug = false
 }

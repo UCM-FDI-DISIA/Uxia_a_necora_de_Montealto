@@ -2916,7 +2916,7 @@ local scenes = {
 				cam = {
 					components = {
 						Transform = {
-							position = {4, 4, 30},
+							position = {4, 4, 200},
 							rotation = {20, 0, 0}
 						},
 						Camera = {
@@ -4921,7 +4921,7 @@ local scenes = {
 									components = {
 										Transform= {
 											position = {50.8,-34.2,0},
-											rotation = {-1,0,0,0},
+											rotation = {0,-1,0,0},
 											scale = {3,20,1}
 										},
 										RigidBody= {
@@ -4953,7 +4953,7 @@ local scenes = {
 									components = {
 										Transform= {
 											position = {91.5,-30.3,0},
-											rotation = {-1,0,0,0},
+											rotation = {0,-1,0,0},
 											scale = {3,26,1}
 										},
 										RigidBody= {
@@ -5017,7 +5017,7 @@ local scenes = {
 									components = {
 										Transform= {
 											position = {126.7,-33.5,0},
-											rotation = {-1,0,0,0},
+											rotation = {0,-1,0,0},
 											scale = {3,23,1}
 										},
 										RigidBody= {
@@ -5050,7 +5050,7 @@ local scenes = {
 									components = {
 										Transform= {
 											position = {134.7,-29.5,0},
-											rotation = {-1,0,0,0},
+											rotation = {0,-1,0,0},
 											scale = {3,23,1}
 										},
 										RigidBody= {
@@ -5082,8 +5082,8 @@ local scenes = {
 								Tentaculo_5= {
 									components = {
 										Transform= {
-											position = {143.7,-25.1,05},
-											rotation = {-1,0,0,0},
+											position = {143.7,-25.1,0},
+											rotation = {0,-1,0,0},
 											scale = {3,23,1}
 										},
 										RigidBody= {
@@ -5116,7 +5116,7 @@ local scenes = {
 									components = {
 										Transform= {
 											position = {152.6,-32.8,0},
-											rotation = {-1,0,0,0},
+											rotation = {0,-1,0,0},
 											scale = {3,23,1}
 										},
 										RigidBody= {
@@ -5279,7 +5279,36 @@ local scenes = {
 							}
 						}
 					}
-				}
+				},
+				NecoraCoquette= {
+					group = "",
+					components = {
+						Transform= {
+							position = {13,-24.5,0},
+							rotation = {0,-1,0,0},
+							scale = {1,1,1}
+						},
+						RigidBody= {
+							scale = {2.95, 1,1.13},
+							axisBlockedPos = {false,true,true},
+							axisBlockedRot = {true, true, true},
+							mass = 1,
+							friction = 1,
+							restitution = 1,
+							shapeType = "Cylinder",
+							static = false,
+							layer = "ALL",	
+							trigger = false
+						},
+						Animator = {
+							mesh = "Crab.mesh",
+							material = "uxiaCoq",
+							activeAnimations = {
+								"my_animation"
+							}
+						}
+					}
+				},
 			}
 		}
 	}
