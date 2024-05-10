@@ -407,8 +407,8 @@ local scenes = {
 			handler = "Player",
 			components = {
 				Transform= {
-					--position = {11.92,-0.67,0},
-					position = {193,5,0},
+					position = {11.92,-0.67,0},
+					--position = {193,5,0},
 					rotation = {0,0,0,1},
 					scale = {1, 1, 1}
 				},
@@ -1936,10 +1936,11 @@ local scenes = {
 					components = {
 						Transform= {
 							position = {39.27,-23.82,0},
-							rotation = {0,0,0.7071068,0.7071068},
+							rotation = {0,0,0,1},
 							scale = {1,1,1}
 						},
 						RigidBody= {
+							scale = {2.95, 1,1.13},
 							axisBlockedPos = {false,true,true},
 							axisBlockedRot = {true, true, true},
 							mass = 1,
@@ -1950,8 +1951,12 @@ local scenes = {
 							layer = "Enemy",	
 							trigger = true
 						},
-						Mesh= {
-							mesh = "Cylinder.mesh"							
+						Animator = {
+							mesh = "Crab.mesh",
+							material = "evilUxia",
+							activeAnimations = {
+								"my_animation"
+							}
 						},
 						MovementComponent= {
 							jumpForce = 0							
@@ -1972,10 +1977,11 @@ local scenes = {
 					components = {
 						Transform= {
 							position = {46.77,-13.32,0},
-							rotation = {0,0,0.7071068,0.7071068},
+							rotation = {0,0,0,1},
 							scale = {1,1,1}
 						},
 						RigidBody= {
+							scale = {2.95, 1,1.13},
 							axisBlockedPos = {false,true,true},
 							axisBlockedRot = {true, true, true},
 							mass = 1,
@@ -1984,10 +1990,14 @@ local scenes = {
 							shapeType = "Cylinder",
 							static = false,
 							layer = "Enemy",	
-							trigger = true							
+							trigger = true
 						},
-						Mesh= {
-							mesh = "Cylinder.mesh"							
+						Animator = {
+							mesh = "Crab.mesh",
+							material = "evilUxia",
+							activeAnimations = {
+								"my_animation"
+							}
 						},
 						MovementComponent= {
 							jumpForce = 0							
@@ -2008,10 +2018,11 @@ local scenes = {
 					components = {
 						Transform= {
 							position = {76.77,-13.38,0},
-							rotation = {0,0,0.7071068,0.7071068},
+							rotation = {0,0,0,1},
 							scale = {1,1,1}
 						},
 						RigidBody= {
+							scale = {2.95, 1,1.13},
 							axisBlockedPos = {false,true,true},
 							axisBlockedRot = {true, true, true},
 							mass = 1,
@@ -2020,10 +2031,14 @@ local scenes = {
 							shapeType = "Cylinder",
 							static = false,
 							layer = "Enemy",	
-							trigger = true							
+							trigger = true
 						},
-						Mesh= {
-							mesh = "Cylinder.mesh"							
+						Animator = {
+							mesh = "Crab.mesh",
+							material = "evilUxia",
+							activeAnimations = {
+								"my_animation"
+							}
 						},
 						MovementComponent= {
 							jumpForce = 0							
@@ -2044,10 +2059,11 @@ local scenes = {
 					components = {
 						Transform= {
 							position = {76.02,-6.13,0},
-							rotation = {0,0,0.7071068,0.7071068},
+							rotation = {0,0,0,1},
 							scale = {1,1,1}
 						},
 						RigidBody= {
+							scale = {2.95, 1,1.13},
 							axisBlockedPos = {false,true,true},
 							axisBlockedRot = {true, true, true},
 							mass = 1,
@@ -2056,10 +2072,14 @@ local scenes = {
 							shapeType = "Cylinder",
 							static = false,
 							layer = "Enemy",	
-							trigger = true							
+							trigger = true
 						},
-						Mesh= {
-							mesh = "Cylinder.mesh"							
+						Animator = {
+							mesh = "Crab.mesh",
+							material = "evilUxia",
+							activeAnimations = {
+								"my_animation"
+							}
 						},
 						MovementComponent= {
 							jumpForce = 0							
@@ -2080,10 +2100,11 @@ local scenes = {
 					components = {
 						Transform= {
 							position = {76.52,4.31,0},
-							rotation = {0,0,0.7071068,0.7071068},
+							rotation = {0,0,0,1},
 							scale = {1,1,1}
 						},
 						RigidBody= {
+							scale = {2.95, 1,1.13},
 							axisBlockedPos = {false,true,true},
 							axisBlockedRot = {true, true, true},
 							mass = 1,
@@ -2092,10 +2113,14 @@ local scenes = {
 							shapeType = "Cylinder",
 							static = false,
 							layer = "Enemy",	
-							trigger = true							
+							trigger = true
 						},
-						Mesh= {
-							mesh = "Cylinder.mesh"							
+						Animator = {
+							mesh = "Crab.mesh",
+							material = "evilUxia",
+							activeAnimations = {
+								"my_animation"
+							}
 						},
 						MovementComponent= {
 							jumpForce = 0							
@@ -2116,10 +2141,11 @@ local scenes = {
 					components = {
 						Transform= {
 							position = {99.77,-8.69,0},
-							rotation = {0,0,0.7071068,0.7071068},
+							rotation = {0,0,0,1},
 							scale = {1,1,1}
 						},
 						RigidBody= {
+							scale = {2.95, 1,1.13},
 							axisBlockedPos = {false,true,true},
 							axisBlockedRot = {true, true, true},
 							mass = 1,
@@ -2128,10 +2154,14 @@ local scenes = {
 							shapeType = "Cylinder",
 							static = false,
 							layer = "Enemy",	
-							trigger = true							
+							trigger = true
 						},
-						Mesh= {
-							mesh = "Cylinder.mesh"							
+						Animator = {
+							mesh = "Crab.mesh",
+							material = "evilUxia",
+							activeAnimations = {
+								"my_animation"
+							}
 						},
 						MovementComponent= {
 							jumpForce = 0							
@@ -2152,10 +2182,11 @@ local scenes = {
 					components = {
 						Transform= {
 							position = {167.84,-12.67,0},
-							rotation = {0,0,0.7071068,0.7071068},
+							rotation = {0,0,0,1},
 							scale = {1,1,1}
 						},
 						RigidBody= {
+							scale = {2.95, 1,1.13},
 							axisBlockedPos = {false,true,true},
 							axisBlockedRot = {true, true, true},
 							mass = 1,
@@ -2164,10 +2195,14 @@ local scenes = {
 							shapeType = "Cylinder",
 							static = false,
 							layer = "Enemy",	
-							trigger = true							
+							trigger = true
 						},
-						Mesh= {
-							mesh = "Cylinder.mesh"							
+						Animator = {
+							mesh = "Crab.mesh",
+							material = "evilUxia",
+							activeAnimations = {
+								"my_animation"
+							}
 						},
 						MovementComponent= {
 							jumpForce = 0							
@@ -2188,10 +2223,11 @@ local scenes = {
 					components = {
 						Transform= {
 							position = {188.59,-2.92,0},
-							rotation = {0,0,0.7071068,0.7071068},
+						rotation = {0,0,0,1},
 							scale = {1,1,1}
 						},
 						RigidBody= {
+							scale = {2.95, 1,1.13},
 							axisBlockedPos = {false,true,true},
 							axisBlockedRot = {true, true, true},
 							mass = 1,
@@ -2200,10 +2236,14 @@ local scenes = {
 							shapeType = "Cylinder",
 							static = false,
 							layer = "Enemy",	
-							trigger = true							
+							trigger = true
 						},
-						Mesh= {
-							mesh = "Cylinder.mesh"							
+						Animator = {
+							mesh = "Crab.mesh",
+							material = "evilUxia",
+							activeAnimations = {
+								"my_animation"
+							}
 						},
 						MovementComponent= {
 							jumpForce = 0							
@@ -2248,7 +2288,8 @@ local scenes = {
 									scale = {4.581482,1,1}
 								},
 								Mesh= {
-									mesh = "Cube.mesh"							
+									mesh = "Cube.mesh",
+									material = "platGris"
 								}
 							}
 						},
@@ -2261,7 +2302,8 @@ local scenes = {
 									scale = {4.581482,1,1}
 								},
 								Mesh= {
-									mesh = "Cube.mesh"							
+									mesh = "Cube.mesh",
+									material = "platGris"						
 								}
 							}
 						},
@@ -2274,7 +2316,8 @@ local scenes = {
 									scale = {4.581482,1,1}
 								},
 								Mesh= {
-									mesh = "Cube.mesh"							
+									mesh = "Cube.mesh",
+									material = "platGris"						
 								}
 							}
 						},
@@ -2287,7 +2330,8 @@ local scenes = {
 									scale = {4.581482,1,1}
 								},
 								Mesh= {
-									mesh = "Cube.mesh"							
+									mesh = "Cube.mesh",
+									material = "platGris"						
 								}
 							}
 						},
@@ -2300,7 +2344,8 @@ local scenes = {
 									scale = {4.581482,1,1}
 								},
 								Mesh= {
-									mesh = "Cube.mesh"							
+									mesh = "Cube.mesh",
+									material = "platGris"					
 								}
 							}
 						},
@@ -2313,7 +2358,8 @@ local scenes = {
 									scale = {4.581482,1,1}
 								},
 								Mesh= {
-									mesh = "Cube.mesh"							
+									mesh = "Cube.mesh",
+									material = "platGris"				
 								}
 							}
 						},
@@ -2326,7 +2372,8 @@ local scenes = {
 									scale = {4.581482,1,1}
 								},
 								Mesh= {
-									mesh = "Cube.mesh"							
+									mesh = "Cube.mesh",
+									material = "platGris"		
 								}
 							}
 						},
@@ -2339,7 +2386,8 @@ local scenes = {
 									scale = {4.581482,1,1}
 								},
 								Mesh= {
-									mesh = "Cube.mesh"							
+									mesh = "Cube.mesh",
+									material = "platGris"			
 								}
 							}
 						},
@@ -2352,7 +2400,8 @@ local scenes = {
 									scale = {4.581482,1,1}
 								},
 								Mesh= {
-									mesh = "Cube.mesh"							
+									mesh = "Cube.mesh",
+									material = "platGris"			
 								}
 							}
 						},
@@ -2365,7 +2414,8 @@ local scenes = {
 									scale = {4.581482,1,1}
 								},
 								Mesh= {
-									mesh = "Cube.mesh"							
+									mesh = "Cube.mesh",
+									material = "platGris"
 								}
 							}
 						}
@@ -4309,23 +4359,28 @@ local scenes = {
 							components = {
 								Transform= {
 									position = {39.27,-23.82,0},
-									rotation = {0,0,0.7071068,0.7071068},
-									scale = {1,1,1}
-								},
-								RigidBody= {
-									axisBlockedPos = {false,true,true},
-									axisBlockedRot = {true, true, true},
-									mass = 1,
-									friction = 1,
-									restitution = 1,
-									shapeType = "Cylinder",
-									static = false,
-									layer = "Enemy",	
-									trigger = true
-								},
-								Mesh= {
-									mesh = "Cylinder.mesh"							
-								},
+									rotation = {0,0,0,1},
+							scale = {1,1,1}
+						},
+						RigidBody= {
+							scale = {2.95, 1,1.13},
+							axisBlockedPos = {false,true,true},
+							axisBlockedRot = {true, true, true},
+							mass = 1,
+							friction = 1,
+							restitution = 1,
+							shapeType = "Cylinder",
+							static = false,
+							layer = "Enemy",	
+							trigger = true
+						},
+						Animator = {
+							mesh = "Crab.mesh",
+							material = "evilUxia",
+							activeAnimations = {
+								"my_animation"
+							}
+						},
 								MovementComponent= {
 									jumpForce = 0							
 								},
@@ -4345,23 +4400,28 @@ local scenes = {
 							components = {
 								Transform= {
 									position = {46.77,-13.32,0},
-									rotation = {0,0,0.7071068,0.7071068},
-									scale = {1,1,1}
-								},
-								RigidBody= {
-									axisBlockedPos = {false,true,true},
-									axisBlockedRot = {true, true, true},
-									mass = 1,
-									friction = 1,
-									restitution = 1,
-									shapeType = "Cylinder",
-									static = false,
-									layer = "Enemy",	
-									trigger = true							
-								},
-								Mesh= {
-									mesh = "Cylinder.mesh"							
-								},
+									rotation = {0,0,0,1},
+							scale = {1,1,1}
+						},
+						RigidBody= {
+							scale = {2.95, 1,1.13},
+							axisBlockedPos = {false,true,true},
+							axisBlockedRot = {true, true, true},
+							mass = 1,
+							friction = 1,
+							restitution = 1,
+							shapeType = "Cylinder",
+							static = false,
+							layer = "Enemy",	
+							trigger = true
+						},
+						Animator = {
+							mesh = "Crab.mesh",
+							material = "evilUxia",
+							activeAnimations = {
+								"my_animation"
+							}
+						},
 								MovementComponent= {
 									jumpForce = 0							
 								},
@@ -4381,23 +4441,28 @@ local scenes = {
 							components = {
 								Transform= {
 									position = {76.77,-13.38,0},
-									rotation = {0,0,0.7071068,0.7071068},
-									scale = {1,1,1}
-								},
-								RigidBody= {
-									axisBlockedPos = {false,true,true},
-									axisBlockedRot = {true, true, true},
-									mass = 1,
-									friction = 1,
-									restitution = 1,
-									shapeType = "Cylinder",
-									static = false,
-									layer = "Enemy",	
-									trigger = true							
-								},
-								Mesh= {
-									mesh = "Cylinder.mesh"							
-								},
+									rotation = {0,0,0,1},
+							scale = {1,1,1}
+						},
+						RigidBody= {
+							scale = {2.95, 1,1.13},
+							axisBlockedPos = {false,true,true},
+							axisBlockedRot = {true, true, true},
+							mass = 1,
+							friction = 1,
+							restitution = 1,
+							shapeType = "Cylinder",
+							static = false,
+							layer = "Enemy",	
+							trigger = true
+						},
+						Animator = {
+							mesh = "Crab.mesh",
+							material = "evilUxia",
+							activeAnimations = {
+								"my_animation"
+							}
+						},
 								MovementComponent= {
 									jumpForce = 0							
 								},
@@ -4417,23 +4482,28 @@ local scenes = {
 							components = {
 								Transform= {
 									position = {76.02,-6.13,0},
-									rotation = {0,0,0.7071068,0.7071068},
-									scale = {1,1,1}
-								},
-								RigidBody= {
-									axisBlockedPos = {false,true,true},
-									axisBlockedRot = {true, true, true},
-									mass = 1,
-									friction = 1,
-									restitution = 1,
-									shapeType = "Cylinder",
-									static = false,
-									layer = "Enemy",	
-									trigger = true							
-								},
-								Mesh= {
-									mesh = "Cylinder.mesh"							
-								},
+									rotation = {0,0,0,1},
+							scale = {1,1,1}
+						},
+						RigidBody= {
+							scale = {2.95, 1,1.13},
+							axisBlockedPos = {false,true,true},
+							axisBlockedRot = {true, true, true},
+							mass = 1,
+							friction = 1,
+							restitution = 1,
+							shapeType = "Cylinder",
+							static = false,
+							layer = "Enemy",	
+							trigger = true
+						},
+						Animator = {
+							mesh = "Crab.mesh",
+							material = "evilUxia",
+							activeAnimations = {
+								"my_animation"
+							}
+						},
 								MovementComponent= {
 									jumpForce = 0							
 								},
@@ -4453,23 +4523,28 @@ local scenes = {
 							components = {
 								Transform= {
 									position = {76.52,4.31,0},
-									rotation = {0,0,0.7071068,0.7071068},
-									scale = {1,1,1}
-								},
-								RigidBody= {
-									axisBlockedPos = {false,true,true},
-									axisBlockedRot = {true, true, true},
-									mass = 1,
-									friction = 1,
-									restitution = 1,
-									shapeType = "Cylinder",
-									static = false,
-									layer = "Enemy",	
-									trigger = true							
-								},
-								Mesh= {
-									mesh = "Cylinder.mesh"							
-								},
+									rotation = {0,0,0,1},
+							scale = {1,1,1}
+						},
+						RigidBody= {
+							scale = {2.95, 1,1.13},
+							axisBlockedPos = {false,true,true},
+							axisBlockedRot = {true, true, true},
+							mass = 1,
+							friction = 1,
+							restitution = 1,
+							shapeType = "Cylinder",
+							static = false,
+							layer = "Enemy",	
+							trigger = true
+						},
+						Animator = {
+							mesh = "Crab.mesh",
+							material = "evilUxia",
+							activeAnimations = {
+								"my_animation"
+							}
+						},
 								MovementComponent= {
 									jumpForce = 0							
 								},
@@ -4489,23 +4564,28 @@ local scenes = {
 							components = {
 								Transform= {
 									position = {99.77,-8.69,0},
-									rotation = {0,0,0.7071068,0.7071068},
-									scale = {1,1,1}
-								},
-								RigidBody= {
-									axisBlockedPos = {false,true,true},
-									axisBlockedRot = {true, true, true},
-									mass = 1,
-									friction = 1,
-									restitution = 1,
-									shapeType = "Cylinder",
-									static = false,
-									layer = "Enemy",	
-									trigger = true							
-								},
-								Mesh= {
-									mesh = "Cylinder.mesh"							
-								},
+									rotation = {0,0,0,1},
+							scale = {1,1,1}
+						},
+						RigidBody= {
+							scale = {2.95, 1,1.13},
+							axisBlockedPos = {false,true,true},
+							axisBlockedRot = {true, true, true},
+							mass = 1,
+							friction = 1,
+							restitution = 1,
+							shapeType = "Cylinder",
+							static = false,
+							layer = "Enemy",	
+							trigger = true
+						},
+						Animator = {
+							mesh = "Crab.mesh",
+							material = "evilUxia",
+							activeAnimations = {
+								"my_animation"
+							}
+						},
 								MovementComponent= {
 									jumpForce = 0							
 								},
@@ -4525,23 +4605,28 @@ local scenes = {
 							components = {
 								Transform= {
 									position = {167.84,-12.67,0},
-									rotation = {0,0,0.7071068,0.7071068},
-									scale = {1,1,1}
-								},
-								RigidBody= {
-									axisBlockedPos = {false,true,true},
-									axisBlockedRot = {true, true, true},
-									mass = 1,
-									friction = 1,
-									restitution = 1,
-									shapeType = "Cylinder",
-									static = false,
-									layer = "Enemy",	
-									trigger = true							
-								},
-								Mesh= {
-									mesh = "Cylinder.mesh"							
-								},
+									rotation = {0,0,0,1},
+							scale = {1,1,1}
+						},
+						RigidBody= {
+							scale = {2.95, 1,1.13},
+							axisBlockedPos = {false,true,true},
+							axisBlockedRot = {true, true, true},
+							mass = 1,
+							friction = 1,
+							restitution = 1,
+							shapeType = "Cylinder",
+							static = false,
+							layer = "Enemy",	
+							trigger = true
+						},
+						Animator = {
+							mesh = "Crab.mesh",
+							material = "evilUxia",
+							activeAnimations = {
+								"my_animation"
+							}
+						},
 								MovementComponent= {
 									jumpForce = 0							
 								},
@@ -4561,23 +4646,28 @@ local scenes = {
 							components = {
 								Transform= {
 									position = {188.59,-2.92,0},
-									rotation = {0,0,0.7071068,0.7071068},
-									scale = {1,1,1}
-								},
-								RigidBody= {
-									axisBlockedPos = {false,true,true},
-									axisBlockedRot = {true, true, true},
-									mass = 1,
-									friction = 1,
-									restitution = 1,
-									shapeType = "Cylinder",
-									static = false,
-									layer = "Enemy",	
-									trigger = true							
-								},
-								Mesh= {
-									mesh = "Cylinder.mesh"							
-								},
+								rotation = {0,0,0,1},
+							scale = {1,1,1}
+						},
+						RigidBody= {
+							scale = {2.95, 1,1.13},
+							axisBlockedPos = {false,true,true},
+							axisBlockedRot = {true, true, true},
+							mass = 1,
+							friction = 1,
+							restitution = 1,
+							shapeType = "Cylinder",
+							static = false,
+							layer = "Enemy",	
+							trigger = true
+						},
+						Animator = {
+							mesh = "Crab.mesh",
+							material = "evilUxia",
+							activeAnimations = {
+								"my_animation"
+							}
+						},
 								MovementComponent= {
 									jumpForce = 0							
 								},
@@ -4634,7 +4724,8 @@ local scenes = {
 											scale = {4.581482,1,1}
 										},
 										Mesh= {
-											mesh = "Cube.mesh"							
+											mesh = "Cube.mesh",
+											material = "platGris"					
 										}
 									}
 								},
@@ -4647,7 +4738,8 @@ local scenes = {
 											scale = {4.581482,1,1}
 										},
 										Mesh= {
-											mesh = "Cube.mesh"							
+											mesh = "Cube.mesh",
+											material = "platGris"						
 										}
 									}
 								},
@@ -4660,7 +4752,8 @@ local scenes = {
 											scale = {4.581482,1,1}
 										},
 										Mesh= {
-											mesh = "Cube.mesh"							
+											mesh = "Cube.mesh",
+											material = "platGris"						
 										}
 									}
 								},
@@ -4673,7 +4766,8 @@ local scenes = {
 											scale = {4.581482,1,1}
 										},
 										Mesh= {
-											mesh = "Cube.mesh"							
+											mesh = "Cube.mesh",
+											material = "platGris"							
 										}
 									}
 								},
@@ -4686,7 +4780,8 @@ local scenes = {
 											scale = {4.581482,1,1}
 										},
 										Mesh= {
-											mesh = "Cube.mesh"							
+											mesh = "Cube.mesh",
+											material = "platGris"						
 										}
 									}
 								},
@@ -4699,7 +4794,8 @@ local scenes = {
 											scale = {4.581482,1,1}
 										},
 										Mesh= {
-											mesh = "Cube.mesh"							
+											mesh = "Cube.mesh",
+											material = "platGris"						
 										}
 									}
 								},
@@ -4712,7 +4808,8 @@ local scenes = {
 											scale = {4.581482,1,1}
 										},
 										Mesh= {
-											mesh = "Cube.mesh"							
+											mesh = "Cube.mesh",
+											material = "platGris"						
 										}
 									}
 								},
@@ -4725,7 +4822,8 @@ local scenes = {
 											scale = {4.581482,1,1}
 										},
 										Mesh= {
-											mesh = "Cube.mesh"							
+											mesh = "Cube.mesh",
+											material = "platGris"						
 										}
 									}
 								},
@@ -4738,7 +4836,8 @@ local scenes = {
 											scale = {4.581482,1,1}
 										},
 										Mesh= {
-											mesh = "Cube.mesh"							
+											mesh = "Cube.mesh",
+											material = "platGris"						
 										}
 									}
 								}
